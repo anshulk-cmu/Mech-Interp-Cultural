@@ -99,13 +99,13 @@ The authors restrict to Chinese–English only; generalization to other scripts 
 
 ## Relevance to our project (ICCD-3K, Phase 1)
 
-Our study asks whether RLHF/alignment **rewrites** mid-layer cultural representations or **gates** them late, using Indian cultural minimal pairs; Phase 1 builds a 3,000-item minimal-pair probe set (clean vs corrupted prefix + target answer; per-item log-odds difference; 60 cells of 50 items; paired t-tests). CLM-Bench is the closest methodological precedent and informs us concretely:
+Our study asks whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **rewrites** mid-layer cultural representations or **gates** them late, using Indian cultural minimal pairs — where Indian culture is at once the controlled probe for this mechanistic question and a genuine subject the study cares about; Phase 1 builds a 3,000-item minimal-pair probe set (clean vs corrupted prefix + target answer; per-item log-odds difference; 60 cells of 50 items; paired t-tests). CLM-Bench is the closest methodological precedent and informs us concretely:
 
 **Methods/metrics we borrow.**
 - The **CounterFact minimal-pair schema** maps onto our clean/corrupted design: `prompt + target_new` (counterfactual) vs `ground_truth` (clean) is our corrupted vs clean prefix. Adopting their five fields (prompt, target_new, ground_truth, subject, rephrase_prompt) gives each item a built-in paraphrase (generality) check.
 - Their per-token reliability accuracy is the discrete analogue of our per-item log-odds difference; we keep the continuous metric log P(target|clean) − log P(target|corrupt) for statistical power but can report their reliability/generality/locality triad for comparability.
 - The **layer-selection procedure** (final-token-of-subject hidden state, sweep layers, pick where representations separate maximally) is exactly the diagnostic for deciding which mid layers to probe for "rewrite vs gate." Their finding that **cultural/language separation grows monotonically with depth, peaking near the upper-middle layers (≈ layer 12 of ~32)** is a strong prior: our Indian-vs-generic separation likely lives in upper-mid layers, so we should center the 60-cell layer grid there.
-- The four delta metrics (subspace angle, RelErr, Jaccard, CosSim) port directly to comparing pre- vs post-RLHF representation deltas: **rewrite** predicts large subspace angle / low cosine between base and aligned cultural directions; **gating** predicts mid-layer directions are preserved with change concentrated late.
+- The four delta metrics (subspace angle, RelErr, Jaccard, CosSim) port directly to comparing base- vs alignment-fine-tuned representation deltas: **rewrite** predicts large subspace angle / low cosine between base and aligned cultural directions; **gating** predicts mid-layer directions are preserved with change concentrated late.
 
 **Design constraints it implies.**
 - **Native-first, not translated.** Their central thesis is that translationese corrupts cultural benchmarks. ICCD-3K must author Indian items natively and avoid back-translation from English templates, or the "cultural" signal becomes a translation artifact.
@@ -115,7 +115,7 @@ Our study asks whether RLHF/alignment **rewrites** mid-layer cultural representa
 **Pitfalls it warns against.**
 - **Single-layer / single-model overreach.** Their own limitation — one layer, one method, one model — is the trap our layer/model sweep exists to avoid before claiming "rewrite vs gate."
 - **The orthogonality claim is narrow.** They show Chinese and English *edit deltas* are orthogonal, but this concerns gradient-based parameter updates, not where the underlying knowledge lives; we must test activation geometry directly rather than assume linear separability.
-- **Generation collapse ≠ knowledge erasure.** Edited models can recall a fact yet fail to generate it in the other language — reliability and generation diverge. So a null log-odds shift post-RLHF could reflect gating of *expression*, not absence of representation; we need both behavioral and representational read-outs to disambiguate.
+- **Generation collapse ≠ knowledge erasure.** Edited models can recall a fact yet fail to generate it in the other language — reliability and generation diverge. So a null log-odds shift post-alignment could reflect gating of *expression*, not absence of representation; we need both behavioral and representational read-outs to disambiguate.
 - **Generator bias.** DeepSeek-R1 authored their facts; any LLM-drafted ICCD-3K items can leak model priors into the corrupted `target_new`, so human bilingual review of every item is non-negotiable.
 
 ## Validation notes

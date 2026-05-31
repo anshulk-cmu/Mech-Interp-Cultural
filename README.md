@@ -1,8 +1,8 @@
 # Mech-Interp-Cultural — The Selective Alignment Project
 
-Does post-training alignment (RLHF) **rewrite** a model's mid-layer representations of culturally specific content, or **gate** them with a late-stage policy that leaves the representations intact? This project answers that mechanistically, with Indian cultural knowledge as the *testbed*, not the topic.
+Does post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **rewrite** a model's mid-layer representations of culturally specific content, or **gate** them with a late-stage policy that leaves the representations intact? This project answers that mechanistically, with Indian cultural knowledge serving as both the controlled *testbed* for the mechanistic question and a genuine subject of study in its own right.
 
-Working title: *The Selectivity of RLHF: Mechanistic Sources of Cultural Flattening in Post-Training Alignment.*
+Working title: *The Selectivity of Post-Training Alignment: Mechanistic Sources of Cultural Flattening in Aligned Language Models.*
 
 ## The question
 
@@ -24,7 +24,7 @@ A 6,000-item controlled minimal-pair probe set in the CounterFact/ROME lineage �
 4. **Causal validation** — cross-checkpoint patching, path patching, refusal-direction ablation/addition, latent-feature steering.
 5. **Synthesis** — pre-registered per-axis verdict plus cross-model generality.
 
-**Model suite:** Pair 1 Llama-3-8B (base/Instruct) and Pair 2 Gemma-2-9B (base/it) are the clean Western-RLHF core; Pair 3 Mistral-Small-3.1-24B / Sarvam-M is exploratory (SFT+RLVR, multi-factor confound).
+**Model suite:** three co-equal model arms, each covering a fine-tuning method and all primary. Pair 1 Llama-3-8B (base/Instruct) and Pair 2 Gemma-2-9B (base/it) cover human-preference RLHF; Pair 3 Mistral-Small-3.1-24B / Sarvam-M covers SFT+RLVR via GRPO. The base-vs-aligned logic and statistical machinery apply equally to every arm.
 
 ## Repository
 
