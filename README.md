@@ -1,48 +1,43 @@
 # Mech-Interp-Cultural — The Selective Alignment Project
 
-A mechanistic-interpretability study of post-training alignment: **does RLHF *rewrite* a model's mid-layer
-representations of culturally specific content, or *gate* them with a late-stage policy that leaves the
-representations intact?** Indian cultural knowledge is the *testbed*, not the topic. The instrument is
-**ICCD-6K**, a 6,000-item controlled minimal-pair probe set (CounterFact/ROME lineage), purpose-built for
-this measurement — deliberately bounded, not a comprehensive cultural benchmark.
+Does post-training alignment (RLHF) **rewrite** a model's mid-layer representations of culturally specific content, or **gate** them with a late-stage policy that leaves the representations intact? This project answers that mechanistically, with Indian cultural knowledge as the *testbed*, not the topic.
 
 Working title: *The Selectivity of RLHF: Mechanistic Sources of Cultural Flattening in Post-Training Alignment.*
 
----
+## The question
 
-## Repository layout
+Aligned models behave differently from their base versions on culturally specific inputs, and not always for the better — refusals, indigenous terms flattened to generic ones, regional facts apparently lost. Two hypotheses explain this identically in behavior but differently inside the network: **representation rewriting** (mid-layer content is genuinely altered) versus **late-stage gating** — the mechanistic form of the Superficial Alignment Hypothesis, where knowledge persists and a late mechanism redirects the output. Behavior alone cannot separate them; mechanistic interpretability can. The distinction matters: a gate is recoverable by activation-level intervention, whereas rewriting requires retraining.
 
-| Path | What it holds |
+## Approach
+
+We run **paired checkpoints** (a base model and its post-trained version) through a controlled probe set, then locate the change with layer-wise probing, sparse dictionary learning, and causal patching. Four pre-registered outcomes — A rewriting, B gating, C mixed-by-axis, D no signal — are each mapped *in advance* to a measurable per-phase signature (the decision-rule table in [plans/project-plan.md](plans/project-plan.md)).
+
+## ICCD-6K — the probe set
+
+A 6,000-item controlled minimal-pair probe set in the CounterFact/ROME lineage — purpose-built for this measurement, not a benchmark and not comprehensive cultural coverage. Fixed scope: **60 cells = 3 axes × 5 regions × 4 sub-concepts** (regions per INDICA). Depth is 100 items/cell, raised from 50 *purely for statistical power* (Holm-corrected per-cell detectable effect d≈0.59 → d≈0.42); breadth is unchanged, and the 3K/50 configuration is retained as a documented fallback. The per-item readout is a log-odds difference (ΔL, in nats) — never a raw probability, so answer-suppression stays detectable; Axis A adds a normalized logit difference LD(r,r′). Corruption is axis-specific Symmetric Token Replacement: Axis A a cross-anchor swap defining r′, Axes B/C description-based (C with reversed sign). QA is two-tier — automated first (deterministic filters + Wikipedia-and-SANSKRITI cross-validation + base-model validation), then human review.
+
+## The five phases
+
+1. **Dataset** — build ICCD-6K (full spec: [plans/ICCD-6K-plan.md](plans/ICCD-6K-plan.md)).
+2. **Layer-wise probing** — linear + MDL probes, Logit-Lens KL, Direct Logit Attribution.
+3. **Dictionary learning** — BatchTopK Crosscoders (Δ-norm: preserved/shifted/exclusive) + Skip Transcoders, trained on background text.
+4. **Causal validation** — cross-checkpoint patching, path patching, refusal-direction ablation/addition, latent-feature steering.
+5. **Synthesis** — pre-registered per-axis verdict plus cross-model generality.
+
+**Model suite:** Pair 1 Llama-3-8B (base/Instruct) and Pair 2 Gemma-2-9B (base/it) are the clean Western-RLHF core; Pair 3 Mistral-Small-3.1-24B / Sarvam-M is exploratory (SFT+RLVR, multi-factor confound).
+
+## Repository
+
+| Path | Contents |
 |---|---|
-| [`papers/`](papers/) | The 7 source research papers as OCR markdown, one folder per paper. **Inputs.** |
-| [`paper-analyses/`](paper-analyses/) | Our web-validated, fact-checked technical analysis of each paper (one file each). **Stage-1 output.** |
-| [`plans/`](plans/) | Planning documents (see below). |
-| [`plans/ICCD-6K-plan.md`](plans/ICCD-6K-plan.md) | **The current Phase 1 dataset-construction plan (v1.2).** ← start here for Phase 1. |
-| [`plans/project-plan.md`](plans/project-plan.md) | End-to-end project plan across all 5 phases. |
-| [`plans/_archive/`](plans/_archive/) | Superseded plan versions, kept for lineage (e.g. the v1.1-WIP ICCD-3K plan). |
+| [papers/](papers/) | 7 source papers (OCR markdown), one folder each |
+| [paper-analyses/](paper-analyses/) | our web-validated technical analysis of each |
+| [plans/project-plan.md](plans/project-plan.md) | end-to-end plan (all five phases) |
+| [plans/ICCD-6K-plan.md](plans/ICCD-6K-plan.md) | Phase 1 dataset spec |
+| [plans/_archive/](plans/_archive/) | superseded versions, kept for lineage |
 
-> Navigation aid: `papers/` (the sources) ↔ `paper-analyses/` (what we made of them) ↔ `plans/` (where the project is going).
-
----
-
-## The 7 papers and why each is here
-
-| Folder | Paper (verified) | Role in this project |
-|---|---|---|
-| `ROME/` | Meng et al., *Locating and Editing Factual Associations in GPT*, NeurIPS 2022 (arXiv:2202.05262) | Minimal-pair / CounterFact template; mid-layer-MLP "rewriting" signature. |
-| `IOI/` | Wang et al., *Interpretability in the Wild* (IOI), ICLR 2023 (arXiv:2211.00593) | Path patching; logit-difference metric; self-repair caveat. |
-| `RefusalDirection/` | Arditi et al., *Refusal Is Mediated by a Single Direction*, NeurIPS 2024 (arXiv:2406.11717) | Axis C method; base-vs-aligned "repurposing" logic. |
-| `ActivationPatching/` | Zhang & Nanda, *Towards Best Practices of Activation Patching*, ICLR 2024 (arXiv:2309.16042) | Governs corruption (STR over Gaussian noising) and metric (logit difference over probability). |
-| `CLMBench/` | Hu et al., *CLM-Bench*, arXiv:2601.17397 (2026) | Closest prior work; layer-selection diagnostic; "generation collapse ≠ knowledge erasure." |
-| `Indica/` | Madhusudan et al., *Common to Whom?* (INDICA), ACL 2026 Main (arXiv:2601.15550) | Validated 5-region taxonomy; LLM-judge over-merge warning. |
-| `Sanskriti/` | Maji et al., *SANSKRITI*, ACL Findings 2025 (arXiv:2506.15355) | Cultural content source (21,853 items); answer-replacement label-noise caveat. |
-
----
+**Papers:** ROME (arXiv:2202.05262), IOI (2211.00593), Refusal Direction (2406.11717), Activation Patching (2309.16042), CLM-Bench (2601.17397), INDICA (2601.15550), SANSKRITI (2506.15355).
 
 ## Status
 
-- **Phase 1 plan:** v1.2 (ICCD-6K), current. Depth raised from 50→100 items/cell (3,000→6,000) **for statistical
-  power only**; the 60-cell scope (3 axes × 5 regions × 4 sub-concepts) is fixed. The 3K configuration is retained
-  as a documented fallback.
-- Phases 2–5 will get their own detailed specs before each runs.
-- Everything is version-tracked in git. Nothing is locked except the OSF pre-registration, filed before Stage 8.
+v1.2 (ICCD-6K). Reproducible (pinned seeds and commit hashes, archived Wikipedia snapshot), pre-registered on OSF before model-side validation; CC-BY-4.0 data / MIT code. Start at [plans/ICCD-6K-plan.md](plans/ICCD-6K-plan.md) for Phase 1, or [plans/project-plan.md](plans/project-plan.md) for the whole study.
