@@ -1,0 +1,38 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# --- Large data caches / build artifacts (Phase 1 pipeline) ---
+# Keep specs, schemas, and the released JSON small-artifacts tracked;
+# ignore bulky scraped caches and archives that are reproducible from snapshots.
+wikipedia_cache/
+web_sources/
+web_sources.tar.gz
+*.tar.gz
+data/raw/
+data/cache/
+*.parquet
+*.arrow
+
+# --- Model / HF caches ---
+.hf_cache/
+hf_home/
+*.safetensors
+*.bin
+
+# --- Logs ---
+*.log
