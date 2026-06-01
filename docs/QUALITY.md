@@ -212,3 +212,36 @@ Indian-aligned **Mistral→Sarvam-M weakens the textile→state binding the MOST
 corr 0.44 (North) / 0.35 (South), Δ +3.32 / +3.91, 79–84 % of items base>aligned.** South costume is
 the strongest weakening yet, extending the Sarvam-M regional-selectivity signal from Festivals to a
 second sub-concept (directional, single confounded arm — Phase 4 adjudicates).
+
+## A01-EE-02 (East) — Tier-1.5 quality (released); A01-WW-02 (West) — structural-ceiling finding
+
+**A01-EE-02 (East), released.** Same generalized chain; web-tier-dominated across all 10 eligible East
+states. The **verify Workflow was hardened this wave** (judge from the provided evidence + own knowledge,
+≤5 web searches, mandatory StructuredOutput call, batch 7) after schema-forced subagents repeatedly
+over-researched and failed to emit (0/14 → 100 % emit). Funnel: 163 pairs → 156 F1-F7 → **131 Tier-1.5
+pass** → 113 (−18 fuzzy-dup) → **108 base-Llama ΔL>1.0 gate (96 %)** → **100 final**.
+
+| Metric | A01-EE-02 |
+|---|---|
+| Stage-4 filtered | 156 |
+| Tier-1.5 verified pass | 131 |
+| After fuzzy-dup drop | **113** (−18) |
+| Base-Llama gate (ΔL>1.0) | **108** (96 %) |
+| Final | **100** |
+| Provenance gaps | 0 |
+| States represented | 10 (Od 16 / As 16 / WB 14 / Man 12 / Miz 9 / Meg 9 / Bih 8 / Nag 7 / Tri 6 / Sik 3) |
+| Token 1/2/3 | 8 / 80 / 12 (2-tok-heavy, the East Axis-A state↔token correlation) |
+
+What Tier-1.5 caught: a weaver CASTE (*Bhulia*), a fashion BRAND (*Boito*), and a region-name **leak**
+(*Bengal Batik* — the anchor literally contains "Bengal"); all four checks applied, counterfactual_ok ≈ 100 %.
+Cross-model: Llama corr **0.92** (Δ +0.85), Gemma aligned **sharper** (corr 0.92, Δ −2.31), **Mistral→Sarvam-M
+corr 0.47, Δ +4.28, 88/100 base>aligned — the strongest costume weakening of any cell** (NN +3.32 → SS +3.91 → EE +4.28).
+
+**A01-WW-02 (West) — PAUSED, a STRUCTURAL CEILING, not a quality failure.** Axis-A's F1 ≤3-token cap leaves
+West only **3 eligible states** (Gujarat/Maharashtra/Goa). Distinctive documented textiles per state are
+finite (unlike festivals): exhaustive sourcing (4 hardened web passes, incl. every Kutch embroidery
+sub-style) → only **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1), and the gate would drop
+the obscure Gujarat sub-styles → ~40 final. The user chose **Release East only** and paused West for a
+design discussion (covering Central too — only 2 states). The 57 verified WW-02 items are construct-valid
+and retained; the cell is paused on the **100-items-per-cell design question**, not on quality. See
+`plans/handoff-A01-WW-02-CC-02.md`.

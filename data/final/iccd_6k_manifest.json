@@ -1,6 +1,6 @@
 {
-  "cells_built": 7,
-  "total_items": 700,
+  "cells_built": 8,
+  "total_items": 800,
   "cells": [
     {
       "cell": "A01-CC-01",
@@ -8,6 +8,10 @@
     },
     {
       "cell": "A01-EE-01",
+      "n": 100
+    },
+    {
+      "cell": "A01-EE-02",
       "n": 100
     },
     {

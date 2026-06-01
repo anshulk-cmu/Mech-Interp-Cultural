@@ -101,9 +101,11 @@ const SCHEMA = {
 function promptFor(batch) {
   return `You are doing construct-validity verification for a controlled minimal-pair research dataset. Axis A tests whether a model %BINDING%. Each item has a clean prefix naming a %ITEM% (the anchor) whose correct completion is the target state, and a corrupted prefix naming a DIFFERENT-region %ITEM% (the corruptor).
 
+>>> CRITICAL OUTPUT RULE: your FINAL action MUST be a call to the StructuredOutput tool with one verdict per item_id. Do NOT end your turn with a prose summary — an answer with no tool call is a total failure. These items are ALREADY web-sourced (each carries a source + wiki_extract), so JUDGE construct validity from the provided evidence + your own knowledge. Only web-search the FEW items that genuinely look doubtful or unfamiliar; do NOT exhaustively re-search every item. Budget at most ~5 web searches for the whole batch, then immediately CALL StructuredOutput. <<<
+
 For EACH item below, apply these four checks (each a boolean) and decide pass = (all four true):
 
-1. fact_ok — %FACT_OK% NEVER assume — verify. Do not manufacture facts.
+1. fact_ok — %FACT_OK% Use the provided evidence + your knowledge first; web-search ONLY if genuinely unsure. Do not manufacture facts.
 
 2. leakage_ok — Does the clean prefix avoid leaking the answer? FALSE if the anchor text contains the target state's own name, OR a major city/district/region name that gives the state away (e.g. Lucknow/Prayagraj/Varanasi->UP, Jaipur/Jodhpur/Udaipur->Rajasthan, Amritsar/Ludhiana->Punjab, Dehradun/Haridwar->Uttarakhand, Leh->Ladakh, Kolkata->West Bengal, Patna/Gaya->Bihar, Guwahati->Assam, Bhubaneswar/Cuttack/Puri->Odisha, Imphal->Manipur, Shillong->Meghalaya, Aizawl->Mizoram, Kohima->Nagaland, Agartala->Tripura, Gangtok->Sikkim). NOTE: a craft NAMED AFTER its town of origin (Banarasi, Sambalpuri, Chanderi, Pochampally, Kanchipuram, Mangalagiri) does NOT contain the STATE name and PASSES leakage_ok; only flag FALSE when the explicit state name or an unmistakable city giveaway is literally present in the anchor.
 
@@ -111,7 +113,7 @@ For EACH item below, apply these four checks (each a boolean) and decide pass = 
 
 4. natural_ok — Do BOTH prefixes read as natural English naming a single clean %ITEM%? FALSE for parentheticals, commas, embedded prepositions ("X in Y"), mojibake, truncation fragments, bare language words, or non-name strings.
 
-Be strict but fair: genuine, distinctive regional items should PASS; noise (wrong-category entries, places, orgs, mis-attributions, pan-Indian non-distinctive items, malformed names) should FAIL the relevant check. In 'reason' give a one-line justification; in 'source' cite the URL or wiki page that confirms fact_ok (or "n/a" if failed). Return exactly one verdict per item_id. Then CALL StructuredOutput.
+Be strict but fair: genuine, distinctive regional items should PASS; noise (wrong-category entries, places, orgs, mis-attributions, pan-Indian non-distinctive items, malformed names) should FAIL the relevant check. In 'reason' give a one-line justification; in 'source' cite the URL or wiki page that confirms fact_ok (or "n/a" if failed). Return exactly one verdict per item_id, then CALL StructuredOutput (mandatory final action — do not stop without it).
 
 ITEMS:
 ${batch.map((it, i) => `${i + 1}. item_id=${it.item_id}

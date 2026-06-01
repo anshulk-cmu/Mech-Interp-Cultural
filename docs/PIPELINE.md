@@ -344,6 +344,51 @@ non-destructive). Re-threshold → `finalize_cell` → `cross_model` → `combin
 the AWS G/VT vCPU quota is now 48, so the 24B run can move to a second AWS box — a g6.12xlarge /
 g6e.12xlarge 4-GPU instance — instead of Babel; see the EE-02/WW-02 handoff.)*
 
+## Costume wave 2: A01-EE-02 (East) released; A01-WW-02 (West) PAUSED at a structural ceiling
+
+Built A01-EE-02 to release and discovered a **design-level limit** for the few-eligible-state Costume cells.
+
+### A01-EE-02 (East) funnel
+```
+candidates: Wikipedia broad-cat (48) + 3 web-research passes (20-agent sweep, 12-agent retry,
+            5-agent rich-state top-up; every textile web-verified + source URL)
+ -> Stage3 pairs 163 -> Stage4 F1-F7 156 -> Tier-1.5 Claude 131 -> 113 (-18 fuzzy-dup)
+ -> Stage8 base-Llama ΔL>1.0 gate 108 (96% retention) -> Pass B 100
+    (Odisha 16 / Assam 16 / WB 14 / Manipur 12 / Mizoram 9 / Meghalaya 9 / Bihar 8 /
+     Nagaland 7 / Tripura 6 / Sikkim 3; token 8/80/12). Jharkhand (4 tok) & Arunachal (5 tok)
+     F1-excluded. 0 missing cross-validation.
+```
+Cross-model: Llama corr 0.92 (Δ +0.85), Gemma aligned sharper (corr 0.92, Δ −2.31), **Mistral→Sarvam-M
+corr 0.47, Δ +4.28 (88/100 base>aligned) — the strongest costume weakening of any cell** (NN +3.32 → SS +3.91 → EE +4.28).
+
+### Verify/research Workflow hardening (landed in `scripts/gen_verify_workflow.py`; reusable)
+Schema-forced `general-purpose` subagents that web-search heavily **exhaust their turn budget and never
+call StructuredOutput** (observed 0/14, 1/10, 8/20 emit rates). Fixes:
+- **Verify:** judge from the provided evidence + own knowledge; web-search only the doubtful few
+  (budget ≤5); a `CRITICAL OUTPUT RULE` makes the StructuredOutput call mandatory; **batch size 7**.
+  After this, emit rate = 100 % (20/20, 23/23, 13/13).
+- **Research:** **confirm-and-emit** — give each agent an EXPLICIT candidate list (known GI/handloom
+  inventories) so it confirms rather than open-ended-searches, cap searches, force the emit. Open-ended
+  "dig into the long tail" prompts fail; explicit-seed "confirm these, EMIT" prompts succeed.
+
+### Stage 8 both-tiers-on-AWS (no Babel) + gotchas
+The G/VT vCPU quota is 48, so all 6 models scored on AWS. **Small (g6.xlarge=4 vCPU) + large
+(g6.12xlarge=48) cannot run concurrently (52 > 48)** — run sequentially, or consolidate onto the large
+box. Gotchas learned (now in `stage8_score.py` + the CC-02 handoff): **pull results BEFORE stopping** (a
+stopped g6.xlarge may not restart — no AZ capacity); **Gemma-2 crashes under multi-GPU `device_map='auto'`**
+(sliding-window cache device mismatch) → pin the ≤9B Gemma to a single GPU (`device_map={"":0}`, now the
+default in `stage8_score.py`); **don't trust only the end-of-run marker** — a mid-suite `set -e` crash leaves
+the box idle. `scripts/scoring/ec2_recover_ee02.sh` is the per-model-independent recovery runner.
+
+### A01-WW-02 (West) — structural-ceiling finding (PAUSED, design decision pending)
+Axis-A targets ARE the state, so the F1 ≤3-token cap fixes per-region eligibility: North 6 / South 5 /
+East 10 — but **West 3 (Gujarat/Maharashtra/Goa)** and **Central 2 (MP + Chhattisgarh)**. Festivals were
+abundant enough (WW-01 = 100); textiles are NOT — distinctive documented per-state textiles are finite.
+Exhaustive West sourcing yielded only **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1) →
+projected ~40 final. Per user decision, **East was released and West paused** for a design discussion
+covering both West and Central (ship short cells / substitute the 02 sub-concept / lower n / re-scope).
+Interim WW-02 artifacts retained. See `plans/handoff-A01-WW-02-CC-02.md`.
+
 ## Known improvements for scaling to 60 cells
 - **Corruptor quality (Stage 3):** the SANSKRITI corruptor extraction yields some malformed anchors;
   Claude caught them but it wastes candidates. Clean the corruptor pool / prefer Wikipedia corruptors.

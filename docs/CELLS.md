@@ -5,10 +5,11 @@
 60 cells = **3 axes × 5 regions × 4 sub-concepts**, 100 items each (6,000 total).
 Cell id = `A0{axis}-{REGION}-0{sub}`, e.g. `A01-SS-01`. Regions: NN North · SS South · EE East · WW West · CC Central.
 
-**Legend:** ✅ done · 🟡 in progress · ⬜ not started.
+**Legend:** ✅ done · 🟡 in progress · ⏸️ paused (design decision) · ⬜ not started.
 **Per-cell stages:** source → STR pairs → F1-F7 filters → base-model gate → Claude verify → final 100 → 6-model cross-model scoring.
 
-**Summary: 7 / 60 released (A01-*-01 Festivals ×5, + A01-NN-02 & A01-SS-02 Costume & Textile), 700 items, all 6/6 models scored.**
+**Summary: 8 / 60 released (A01-*-01 Festivals ×5, + A01-NN-02, A01-SS-02 & A01-EE-02 Costume & Textile), 800 items, all 6/6 models scored.**
+**A01-WW-02 (West) is PAUSED** at its structural textile ceiling (only 3 eligible states → 57 verified-distinct, ~40 final); **A01-CC-02 (Central) is similarly constrained** (only 2 states). Both await a design decision on the few-eligible-state Costume cells (see the EE-02/WW-02 notes below + `plans/handoff-A01-WW-02-CC-02.md`).
 SANSKRITI festival inventory by region (from Stage 1) noted where known, to gauge sourcing ease.
 
 ---
@@ -18,7 +19,7 @@ SANSKRITI festival inventory by region (from Stage 1) noted where known, to gaug
 | Sub-concept | NN North | SS South | EE East | WW West | CC Central |
 |---|---|---|---|---|---|
 | 01 Festivals | ✅ A01-NN-01 | ✅ A01-SS-01 | ✅ A01-EE-01 | ✅ A01-WW-01 | ✅ A01-CC-01 |
-| 02 Costume & Textile | ✅ A01-NN-02 | ✅ A01-SS-02 | ⬜ A01-EE-02 | ⬜ A01-WW-02 | ⬜ A01-CC-02 |
+| 02 Costume & Textile | ✅ A01-NN-02 | ✅ A01-SS-02 | ✅ A01-EE-02 | ⏸️ A01-WW-02 | ⬜ A01-CC-02 |
 | 03 Cuisine | ⬜ A01-NN-03 | ⬜ A01-SS-03 | ⬜ A01-EE-03 | ⬜ A01-WW-03 | ⬜ A01-CC-03 |
 | 04 Rituals & Ceremonies | ⬜ A01-NN-04 | ⬜ A01-SS-04 | ⬜ A01-EE-04 | ⬜ A01-WW-04 | ⬜ A01-CC-04 |
 
@@ -53,6 +54,8 @@ SANSKRITI festival inventory by region (from Stage 1) noted where known, to gaug
 | **A01-CC-01** | ✅ 143 (SANSKRITI 1 / Wiki 14 / web 128) | ✅ 134 | ✅ 134 | ✅ 102 (Llama-3.1-8B) | ✅ 113 (118 pass −5 dup) | ✅ **100** | ✅ **6/6 models** |
 | **A01-NN-02** | ✅ web-tier (SANSKRITI/Wiki thin; 4 web passes) | ✅ 156 | ✅ 146 | ✅ 101 (Llama-3.1-8B) | ✅ 110 (123 pass −13 dup) | ✅ **100** | ✅ **6/6 models** |
 | **A01-SS-02** | ✅ web-tier (SANSKRITI/Wiki thin; 5 web passes) | ✅ 142 | ✅ 142 | ✅ 106 (Llama-3.1-8B) | ✅ 107 (127 pass −20 dup) | ✅ **100** | ✅ **6/6 models** |
+| **A01-EE-02** | ✅ web-tier (broad-cat + 3 web passes; all 10 East states) | ✅ 163 | ✅ 156 | ✅ 108 (Llama-3.1-8B) | ✅ 113 (131 pass −18 dup) | ✅ **100** | ✅ **6/6 models** |
+| **A01-WW-02** | ⏸️ PAUSED — structural ceiling (3 states) | 91 | 91 | — | 57 verified (63 pass −6 dup) | ⏸️ ~40 proj. | — |
 
 **A01-SS-01 notes:** 100% strict-clean, state-balanced (Kerala 39 / TN 24 / Karnataka 16 / AP 14 / Telangana 7), 0 provenance gaps. Per-model scores appended in `data/final/iccd_A01-SS-01.json`. Cross-model: RLHF pairs preserve/sharpen binding (corr 0.86–0.91); **Sarvam-M (Indian fine-tune) weakens it (Δ +1.36, corr 0.36) — candidate rewrite**; tokenizer gate passed. Details: `docs/QUALITY.md`, `docs/CROSSMODEL.md`.
 
@@ -73,6 +76,12 @@ SANSKRITI festival inventory by region (from Stage 1) noted where known, to gaug
 - **A01-SS-02 (South):** funnel — same chain + a focused top-up → 142 pairs → 142 F1-F7 → 127 Tier-1.5 → 107 (−20 fuzzy-dup) → **106 gate / 104 survivors** → **100 final** (Karnataka 25 / Tamil Nadu 24 / Andhra Pradesh 19 / Kerala 16 / Telangana 16; token 41/24/35). 0 provenance gaps. Reached 100 via a small **second scoring round** (9 newly-sourced famous GI textiles, e.g. Madras checks / Salem Fabric / Khun) appended to the suite.
 - **Textile-specific lessons.** SANSKRITI costume questions don't fit the festival-shaped anchor regex (yield ~6–8 clean anchors/cell), so both cells leaned hard on the **web tier** (every textile web-verified + source URL; GI-registry / Ministry-of-Textiles / Wikipedia). The base-Llama ΔL gate retains textiles at **~92–96%** — as strong as festivals — because Tier-1.5 already filters to real, distinctive, well-documented GI textiles the model knows. Verification caught brands (Fabindia, Anokhi, JJ Valaya), weaver-CASTE names (Adaviyar, Basor), jewellery (Araimudi, Bangle), paintings (Aipan, Pichwai, Cheriyal), and government powerloom schemes (Bathukamma/Sircilla sarees). Fuzzy-dedup (now textile-suffix aware) collapsed saree/sari/silk variants.
 - **Cross-model (6/6 models, appended to the release JSONs):** clean-RLHF preserves binding — Llama-3.1-8B corr **0.94** (N) / **0.95** (S); **Gemma-2-9B aligned is sharper** (Δ −2.56 / −2.37, corr 0.91 / 0.94), the same instruction-tuning-sharpens pattern as Festivals. **Mistral→Sarvam-M (Indian SFT+RLVR) weakens binding the MOST of any cell built so far — corr 0.44 (North) / 0.35 (South), Δ +3.32 / +3.91, 79–84 % of items base>aligned** — a strong costume-axis selectivity signal (South strongest). AWS instances + SGs torn down; Babel token/dir/cache wiped (both scoring rounds).
+
+**A01-EE-02 notes (released, wave 5 — East Costume & Textile).** Built on the STEP-0 generalization. SANSKRITI/Wikipedia costume-thin, so web-tier-dominated as before. **This wave both model tiers ran on AWS (no Babel)** — the G/VT vCPU quota is now 48.
+- **A01-EE-02 (East):** funnel — Wikipedia broad-cat + SANSKRITI + 3 web passes (a 20-agent sweep, a 12-agent retry, a 5-agent rich-state top-up) → 163 pairs → 156 F1-F7 → 131 Tier-1.5 Claude-pass → 113 (−18 fuzzy-dup) → **108 base-Llama ΔL>1.0 gate (96 % retention)** → **100 final**. All 10 eligible East states: Odisha 16 / Assam 16 / West Bengal 14 / Manipur 12 / Mizoram 9 / Meghalaya 9 / Bihar 8 / Nagaland 7 / Tripura 6 / Sikkim 3; token 8/80/12 (2-token-heavy — the same Axis-A state↔token correlation as EE-01). 0 missing cross-validation. **Jharkhand (4 tok) & Arunachal Pradesh (5 tok) excluded by the F1 cap.** Verification caught weaver-CASTE names (Bhulia), a fashion brand (Boito), and a `Bengal Batik` leak (anchor literally contains the region name). Strong NE coverage (Manipur Phanek/Wangkhei Phee/Moirang Phee, Mizo puan, Naga/Chakhesang shawls, Tripura Risa/Rignai, Lepcha, Bodo Dokhona/Jwmgra, Karbi/Tai-Phake/Rabha tribal wraps).
+- **Cross-model (6/6 models):** clean-RLHF preserves — Llama-3.1-8B corr **0.92** (Δ +0.85); **Gemma-2-9B aligned is sharper** (corr 0.92, Δ −2.31, 74/100 aligned>base). **Mistral→Sarvam-M weakens binding the MOST of ANY cell to date — corr 0.47, Δ +4.28, 88/100 base>aligned** — extending the costume-axis Sarvam-M selectivity signal (NN +3.32 → SS +3.91 → EE +4.28). Both AWS boxes stopped after pulling results (not torn down — awaiting user teardown).
+
+**A01-WW-02 (West) — PAUSED at a STRUCTURAL CEILING (design decision pending; not released).** Axis-A targets ARE the state, so the F1 ≤3-token cap fixes eligibility: West has only **3 eligible states** (Gujarat/Maharashtra/Goa; Dadra & Nagar Haveli & Daman & Diu is 13 tok, excluded). Unlike festivals (WW-01 hit 100 as Mah40/Guj30/Goa30), distinctive documented **textiles per state are finite**: exhaustive sourcing (Wikipedia broad-cats + 4 hardened web passes, incl. every documented Kutch embroidery sub-style) yielded **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1), and the model gate would cut the obscure Gujarat sub-styles (Suf/Neran/Kanbi/Mukko/…) → **projected ~40 final**. The user chose **"Release East only"** and paused WW-02; interim artifacts (`pairs_filtered_/claude_verdicts_/stage8_input_A01-WW-02.json`) are kept for the design discussion. **A01-CC-02 (Central) is the same problem, worse — only 2 eligible states (MP + Chhattisgarh) → ~10–15 distinct.** The decision (ship short cells / substitute sub-concept / lower n / re-scope) covers BOTH cells — see `plans/handoff-A01-WW-02-CC-02.md`.
 
 ## Sourcing-ease hints (SANSKRITI festival inventory, Stage 1)
 A01 Festivals by region: **South 323, East 311, North 268, West 132, Central 104**. East/North are data-rich (easy next builds); West/Central thinner; Northeast (within East) is Wikipedia-thin → leans on the web tier. (A02/A03 sub-concepts map to other SANSKRITI attributes — Dance_and_Music, Art, Religion, History, Medicine — with some gaps that lean on Wikipedia/web; see `docs/PIPELINE.md`.)
