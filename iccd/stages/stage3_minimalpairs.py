@@ -1,9 +1,10 @@
 """Stage 3 — Axis A STR cross-anchor-swap minimal pairs.
 
-Clean prefix names the cell's festival -> target state r. The corrupted twin names a
-same-sub-concept festival from a DIFFERENT region -> r' (so r' != r by construction).
-Both share an identical template suffix, so only the swapped anchor differs (STR), and
-the swapped anchor is token-length matched (relax +/-1, logged). Deterministic under
+Clean prefix names the cell's cultural anchor (festival / textile / dish / ritual,
+per sub-concept) -> target state r. The corrupted twin names a same-sub-concept anchor
+from a DIFFERENT region -> r' (so r' != r by construction). Both share one fixed relation
+frame (config.RELATION_TEMPLATES[axis, sub]), so only the swapped anchor differs (STR),
+and the swapped anchor is token-length matched (relax +/-1, logged). Deterministic under
 the counterfactual-audit seed. Leakage (F2/F3) and corruption checks are Stage 4.
 """
 from __future__ import annotations
@@ -12,20 +13,25 @@ import hashlib
 import random
 import sys
 
-from ..config import CORRUPTOR_BANK, INTERIM, SEEDS, SMOKE_CELL, cell_id
+from ..config import CORRUPTOR_BANK, INTERIM, SEEDS, SMOKE_CELL, cell_id, relation_template
 from ..logutil import get_logger
 from ..state import jsonl_read, read_json, write_json
 from ..tok import n_tokens, target_token_len
 
 log = get_logger("stage3")
-TEMPLATE = "{anchor} is a festival celebrated in the Indian state of"
 
 
-def _corruptor_pool(clean_region):
-    """Clean, different-region festivals from the reusable corruptor bank (STR cross-anchor swap)."""
+def _corruptor_pool(clean_region, sub):
+    """Clean, different-region, SAME-sub-concept anchors from the reusable corruptor bank
+    (STR cross-anchor swap). The bank is keyed by sub-concept then region; a same-sub-concept
+    corruptor is mandatory (a textile, not a festival, for A01-02) or the corrupted prefix is
+    nonsense under the textile relation frame. Falls back to the legacy flat region-keyed layout
+    (treated as sub-concept '01') for back-compat."""
     bank = read_json(CORRUPTOR_BANK, {})
+    by_sub = bank.get("by_subconcept")
+    region_map = by_sub.get(sub, {}) if by_sub else {k: v for k, v in bank.items() if not k.startswith("_")}
     out = []
-    for rc, items in bank.items():
+    for rc, items in region_map.items():
         if rc.startswith("_") or rc == clean_region:
             continue
         for it in items:
@@ -44,8 +50,9 @@ def run(cell=SMOKE_CELL, force: bool = False):
         return
 
     rng = random.Random(SEEDS["counterfactual_audit"])
-    corruptors = _corruptor_pool(region)
-    log.info("corruptor pool (other regions): %d", len(corruptors))
+    template = relation_template(axis, sub)
+    corruptors = _corruptor_pool(region, sub)
+    log.info("corruptor pool (other regions, sub %s): %d", sub, len(corruptors))
 
     pairs = []
     for c in sorted(jsonl_read(src), key=lambda c: c["anchor_key"]):
@@ -68,8 +75,8 @@ def run(cell=SMOKE_CELL, force: bool = False):
             "r": target, "r_prime": corr["state"],
             "corruptor_anchor": corr["anchor"], "corruptor_region": corr["region"],
             "length_relaxed": relaxed,
-            "clean_prefix": TEMPLATE.format(anchor=anchor),
-            "corrupted_prefix": TEMPLATE.format(anchor=corr["anchor"]),
+            "clean_prefix": template.format(anchor=anchor),
+            "corrupted_prefix": template.format(anchor=corr["anchor"]),
             "target_tokens": target_token_len(target),
             "source_primary": c["source_primary"], "wiki": c["wiki"],
             "web_source_url": c.get("web_source_url"),

@@ -48,6 +48,10 @@ def main():
     kw = dict(device_map="auto", low_cpu_mem_usage=True, token=token)
     if "gemma" in a.model.lower():
         kw["attn_implementation"] = "eager"  # Gemma-2 logits are correct only with eager attention
+        # Gemma-2's sliding-window KV-cache update crashes when sharded across GPUs
+        # (RuntimeError: indices ... same device). The 9B fits one L4/L40S, so pin it to a single
+        # device — safe on 1-GPU boxes too (device_map="auto" already lands there).
+        kw["device_map"] = {"": 0}
     try:  # transformers >=5 renamed torch_dtype -> dtype
         model = AutoModelForCausalLM.from_pretrained(a.model, dtype=torch.float16, **kw)
     except TypeError:

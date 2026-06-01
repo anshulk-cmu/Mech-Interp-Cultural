@@ -6,7 +6,8 @@ verdict, producing the release record. Missing-cross-validation count must be ze
 """
 from __future__ import annotations
 
-from ..config import FINAL, INTERIM, REGION_NAMES, STATE_TO_REGION, SMOKE_CELL, cell_id
+from ..config import (FINAL, INTERIM, REGION_NAMES, STATE_TO_REGION, SMOKE_CELL, SUBCONCEPTS,
+                      cell_id)
 from ..logutil import get_logger
 from ..state import jsonl_read, read_json, write_json
 
@@ -14,7 +15,9 @@ log = get_logger("stage6")
 
 
 def run(cell=SMOKE_CELL):
+    axis, region_code, sub = cell
     cid = cell_id(*cell)
+    sub_concept_name = SUBCONCEPTS[axis][sub]
     final = read_json(INTERIM / f"selected_{cid}.json", [])
     dl = {r["item_id"]: r for r in jsonl_read(INTERIM / f"stage8_results_{cid}.jsonl")}
     verds = {v["item_id"]: v for v in read_json(INTERIM / f"claude_verdicts_{cid}.json", [])}
@@ -28,8 +31,8 @@ def run(cell=SMOKE_CELL):
             missing += 1
         region = STATE_TO_REGION.get(p["target"], cid.split("-")[1])
         out.append({
-            "item_id": iid, "cell_id": cid, "axis": "A01",
-            "region": region, "region_name": REGION_NAMES[region], "sub_concept": "Festivals",
+            "item_id": iid, "cell_id": cid, "axis": axis,
+            "region": region, "region_name": REGION_NAMES[region], "sub_concept": sub_concept_name,
             "anchor": p["anchor"], "target": p["target"],
             "clean_prefix": p["clean_prefix"], "corrupted_prefix": p["corrupted_prefix"],
             "r": p["r"], "r_prime": p["r_prime"], "corruptor_anchor": p["corruptor_anchor"],

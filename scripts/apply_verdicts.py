@@ -22,7 +22,12 @@ from iccd.state import read_json, write_json
 
 _GENERIC = {"fair", "mela", "melo", "festival", "festivals", "utsav", "mahotsav", "yatra",
             "jatra", "zatra", "urs", "tihar", "parva", "parab", "poonam", "purnima", "no",
-            "the", "of", "ka", "ki", "maha", "shri", "shree"}
+            "the", "of", "ka", "ki", "maha", "shri", "shree",
+            # Costume & Textile generic type-words (A01-02): collapse "Ilkal saree"/"Ilkal sari",
+            # "Uppada Jamdani"/"Uppada Jamdani sarees", "Gadwal Sari"/"Gadwal saree" to one item.
+            "saree", "sarees", "sari", "saris", "silk", "cotton", "dhoti", "dhoties", "mundu",
+            "set", "shawl", "print", "printing", "durrie", "dhurrie", "durries", "dhurries",
+            "handloom", "handlooms", "cloth", "fabric", "weave", "weaving", "embroidery", "work"}
 
 
 def _core(anchor: str):

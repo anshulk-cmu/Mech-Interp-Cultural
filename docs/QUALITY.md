@@ -178,3 +178,70 @@ Llama/Gemma preserve or sharpen the binding (corr Llama 0.89 West / 0.86 Central
 aligned *sharper*), while the Indian-aligned **Sarvam-M weakens it most (corr 0.61 West / 0.50
 Central; Δ +0.29 / +0.03)** — Central ties East for the weakest correlation, reinforcing the
 regional-selectivity hint (directional, single confounded arm — Phase 4 adjudicates).
+
+## A01-NN-02 (North) + A01-SS-02 (South) — Tier-1.5 quality (first Costume & Textile cells)
+
+First non-Festivals sub-concept; the pipeline was generalized by sub-concept (STEP 0, `docs/PIPELINE.md`)
+before building. The A01-02 relation frame is `"{anchor} is a folk textile tradition associated with
+the Indian state of"`; corruptors are same-sub-concept, cross-region textiles (`corruptor_bank.json`
+`by_subconcept["02"]`); `fact_ok` requires a real, distinctive, GI-tag/handloom-board-documented
+regional textile of the target state.
+
+| Tier-1.5 rejection class (caught, costume-specific) | example | check |
+|---|---|---|
+| Fashion brand / retailer / designer | Fabindia, Anokhi, JJ Valaya, Tarun Tahiliani, Obeetee | fact_ok |
+| Weaver CASTE / community name (not a textile) | Adaviyar, Basor, Bhuiyar, Koshta, Tanti | fact_ok |
+| Jewellery / ornament / footwear | Bangle, Araimudi, Kunukku, Tilla Jutti | fact_ok |
+| Painting on cloth (not a weave/embroidery) | Aipan, Pichwai, Phad, Cheriyal scroll | fact_ok |
+| Government powerloom scheme / cluster (no GI) | Bathukamma saree, Sircilla "matchbox" saree | fact_ok |
+| Pan-Indian non-distinctive garment | angavastra, Mundu, Wedding sari, Bandhani→TN (mis-attribution) | fact_ok |
+| Bare place name, no textile noun | Bandar Polavaram, Bobbili | natural_ok / fact_ok |
+
+Funnels: **A01-NN-02** 146 F1-F7 → 123 Tier-1.5 → 110 (−13 fuzzy-dup) → 101 base-Llama ΔL>1.0 gate
+→ **100** (UP 28 / Rajasthan 26 / Punjab 21 / Uttarakhand 15 / Ladakh 8 / Haryana 2; token 47/38/15).
+**A01-SS-02** 142 F1-F7 → 127 Tier-1.5 → 107 (−20 fuzzy-dup) → 106 gate / 104 survivors → **100**
+(Karnataka 25 / TN 24 / AP 19 / Kerala 16 / Telangana 16; token 41/24/35; reached 100 via a 9-item
+second scoring round). Both **0 missing cross-validation**; manifest now **7/60 cells, 700 items**.
+The base-Llama ΔL gate kept textiles at **92 % (N) / 96 % (S)** — as strong as Festivals, because
+Tier-1.5 pre-filters to documented GI textiles. `counterfactual_ok` ≈ 100 % (curated textile corruptor
+bank). Fuzzy-dedup is the dominant attrition (saree/sari/silk name-variants).
+
+Cross-model (all 6 models, appended to the release JSONs): clean-RLHF preserves the binding — Llama-3.1-8B
+corr **0.94 N / 0.95 S**; Gemma-2-9B aligned is **sharper** (Δ −2.56 / −2.37, corr 0.91 / 0.94). The
+Indian-aligned **Mistral→Sarvam-M weakens the textile→state binding the MOST of any cell to date —
+corr 0.44 (North) / 0.35 (South), Δ +3.32 / +3.91, 79–84 % of items base>aligned.** South costume is
+the strongest weakening yet, extending the Sarvam-M regional-selectivity signal from Festivals to a
+second sub-concept (directional, single confounded arm — Phase 4 adjudicates).
+
+## A01-EE-02 (East) — Tier-1.5 quality (released); A01-WW-02 (West) — structural-ceiling finding
+
+**A01-EE-02 (East), released.** Same generalized chain; web-tier-dominated across all 10 eligible East
+states. The **verify Workflow was hardened this wave** (judge from the provided evidence + own knowledge,
+≤5 web searches, mandatory StructuredOutput call, batch 7) after schema-forced subagents repeatedly
+over-researched and failed to emit (0/14 → 100 % emit). Funnel: 163 pairs → 156 F1-F7 → **131 Tier-1.5
+pass** → 113 (−18 fuzzy-dup) → **108 base-Llama ΔL>1.0 gate (96 %)** → **100 final**.
+
+| Metric | A01-EE-02 |
+|---|---|
+| Stage-4 filtered | 156 |
+| Tier-1.5 verified pass | 131 |
+| After fuzzy-dup drop | **113** (−18) |
+| Base-Llama gate (ΔL>1.0) | **108** (96 %) |
+| Final | **100** |
+| Provenance gaps | 0 |
+| States represented | 10 (Od 16 / As 16 / WB 14 / Man 12 / Miz 9 / Meg 9 / Bih 8 / Nag 7 / Tri 6 / Sik 3) |
+| Token 1/2/3 | 8 / 80 / 12 (2-tok-heavy, the East Axis-A state↔token correlation) |
+
+What Tier-1.5 caught: a weaver CASTE (*Bhulia*), a fashion BRAND (*Boito*), and a region-name **leak**
+(*Bengal Batik* — the anchor literally contains "Bengal"); all four checks applied, counterfactual_ok ≈ 100 %.
+Cross-model: Llama corr **0.92** (Δ +0.85), Gemma aligned **sharper** (corr 0.92, Δ −2.31), **Mistral→Sarvam-M
+corr 0.47, Δ +4.28, 88/100 base>aligned — the strongest costume weakening of any cell** (NN +3.32 → SS +3.91 → EE +4.28).
+
+**A01-WW-02 (West) — PAUSED, a STRUCTURAL CEILING, not a quality failure.** Axis-A's F1 ≤3-token cap leaves
+West only **3 eligible states** (Gujarat/Maharashtra/Goa). Distinctive documented textiles per state are
+finite (unlike festivals): exhaustive sourcing (4 hardened web passes, incl. every Kutch embroidery
+sub-style) → only **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1), and the gate would drop
+the obscure Gujarat sub-styles → ~40 final. The user chose **Release East only** and paused West for a
+design discussion (covering Central too — only 2 states). The 57 verified WW-02 items are construct-valid
+and retained; the cell is paused on the **100-items-per-cell design question**, not on quality. See
+`plans/handoff-A01-WW-02-CC-02.md`.

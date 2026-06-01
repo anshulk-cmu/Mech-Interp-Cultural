@@ -254,6 +254,141 @@ Babel** (A6000×4, job 8227432) via `babel_suite_wwcc.sbatch`. Re-threshold → 
 → `cross_model` → `combine_cells` (manifest **5/60, 500 items**). AWS instance terminated + SG
 deleted; Babel token/dir/scratch-cache wiped.
 
+## Sub-concept generalization (STEP 0): A01-02 Costume & Textile (first non-Festivals build)
+
+Waves 1-3 were all **A01-01 Festivals**, so several stages were festival-hardcoded. Before
+building the first non-Festivals cells (A01-NN-02 North, A01-SS-02 South — Costume & Textile)
+the pipeline was **parametrized by sub-concept** so 03 Cuisine and 04 Rituals reuse it unchanged.
+A01-01 behavior is bit-for-bit preserved (the released festival cells are unaffected).
+
+- **STR relation frame (Stage 3) is per sub-concept.** `config.RELATION_TEMPLATES[(axis, sub)]`
+  holds the one fixed STR frame per cell (only the anchor token varies within a pair, so the
+  suffix stays identical — strict STR). A01-01 = `"{anchor} is a festival celebrated in the Indian
+  state of"` (verbatim); **A01-02 = `"{anchor} is a folk textile tradition associated with the
+  Indian state of"`** (plan §D.2). `stage3_minimalpairs.py` reads it via `relation_template(axis, sub)`.
+  03/04 carry provisional defaults, finalized when built.
+- **Corruptors are sub-concept-matched (Stage 3).** `corruptor_bank.json` is restructured to
+  `by_subconcept[sub][region]`; `_corruptor_pool(region, sub)` selects the matching pool (legacy
+  flat region keys still read as "01"). A reusing-festival-corruptors bug ("Pongal is a folk textile
+  tradition…") is structurally impossible now. Added a clean, single-state-distinctive **Costume
+  set ("02")** across all 5 regions (Phulkari/Punjab, Kanjeevaram/TN, Pochampally ikat/Telangana,
+  Sambalpuri/Odisha, Muga silk/Assam, Patola/Gujarat, Paithani/Maharashtra, Chanderi/MP, Kosa
+  silk/Chhattisgarh, …; ~26-item cross-region pool per cell, token-length 2-6 for length matching).
+- **Wikipedia sourcing is per sub-concept (Stage 2).** `_SUBCONCEPT_SOURCING[(axis, sub)]` gives
+  `state_cats` / `extra_cats` / `broad_cats`. Festival cats are per-state. For textiles the
+  per-state cats (`Textile arts of {s}`, `Crafts of {s}`) are **empty on en.wikipedia** (probed
+  2026-06-01), but India-level **broad cats** are rich — `Textile arts of India` (183), `Saris`
+  (61), `Embroidery in India` (35), `Indian clothing`. Broad cats are fetched **once** and each
+  member's state is **resolved from its Wikipedia extract restricted to the cell's region** (kept
+  only if exactly one region-state is named), so a shared category can't misattribute. `_GENERIC`
+  (the SANSKRITI-attestation skip set) gained costume vocabulary (saree/textile/weave/embroidery/…).
+- **Tier-1.5 verify prompt is per sub-concept.** `gen_verify_workflow.py` injects a
+  `_VERIFY_PROFILE[sub]` (binding sentence + `fact_ok` definition). A01-02 `fact_ok` requires a
+  *real, distinctive regional textile/weave/handloom/garment/embroidery of the target state*
+  (GI-tag / handloom-board aware), rejecting festivals/food/dance/people/places and pan-Indian
+  non-distinctive garments; leakage_ok notes that toponymic craft names (Banarasi, Sambalpuri,
+  Chanderi) are the normal convention and pass unless the explicit STATE name is present.
+- **Release record is per sub-concept (Stage 6).** `stage6_provenance.py` no longer hardcodes
+  `sub_concept:"Festivals"`/`axis:"A01"`; it reads `SUBCONCEPTS[axis][sub]` and the cell's axis.
+- **Costume leakage nuance.** Many textiles are toponymic (Banarasi←Banaras/UP, Sambalpuri←Sambalpur/
+  Odisha, Pochampally←a Telangana town). The verbatim-state-name F2 rule + gazetteer city flag +
+  Tier-1.5 adjudication handle this; the explicit-city variant ("Kanchipuram silk") fails leakage
+  while the adjective form ("Kanjeevaram") passes — the desired selection.
+
+## Costume wave: A01-NN-02 (North) + A01-SS-02 (South) — released, 6/6 models
+
+First **non-Festivals** cells, built on the STEP-0 generalization above.
+
+### Funnels
+```
+A01-NN-02: web-tier (SANSKRITI/Wiki costume-thin; Wikipedia broad-cats + 4 web passes)
+ -> Stage3 pairs 156 -> Stage4 F1-F7 146 -> Tier-1.5 Claude 123 -> 110 (-13 fuzzy-dup)
+ -> Stage8 base-Llama ΔL>1.0 gate 101 -> Pass B 100  (UP 28 / Rajasthan 26 / Punjab 21 /
+    Uttarakhand 15 / Ladakh 8 / Haryana 2; token 47/38/15)
+
+A01-SS-02: same chain + a focused top-up pass
+ -> Stage3 pairs 142 -> Stage4 F1-F7 142 -> Tier-1.5 Claude 127 -> 107 (-20 fuzzy-dup)
+ -> Stage8 gate 106 / survivors 104 -> Pass B 100  (Karnataka 25 / TN 24 / AP 19 /
+    Kerala 16 / Telangana 16; token 41/24/35)
+```
+**F1 exclusions:** North drops Himachal Pradesh + Jammu & Kashmir (the two textile-richest North
+states, >3 tokens) — a real coverage cost, documented; Delhi/Chandigarh have no distinctive regional
+textile tradition. South drops nothing (all 5 eligible states are textile-rich). Provenance: every
+web textile carries a source URL (GI registry / Ministry of Textiles / Wikipedia / craft archives);
+0 cross-validation gaps on either cell.
+
+### What was different from Festivals
+- **SANSKRITI is costume-thin in practice:** its costume questions don't match the festival-shaped
+  anchor regex, yielding only ~6–8 clean anchors/cell, so both cells are **web-tier-dominated** even
+  for "rich" South — heavier than the SANSKRITI inventory suggested. Took 4 (North) / 5 (South)
+  Workflow web passes to over-provision ≥130 filtered (declining yield: 180 → 77 → 31 → 27 distinct).
+- **ΔL gate retention ≈ 92–96 %** — as strong as Festivals. Llama-3.1-8B binds well-documented GI
+  textiles strongly; obscure revival/village weaves drop, but Tier-1.5 already filters to documented
+  GI textiles, so retention stays high. (Earlier worry that textiles would gate poorly was unfounded.)
+- **Fuzzy-dedup is the big textile attrition:** South has many `saree`/`sari`/`silk` name-variants of
+  one textile; `apply_verdicts` (now textile-suffix-aware) dropped 13–20/cell.
+- **Two scoring rounds for South:** SS-02 first landed 97 after the gate; a small top-up (9 newly
+  sourced famous GI textiles — Madras checks, Salem Fabric, Khun, Gajendragad, Kuthampully/
+  Chendamangalam dhoti, Kanchi cotton, Elampillai) was sourced → verified → scored in a **resumable
+  second GPU round** (results appended to the six `results_<slug>.jsonl`) → re-threshold → 100.
+
+### Stage 8 (done, parallel AWS + Babel)
+Combined `suite_input_NN02SS02.json` (211 items round 1, +9 round 2). 4 small models on an **AWS
+g6.xlarge** (L4 24 GB) via `ec2_run_suite_nn02ss02.sh`; the 2×24B (Mistral-Small-24B-Base, Sarvam-M)
+on **CMU Babel** (A6000×4) via `babel_suite_nn02ss02.sbatch`. **Babel hardening this wave:** Babel's
+base miniconda had been upgraded to huggingface_hub 1.x (httpx backend) + transformers 5.x, whose
+multi-shard 24B downloader fails with "Cannot send a request, as the client has been closed"; the
+sbatch now pins `transformers==4.48.3` + `huggingface_hub<1.0` to `--user` (keeps base torch,
+non-destructive). Re-threshold → `finalize_cell` → `cross_model` → `combine_cells` (manifest **7/60,
+700 items**). Both AWS instances + SGs torn down; Babel token/dir/scratch-cache wiped. *(Future waves:
+the AWS G/VT vCPU quota is now 48, so the 24B run can move to a second AWS box — a g6.12xlarge /
+g6e.12xlarge 4-GPU instance — instead of Babel; see the EE-02/WW-02 handoff.)*
+
+## Costume wave 2: A01-EE-02 (East) released; A01-WW-02 (West) PAUSED at a structural ceiling
+
+Built A01-EE-02 to release and discovered a **design-level limit** for the few-eligible-state Costume cells.
+
+### A01-EE-02 (East) funnel
+```
+candidates: Wikipedia broad-cat (48) + 3 web-research passes (20-agent sweep, 12-agent retry,
+            5-agent rich-state top-up; every textile web-verified + source URL)
+ -> Stage3 pairs 163 -> Stage4 F1-F7 156 -> Tier-1.5 Claude 131 -> 113 (-18 fuzzy-dup)
+ -> Stage8 base-Llama ΔL>1.0 gate 108 (96% retention) -> Pass B 100
+    (Odisha 16 / Assam 16 / WB 14 / Manipur 12 / Mizoram 9 / Meghalaya 9 / Bihar 8 /
+     Nagaland 7 / Tripura 6 / Sikkim 3; token 8/80/12). Jharkhand (4 tok) & Arunachal (5 tok)
+     F1-excluded. 0 missing cross-validation.
+```
+Cross-model: Llama corr 0.92 (Δ +0.85), Gemma aligned sharper (corr 0.92, Δ −2.31), **Mistral→Sarvam-M
+corr 0.47, Δ +4.28 (88/100 base>aligned) — the strongest costume weakening of any cell** (NN +3.32 → SS +3.91 → EE +4.28).
+
+### Verify/research Workflow hardening (landed in `scripts/gen_verify_workflow.py`; reusable)
+Schema-forced `general-purpose` subagents that web-search heavily **exhaust their turn budget and never
+call StructuredOutput** (observed 0/14, 1/10, 8/20 emit rates). Fixes:
+- **Verify:** judge from the provided evidence + own knowledge; web-search only the doubtful few
+  (budget ≤5); a `CRITICAL OUTPUT RULE` makes the StructuredOutput call mandatory; **batch size 7**.
+  After this, emit rate = 100 % (20/20, 23/23, 13/13).
+- **Research:** **confirm-and-emit** — give each agent an EXPLICIT candidate list (known GI/handloom
+  inventories) so it confirms rather than open-ended-searches, cap searches, force the emit. Open-ended
+  "dig into the long tail" prompts fail; explicit-seed "confirm these, EMIT" prompts succeed.
+
+### Stage 8 both-tiers-on-AWS (no Babel) + gotchas
+The G/VT vCPU quota is 48, so all 6 models scored on AWS. **Small (g6.xlarge=4 vCPU) + large
+(g6.12xlarge=48) cannot run concurrently (52 > 48)** — run sequentially, or consolidate onto the large
+box. Gotchas learned (now in `stage8_score.py` + the CC-02 handoff): **pull results BEFORE stopping** (a
+stopped g6.xlarge may not restart — no AZ capacity); **Gemma-2 crashes under multi-GPU `device_map='auto'`**
+(sliding-window cache device mismatch) → pin the ≤9B Gemma to a single GPU (`device_map={"":0}`, now the
+default in `stage8_score.py`); **don't trust only the end-of-run marker** — a mid-suite `set -e` crash leaves
+the box idle. `scripts/scoring/ec2_recover_ee02.sh` is the per-model-independent recovery runner.
+
+### A01-WW-02 (West) — structural-ceiling finding (PAUSED, design decision pending)
+Axis-A targets ARE the state, so the F1 ≤3-token cap fixes per-region eligibility: North 6 / South 5 /
+East 10 — but **West 3 (Gujarat/Maharashtra/Goa)** and **Central 2 (MP + Chhattisgarh)**. Festivals were
+abundant enough (WW-01 = 100); textiles are NOT — distinctive documented per-state textiles are finite.
+Exhaustive West sourcing yielded only **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1) →
+projected ~40 final. Per user decision, **East was released and West paused** for a design discussion
+covering both West and Central (ship short cells / substitute the 02 sub-concept / lower n / re-scope).
+Interim WW-02 artifacts retained. See `plans/handoff-A01-WW-02-CC-02.md`.
+
 ## Known improvements for scaling to 60 cells
 - **Corruptor quality (Stage 3):** the SANSKRITI corruptor extraction yields some malformed anchors;
   Claude caught them but it wastes candidates. Clean the corruptor pool / prefer Wikipedia corruptors.
