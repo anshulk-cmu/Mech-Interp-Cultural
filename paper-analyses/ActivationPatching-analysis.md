@@ -1,5 +1,7 @@
 # Technical Analysis: "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods"
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Authors:** Fred Zhang (UC Berkeley; work done while interning at Google) and Neel Nanda (Independent).
 **Venue / Year:** ICLR 2024 (poster). **arXiv:** 2309.16042 (submitted Sep 27, 2023; v2 Jan 17, 2024). **OpenReview:** Hf17y6u9BC.
 
@@ -82,7 +84,7 @@ The authors are explicit: experiments are confined to decoder-only models ≤ 6B
 
 ## Relevance to our Phase 1 (ICCD-3K)
 
-Our study asks whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, instruction-tuning) **rewrites mid-layer cultural representations** or **gates them late**, using Indian-cultural minimal pairs — where Indian culture is both the controlled probe for this mechanistic question and a genuine subject the study cares about. Phase 1 builds a 3,000-item probe set (clean prefix vs corrupted prefix + target answer; per-item log-odds difference; 60 cells × 50 items; paired t-tests). This paper directly governs how we should design it.
+Our study asks where in the network post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, instruction-tuning) **selectively** reshapes cultural knowledge and whether that change is recoverable — for each cultural content type, a recoverable late **gate** or an unrecoverable mid-layer **rewrite** — using Indian-cultural minimal pairs, where Indian culture is both the controlled probe for this mechanistic question and a genuine subject the study cares about. Phase 1 builds a 3,000-item probe set (clean prefix vs corrupted prefix + target answer; per-item log-odds difference; 60 cells × 50 items; paired t-tests). This paper directly governs how we should design it.
 
 **Methods/metrics we borrow.** Our per-item log-odds difference is essentially the paper's **logit difference metric** at the answer token, and the paper gives us a principled reason to prefer it over raw probability: only logit difference (or a paired clean-vs-corrupt log-odds contrast) can surface components that *suppress* a culturally-correct answer — exactly the "gating" hypothesis. If alignment installs a late-layer head that down-weights a mid-layer cultural feature, a probability metric would floor out and hide it; the non-negativity argument is the formal warning. We should report a normalized effect in [0,1] (clean = 1, corrupt = 0) so cells are comparable.
 

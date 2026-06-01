@@ -1,0 +1,33 @@
+{
+  "_doc": "Web-tier supplement per cell: curated genuine festivals beyond Wikipedia-category/SANSKRITI reach, each with a source URL (logged to web_sources.jsonl at injection). Targets thin states / token buckets. Reusable per-cell at scale.",
+  "A01-SS-01": [
+    {"anchor": "Chithirai Thiruvizha", "target": "Tamil Nadu", "source_url": "https://cultureandheritage.org/religious-temple-festivals-of-tamilnadu"},
+    {"anchor": "Panguni Uthiram", "target": "Tamil Nadu", "source_url": "https://en.wikipedia.org/wiki/Panguni_Uthiram"},
+    {"anchor": "Aadi Perukku", "target": "Tamil Nadu", "source_url": "https://cultureandheritage.org/religious-temple-festivals-of-tamilnadu"},
+    {"anchor": "Masi Magam", "target": "Tamil Nadu", "source_url": "https://cultureandheritage.org/religious-temple-festivals-of-tamilnadu"},
+    {"anchor": "Aadi Pooram", "target": "Tamil Nadu", "source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html"},
+    {"anchor": "Vaikasi Visakam", "target": "Tamil Nadu", "source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html"},
+    {"anchor": "Kanda Sasti", "target": "Tamil Nadu", "source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html"},
+    {"anchor": "Vaikunta Ekadasi", "target": "Tamil Nadu", "source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html"},
+    {"anchor": "Nagoba Jatara", "target": "Telangana", "source_url": "https://telanganatourism.gov.in/partials/about/festivals-of-telangana/nagoba-jaatara.html"},
+    {"anchor": "Edupayala Jatara", "target": "Telangana", "source_url": "https://www.safarmentor.com/blog/festivals-in-telangana/"},
+    {"anchor": "Komuravelli Mallanna Jatara", "target": "Telangana", "source_url": "https://www.safarmentor.com/blog/festivals-in-telangana/"},
+    {"anchor": "Korivi Veerabhadra Jatara", "target": "Telangana", "source_url": "https://telangana.pscnotes.com/telangana-history/fairs-and-festivals-of-telangana/"},
+    {"anchor": "Manyamkonda Brahmotsavam", "target": "Telangana", "source_url": "https://telangana.pscnotes.com/telangana-history/fairs-and-festivals-of-telangana/"},
+    {"anchor": "Vairamudi", "target": "Karnataka", "source_url": "https://cultureandheritage.org/religious-temple-festivals-of-karnataka"},
+    {"anchor": "Banashankari Jatre", "target": "Karnataka", "source_url": "https://utsav.gov.in/view-event/sri-banashankari-fair-1"},
+    {"anchor": "Godachi Fair", "target": "Karnataka", "source_url": "https://utsav.gov.in/view-event/godachi-fair-jathre-1"},
+    {"anchor": "Avani Avittam", "target": "Tamil Nadu", "source_url": "https://en.wikipedia.org/wiki/Avani_Avittam"},
+    {"anchor": "Chitra Pournami", "target": "Tamil Nadu", "source_url": "https://en.wikipedia.org/wiki/Chitra_Pournami"},
+    {"anchor": "Aadi Amavasai", "target": "Tamil Nadu", "source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html"},
+    {"anchor": "Aadi Krithigai", "target": "Tamil Nadu", "source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html"},
+    {"anchor": "Tula Sankramana", "target": "Karnataka", "source_url": "https://en.wikipedia.org/wiki/Tula_Sankramana"},
+    {"anchor": "Kadalekai Parishe", "target": "Karnataka", "source_url": "https://en.wikipedia.org/wiki/Kadalekai_Parishe"},
+    {"anchor": "Pydithalli Sirimanotsavam", "target": "Andhra Pradesh", "source_url": "https://en.wikipedia.org/wiki/Pydithalli_Ammavari_Sirimanotsavam"},
+    {"anchor": "Polala Amavasya", "target": "Andhra Pradesh", "source_url": "https://en.wikipedia.org/wiki/Polala_Amavasya"},
+    {"anchor": "Chettikulangara Bharani", "target": "Kerala", "source_url": "https://en.wikipedia.org/wiki/Chettikulangara_Bharani"},
+    {"anchor": "Kodungallur Bharani", "target": "Kerala", "source_url": "https://en.wikipedia.org/wiki/Kodungallur_Bharani"},
+    {"anchor": "Kottiyoor Vysakha Mahotsavam", "target": "Kerala", "source_url": "https://en.wikipedia.org/wiki/Kottiyoor_Vysakha_Mahotsavam"},
+    {"anchor": "Ayyappan Vilakku", "target": "Kerala", "source_url": "https://en.wikipedia.org/wiki/Ayyappan_Vilakku"}
+  ]
+}

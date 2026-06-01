@@ -1,5 +1,7 @@
 # Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Authors:** Kevin Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris (Redwood Research), Jacob Steinhardt (Redwood Research / UC Berkeley).
 **Venue / year:** ICLR 2023 (poster). **arXiv:** 2211.00593. **Code:** `redwoodresearch/Easy-Transformer` (later TransformerLens).
 
@@ -73,7 +75,7 @@ The authors are candid. (1) The circuit **fails the hardest completeness test** 
 
 ## Relevance to our project (ICCD-3K, Phase 1)
 
-Our study asks whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **rewrites mid-layer cultural representations** or **gates them late**, using Indian cultural minimal pairs. Indian culture here is both the controlled probe for that mechanistic question and a genuine subject the study cares about. IOI is the canonical template for the machinery Phase 1 depends on.
+Our study asks where in the network post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **selectively** reshapes cultural knowledge and whether that change is recoverable — for each cultural content type, a recoverable late **gate** or an unrecoverable mid-layer **rewrite** — using Indian cultural minimal pairs. Indian culture here is both the controlled probe for that mechanistic question and a genuine subject the study cares about. IOI is the canonical template for the machinery Phase 1 depends on.
 
 **Methods/metrics we borrow.** (1) The **clean-vs-corrupted minimal-pair design** maps directly onto IOI's `x_orig ~ p_IOI` vs `x_new ~ p_ABC`; our "clean prefix vs corrupted prefix + target answer" is the same counterfactual logic, and their template-matched ablation is the right model for fixing grammar while removing only the cultural signal. (2) IOI's **logit-difference** `logit(IO) − logit(S)` is exactly our **per-item log-odds difference** between two target completions, validating our paired per-item scoring. (3) **Path/activation patching** distinguishes "rewrite" from "late gating": patching mid-layer activations and checking whether the cultural log-odds difference recovers tells us *where* the representation lives, while patching query-side late (à la S-Inhibition → Name Mover queries) tests a gating hypothesis. (4) Their **linear-signal decomposition** (`2.31·S_pos + 0.99·S_tok`) models how to separate confounded factors — for us, "cultural content" from "register/format."
 

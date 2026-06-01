@@ -1,5 +1,7 @@
 # SANSKRITI: A Comprehensive Benchmark for Evaluating Language Models' Knowledge of Indian Culture — Technical Analysis
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Citation.** Arijit Maji, Raghvendra Kumar, Akash Ghosh, Anushka, and Sriparna Saha. 2025. *SANSKRITI: A Comprehensive Benchmark for Evaluating Language Models' Knowledge of Indian Culture.* In Findings of the Association for Computational Linguistics: ACL 2025, pages 4434–4451. arXiv:2506.15355. (Authors 1–4 at IIT Patna; Anushka at Banasthali Vidyapeeth.)
 
 ## Problem and motivation
@@ -70,7 +72,7 @@ The authors list five: (1) only sixteen attributes and a narrow set of question 
 
 ## Relevance to our Phase 1 (ICCD-3K minimal-pair probe)
 
-Our project is a *mechanistic* study asking whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **rewrites** mid-layer cultural representations or **gates** them late, using Indian cultural minimal pairs (clean prefix vs corrupted prefix + target answer; per-item log-odds difference; 60 cells of 50 items = 3,000 items; paired t-tests). Indian culture here is both the controlled probe for that mechanistic question and a genuine subject of study in its own right. SANSKRITI is not a methods source for the interventions — it offers none — but it is a high-value *content and design* source.
+Our project is a *mechanistic* study asking where in the network post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **selectively** reshapes cultural knowledge and whether that change is recoverable — for each cultural content type, a recoverable late **gate** or an unrecoverable mid-layer **rewrite** — using Indian cultural minimal pairs (clean prefix vs corrupted prefix + target answer; per-item log-odds difference; 60 cells of 50 items = 3,000 items; paired t-tests). Indian culture here is both the controlled probe for that mechanistic question and a genuine subject of study in its own right. SANSKRITI is not a methods source for the interventions — it offers none — but it is a high-value *content and design* source.
 
 **What we borrow.** (1) The taxonomy: SANSKRITI's 16 attributes × 36 regions × 4 question types is a ready-made factorization for our 60-cell stratification (e.g., attribute × region cells), giving us a principled, coverage-balanced way to define cells of 50 items each. (2) The grounded item-construction discipline: each fact tied to explicit source text with a documented rationale (Appendix 7.3, the Bihar example) is exactly the provenance hygiene we want so that a "corrupted prefix" flips a *known* fact rather than a contested one. (3) The released HuggingFace dataset (`13ari/Sanskriti`) is a candidate seed pool — we can mine its verified state/attribute facts to author minimal pairs (e.g., "Kathakali originates in the state of ___" → Kerala [clean] vs Karnataka [corrupted]) and reuse its plausible distractors as our corrupted targets.
 

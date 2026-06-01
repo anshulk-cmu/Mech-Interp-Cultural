@@ -1,0 +1,6246 @@
+[
+  {
+    "item_id": "iccd_A01-SS-01_a920e01c05",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Uthralikavu Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Uthralikavu Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Uthralikavu Pooram",
+      "wiki_oldid": 1333627688,
+      "wiki_url": "https://en.wikipedia.org/wiki/Uthralikavu_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.748366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.99961529392749,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.9995,
+        "logp_clean": -0.0122,
+        "logp_corrupt": -10.0117
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.9326,
+        "logp_clean": -0.0033,
+        "logp_corrupt": -10.936
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.8151,
+        "logp_clean": -0.0235,
+        "logp_corrupt": -9.8386
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.4605,
+        "logp_clean": -0.004,
+        "logp_corrupt": -14.4646
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.9331,
+      "Gemma-2-9B": -4.6454
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_93c4a6fb0b",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Basava Jayanthi",
+    "target": "Karnataka",
+    "clean_prefix": "Basava Jayanthi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Basava Jayanti",
+      "wiki_oldid": 1323943978,
+      "wiki_url": "https://en.wikipedia.org/wiki/Basava_Jayanti",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.724862+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.256691258400679,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.2646,
+        "logp_clean": -0.0268,
+        "logp_corrupt": -9.2914
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.3569,
+        "logp_clean": -0.013,
+        "logp_corrupt": -12.3699
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.4207,
+        "logp_clean": -0.0195,
+        "logp_corrupt": -10.4402
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.2479,
+        "logp_clean": -0.0016,
+        "logp_corrupt": -14.2495
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -3.0923,
+      "Gemma-2-9B": -3.8272
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_82790e3540",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Chettikulangara Bharani",
+    "target": "Kerala",
+    "clean_prefix": "Chettikulangara Bharani is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chettikulangara_Bharani",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.105482+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chettikulangara_Bharani",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.19336439948529,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.2085,
+        "logp_clean": -0.0151,
+        "logp_corrupt": -10.2236
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7264,
+        "logp_clean": -0.0042,
+        "logp_corrupt": -7.7306
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6905,
+        "logp_clean": -0.0133,
+        "logp_corrupt": -5.7038
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5846,
+        "logp_clean": -0.0022,
+        "logp_corrupt": -6.5868
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.4821,
+      "Gemma-2-9B": -0.8941
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_74de1c701d",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Mahamastakabhisheka",
+    "target": "Karnataka",
+    "clean_prefix": "Mahamastakabhisheka is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Mahamastakabhisheka",
+      "wiki_oldid": 1322092417,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mahamastakabhisheka",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.740859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.60031547024846,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.6231,
+        "logp_clean": -0.0145,
+        "logp_corrupt": -9.6376
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.8904,
+        "logp_clean": -0.0355,
+        "logp_corrupt": -7.9259
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.0333,
+        "logp_clean": -0.0143,
+        "logp_corrupt": -5.0476
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.2602,
+        "logp_clean": -0.0063,
+        "logp_corrupt": -5.2665
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.7327,
+      "Gemma-2-9B": -0.2269
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_3b97742ebf",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aaraattu",
+    "target": "Kerala",
+    "clean_prefix": "Aaraattu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Tarnetar is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Tarnetar",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Aaraattu",
+      "wiki_oldid": 1323938604,
+      "wiki_url": "https://en.wikipedia.org/wiki/Aaraattu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.752366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.521648421883583,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.5156,
+        "logp_clean": -0.1655,
+        "logp_corrupt": -9.6811
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.5045,
+        "logp_clean": -0.149,
+        "logp_corrupt": -9.6534
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.1564,
+        "logp_clean": -0.0532,
+        "logp_corrupt": -9.2096
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.6066,
+        "logp_clean": -0.033,
+        "logp_corrupt": -6.6396
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.0111,
+      "Gemma-2-9B": 2.5498
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_bd459ea1fd",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kanakadasa Jayanthi",
+    "target": "Karnataka",
+    "clean_prefix": "Kanakadasa Jayanthi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kanaka Dasa",
+      "wiki_oldid": 1340760257,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kanaka_Dasa",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.737859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.783504659309983,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.7758,
+        "logp_clean": -0.0157,
+        "logp_corrupt": -9.7915
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.4837,
+        "logp_clean": -0.0064,
+        "logp_corrupt": -12.4901
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.1181,
+        "logp_clean": -0.0166,
+        "logp_corrupt": -10.1348
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.7102,
+        "logp_clean": -0.0029,
+        "logp_corrupt": -12.713
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.7079,
+      "Gemma-2-9B": -2.5921
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_de616349dd",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kondotty Nercha",
+    "target": "Kerala",
+    "clean_prefix": "Kondotty Nercha is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kondotty Nercha",
+      "wiki_oldid": 1326555276,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kondotty_Nercha",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.756389+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.25990130007267,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2538,
+        "logp_clean": -0.0209,
+        "logp_corrupt": -8.2747
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.6424,
+        "logp_clean": -0.0062,
+        "logp_corrupt": -7.6487
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4284,
+        "logp_clean": -0.0177,
+        "logp_corrupt": -8.4461
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.1124,
+        "logp_clean": -0.0095,
+        "logp_corrupt": -8.122
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6114,
+      "Gemma-2-9B": 0.316
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_8fa520e716",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Karaga",
+    "target": "Karnataka",
+    "clean_prefix": "Karaga is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bihu is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Bihu",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Karaga",
+      "wiki_oldid": 1022293953,
+      "wiki_url": "https://en.wikipedia.org/wiki/Karaga",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.725861+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 6.59511923789978,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.5842,
+        "logp_clean": -2.9128,
+        "logp_corrupt": -9.497
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.0439,
+        "logp_clean": -3.9426,
+        "logp_corrupt": -12.9865
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.6973,
+        "logp_clean": -0.0591,
+        "logp_corrupt": -10.7564
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.9579,
+        "logp_clean": -0.6556,
+        "logp_corrupt": -13.6135
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.4597,
+      "Gemma-2-9B": -2.2606
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_17e6af6eb0",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kodungallur Bharani",
+    "target": "Kerala",
+    "clean_prefix": "Kodungallur Bharani is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kodungallur Bharani festival",
+      "wiki_oldid": 1336015782,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kodungallur_Bharani_festival",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.110483+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kodungallur_Bharani",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.835670557804406,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.8357,
+        "logp_clean": -0.0106,
+        "logp_corrupt": -9.8462
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.7136,
+        "logp_clean": -0.0031,
+        "logp_corrupt": -12.7167
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.2327,
+        "logp_clean": -0.0114,
+        "logp_corrupt": -10.2441
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.9925,
+        "logp_clean": -0.0018,
+        "logp_corrupt": -13.9943
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.8779,
+      "Gemma-2-9B": -3.7598
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_a0a63a88f4",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Vairamudi",
+    "target": "Karnataka",
+    "clean_prefix": "Vairamudi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Baisakhi is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Baisakhi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Melukote",
+      "wiki_oldid": 1348604513,
+      "wiki_url": "https://en.wikipedia.org/wiki/Melukote",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.071767+00:00",
+      "web_source_url": "https://cultureandheritage.org/religious-temple-festivals-of-karnataka",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.262899160385132,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.2643,
+        "logp_clean": -1.3779,
+        "logp_corrupt": -5.6421
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.5935,
+        "logp_clean": -1.9912,
+        "logp_corrupt": -7.5847
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2525,
+        "logp_clean": -3.089,
+        "logp_corrupt": -8.3415
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.8785,
+        "logp_clean": -3.92,
+        "logp_corrupt": -12.7985
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.3292,
+      "Gemma-2-9B": -3.626
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_1c7a680fe6",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Karivela",
+    "target": "Kerala",
+    "clean_prefix": "Karivela is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lokrang is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Lokrang",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Karivela",
+      "wiki_oldid": 1274419243,
+      "wiki_url": "https://en.wikipedia.org/wiki/Karivela",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.751365+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 3.5628223419189453,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.5583,
+        "logp_clean": -2.8134,
+        "logp_corrupt": -6.3717
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.1047,
+        "logp_clean": -3.8059,
+        "logp_corrupt": -5.9106
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.3559,
+        "logp_clean": -1.2493,
+        "logp_corrupt": -3.6051
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 2.5983,
+        "logp_clean": -1.0317,
+        "logp_corrupt": -3.6299
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.4536,
+      "Gemma-2-9B": -0.2424
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_ea9b3a0c54",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kadalekai Parishe",
+    "target": "Karnataka",
+    "clean_prefix": "Kadalekai Parishe is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kadalekai Parishe",
+      "wiki_oldid": 1336946469,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kadalekai_Parishe",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.093442+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kadalekai_Parishe",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.788800748065114,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.781,
+        "logp_clean": -0.0106,
+        "logp_corrupt": -9.7915
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.4289,
+        "logp_clean": -0.0613,
+        "logp_corrupt": -12.4901
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.1188,
+        "logp_clean": -0.016,
+        "logp_corrupt": -10.1348
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.7053,
+        "logp_clean": -0.0077,
+        "logp_corrupt": -12.713
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.6479,
+      "Gemma-2-9B": -2.5865
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_8da8212fb8",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Chinakkathoor Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Chinakkathoor Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Chinakkathoor Pooram",
+      "wiki_oldid": 1300063631,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chinakkathoor_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.748366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 10.19286940060556,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.2076,
+        "logp_clean": -0.016,
+        "logp_corrupt": -10.2236
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7253,
+        "logp_clean": -0.0053,
+        "logp_corrupt": -7.7306
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6612,
+        "logp_clean": -0.0427,
+        "logp_corrupt": -5.7038
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5757,
+        "logp_clean": -0.0111,
+        "logp_corrupt": -6.5868
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.4823,
+      "Gemma-2-9B": -0.9145
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_38f109bba9",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Tula Sankramana",
+    "target": "Karnataka",
+    "clean_prefix": "Tula Sankramana is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://en.wikipedia.org/wiki/Tula_Sankramana",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.093442+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Tula_Sankramana",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.0866628885269165,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.0729,
+        "logp_clean": -1.9775,
+        "logp_corrupt": -5.0504
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.8826,
+        "logp_clean": -3.0507,
+        "logp_corrupt": -5.9333
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.5896,
+        "logp_clean": -1.4831,
+        "logp_corrupt": -5.0727
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.0214,
+        "logp_clean": -0.5272,
+        "logp_corrupt": -4.5486
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.1903,
+      "Gemma-2-9B": -0.4318
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_7a7bbc9086",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Ayyappan Vilakku",
+    "target": "Kerala",
+    "clean_prefix": "Ayyappan Vilakku is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ayyappan_Vilakku",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.114472+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Ayyappan_Vilakku",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.0810407102108,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.0959,
+        "logp_clean": -0.1276,
+        "logp_corrupt": -10.2236
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.6063,
+        "logp_clean": -0.1243,
+        "logp_corrupt": -7.7306
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.5346,
+        "logp_clean": -0.1693,
+        "logp_corrupt": -5.7038
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5583,
+        "logp_clean": -0.0285,
+        "logp_corrupt": -6.5868
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.4896,
+      "Gemma-2-9B": -1.0237
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_b6449c08e4",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Mailara Jaatre",
+    "target": "Karnataka",
+    "clean_prefix": "Mailara Jaatre is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Durga Puja is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Durga Puja",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Mailara Jaatre",
+      "wiki_oldid": 1344835969,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mailara_Jaatre",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.738859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 3.4833272099494934,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.4845,
+        "logp_clean": -0.7059,
+        "logp_corrupt": -4.1904
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.5283,
+        "logp_clean": -0.7703,
+        "logp_corrupt": -7.2985
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.5183,
+        "logp_clean": -0.1167,
+        "logp_corrupt": -6.635
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.8518,
+        "logp_clean": -0.2933,
+        "logp_corrupt": -9.145
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -3.0438,
+      "Gemma-2-9B": -2.3335
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_72336df93d",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Puli Kali",
+    "target": "Kerala",
+    "clean_prefix": "Puli Kali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Tarnetar is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Tarnetar",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Puli Kali",
+      "wiki_oldid": 1259261202,
+      "wiki_url": "https://en.wikipedia.org/wiki/Puli_Kali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.756389+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.664232527837157,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.6569,
+        "logp_clean": -0.0242,
+        "logp_corrupt": -9.6811
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.6418,
+        "logp_clean": -0.0117,
+        "logp_corrupt": -9.6534
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.52,
+        "logp_clean": -0.6896,
+        "logp_corrupt": -9.2096
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.603,
+        "logp_clean": -0.0366,
+        "logp_corrupt": -6.6396
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.0151,
+      "Gemma-2-9B": 1.917
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_946c66f370",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Godachi Fair",
+    "target": "Karnataka",
+    "clean_prefix": "Godachi Fair is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Shigmo is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Goa",
+    "corruptor_anchor": "Shigmo",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://utsav.gov.in/view-event/godachi-fair-jathre-1",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.080767+00:00",
+      "web_source_url": "https://utsav.gov.in/view-event/godachi-fair-jathre-1",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.00827693939209,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.007,
+        "logp_clean": -2.952,
+        "logp_corrupt": -5.959
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.6561,
+        "logp_clean": -4.4284,
+        "logp_corrupt": -7.0845
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.2645,
+        "logp_clean": -2.5882,
+        "logp_corrupt": -5.8527
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.3342,
+        "logp_clean": -1.3217,
+        "logp_corrupt": -8.6559
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.3509,
+      "Gemma-2-9B": -4.0697
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_216fe6e4fe",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Attukal Pongala",
+    "target": "Kerala",
+    "clean_prefix": "Attukal Pongala is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Attukal Pongala",
+      "wiki_oldid": 1312755999,
+      "wiki_url": "https://en.wikipedia.org/wiki/Attukal_Pongala",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.749366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 3.8588710660114884,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.8591,
+        "logp_clean": -0.0135,
+        "logp_corrupt": -3.8726
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.3722,
+        "logp_clean": -0.0032,
+        "logp_corrupt": -4.3755
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2908,
+        "logp_clean": -0.0134,
+        "logp_corrupt": -5.3043
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.212,
+        "logp_clean": -0.0025,
+        "logp_corrupt": -6.2145
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.5131,
+      "Gemma-2-9B": -0.9212
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_91fc848958",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Madikeri Dasara",
+    "target": "Karnataka",
+    "clean_prefix": "Madikeri Dasara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Madikeri Dasara",
+      "wiki_oldid": 1344768531,
+      "wiki_url": "https://en.wikipedia.org/wiki/Madikeri_Dasara",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.741859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.291110405698419,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2928,
+        "logp_clean": -0.0288,
+        "logp_corrupt": -8.3216
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.722,
+        "logp_clean": -0.0048,
+        "logp_corrupt": -7.7268
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.8899,
+        "logp_clean": -0.0249,
+        "logp_corrupt": -6.9148
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.5342,
+        "logp_clean": -0.0018,
+        "logp_corrupt": -8.536
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.5708,
+      "Gemma-2-9B": -1.6443
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_80600d7427",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Oachirakali",
+    "target": "Kerala",
+    "clean_prefix": "Oachirakali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Oachirakali",
+      "wiki_oldid": 1256557690,
+      "wiki_url": "https://en.wikipedia.org/wiki/Oachirakali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.753367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 6.096231460571289,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.1181,
+        "logp_clean": -2.1566,
+        "logp_corrupt": -8.2747
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.0721,
+        "logp_clean": -2.5765,
+        "logp_corrupt": -7.6487
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4249,
+        "logp_clean": -0.0212,
+        "logp_corrupt": -8.4461
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.0963,
+        "logp_clean": -0.0257,
+        "logp_corrupt": -8.122
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.046,
+      "Gemma-2-9B": 0.3286
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_8a5172dfac",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Gorehabba",
+    "target": "Karnataka",
+    "clean_prefix": "Gorehabba is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Gudi Padwa is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Gudi Padwa",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Gorehabba",
+      "wiki_oldid": 1350451792,
+      "wiki_url": "https://en.wikipedia.org/wiki/Gorehabba",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.740859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 3.494400978088379,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.4922,
+        "logp_clean": -2.0467,
+        "logp_corrupt": -5.5389
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.9481,
+        "logp_clean": -4.1457,
+        "logp_corrupt": -8.0939
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.4502,
+        "logp_clean": -0.1832,
+        "logp_corrupt": -5.6334
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.8231,
+        "logp_clean": -0.0415,
+        "logp_corrupt": -8.8646
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4559,
+      "Gemma-2-9B": -3.3729
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_777e66e886",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aluva Sivarathri",
+    "target": "Kerala",
+    "clean_prefix": "Aluva Sivarathri is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganesh Chaturthi is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Ganesh Chaturthi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Aluva Sivarathri festival",
+      "wiki_oldid": 1335369963,
+      "wiki_url": "https://en.wikipedia.org/wiki/Aluva_Sivarathri_festival",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.758367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 2.4307985827326775,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.4392,
+        "logp_clean": -0.0137,
+        "logp_corrupt": -2.4529
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.5581,
+        "logp_clean": -0.0042,
+        "logp_corrupt": -4.5623
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.9005,
+        "logp_clean": -0.0135,
+        "logp_corrupt": -5.914
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.7175,
+        "logp_clean": -0.0032,
+        "logp_corrupt": -6.7207
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.1189,
+      "Gemma-2-9B": -0.817
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_5ec6ba01bf",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Panchalinga Darshana",
+    "target": "Karnataka",
+    "clean_prefix": "Panchalinga Darshana is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Panchalinga Darshana",
+      "wiki_oldid": 1336627754,
+      "wiki_url": "https://en.wikipedia.org/wiki/Panchalinga_Darshana",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.737859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.330176562070847,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.3474,
+        "logp_clean": -0.2902,
+        "logp_corrupt": -9.6376
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.4429,
+        "logp_clean": -0.483,
+        "logp_corrupt": -7.9259
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.816,
+        "logp_clean": -0.2316,
+        "logp_corrupt": -5.0476
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.2233,
+        "logp_clean": -0.0431,
+        "logp_corrupt": -5.2665
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.9045,
+      "Gemma-2-9B": -0.4073
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_feb6fedcdf",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Valla Sadhya",
+    "target": "Kerala",
+    "clean_prefix": "Valla Sadhya is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Gudi Padwa is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Gudi Padwa",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Valla Sadhya",
+      "wiki_oldid": 1344303724,
+      "wiki_url": "https://en.wikipedia.org/wiki/Valla_Sadhya",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.750366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 7.4963080286979675,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.4959,
+        "logp_clean": -0.1993,
+        "logp_corrupt": -7.6952
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.5779,
+        "logp_clean": -0.6957,
+        "logp_corrupt": -10.2735
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.879,
+        "logp_clean": -0.2281,
+        "logp_corrupt": -8.107
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.4654,
+        "logp_clean": -0.0671,
+        "logp_corrupt": -12.5325
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.082,
+      "Gemma-2-9B": -4.5864
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_7a6028692a",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Bhimana Amavasya",
+    "target": "Karnataka",
+    "clean_prefix": "Bhimana Amavasya is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Bhimana Amavasya",
+      "wiki_oldid": 1302210928,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bhimana_Amavasya",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.737859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 7.915240406990051,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.9363,
+        "logp_clean": -1.7013,
+        "logp_corrupt": -9.6376
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.3311,
+        "logp_clean": -1.5948,
+        "logp_corrupt": -7.9259
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.8822,
+        "logp_clean": -1.1654,
+        "logp_corrupt": -5.0476
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.6504,
+        "logp_clean": -0.6161,
+        "logp_corrupt": -5.2665
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.6052,
+      "Gemma-2-9B": -0.7682
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_19085c616c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Sri Narayana Jayanthi",
+    "target": "Kerala",
+    "clean_prefix": "Sri Narayana Jayanthi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Sri Narayana Jayanthi",
+      "wiki_oldid": 1342439409,
+      "wiki_url": "https://en.wikipedia.org/wiki/Sri_Narayana_Jayanthi",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.748366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.451908141374588,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.452,
+        "logp_clean": -0.3942,
+        "logp_corrupt": -9.8462
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.4794,
+        "logp_clean": -0.2373,
+        "logp_corrupt": -12.7167
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.18,
+        "logp_clean": -0.0641,
+        "logp_corrupt": -10.2441
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.967,
+        "logp_clean": -0.0273,
+        "logp_corrupt": -13.9943
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -3.0274,
+      "Gemma-2-9B": -3.787
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_c804ea6c26",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Dakkebali",
+    "target": "Karnataka",
+    "clean_prefix": "Dakkebali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Dakkebali",
+      "wiki_oldid": 1345157832,
+      "wiki_url": "https://en.wikipedia.org/wiki/Dakkebali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.738859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 4.374803304672241,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.3764,
+        "logp_clean": -3.9452,
+        "logp_corrupt": -8.3216
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.5068,
+        "logp_clean": -4.22,
+        "logp_corrupt": -7.7268
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.1937,
+        "logp_clean": -1.7211,
+        "logp_corrupt": -6.9148
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.0954,
+        "logp_clean": -0.4407,
+        "logp_corrupt": -8.536
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.8696,
+      "Gemma-2-9B": -2.9017
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_67fe947ba9",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Thrissur Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Thrissur Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Thrissur Pooram",
+      "wiki_oldid": 1356189765,
+      "wiki_url": "https://en.wikipedia.org/wiki/Thrissur_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.751365+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.883242071606219,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8832,
+        "logp_clean": -0.0097,
+        "logp_corrupt": -8.893
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.5386,
+        "logp_clean": -0.0033,
+        "logp_corrupt": -10.5418
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.5705,
+        "logp_clean": -0.0143,
+        "logp_corrupt": -11.5847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 17.5864,
+        "logp_clean": -0.001,
+        "logp_corrupt": -17.5874
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.6554,
+      "Gemma-2-9B": -6.0159
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_96945aa46c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Banashankari Jatre",
+    "target": "Karnataka",
+    "clean_prefix": "Banashankari Jatre is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://utsav.gov.in/view-event/sri-banashankari-fair-1",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.076767+00:00",
+      "web_source_url": "https://utsav.gov.in/view-event/sri-banashankari-fair-1",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.4401674875989556,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.4403,
+        "logp_clean": -0.0104,
+        "logp_corrupt": -3.4507
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.0894,
+        "logp_clean": -0.0048,
+        "logp_corrupt": -4.0942
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.3563,
+        "logp_clean": -0.0261,
+        "logp_corrupt": -4.3824
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.279,
+        "logp_clean": -0.0058,
+        "logp_corrupt": -5.2848
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.6491,
+      "Gemma-2-9B": -0.9227
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_c654df761f",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Vallam kali",
+    "target": "Kerala",
+    "clean_prefix": "Vallam kali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Raja Parba is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Raja Parba",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Vallam kali",
+      "wiki_oldid": 1354535645,
+      "wiki_url": "https://en.wikipedia.org/wiki/Vallam_kali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.751365+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.2933269739151,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2866,
+        "logp_clean": -0.7408,
+        "logp_corrupt": -9.0274
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.2068,
+        "logp_clean": -0.3162,
+        "logp_corrupt": -10.5229
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.0315,
+        "logp_clean": -0.0335,
+        "logp_corrupt": -4.065
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.5982,
+        "logp_clean": -0.0163,
+        "logp_corrupt": -5.6145
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.9202,
+      "Gemma-2-9B": -1.5667
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_939de767dc",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kolar Theppothsava",
+    "target": "Karnataka",
+    "clean_prefix": "Kolar Theppothsava is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a festival celebrated in the Indian state of",
+    "r": "Karnataka",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kolar Theppothsava",
+      "wiki_oldid": 1323942499,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kolar_Theppothsava",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.739860+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 10.126489996910095,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.1191,
+        "logp_clean": -0.08,
+        "logp_corrupt": -10.1992
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.46,
+        "logp_clean": -0.0932,
+        "logp_corrupt": -10.5531
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4416,
+        "logp_clean": -0.1548,
+        "logp_corrupt": -8.5964
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.2752,
+        "logp_clean": -0.3457,
+        "logp_corrupt": -12.6208
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3409,
+      "Gemma-2-9B": -3.8336
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_1431974134",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kollam Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Kollam Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kollam Pooram",
+      "wiki_oldid": 1345546399,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kollam_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.755366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.8800426768139,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8799,
+        "logp_clean": -0.0131,
+        "logp_corrupt": -8.893
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.5379,
+        "logp_clean": -0.0039,
+        "logp_corrupt": -10.5418
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.5696,
+        "logp_clean": -0.0151,
+        "logp_corrupt": -11.5847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 17.5848,
+        "logp_clean": -0.0026,
+        "logp_corrupt": -17.5874
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.658,
+      "Gemma-2-9B": -6.0152
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_ceaad5cac3",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kuchela dinam",
+    "target": "Kerala",
+    "clean_prefix": "Kuchela dinam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kuchela dinam",
+      "wiki_oldid": 1261026254,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kuchela_dinam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.760367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 6.898391962051392,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.8974,
+        "logp_clean": -1.9956,
+        "logp_corrupt": -8.893
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.0855,
+        "logp_clean": -3.4563,
+        "logp_corrupt": -10.5418
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.1082,
+        "logp_clean": -2.4766,
+        "logp_corrupt": -11.5847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 15.1234,
+        "logp_clean": -2.464,
+        "logp_corrupt": -17.5874
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.1881,
+      "Gemma-2-9B": -6.0152
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_8aa27da418",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aanayoottu",
+    "target": "Kerala",
+    "clean_prefix": "Aanayoottu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Aanayoottu",
+      "wiki_oldid": 1174639434,
+      "wiki_url": "https://en.wikipedia.org/wiki/Aanayoottu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.761367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.870778826996684,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8707,
+        "logp_clean": -0.0223,
+        "logp_corrupt": -8.893
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.5213,
+        "logp_clean": -0.0205,
+        "logp_corrupt": -10.5418
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.5266,
+        "logp_clean": -0.0581,
+        "logp_corrupt": -11.5847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 17.5698,
+        "logp_clean": -0.0176,
+        "logp_corrupt": -17.5874
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.6506,
+      "Gemma-2-9B": -6.0432
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_e7ddc1130d",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Vairankode Vela",
+    "target": "Kerala",
+    "clean_prefix": "Vairankode Vela is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Vairankode Vela",
+      "wiki_oldid": 1333884538,
+      "wiki_url": "https://en.wikipedia.org/wiki/Vairankode_Vela",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.753367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 5.501805275678635,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.4884,
+        "logp_clean": -0.1401,
+        "logp_corrupt": -5.6285
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.5618,
+        "logp_clean": -0.0589,
+        "logp_corrupt": -5.6208
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.9389,
+        "logp_clean": -0.169,
+        "logp_corrupt": -6.1079
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.1621,
+        "logp_clean": -0.035,
+        "logp_corrupt": -5.1971
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.0734,
+      "Gemma-2-9B": 0.7768
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_f04ccf995c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Payippadu Vallam Kali",
+    "target": "Kerala",
+    "clean_prefix": "Payippadu Vallam Kali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bastar Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Chhattisgarh",
+    "corruptor_anchor": "Bastar Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Payippadu Vallam Kali",
+      "wiki_oldid": 1348655559,
+      "wiki_url": "https://en.wikipedia.org/wiki/Payippadu_Vallam_Kali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.754366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 11.08678687736392,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.0862,
+        "logp_clean": -0.028,
+        "logp_corrupt": -11.1141
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 13.1293,
+        "logp_clean": -0.0486,
+        "logp_corrupt": -13.178
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.9036,
+        "logp_clean": -0.0183,
+        "logp_corrupt": -9.9219
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.7683,
+        "logp_clean": -0.0081,
+        "logp_corrupt": -14.7764
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.0431,
+      "Gemma-2-9B": -4.8647
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_51cbba200a",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Makara Jyothi",
+    "target": "Kerala",
+    "clean_prefix": "Makara Jyothi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Makara Jyothi",
+      "wiki_oldid": 1332874411,
+      "wiki_url": "https://en.wikipedia.org/wiki/Makara_Jyothi",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.755366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.936564683914185,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.9515,
+        "logp_clean": -0.272,
+        "logp_corrupt": -10.2236
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.2888,
+        "logp_clean": -0.4417,
+        "logp_corrupt": -7.7306
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.3566,
+        "logp_clean": -0.3473,
+        "logp_corrupt": -5.7038
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5415,
+        "logp_clean": -0.0452,
+        "logp_corrupt": -6.5868
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.6627,
+      "Gemma-2-9B": -1.1849
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_bbe83b3870",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kummattikali",
+    "target": "Kerala",
+    "clean_prefix": "Kummattikali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kummattikali",
+      "wiki_oldid": 1257745333,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kummattikali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.755366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.258190205320716,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2521,
+        "logp_clean": -0.0226,
+        "logp_corrupt": -8.2747
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.6414,
+        "logp_clean": -0.0073,
+        "logp_corrupt": -7.6487
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.2218,
+        "logp_clean": -0.2242,
+        "logp_corrupt": -8.4461
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.0969,
+        "logp_clean": -0.0251,
+        "logp_corrupt": -8.122
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6107,
+      "Gemma-2-9B": 0.1249
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_1f416e5d75",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Nalukulangara Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Nalukulangara Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Nalukulangara Pooram",
+      "wiki_oldid": 1323989292,
+      "wiki_url": "https://en.wikipedia.org/wiki/Nalukulangara_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.747366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.804917193949223,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.8048,
+        "logp_clean": -0.0414,
+        "logp_corrupt": -9.8462
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.6773,
+        "logp_clean": -0.0394,
+        "logp_corrupt": -12.7167
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.2095,
+        "logp_clean": -0.0346,
+        "logp_corrupt": -10.2441
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.9839,
+        "logp_clean": -0.0104,
+        "logp_corrupt": -13.9943
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.8725,
+      "Gemma-2-9B": -3.7744
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_726d7d83a6",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kanyarkali",
+    "target": "Kerala",
+    "clean_prefix": "Kanyarkali is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Sao Joao is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Goa",
+    "corruptor_anchor": "Sao Joao",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kanyarkali",
+      "wiki_oldid": 1355528182,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kanyarkali",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.746367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 6.251102894544601,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2655,
+        "logp_clean": -0.0488,
+        "logp_corrupt": -6.3143
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.4796,
+        "logp_clean": -0.0868,
+        "logp_corrupt": -6.5664
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2669,
+        "logp_clean": -0.2812,
+        "logp_corrupt": -5.5481
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.0343,
+        "logp_clean": -0.1497,
+        "logp_corrupt": -4.1841
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2141,
+      "Gemma-2-9B": 1.2326
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_2873c2f338",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Onathallu",
+    "target": "Kerala",
+    "clean_prefix": "Onathallu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bhagoria is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bhagoria",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Onathallu",
+      "wiki_oldid": 1261446455,
+      "wiki_url": "https://en.wikipedia.org/wiki/Onathallu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.746367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 12.046239346265793,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 12.0538,
+        "logp_clean": -0.1592,
+        "logp_corrupt": -12.213
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.2345,
+        "logp_clean": -0.1688,
+        "logp_corrupt": -11.4033
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.4282,
+        "logp_clean": -1.2176,
+        "logp_corrupt": -10.6458
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.5645,
+        "logp_clean": -1.6994,
+        "logp_corrupt": -11.2639
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.8193,
+      "Gemma-2-9B": -0.1363
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_e45ccb119e",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Triprayar Boat Race",
+    "target": "Kerala",
+    "clean_prefix": "Triprayar Boat Race is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Triprayar Boat Race",
+      "wiki_oldid": 1348483495,
+      "wiki_url": "https://en.wikipedia.org/wiki/Triprayar_Boat_Race",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.747366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.876387542113662,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8764,
+        "logp_clean": -0.0166,
+        "logp_corrupt": -8.893
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.537,
+        "logp_clean": -0.0048,
+        "logp_corrupt": -10.5418
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.5692,
+        "logp_clean": -0.0156,
+        "logp_corrupt": -11.5847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 17.5831,
+        "logp_clean": -0.0043,
+        "logp_corrupt": -17.5874
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.6606,
+      "Gemma-2-9B": -6.0139
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_e9958b13c5",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Trichambaram uthsavam",
+    "target": "Kerala",
+    "clean_prefix": "Trichambaram uthsavam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Trichambaram uthsavam",
+      "wiki_oldid": 1349933307,
+      "wiki_url": "https://en.wikipedia.org/wiki/Trichambaram_uthsavam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.743858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.786482851952314,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.7865,
+        "logp_clean": -0.0597,
+        "logp_corrupt": -9.8462
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.6997,
+        "logp_clean": -0.017,
+        "logp_corrupt": -12.7167
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.9505,
+        "logp_clean": -0.2936,
+        "logp_corrupt": -10.2441
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.5207,
+        "logp_clean": -0.4735,
+        "logp_corrupt": -13.9943
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.9132,
+      "Gemma-2-9B": -3.5702
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_a722a97aff",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Neelamperoor Padayani",
+    "target": "Kerala",
+    "clean_prefix": "Neelamperoor Padayani is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Neelamperoor Padayani",
+      "wiki_oldid": 1259259206,
+      "wiki_url": "https://en.wikipedia.org/wiki/Neelamperoor_Padayani",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.762368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.826617076992989,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.8266,
+        "logp_clean": -0.0196,
+        "logp_corrupt": -9.8462
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.7107,
+        "logp_clean": -0.006,
+        "logp_corrupt": -12.7167
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.2235,
+        "logp_clean": -0.0206,
+        "logp_corrupt": -10.2441
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.9886,
+        "logp_clean": -0.0057,
+        "logp_corrupt": -13.9943
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.8841,
+      "Gemma-2-9B": -3.7651
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_f1508f71a6",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Peruvanam Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Peruvanam Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Peruvanam Pooram",
+      "wiki_oldid": 1325665166,
+      "wiki_url": "https://en.wikipedia.org/wiki/Peruvanam_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.761367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 3.859912962652743,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.8599,
+        "logp_clean": -0.0126,
+        "logp_corrupt": -3.8726
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.3714,
+        "logp_clean": -0.0041,
+        "logp_corrupt": -4.3755
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2777,
+        "logp_clean": -0.0265,
+        "logp_corrupt": -5.3043
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.2069,
+        "logp_clean": -0.0076,
+        "logp_corrupt": -6.2145
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.5115,
+      "Gemma-2-9B": -0.9292
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_eef6a20ec8",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kallada Boat Race",
+    "target": "Kerala",
+    "clean_prefix": "Kallada Boat Race is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kallada Boat Race",
+      "wiki_oldid": 1332232550,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kallada_Boat_Race",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.760367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.856190711259842,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8563,
+        "logp_clean": -0.0366,
+        "logp_corrupt": -8.893
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.5266,
+        "logp_clean": -0.0152,
+        "logp_corrupt": -10.5418
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.5622,
+        "logp_clean": -0.0226,
+        "logp_corrupt": -11.5847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 17.5799,
+        "logp_clean": -0.0075,
+        "logp_corrupt": -17.5874
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.6703,
+      "Gemma-2-9B": -6.0177
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_02d324a87f",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Manappullikavu Vela",
+    "target": "Kerala",
+    "clean_prefix": "Manappullikavu Vela is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Manappullikavu Vela",
+      "wiki_oldid": 1301554299,
+      "wiki_url": "https://en.wikipedia.org/wiki/Manappullikavu_Vela",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.758367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.830979644320905,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.8309,
+        "logp_clean": -0.0153,
+        "logp_corrupt": -9.8462
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.7133,
+        "logp_clean": -0.0034,
+        "logp_corrupt": -12.7167
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.2125,
+        "logp_clean": -0.0316,
+        "logp_corrupt": -10.2441
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.9853,
+        "logp_clean": -0.0089,
+        "logp_corrupt": -13.9943
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.8824,
+      "Gemma-2-9B": -3.7728
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_36095b7653",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Vishu",
+    "target": "Kerala",
+    "clean_prefix": "Vishu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lokrang is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Lokrang",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Vishu",
+      "wiki_oldid": 1349010077,
+      "wiki_url": "https://en.wikipedia.org/wiki/Vishu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.727861+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 6.369676800444722,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.3607,
+        "logp_clean": -0.011,
+        "logp_corrupt": -6.3717
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.9026,
+        "logp_clean": -0.008,
+        "logp_corrupt": -5.9106
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.5778,
+        "logp_clean": -0.0274,
+        "logp_corrupt": -3.6051
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.6272,
+        "logp_clean": -0.0027,
+        "logp_corrupt": -3.6299
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.4581,
+      "Gemma-2-9B": -0.0494
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_fbecd1a7e2",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Arattupuzha Pooram",
+    "target": "Kerala",
+    "clean_prefix": "Arattupuzha Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Arattupuzha Pooram",
+      "wiki_oldid": 1223650206,
+      "wiki_url": "https://en.wikipedia.org/wiki/Arattupuzha_Pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.742858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 10.196234631352127,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.2114,
+        "logp_clean": -0.0122,
+        "logp_corrupt": -10.2236
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7258,
+        "logp_clean": -0.0048,
+        "logp_corrupt": -7.7306
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6878,
+        "logp_clean": -0.0161,
+        "logp_corrupt": -5.7038
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5837,
+        "logp_clean": -0.003,
+        "logp_corrupt": -6.5868
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.4856,
+      "Gemma-2-9B": -0.8959
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_2ac65f7e4f",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Vaikasi Visakam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Vaikasi Visakam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Vaikasi Visakam",
+      "wiki_oldid": 1309099896,
+      "wiki_url": "https://en.wikipedia.org/wiki/Vaikasi_Visakam",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.036638+00:00",
+      "web_source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.665424393489957,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.6676,
+        "logp_clean": -0.0898,
+        "logp_corrupt": -8.7573
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.0213,
+        "logp_clean": -0.0146,
+        "logp_corrupt": -9.036
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.2354,
+        "logp_clean": -0.1117,
+        "logp_corrupt": -8.3471
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.3053,
+        "logp_clean": -0.0662,
+        "logp_corrupt": -10.3716
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3537,
+      "Gemma-2-9B": -2.0699
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_5f4f783183",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aadi Perukku",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Aadi Perukku is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Aadi Perukku",
+      "wiki_oldid": 1343473438,
+      "wiki_url": "https://en.wikipedia.org/wiki/Aadi_Perukku",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.996719+00:00",
+      "web_source_url": "https://cultureandheritage.org/religious-temple-festivals-of-tamilnadu",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.022458070889115,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.0305,
+        "logp_clean": -0.0822,
+        "logp_corrupt": -9.1127
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.1134,
+        "logp_clean": -0.0098,
+        "logp_corrupt": -8.1232
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.1718,
+        "logp_clean": -0.0724,
+        "logp_corrupt": -9.2442
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.4281,
+        "logp_clean": -0.0062,
+        "logp_corrupt": -12.4343
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9171,
+      "Gemma-2-9B": -3.2563
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_a14e87199d",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aadi Krithigai",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Aadi Krithigai is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.088767+00:00",
+      "web_source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.9180610831826925,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.9183,
+        "logp_clean": -0.1681,
+        "logp_corrupt": -5.0864
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.3152,
+        "logp_clean": -0.0559,
+        "logp_corrupt": -5.3711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.8893,
+        "logp_clean": -0.0693,
+        "logp_corrupt": -4.9586
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.2277,
+        "logp_clean": -0.0092,
+        "logp_corrupt": -7.2369
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3969,
+      "Gemma-2-9B": -2.3384
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_914b624c13",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kanda Sasti",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Kanda Sasti is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Baisakhi is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Baisakhi",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kanda Shasti Kavasam",
+      "wiki_oldid": 1336869572,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kanda_Shasti_Kavasam",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.045852+00:00",
+      "web_source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.369996216148138,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.3818,
+        "logp_clean": -0.0905,
+        "logp_corrupt": -5.4724
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.9682,
+        "logp_clean": -0.1581,
+        "logp_corrupt": -7.1263
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.3096,
+        "logp_clean": -0.3718,
+        "logp_corrupt": -7.6814
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.1657,
+        "logp_clean": -0.5057,
+        "logp_corrupt": -13.6714
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.5864,
+      "Gemma-2-9B": -5.8561
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_d73d7cf115",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Karthika Deepam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Karthika Deepam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Karthika Deepam",
+      "wiki_oldid": 1347553533,
+      "wiki_url": "https://en.wikipedia.org/wiki/Karthika_Deepam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.767368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.33909372612834,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.332,
+        "logp_clean": -1.0262,
+        "logp_corrupt": -9.3582
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.3833,
+        "logp_clean": -1.5963,
+        "logp_corrupt": -11.9796
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.9944,
+        "logp_clean": -1.0371,
+        "logp_corrupt": -10.0316
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.8915,
+        "logp_clean": -1.6374,
+        "logp_corrupt": -14.5289
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.0513,
+      "Gemma-2-9B": -3.8971
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_0c1f0d582e",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Vaikunta Ekadasi",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Vaikunta Ekadasi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Vaikuntha Ekadashi",
+      "wiki_oldid": 1345784478,
+      "wiki_url": "https://en.wikipedia.org/wiki/Vaikuntha_Ekadashi",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.046851+00:00",
+      "web_source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.6183412726968527,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.6185,
+        "logp_clean": -1.4679,
+        "logp_corrupt": -5.0864
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.5377,
+        "logp_clean": -2.8333,
+        "logp_corrupt": -5.3711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.2795,
+        "logp_clean": -1.6791,
+        "logp_corrupt": -4.9586
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.1057,
+        "logp_clean": -2.1313,
+        "logp_corrupt": -7.2369
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0808,
+      "Gemma-2-9B": -1.8262
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_9ee7e1b228",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Theppotsavam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Theppotsavam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Theppotsavam",
+      "wiki_oldid": 1323352284,
+      "wiki_url": "https://en.wikipedia.org/wiki/Theppotsavam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.763368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 6.885260112583637,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.8932,
+        "logp_clean": -2.2195,
+        "logp_corrupt": -9.1127
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.8933,
+        "logp_clean": -2.23,
+        "logp_corrupt": -8.1232
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.9275,
+        "logp_clean": -1.3166,
+        "logp_corrupt": -9.2442
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.3757,
+        "logp_clean": -2.0586,
+        "logp_corrupt": -12.4343
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9999,
+      "Gemma-2-9B": -2.4482
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_f67e556c0c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aadi Pooram",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Aadi Pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bhagoria is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bhagoria",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Andal",
+      "wiki_oldid": 1348769823,
+      "wiki_url": "https://en.wikipedia.org/wiki/Andal",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.036638+00:00",
+      "web_source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 14.17819832265377,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 14.1835,
+        "logp_clean": -0.2564,
+        "logp_corrupt": -14.4399
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 13.2624,
+        "logp_clean": -0.4203,
+        "logp_corrupt": -13.6827
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.534,
+        "logp_clean": -2.1095,
+        "logp_corrupt": -11.6435
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.6303,
+        "logp_clean": -1.9785,
+        "logp_corrupt": -13.6088
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9211,
+      "Gemma-2-9B": -2.0963
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_7734b1cf83",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Mattu Pongal",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Mattu Pongal is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Mattu Pongal",
+      "wiki_oldid": 1311261022,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mattu_Pongal",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.764368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.892956789582968,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.9001,
+        "logp_clean": -0.2126,
+        "logp_corrupt": -9.1127
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.917,
+        "logp_clean": -0.2063,
+        "logp_corrupt": -8.1232
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.1499,
+        "logp_clean": -0.0942,
+        "logp_corrupt": -9.2442
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.4298,
+        "logp_clean": -0.0045,
+        "logp_corrupt": -12.4343
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9831,
+      "Gemma-2-9B": -3.2799
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_7697c461c3",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Avani Avittam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Avani Avittam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Upakarma",
+      "wiki_oldid": 1323593155,
+      "wiki_url": "https://en.wikipedia.org/wiki/Upakarma",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.080767+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Avani_Avittam",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.053011141717434,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.0527,
+        "logp_clean": -0.3055,
+        "logp_corrupt": -9.3582
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.7253,
+        "logp_clean": -0.2542,
+        "logp_corrupt": -11.9796
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.9775,
+        "logp_clean": -1.054,
+        "logp_corrupt": -10.0316
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.9812,
+        "logp_clean": -3.5477,
+        "logp_corrupt": -14.5289
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.6726,
+      "Gemma-2-9B": -2.0037
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_c5b779e8d9",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Puthandu",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Puthandu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Sarhul is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Sarhul",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Puthandu",
+      "wiki_oldid": 1348907510,
+      "wiki_url": "https://en.wikipedia.org/wiki/Puthandu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.767368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 11.840229786932468,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.8565,
+        "logp_clean": -0.1111,
+        "logp_corrupt": -11.9676
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 14.2004,
+        "logp_clean": -0.0652,
+        "logp_corrupt": -14.2656
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.3993,
+        "logp_clean": -0.0707,
+        "logp_corrupt": -10.47
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.537,
+        "logp_clean": -0.0106,
+        "logp_corrupt": -13.5475
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.3439,
+      "Gemma-2-9B": -3.1377
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_85ad84636c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Mahamaham",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Mahamaham is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Sekrenyi is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Nagaland",
+    "corruptor_anchor": "Sekrenyi",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Mahamaham",
+      "wiki_oldid": 1323519507,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mahamaham",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.728855+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.484414763748646,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.4943,
+        "logp_clean": -0.0742,
+        "logp_corrupt": -8.5684
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.1704,
+        "logp_clean": -0.0145,
+        "logp_corrupt": -8.1849
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6684,
+        "logp_clean": -0.06,
+        "logp_corrupt": -5.7285
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.3849,
+        "logp_clean": -0.0093,
+        "logp_corrupt": -3.3941
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.3239,
+      "Gemma-2-9B": 2.2835
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_7880e23154",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Chitra Pournami",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Chitra Pournami is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chitra Pournami",
+      "wiki_oldid": 788449387,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chitra_Pournami",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.081762+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chitra_Pournami",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.869635529816151,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.881,
+        "logp_clean": -1.4772,
+        "logp_corrupt": -9.3582
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.0962,
+        "logp_clean": -1.8834,
+        "logp_corrupt": -11.9796
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.0802,
+        "logp_clean": -0.9514,
+        "logp_corrupt": -10.0316
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.9848,
+        "logp_clean": -1.544,
+        "logp_corrupt": -14.5289
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.2152,
+      "Gemma-2-9B": -3.9046
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_8333c1ca52",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Surasamharam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Surasamharam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Surasamharam",
+      "wiki_oldid": 1324070706,
+      "wiki_url": "https://en.wikipedia.org/wiki/Surasamharam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.765368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 7.5914770141243935,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.5884,
+        "logp_clean": -1.7697,
+        "logp_corrupt": -9.3582
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.7591,
+        "logp_clean": -2.2205,
+        "logp_corrupt": -11.9796
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4871,
+        "logp_clean": -1.5444,
+        "logp_corrupt": -10.0316
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.5555,
+        "logp_clean": -0.9733,
+        "logp_corrupt": -14.5289
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.1707,
+      "Gemma-2-9B": -5.0684
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_3fcaf21ddd",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Masi Magam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Masi Magam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bhagoria is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bhagoria",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Masi Marjamäki",
+      "wiki_oldid": 1351552261,
+      "wiki_url": "https://en.wikipedia.org/wiki/Masi_Marjamäki",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.035637+00:00",
+      "web_source_url": "https://cultureandheritage.org/religious-temple-festivals-of-tamilnadu",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 13.968623533844948,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 13.9771,
+        "logp_clean": -0.4628,
+        "logp_corrupt": -14.4399
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 13.001,
+        "logp_clean": -0.6817,
+        "logp_corrupt": -13.6827
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.3003,
+        "logp_clean": -0.3432,
+        "logp_corrupt": -11.6435
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.363,
+        "logp_clean": -1.2457,
+        "logp_corrupt": -13.6088
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9761,
+      "Gemma-2-9B": -1.0627
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_9e2b17dea7",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Thaipusam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Thaipusam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Thaipusam",
+      "wiki_oldid": 1338986355,
+      "wiki_url": "https://en.wikipedia.org/wiki/Thaipusam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.767368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 9.026347242295742,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.0246,
+        "logp_clean": -0.3336,
+        "logp_corrupt": -9.3582
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.3884,
+        "logp_clean": -0.5912,
+        "logp_corrupt": -11.9796
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.9832,
+        "logp_clean": -0.0483,
+        "logp_corrupt": -10.0316
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.523,
+        "logp_clean": -0.0058,
+        "logp_corrupt": -14.5289
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.3638,
+      "Gemma-2-9B": -4.5398
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_3258422737",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Pongal",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Pongal is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Teej is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Teej",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Pongal",
+      "wiki_oldid": 1220270995,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pongal",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.729881+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 5.387847900390625,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.3927,
+        "logp_clean": -0.1969,
+        "logp_corrupt": -5.5896
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.9536,
+        "logp_clean": -0.0251,
+        "logp_corrupt": -7.9787
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.1186,
+        "logp_clean": -0.076,
+        "logp_corrupt": -7.1946
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.7741,
+        "logp_clean": -0.0031,
+        "logp_corrupt": -8.7772
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.5609,
+      "Gemma-2-9B": -1.6555
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_957ff5dcad",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Karthigai Deepam",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Karthigai Deepam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Karthika Deepam",
+      "wiki_oldid": 1347553533,
+      "wiki_url": "https://en.wikipedia.org/wiki/Karthika_Deepam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.727861+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 4.9782212153077126,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.9794,
+        "logp_clean": -0.107,
+        "logp_corrupt": -5.0864
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.352,
+        "logp_clean": -0.0191,
+        "logp_corrupt": -5.3711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.9002,
+        "logp_clean": -0.0584,
+        "logp_corrupt": -4.9586
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.2339,
+        "logp_clean": -0.003,
+        "logp_corrupt": -7.2369
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3726,
+      "Gemma-2-9B": -2.3337
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_fe132d5ec0",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Panguni Uthiram",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Panguni Uthiram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Panguni Uthiram",
+      "wiki_oldid": 1323515115,
+      "wiki_url": "https://en.wikipedia.org/wiki/Panguni_Uthiram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.995719+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Panguni_Uthiram",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.961418395861983,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.9619,
+        "logp_clean": -0.1245,
+        "logp_corrupt": -5.0864
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.3203,
+        "logp_clean": -0.0508,
+        "logp_corrupt": -5.3711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.8902,
+        "logp_clean": -0.0684,
+        "logp_corrupt": -4.9586
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.2315,
+        "logp_clean": -0.0054,
+        "logp_corrupt": -7.2369
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3584,
+      "Gemma-2-9B": -2.3413
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_c2d534d8a0",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Aadi Amavasai",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Aadi Amavasai is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.085764+00:00",
+      "web_source_url": "https://www.drikpanchang.com/festivals/tamil-festivals.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.848098365589976,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.8479,
+        "logp_clean": -0.2385,
+        "logp_corrupt": -5.0864
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.2585,
+        "logp_clean": -0.1126,
+        "logp_corrupt": -5.3711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.8223,
+        "logp_clean": -0.1363,
+        "logp_corrupt": -4.9586
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.22,
+        "logp_clean": -0.0169,
+        "logp_corrupt": -7.2369
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4106,
+      "Gemma-2-9B": -2.3977
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_fdb7317fe4",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Thimithi",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Thimithi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Durga Puja is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Durga Puja",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Thimithi",
+      "wiki_oldid": 1341042988,
+      "wiki_url": "https://en.wikipedia.org/wiki/Thimithi",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.768368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 3.9061180725693703,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.9068,
+        "logp_clean": -0.1865,
+        "logp_corrupt": -4.0933
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.7545,
+        "logp_clean": -0.5807,
+        "logp_corrupt": -7.3352
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.6953,
+        "logp_clean": -0.1881,
+        "logp_corrupt": -6.8833
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.8466,
+        "logp_clean": -0.2084,
+        "logp_corrupt": -10.0549
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.8477,
+      "Gemma-2-9B": -3.1513
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_80b2c6bcf6",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Erwadi Santhanakoodu",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Erwadi Santhanakoodu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Kullu Dussehra is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Kullu Dussehra",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Erwadi Santhanakoodu Festival",
+      "wiki_oldid": 1340035534,
+      "wiki_url": "https://en.wikipedia.org/wiki/Erwadi_Santhanakoodu_Festival",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.764368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 11.561506073921919,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.5624,
+        "logp_clean": -0.1253,
+        "logp_corrupt": -11.6877
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 14.1844,
+        "logp_clean": -0.0891,
+        "logp_corrupt": -14.2735
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.5535,
+        "logp_clean": -0.058,
+        "logp_corrupt": -11.6116
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 18.3366,
+        "logp_clean": -0.011,
+        "logp_corrupt": -18.3476
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.622,
+      "Gemma-2-9B": -6.7831
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_d442dd439d",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Nandhi Marriage",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Nandhi Marriage is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Tarnetar is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Tarnetar",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Nandhi Marriage Festival",
+      "wiki_oldid": 1356582066,
+      "wiki_url": "https://en.wikipedia.org/wiki/Nandhi_Marriage_Festival",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.765368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.260625131428242,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2279,
+        "logp_clean": -0.495,
+        "logp_corrupt": -8.7229
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.1104,
+        "logp_clean": -0.3533,
+        "logp_corrupt": -8.4637
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.5816,
+        "logp_clean": -1.0096,
+        "logp_corrupt": -8.5912
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.9802,
+        "logp_clean": -0.7014,
+        "logp_corrupt": -6.6817
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.1175,
+      "Gemma-2-9B": 1.6014
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_1a9382ac9c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Mayana Kollai",
+    "target": "Tamil Nadu",
+    "clean_prefix": "Mayana Kollai is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Tamil Nadu",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 2,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Mayana Kollai",
+      "wiki_oldid": 1330008050,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mayana_Kollai",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.763368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.399998739361763,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.4012,
+        "logp_clean": -0.957,
+        "logp_corrupt": -9.3582
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.7619,
+        "logp_clean": -1.2176,
+        "logp_corrupt": -11.9796
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.5477,
+        "logp_clean": -0.4838,
+        "logp_corrupt": -10.0316
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.2256,
+        "logp_clean": -0.3033,
+        "logp_corrupt": -14.5289
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.3607,
+      "Gemma-2-9B": -4.6779
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_fd3b79b80c",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Bhogi",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Bhogi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lokrang is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Lokrang",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Bhogi",
+      "wiki_oldid": 1347966416,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bhogi",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.723932+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 5.864786563441157,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.8575,
+        "logp_clean": -0.8467,
+        "logp_corrupt": -6.7042
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.8247,
+        "logp_clean": -0.0558,
+        "logp_corrupt": -4.8805
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.7903,
+        "logp_clean": -0.6071,
+        "logp_corrupt": -4.3974
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.7885,
+        "logp_clean": -0.3805,
+        "logp_corrupt": -5.1691
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0328,
+      "Gemma-2-9B": -0.9982
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_dc41b3a9f7",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Edupayala Jatara",
+    "target": "Telangana",
+    "clean_prefix": "Edupayala Jatara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.safarmentor.com/blog/festivals-in-telangana/",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.050851+00:00",
+      "web_source_url": "https://www.safarmentor.com/blog/festivals-in-telangana/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 13.319767233799212,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 13.3223,
+        "logp_clean": -0.2503,
+        "logp_corrupt": -13.5726
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 14.0421,
+        "logp_clean": -0.2363,
+        "logp_corrupt": -14.2784
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.8949,
+        "logp_clean": -1.1781,
+        "logp_corrupt": -11.073
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 15.4039,
+        "logp_clean": -1.1134,
+        "logp_corrupt": -16.5173
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.7198,
+      "Gemma-2-9B": -5.509
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_9c1c67691b",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Peerla Panduga",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Peerla Panduga is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bhagoria is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bhagoria",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Peerla Panduga",
+      "wiki_oldid": 1317637038,
+      "wiki_url": "https://en.wikipedia.org/wiki/Peerla_Panduga",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.731858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 11.41348560526967,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.4021,
+        "logp_clean": -0.6131,
+        "logp_corrupt": -12.0152
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.2805,
+        "logp_clean": -0.9027,
+        "logp_corrupt": -11.1831
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.3446,
+        "logp_clean": -0.5195,
+        "logp_corrupt": -10.8641
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.1838,
+        "logp_clean": -0.3265,
+        "logp_corrupt": -12.5103
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1216,
+      "Gemma-2-9B": -1.8392
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_60ae1b1160",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Bathukamma",
+    "target": "Telangana",
+    "clean_prefix": "Bathukamma is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bhagoria is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bhagoria",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Bathukamma",
+      "wiki_oldid": 1324038362,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bathukamma",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.770368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 14.643592605367303,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 14.6369,
+        "logp_clean": -0.1291,
+        "logp_corrupt": -14.766
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 12.9999,
+        "logp_clean": -0.1712,
+        "logp_corrupt": -13.1711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.0442,
+        "logp_clean": -0.0381,
+        "logp_corrupt": -11.0823
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.7969,
+        "logp_clean": -0.0022,
+        "logp_corrupt": -11.7991
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.637,
+      "Gemma-2-9B": -0.7527
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_1cb651d410",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Pavithrotsavam",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Pavithrotsavam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Pavithrotsavam",
+      "wiki_oldid": 1103420450,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pavithrotsavam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.732858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 2.705643347930163,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.7037,
+        "logp_clean": -2.0872,
+        "logp_corrupt": -4.7908
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.416,
+        "logp_clean": -1.5558,
+        "logp_corrupt": -3.9717
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.865,
+        "logp_clean": -4.0869,
+        "logp_corrupt": -4.9519
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 2.006,
+        "logp_clean": -5.0637,
+        "logp_corrupt": -7.0697
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2877,
+      "Gemma-2-9B": -1.141
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_8b5c04c320",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Bonalu",
+    "target": "Telangana",
+    "clean_prefix": "Bonalu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lokrang is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Lokrang",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Bonalu",
+      "wiki_oldid": 1331200255,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bonalu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.729881+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 7.587309609341901,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.5802,
+        "logp_clean": -0.198,
+        "logp_corrupt": -7.7783
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.644,
+        "logp_clean": -0.2806,
+        "logp_corrupt": -5.9246
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2531,
+        "logp_clean": -0.0551,
+        "logp_corrupt": -5.3082
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.902,
+        "logp_clean": -0.017,
+        "logp_corrupt": -4.919
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.9362,
+      "Gemma-2-9B": 0.3511
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_a264b495ba",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Gangamma Jatara",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Gangamma Jatara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Gangamma Jatara",
+      "wiki_oldid": 1295116311,
+      "wiki_url": "https://en.wikipedia.org/wiki/Gangamma_Jatara",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.733858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 7.86660161614418,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.8617,
+        "logp_clean": -0.2827,
+        "logp_corrupt": -8.1445
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.5934,
+        "logp_clean": -0.704,
+        "logp_corrupt": -8.2973
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.2541,
+        "logp_clean": -0.982,
+        "logp_corrupt": -8.2361
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.5153,
+        "logp_clean": -0.5175,
+        "logp_corrupt": -9.0328
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2683,
+      "Gemma-2-9B": -1.2612
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_190472a918",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Peddagattu jathara",
+    "target": "Telangana",
+    "clean_prefix": "Peddagattu jathara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganesh Chaturthi is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Ganesh Chaturthi",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Peddagattu jathara",
+      "wiki_oldid": 1192130161,
+      "wiki_url": "https://en.wikipedia.org/wiki/Peddagattu_jathara",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.772368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 2.191769439203199,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.1992,
+        "logp_clean": -1.2403,
+        "logp_corrupt": -3.4395
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.3775,
+        "logp_clean": -1.2122,
+        "logp_corrupt": -4.5897
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.8872,
+        "logp_clean": -0.9018,
+        "logp_corrupt": -7.789
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.4177,
+        "logp_clean": -0.9123,
+        "logp_corrupt": -9.3301
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.1783,
+      "Gemma-2-9B": -1.5305
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_e6228f55d4",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Pidakala War",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Pidakala War is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Sarhul is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Sarhul",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Pidakala War",
+      "wiki_oldid": 1346670222,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pidakala_War",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.731858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 10.277325196191669,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.27,
+        "logp_clean": -0.7477,
+        "logp_corrupt": -11.0177
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.5034,
+        "logp_clean": -0.4957,
+        "logp_corrupt": -10.9992
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.7703,
+        "logp_clean": -2.4965,
+        "logp_corrupt": -9.2668
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.1258,
+        "logp_clean": -2.7745,
+        "logp_corrupt": -11.9003
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2334,
+      "Gemma-2-9B": -2.3555
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_62af2f0bd0",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Nagoba Jatara",
+    "target": "Telangana",
+    "clean_prefix": "Nagoba Jatara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Nagoba Jatara",
+      "wiki_oldid": 1348190023,
+      "wiki_url": "https://en.wikipedia.org/wiki/Nagoba_Jatara",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.046851+00:00",
+      "web_source_url": "https://telanganatourism.gov.in/partials/about/festivals-of-telangana/nagoba-jaatara.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.680572130717337,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.675,
+        "logp_clean": -0.0461,
+        "logp_corrupt": -10.7211
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.2027,
+        "logp_clean": -0.0735,
+        "logp_corrupt": -11.2762
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.3831,
+        "logp_clean": -0.2326,
+        "logp_corrupt": -10.6157
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.5865,
+        "logp_clean": -0.1262,
+        "logp_corrupt": -12.7127
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.5277,
+      "Gemma-2-9B": -2.2034
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_ec3f93e50e",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Devaragutta Dasara",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Devaragutta Dasara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Ganga Dussehra is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Ganga Dussehra",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Devaragutta Dasara festival",
+      "wiki_oldid": 1349884934,
+      "wiki_url": "https://en.wikipedia.org/wiki/Devaragutta_Dasara_festival",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.736860+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 4.024171101395041,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.0247,
+        "logp_clean": -0.7661,
+        "logp_corrupt": -4.7908
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.3642,
+        "logp_clean": -0.6076,
+        "logp_corrupt": -3.9717
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.7672,
+        "logp_clean": -2.1847,
+        "logp_corrupt": -4.9519
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.6076,
+        "logp_clean": -1.4621,
+        "logp_corrupt": -7.0697
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6605,
+      "Gemma-2-9B": -2.8404
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_4e0813d035",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kothakonda Jatara",
+    "target": "Telangana",
+    "clean_prefix": "Kothakonda Jatara is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kothakonda Jatara",
+      "wiki_oldid": 1340373967,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kothakonda_Jatara",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.771368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 12.473099560185801,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 12.4725,
+        "logp_clean": -1.1001,
+        "logp_corrupt": -13.5726
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 13.4135,
+        "logp_clean": -0.8649,
+        "logp_corrupt": -14.2784
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.2392,
+        "logp_clean": -0.8338,
+        "logp_corrupt": -11.073
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 16.0958,
+        "logp_clean": -0.4216,
+        "logp_corrupt": -16.5173
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.941,
+      "Gemma-2-9B": -5.8566
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_030db79f35",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Krishna Pushkaram",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Krishna Pushkaram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Krishna Pushkaram",
+      "wiki_oldid": 1277309560,
+      "wiki_url": "https://en.wikipedia.org/wiki/Krishna_Pushkaram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.730859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.009006280452013,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.0029,
+        "logp_clean": -0.1416,
+        "logp_corrupt": -8.1445
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.1967,
+        "logp_clean": -0.1006,
+        "logp_corrupt": -8.2973
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.0505,
+        "logp_clean": -0.1855,
+        "logp_corrupt": -8.2361
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.5533,
+        "logp_clean": -0.4795,
+        "logp_corrupt": -9.0328
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.1938,
+      "Gemma-2-9B": -0.5028
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_c7dfe88e32",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Ganesh Chaturthi",
+    "target": "Telangana",
+    "clean_prefix": "Ganesh Chaturthi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Telangana",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Ganesh Chaturthi",
+      "wiki_oldid": 1354299610,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ganesh_Chaturthi",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.768368+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 7.646392669412307,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.6606,
+        "logp_clean": -3.4395,
+        "logp_corrupt": -11.1001
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.0212,
+        "logp_clean": -4.5897,
+        "logp_corrupt": -8.6109
+      },
+      "gemma-2-9b-base": {
+        "delta_L": -1.7414,
+        "logp_clean": -7.789,
+        "logp_corrupt": -6.0476
+      },
+      "gemma-2-9b-it": {
+        "delta_L": -3.6652,
+        "logp_clean": -9.3301,
+        "logp_corrupt": -5.6649
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 3.6394,
+      "Gemma-2-9B": 1.9238
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_61258c18b8",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Srivari Brahmotsavam",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Srivari Brahmotsavam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Bastar Dussehra is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Chhattisgarh",
+    "corruptor_anchor": "Bastar Dussehra",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Srivari Brahmotsavam",
+      "wiki_oldid": 1326443169,
+      "wiki_url": "https://en.wikipedia.org/wiki/Srivari_Brahmotsavam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.735858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 7.254283736925572,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.2531,
+        "logp_clean": -0.0473,
+        "logp_corrupt": -7.3004
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.9486,
+        "logp_clean": -0.0306,
+        "logp_corrupt": -7.9792
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.35,
+        "logp_clean": -0.044,
+        "logp_corrupt": -9.394
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.7513,
+        "logp_clean": -0.002,
+        "logp_corrupt": -12.7533
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.6955,
+      "Gemma-2-9B": -3.4013
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_4229e21fc8",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Abhideyaka Abhishekam",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Abhideyaka Abhishekam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Abhideyaka Abhishekam",
+      "wiki_oldid": 1203372459,
+      "wiki_url": "https://en.wikipedia.org/wiki/Abhideyaka_Abhishekam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.734858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 10.536598976701498,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.5597,
+        "logp_clean": -2.0411,
+        "logp_corrupt": -12.6008
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.769,
+        "logp_clean": -1.3014,
+        "logp_corrupt": -13.0705
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.5306,
+        "logp_clean": -1.6285,
+        "logp_corrupt": -9.1592
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.06,
+        "logp_clean": -3.2487,
+        "logp_corrupt": -13.3087
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.2093,
+      "Gemma-2-9B": -2.5294
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_5e8c48e430",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Atla Tadde",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Atla Tadde is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Lathmar Holi is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Lathmar Holi",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Atla Tadde",
+      "wiki_oldid": 1330484843,
+      "wiki_url": "https://en.wikipedia.org/wiki/Atla_Tadde",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.723932+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 6.261714514810592,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2708,
+        "logp_clean": -2.7862,
+        "logp_corrupt": -9.057
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.4368,
+        "logp_clean": -1.8996,
+        "logp_corrupt": -7.3364
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.5533,
+        "logp_clean": -3.5148,
+        "logp_corrupt": -8.0681
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.1387,
+        "logp_clean": -4.4359,
+        "logp_corrupt": -9.5746
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.834,
+      "Gemma-2-9B": -0.5854
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_f16f49f003",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Tirumala Shanivaralu",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Tirumala Shanivaralu is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Tirumala Shanivaralu",
+      "wiki_oldid": 1311296717,
+      "wiki_url": "https://en.wikipedia.org/wiki/Tirumala_Shanivaralu",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.733858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.425197539385408,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.4579,
+        "logp_clean": -0.1481,
+        "logp_corrupt": -8.6061
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.5319,
+        "logp_clean": -0.0467,
+        "logp_corrupt": -5.5786
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.7917,
+        "logp_clean": -0.0927,
+        "logp_corrupt": -5.8845
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.1928,
+        "logp_clean": -0.0054,
+        "logp_corrupt": -5.1982
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.926,
+      "Gemma-2-9B": 0.5989
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_ed34aba1b3",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Rottela Panduga",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Rottela Panduga is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Rann Utsav is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Rann Utsav",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Rottela Panduga",
+      "wiki_oldid": 1346914414,
+      "wiki_url": "https://en.wikipedia.org/wiki/Rottela_Panduga",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.735858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.877115230541676,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8771,
+        "logp_clean": -0.253,
+        "logp_corrupt": -9.1301
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7629,
+        "logp_clean": -1.0218,
+        "logp_corrupt": -8.7846
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.9385,
+        "logp_clean": -0.499,
+        "logp_corrupt": -11.4374
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 15.0509,
+        "logp_clean": -0.713,
+        "logp_corrupt": -15.7639
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1142,
+      "Gemma-2-9B": -4.1124
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_ac6eacd472",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Ugadi",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Ugadi is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Shigmo is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Goa",
+    "corruptor_anchor": "Shigmo",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Ugadi",
+      "wiki_oldid": 1354665899,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ugadi",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.730859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 8.421825747936964,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.4066,
+        "logp_clean": -0.8992,
+        "logp_corrupt": -9.3058
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.1476,
+        "logp_clean": -0.6823,
+        "logp_corrupt": -9.8299
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.8074,
+        "logp_clean": -1.4989,
+        "logp_corrupt": -11.3063
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.0705,
+        "logp_clean": -2.3753,
+        "logp_corrupt": -15.4458
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.741,
+      "Gemma-2-9B": -3.2631
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_ac1d566ee9",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Mamankam",
+    "target": "Kerala",
+    "clean_prefix": "Mamankam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Sarhul is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Sarhul",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Mamankam",
+      "wiki_oldid": 1344726049,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mamankam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.759367+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 11.747074462473392,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.7625,
+        "logp_clean": -0.0353,
+        "logp_corrupt": -11.7978
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 13.5394,
+        "logp_clean": -0.0252,
+        "logp_corrupt": -13.5646
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.1997,
+        "logp_clean": -0.0341,
+        "logp_corrupt": -10.2338
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.6787,
+        "logp_clean": -0.0105,
+        "logp_corrupt": -11.6892
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.7769,
+      "Gemma-2-9B": -1.479
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_d91412b2ae",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Polala Amavasya",
+    "target": "Andhra Pradesh",
+    "clean_prefix": "Polala Amavasya is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Andhra Pradesh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://en.wikipedia.org/wiki/Polala_Amavasya",
+      "wiki_accessed_utc": "2026-05-31T21:40:02.102478+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Polala_Amavasya",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.156161681283265,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.1632,
+        "logp_clean": -1.9813,
+        "logp_corrupt": -8.1445
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.2482,
+        "logp_clean": -2.0492,
+        "logp_corrupt": -8.2973
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.8619,
+        "logp_clean": -1.3741,
+        "logp_corrupt": -8.2361
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.577,
+        "logp_clean": -1.4558,
+        "logp_corrupt": -9.0328
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.085,
+      "Gemma-2-9B": -0.7151
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_fe2d66beb2",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Onam",
+    "target": "Kerala",
+    "clean_prefix": "Onam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Minjar is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Minjar",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "sanskriti",
+      "wiki_title": "Onam",
+      "wiki_oldid": 1353964035,
+      "wiki_url": "https://en.wikipedia.org/wiki/Onam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.727861+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 3.4134293161332607,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.3982,
+        "logp_clean": -0.021,
+        "logp_corrupt": -3.4192
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.8601,
+        "logp_clean": -0.0031,
+        "logp_corrupt": -3.8632
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.1899,
+        "logp_clean": -0.021,
+        "logp_corrupt": -2.2109
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.8619,
+        "logp_clean": -0.0008,
+        "logp_corrupt": -3.8627
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4619,
+      "Gemma-2-9B": -1.672
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_dd3fd971f9",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Irupathiyetttam Onam",
+    "target": "Kerala",
+    "clean_prefix": "Irupathiyetttam Onam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Irupathiyetttam Onam",
+      "wiki_oldid": 1337773919,
+      "wiki_url": "https://en.wikipedia.org/wiki/Irupathiyetttam_Onam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.744859+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 9.972558423876762,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.9725,
+        "logp_clean": -0.0392,
+        "logp_corrupt": -10.0117
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.9082,
+        "logp_clean": -0.0278,
+        "logp_corrupt": -10.936
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.7991,
+        "logp_clean": -0.0395,
+        "logp_corrupt": -9.8386
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.4552,
+        "logp_clean": -0.0094,
+        "logp_corrupt": -14.4646
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.9357,
+      "Gemma-2-9B": -4.6561
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_20ef248239",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Kottakkal pooram",
+    "target": "Kerala",
+    "clean_prefix": "Kottakkal pooram is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Narali Purnima is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Narali Purnima",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kottakkal pooram",
+      "wiki_oldid": 1323989358,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kottakkal_pooram",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.742858+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 5.59179724752903,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.5784,
+        "logp_clean": -0.0502,
+        "logp_corrupt": -5.6285
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.6052,
+        "logp_clean": -0.0156,
+        "logp_corrupt": -5.6208
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.0605,
+        "logp_clean": -0.0474,
+        "logp_corrupt": -6.1079
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.1873,
+        "logp_clean": -0.0097,
+        "logp_corrupt": -5.1971
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.0268,
+      "Gemma-2-9B": 0.8732
+    }
+  },
+  {
+    "item_id": "iccd_A01-SS-01_fa361c4482",
+    "cell_id": "A01-SS-01",
+    "axis": "A01",
+    "region": "SS",
+    "region_name": "South",
+    "sub_concept": "Festivals",
+    "anchor": "Ilanjithara Melam",
+    "target": "Kerala",
+    "clean_prefix": "Ilanjithara Melam is a festival celebrated in the Indian state of",
+    "corrupted_prefix": "Phool Walon Ki Sair is a festival celebrated in the Indian state of",
+    "r": "Kerala",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Phool Walon Ki Sair",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Ilanjithara Melam",
+      "wiki_oldid": 1289075112,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ilanjithara_Melam",
+      "wiki_accessed_utc": "2026-05-31T21:40:01.752366+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 10.174715366214514,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.1897,
+        "logp_clean": -0.0338,
+        "logp_corrupt": -10.2236
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7067,
+        "logp_clean": -0.0238,
+        "logp_corrupt": -7.7306
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6649,
+        "logp_clean": -0.0389,
+        "logp_corrupt": -5.7038
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5805,
+        "logp_clean": -0.0063,
+        "logp_corrupt": -6.5868
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.483,
+      "Gemma-2-9B": -0.9156
+    }
+  }
+]

@@ -1,0 +1,11 @@
+# ICCD-6K local 'culture' env (Python 3.11.15) — no torch; model runs on AWS.
+# Resolved versions recorded 2026-05-31 (reproducibility = record what was used).
+huggingface_hub==1.17.0
+transformers==5.9.0
+tokenizers==0.22.2
+requests==2.34.2
+pandas==3.0.3
+numpy==2.4.6
+scipy==1.17.1
+statsmodels==0.14.6
+tqdm==4.67.3

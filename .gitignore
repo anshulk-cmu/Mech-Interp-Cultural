@@ -25,6 +25,8 @@ web_sources.tar.gz
 *.tar.gz
 data/raw/
 data/cache/
+data/interim/
+data/resources/wiki_cache/
 *.parquet
 *.arrow
 

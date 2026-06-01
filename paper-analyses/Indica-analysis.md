@@ -1,5 +1,7 @@
 # INDICA — Technical Analysis
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Paper:** Common to Whom? Regional Cultural Commonsense and LLM Bias in India
 **Authors:** Sangmitra Madhusudan, Trush Shashank More, Steph Buongiorno, Renata Dividino, Jad Kabbara, Ali Emami
 **Venue / Year:** Accepted to ACL 2026 (Main Conference); arXiv:2601.15550 (submitted 22 Jan 2026, rev. 14 Apr 2026)
@@ -79,7 +81,7 @@ The authors flag: (1) **geographic scope** — only India is instantiated; (2) *
 
 ## Relevance to our project (ICCD-3K, Phase 1)
 
-ICCD-3K builds 3,000 Indian cultural minimal pairs (clean prefix vs corrupted prefix + target), 60 cells of 50 items, with a per-item log-odds difference and paired t-tests, to ask whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) *rewrites* mid-layer cultural representations or *gates* them late. INDICA is one of three source datasets (with SANSKRITI and Wikipedia) and contributes several concrete things to Phase 1.
+ICCD-3K builds 3,000 Indian cultural minimal pairs (clean prefix vs corrupted prefix + target), 60 cells of 50 items, with a per-item log-odds difference and paired t-tests, to ask where in the network post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) *selectively* reshapes cultural knowledge and whether that change is recoverable — for each cultural content type, a recoverable late *gate* or an unrecoverable mid-layer *rewrite*. INDICA is one of three source datasets (with SANSKRITI and Wikipedia) and contributes several concrete things to Phase 1.
 
 **What we borrow.** First, the **five-region taxonomy** itself: the plan locks the state→region mapping to INDICA's five regions because INDICA empirically validates them, and uses INDICA's regional consensus to confirm a cultural anchor's regional attribution where it overlaps SANSKRITI (mostly festival items). Second, INDICA's **regional under-representation finding** is exactly the behavioral phenomenon our mechanistic study seeks to explain: it documents *that* models default to Central/North; ICCD-3K asks *where in the network* that default is encoded and whether alignment created or merely surfaced it. The averaged selection ratios (Central 1.37×, West 0.73×) give us a target effect that should appear in mid-layer probes if cultural region is linearly represented.
 

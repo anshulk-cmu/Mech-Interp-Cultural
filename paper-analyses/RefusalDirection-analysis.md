@@ -1,5 +1,7 @@
 # Refusal in Language Models Is Mediated by a Single Direction — Technical Analysis
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Authors:** Andy Arditi (Independent), Oscar Obeso (ETH Zürich), Aaquib Syed (U. Maryland), Daniel Paleka (ETH Zürich), Nina Panickssery (Anthropic), Wes Gurnee (MIT), Neel Nanda. **Venue:** NeurIPS 2024 (poster), *Advances in Neural Information Processing Systems 37*. **arXiv:** 2406.11717 (submitted 17 Jun 2024). All four facts verified online; see Validation notes.
 
 ## Problem and motivation
@@ -79,7 +81,7 @@ The authors flag: (1) generality is unproven for untested/larger/proprietary/fut
 
 ## Relevance to our project (ICCD-3K, Phase 1)
 
-Our study asks whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **rewrites** mid-layer cultural representations or **gates** them late, using Indian cultural minimal pairs — where Indian culture is at once the controlled probe for this mechanistic question and a genuine subject the study cares about. This paper is a direct methodological template.
+Our study asks where in the network post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **selectively** reshapes cultural knowledge and whether that change is recoverable — for each cultural content type, a recoverable late **gate** or an unrecoverable mid-layer **rewrite** — using Indian cultural minimal pairs, where Indian culture is at once the controlled probe for this mechanistic question and a genuine subject the study cares about. This paper is a direct methodological template.
 
 **Methods/metrics we borrow.** (a) **Difference-in-means** (Eqs. 2) is exactly our tool for extracting a per-concept "cultural direction" from clean vs. corrupted prefix pairs — cheap, training-free, causally potent. (b) The **log-odds / logit metric** (Eqs. 6–9) is the principled form of our planned per-item *log-odds difference* on the target-answer token; we should adopt the full log-odds, `log p − log(1−p)`, not raw probability, to separate extreme values and stabilize the paired t-tests over our 60 cells × 50 items. (c) **Directional ablation** (Eq. 4) and **activation addition** (Eq. 3) give us necessity/sufficiency tests for a cultural direction at each layer — the natural experiment for "gate vs. rewrite." (d) **DFA** (project component output onto the direction) lets us attribute *which layers/heads* carry cultural information and whether alignment suppresses late (gating) vs. shifts mid (rewriting). (e) Their **base-vs-chat cosine-similarity** experiment (App. J) is the single most transferable design: if our cultural direction is present in the base model and merely re-expressed late in the aligned model, that is *gating*; if mid-layer geometry is restructured, that is *rewriting*. We should replicate it verbatim on Indian-culture pairs, applying the same base-vs-aligned logic equally to every fine-tuning method's model pair.
 

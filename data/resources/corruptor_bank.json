@@ -1,0 +1,52 @@
+{
+  "_doc": "Clean, well-known single-name festivals by region for Axis-A cross-anchor-swap corruptors (STR: real, different-region, in-distribution). Reusable across all 60 cells. region codes per iccd.config.REGIONS.",
+  "NN": [
+    {"anchor": "Lohri", "state": "Punjab"},
+    {"anchor": "Baisakhi", "state": "Punjab"},
+    {"anchor": "Lathmar Holi", "state": "Uttar Pradesh"},
+    {"anchor": "Teej", "state": "Rajasthan"},
+    {"anchor": "Gangaur", "state": "Rajasthan"},
+    {"anchor": "Hemis", "state": "Ladakh"},
+    {"anchor": "Losar", "state": "Ladakh"},
+    {"anchor": "Kullu Dussehra", "state": "Himachal Pradesh"},
+    {"anchor": "Minjar", "state": "Himachal Pradesh"},
+    {"anchor": "Phool Walon Ki Sair", "state": "Delhi"},
+    {"anchor": "Nanda Devi Raj Jat", "state": "Uttarakhand"},
+    {"anchor": "Ganga Dussehra", "state": "Uttarakhand"}
+  ],
+  "EE": [
+    {"anchor": "Bihu", "state": "Assam"},
+    {"anchor": "Durga Puja", "state": "West Bengal"},
+    {"anchor": "Gajan", "state": "West Bengal"},
+    {"anchor": "Charak Puja", "state": "West Bengal"},
+    {"anchor": "Rath Yatra", "state": "Odisha"},
+    {"anchor": "Raja Parba", "state": "Odisha"},
+    {"anchor": "Sarhul", "state": "Jharkhand"},
+    {"anchor": "Karam", "state": "Jharkhand"},
+    {"anchor": "Chhath", "state": "Bihar"},
+    {"anchor": "Hornbill", "state": "Nagaland"},
+    {"anchor": "Sekrenyi", "state": "Nagaland"},
+    {"anchor": "Sangken", "state": "Arunachal Pradesh"},
+    {"anchor": "Ningol Chakouba", "state": "Manipur"},
+    {"anchor": "Wangala", "state": "Meghalaya"}
+  ],
+  "WW": [
+    {"anchor": "Shigmo", "state": "Goa"},
+    {"anchor": "Sao Joao", "state": "Goa"},
+    {"anchor": "Navratri", "state": "Gujarat"},
+    {"anchor": "Tarnetar", "state": "Gujarat"},
+    {"anchor": "Rann Utsav", "state": "Gujarat"},
+    {"anchor": "Uttarayan", "state": "Gujarat"},
+    {"anchor": "Ganesh Chaturthi", "state": "Maharashtra"},
+    {"anchor": "Gudi Padwa", "state": "Maharashtra"},
+    {"anchor": "Narali Purnima", "state": "Maharashtra"},
+    {"anchor": "Pola", "state": "Maharashtra"}
+  ],
+  "CC": [
+    {"anchor": "Bastar Dussehra", "state": "Chhattisgarh"},
+    {"anchor": "Hareli", "state": "Chhattisgarh"},
+    {"anchor": "Madai", "state": "Chhattisgarh"},
+    {"anchor": "Bhagoria", "state": "Madhya Pradesh"},
+    {"anchor": "Lokrang", "state": "Madhya Pradesh"}
+  ]
+}

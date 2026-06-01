@@ -1,5 +1,7 @@
 # CLM-Bench: Benchmarking and Analyzing Cross-lingual Misalignment of LLMs in Knowledge Editing — Technical Analysis
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Paper:** Yucheng Hu, Wei Zhou, Juesi Xiao (Tianjin University). arXiv:2601.17397, submitted 24 January 2026, cs.CL; comments indicate an EACL MME workshop paper. Verified against arXiv (see Validation notes).
 
 ## Problem and motivation
@@ -99,7 +101,7 @@ The authors restrict to Chinese–English only; generalization to other scripts 
 
 ## Relevance to our project (ICCD-3K, Phase 1)
 
-Our study asks whether post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **rewrites** mid-layer cultural representations or **gates** them late, using Indian cultural minimal pairs — where Indian culture is at once the controlled probe for this mechanistic question and a genuine subject the study cares about; Phase 1 builds a 3,000-item minimal-pair probe set (clean vs corrupted prefix + target answer; per-item log-odds difference; 60 cells of 50 items; paired t-tests). CLM-Bench is the closest methodological precedent and informs us concretely:
+Our study asks where in the network post-training alignment (via any fine-tuning method: SFT, RLHF, DPO, RLVR/GRPO, ...) **selectively** reshapes cultural knowledge and whether that change is recoverable — for each cultural content type, a recoverable late **gate** or an unrecoverable mid-layer **rewrite** — using Indian cultural minimal pairs, where Indian culture is at once the controlled probe for this mechanistic question and a genuine subject the study cares about; Phase 1 builds a 3,000-item minimal-pair probe set (clean vs corrupted prefix + target answer; per-item log-odds difference; 60 cells of 50 items; paired t-tests). CLM-Bench is the closest methodological precedent and informs us concretely:
 
 **Methods/metrics we borrow.**
 - The **CounterFact minimal-pair schema** maps onto our clean/corrupted design: `prompt + target_new` (counterfactual) vs `ground_truth` (clean) is our corrupted vs clean prefix. Adopting their five fields (prompt, target_new, ground_truth, subject, rephrase_prompt) gives each item a built-in paraphrase (generality) check.

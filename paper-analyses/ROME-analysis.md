@@ -1,5 +1,7 @@
 # Locating and Editing Factual Associations in GPT (ROME): Technical Analysis
 
+**Author:** Anshul Kumar, Carnegie Mellon University — anshulk@andrew.cmu.edu
+
 **Paper:** Kevin Meng, David Bau, Alex Andonian, Yonatan Belinkov. "Locating and Editing Factual Associations in GPT." NeurIPS 2022 (Advances in Neural Information Processing Systems, vol. 35). arXiv:2202.05262 (v1 Feb 10 2022; v5 Jan 13 2023). Project page: https://rome.baulab.info/.
 
 ## Problem and motivation
