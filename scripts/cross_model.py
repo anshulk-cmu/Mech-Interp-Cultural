@@ -12,10 +12,10 @@ and prints per-pair summary stats. Pairs with no results yet are skipped.
 import io
 import json
 import statistics as st
+import sys
 from pathlib import Path
 
 INTERIM = Path("data/interim")
-RELEASE = Path("data/final/iccd_A01-SS-01.json")
 # slug -> (display key in JSON, pair name, role)
 MODELS = {
     "llama31-base": ("Llama-3.1-8B-base", "Llama-3.1-8B", "base"),
@@ -46,7 +46,8 @@ def _corr(xs, ys):
     return sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / den if den else float("nan")
 
 
-def main():
+def main(cell="A01-SS-01"):
+    RELEASE = Path(f"data/final/iccd_{cell}.json")
     rel = json.load(io.open(RELEASE, encoding="utf-8"))
     scores = {slug: load(slug) for slug in MODELS}
 
@@ -87,4 +88,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1] if len(sys.argv) > 1 else "A01-SS-01")

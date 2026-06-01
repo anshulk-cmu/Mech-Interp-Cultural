@@ -30,7 +30,9 @@ def run(cell=SMOKE_CELL):
         k = anchor.lower()
         if k in done or _is_event(anchor):
             continue
-        summ = wiki.resolve_and_summary(anchor)
+        # Prefer an explicit Wikipedia title hint (from sourcing) for a reliable oldid;
+        # fall back to resolving the anchor name itself.
+        summ = wiki.resolve_and_summary(entry.get("wikipedia_title") or anchor)
         wiki_ok = summ is not None and (
             "india" in summ["extract"].lower() or state.lower() in summ["extract"].lower())
         now = datetime.now(timezone.utc).isoformat()

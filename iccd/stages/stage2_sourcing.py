@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 
 from .. import wiki
 from ..config import CANDIDATES_PER_CELL, INTERIM, REGIONS, SMOKE_CELL, cell_id
@@ -26,7 +27,7 @@ _Q_PATTERNS = [
 ]
 _PAREN = re.compile(r"\s*\([^)]*\)")
 _TAIL = re.compile(r"\s*(festival processions|festivals|festival)\s*$", re.I)
-_MOJIBAKE = re.compile(r"[ÃÂ€ƒ½¼Å]")
+_MOJIBAKE = re.compile(r"[ÃÂ€ƒ½¼Å�]")  # � = replacement char (mangled non-Latin titles)
 # words that, left trailing after stripping "Festival", would make a fragment -> keep full title
 _FRAGMENT_TAIL = {"film", "dance", "music", "book", "arts", "art", "literary", "comedy",
                   "food", "drama", "theatre", "jazz", "rock", "short", "science"}
@@ -37,11 +38,21 @@ _EXCLUDE = re.compile(r"(film festival|international film|music season|music fes
 _YEAR = re.compile(r"\b(18|19|20)\d\d\b")
 _STATE_CATS = ["Festivals in {s}", "Hindu festivals in {s}", "Religious festivals in {s}"]
 _EXTRA_CATS = {  # language/state-scoped; India-guard + Claude still gate attribution
+    # South
     "Tamil Nadu": ["Tamil festivals", "Tamil Hindu festivals"],
     "Karnataka": ["Kannada festivals"],
     "Kerala": ["Malayali festivals", "Hindu festivals in Kerala"],
     "Andhra Pradesh": ["Telugu festivals"],
     "Telangana": ["Telangana festivals"],
+    # North / East language-community categories that exist on Wikipedia (probed 2026-05-31);
+    # non-existent ones (e.g. "Assamese/Odia festivals") return empty and are harmless.
+    "Punjab": ["Punjabi festivals"],
+    "West Bengal": ["Bengali festivals", "Bengali Hindu festivals"],
+    # West / Central language-community categories (probed 2026-05-31); absent ones are harmless.
+    "Maharashtra": ["Marathi festivals", "Marathi Hindu festivals"],
+    "Gujarat": ["Gujarati festivals", "Gujarati Hindu festivals"],
+    "Goa": ["Goan festivals", "Konkani festivals"],
+    "Madhya Pradesh": ["Adivasi festivals"],
 }
 _GENERIC = {"festival", "fair", "jatra", "mela", "utsav", "puja", "pooja", "temple",
             "hindu", "day", "night", "feast", "celebration", "harvest", "annual"}
@@ -64,6 +75,11 @@ def _attested(anchor: str, blob: str) -> bool:
 def _clean(name: str):
     name = _PAREN.sub("", name).strip().strip(".?!'\"’ ").strip()
     if _MOJIBAKE.search(name):
+        return None
+    # Fold Latin diacritics to ASCII for natural English-template anchors (Northeast titles
+    # often carry â/û/ü); the original diacritic title is still used for the Wikipedia fetch.
+    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii").strip()
+    if not name:
         return None
     stripped = _TAIL.sub("", name).strip()
     if stripped and stripped.split()[-1].lower() not in _FRAGMENT_TAIL:

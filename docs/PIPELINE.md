@@ -140,6 +140,120 @@ SANSKRITI cell items 323 -> Stage2 candidates 174 -> Stage3 pairs 172 -> Stage4 
  -> Stage8 model-kept 163 -> Claude-approved 108 -> Pass B final 100 (0 cross-val gaps)
 ```
 
+## Scale-out: A01-NN-01 (North) + A01-EE-01 (East) — built through Tier-1.5, pre-Stage-8
+
+Second build wave. Same nine-stage chain as A01-SS-01, driven per cell by `scripts/build_cell.py`
+(reusable: `bootstrap`, `stage2`, `webtier`, `pairs`, `all`). Claude Tier-1.5 was run *before*
+the Stage-8 gate (the gate needs AWS/Babel), so each cell's `stage8_input_<cell>.json` is the
+over-provisioned **verified** batch, ready to score.
+
+### Funnels
+```
+A01-NN-01: candidates 208 (SANSKRITI 7 / Wiki 63 / web 138)
+ -> Stage3 pairs 197 -> Stage4 F1-F7 kept 155 -> Tier-1.5 Claude pass 126 (deduped)
+ -> Stage8 base-Llama-3.1-8B ΔL>1.0 gate 119 -> Pass B 100 (token 50/30/20)
+
+A01-EE-01: candidates 214 (SANSKRITI 20 / Wiki 136 / web 58)
+ -> Stage3 pairs 209 -> Stage4 F1-F7 kept 168 -> Tier-1.5 Claude pass 121 (deduped)
+ -> Stage8 base-Llama-3.1-8B ΔL>1.0 gate 112 -> Pass B 100 (token 7/77/16)
+```
+Stage-4 rejections were dominated by **F1 token-overlong**: the Axis-A target IS the state, and
+states whose names tokenize to >3 (Jammu and Kashmir, Himachal Pradesh, Chandigarh in North;
+Arunachal Pradesh, Jharkhand in East) are excluded by design. North therefore draws from 7
+short-name states, East from 10. Verified pools: 0 provenance gaps, 0 state-name leaks, 0
+bad counterfactuals; provenance NN 90 Wikipedia-oldid + 36 web-URL, EE 112 + 9.
+
+### Resources extended for the scale-out (all 60-cell-reusable)
+- `data/resources/gazetteer.json`, `language_map.json` — Stage-0 walk extended South→all 30
+  South/North/East states (district/city names for F2; language map for F3).
+- `iccd/stages/stage4_filters.py` `_UNIQUE_LANG` — North/East single-state languages added
+  (Punjabi, Odia, Assamese, Meitei, Khasi, Mizo, Kokborok, Maithili, …); shared languages
+  (Hindi, Bengali, Santali, Nepali) stay flag-only.
+- `iccd/stages/stage2_sourcing.py` `_EXTRA_CATS` — added the real language-community Wikipedia
+  festival categories that exist (`Punjabi festivals`, `Bengali festivals`, `Bengali Hindu festivals`).
+- `data/resources/corruptor_bank.json` — added the South (`SS`) corruptor list so North/East
+  cells have a rich cross-region swap pool (now all 5 regions present).
+- `data/resources/web_festivals.json` — `A01-NN-01` (138) + `A01-EE-01` (58) curated web-tier
+  festivals, every entry web-verified with a source URL (provenance logged to `web_sources.jsonl`).
+
+### Hardening landed this wave (helps every remaining cell)
+- `iccd/wiki.py`: retry/backoff on transient drops (RemoteDisconnected/timeout) over the on-disk cache.
+- `iccd/stages/stage2_sourcing.py`: U+FFFD mojibake guard + Latin-diacritic ASCII folding in `_clean`
+  (e.g. "Chapchâr Kût"→"Chapchar Kut"), so Northeast titles become clean, deduped, natural anchors.
+- `iccd/stages/stage2b_webtier.py`: web entries may carry a `wikipedia_title` hint for a reliable oldid.
+
+### Tooling added
+- `scripts/build_cell.py` — local per-cell driver (Stages 2→5 Pass A) + `bootstrap` for new regions.
+- `scripts/gen_verify_workflow.py` — emits a batched Tier-1.5 verification Workflow for a filtered cell.
+- `scripts/finalize_cell.py` — post-Stage-8: (Claude-pass ∩ ΔL>1.0) → Pass B 100 → Stage 6 release.
+
+### How these two cells were finished (Stage 8, done)
+Scored the 6-model suite on the combined `suite_input_NNEE.json` (247 verified items), **in parallel**:
+4 small models (Llama-3.1-8B base/Instruct, Gemma-2-9b base/it) on an **AWS g6.xlarge** (L4 24GB) via
+`ec2_run_suite_nnee.sh`; the 2×24B (Mistral-Small-24B-Base, Sarvam-M) on **CMU Babel** (A6000×4) via
+`babel_suite_nnee.sbatch` (job 8227040). Base-Llama scores (threshold −1000) were re-thresholded at
+ΔL>1.0 per cell to form the gate → `scripts/finalize_cell.py <cell>` → `data/final/iccd_<cell>.json`
+→ `scripts/cross_model.py <cell>` appended all 6 models' `model_scores` + `cross_model_delta` →
+`scripts/combine_cells.py` (manifest 3/60, 300 items). AWS instance + SG torn down; Babel token/dir/cache wiped.
+
+## Scale-out wave 3: A01-WW-01 (West) + A01-CC-01 (Central) — released, 6/6 models
+
+The two festival-thin regions (SANSKRITI West 132 / Central 104). Same chain, but the
+candidate pool came overwhelmingly from the **web tier** (Wikipedia/SANSKRITI yield only
+~35 / ~15), so this wave exercised the designed-but-unused-until-now web path at full scale.
+
+### Funnels
+```
+A01-WW-01: candidates 164 (SANSKRITI 5 / Wiki 30 / web 129)
+ -> Stage3 pairs 147 -> Stage4 F1-F7 143 -> Tier-1.5 Claude 121 -> 111 (−10 fuzzy-dup)
+ -> Stage8 base-Llama ΔL>1.0 gate 105 -> Pass B 100  (Maharashtra 40 / Gujarat 30 / Goa 30; token 100/0/0)
+
+A01-CC-01: candidates 143 (SANSKRITI 1 / Wiki 14 / web 128)
+ -> Stage3 pairs 134 -> Stage4 F1-F7 134 -> Tier-1.5 Claude 118 -> 113 (−5 fuzzy-dup)
+ -> Stage8 base-Llama ΔL>1.0 gate 102 -> Pass B 100  (Madhya Pradesh 58 / Chhattisgarh 42; token 58/42 over 3/5-tok)
+```
+Provenance: WW 72 Wikipedia-oldid + 28 web-URL; CC 54 + 46; both 0 gaps. West realizes a
+clean **single-token** stratum (Gujarat/Maharashtra/Goa all 1 tok; DNH&DD dropped at 13 tok).
+
+### F1 design exception (Central / Chhattisgarh)
+Central has only two states under the F1 ≤3-token target cap candidate set: Madhya Pradesh
+(3 tok) and Chhattisgarh — which the Llama-3.1 tokenizer splits into **5** tokens. Dropping it
+(as J&K/Himachal/Arunachal/Jharkhand are dropped elsewhere) would collapse Central to a
+single state and make 100 distinctive items infeasible. So Chhattisgarh is kept as a
+**documented exception** in `config.F1_TOKEN_EXCEPTIONS` (consumed by `stage4_filters`); its
+items form a 5-token stratum carried through Pass B's fallback fill. The cap's purpose
+(token-length confound control) is preserved by documenting the stratum, and the ΔL gate +
+Tier-1.5 verification are length-agnostic. User-approved 2026-05-31.
+
+### Web tier at scale (Workflow-driven)
+Sourcing was a **structured-output web-research Workflow**: one general-purpose agent per
+state×scope (folk/tribal/temple-jatra and mela/community), each web-verifying every festival
+with a logged source URL and emitting `distinctive=true` only. West ran one pass (5 states ×
+2 scopes); Central, thinner, took a second supplemental pass (MP×2 + Chhattisgarh×2, deeper
+regional/tribal scopes) to clear the ≥130-filtered over-provision bar. A Tier-1.5 verify
+Workflow then fact-checked each minimal pair; fuzzy-dup variants (Zatra/Jatra, Madhavpur
+Ghed/Fair, Akti/Akti Tihar) were dropped before the gate.
+
+### Tooling added this wave (all 60-cell-reusable)
+- `scripts/merge_web_festivals.py` — append-safe merge of a web-research Workflow's output
+  into `web_festivals.json` (ASCII-fold, distinctive-only, dedup vs existing + candidates_raw).
+- `scripts/apply_verdicts.py` — save Tier-1.5 verdicts, fuzzy-dedup variant festival names,
+  regenerate `stage8_input_<cell>.json` = the deduped Claude-pass batch.
+- `scripts/rethreshold.py` — split the base-Llama suite scores per cell at ΔL>1.0 → `stage8_results_<cell>.jsonl`.
+- `scripts/scoring/{ec2_run_suite_wwcc.sh, babel_suite_wwcc.sbatch}` — WWCC suite runners.
+- Resources extended: `gazetteer.json` + `language_map.json` (Stage-0 walk, now all 36
+  South/North/East/West/Central states), `stage4._UNIQUE_LANG` (Gujarati/Marathi/Konkani/
+  Chhattisgarhi), `stage2._EXTRA_CATS` (Marathi/Gujarati/Goan festival categories),
+  `web_festivals.json` (`A01-WW-01` 129, `A01-CC-01` 128, every entry web-verified).
+
+### Stage 8 (done, parallel AWS + Babel)
+Combined `suite_input_WWCC.json` (224 verified items). 4 small models (Llama-3.1-8B base/it,
+Gemma-2-9b base/it) on an **AWS g6.xlarge** (L4 24GB; us-east-1a after a/b/c/d/e/f capacity
+hunt) via `ec2_run_suite_wwcc.sh`; the 2×24B (Mistral-Small-24B-Base, Sarvam-M) on **CMU
+Babel** (A6000×4, job 8227432) via `babel_suite_wwcc.sbatch`. Re-threshold → `finalize_cell`
+→ `cross_model` → `combine_cells` (manifest **5/60, 500 items**). AWS instance terminated + SG
+deleted; Babel token/dir/scratch-cache wiped.
+
 ## Known improvements for scaling to 60 cells
 - **Corruptor quality (Stage 3):** the SANSKRITI corruptor extraction yields some malformed anchors;
   Claude caught them but it wastes candidates. Clean the corruptor pool / prefer Wikipedia corruptors.

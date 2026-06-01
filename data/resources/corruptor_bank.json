@@ -48,5 +48,19 @@
     {"anchor": "Madai", "state": "Chhattisgarh"},
     {"anchor": "Bhagoria", "state": "Madhya Pradesh"},
     {"anchor": "Lokrang", "state": "Madhya Pradesh"}
+  ],
+  "SS": [
+    {"anchor": "Onam", "state": "Kerala"},
+    {"anchor": "Vishu", "state": "Kerala"},
+    {"anchor": "Thiruvathira", "state": "Kerala"},
+    {"anchor": "Pongal", "state": "Tamil Nadu"},
+    {"anchor": "Thaipusam", "state": "Tamil Nadu"},
+    {"anchor": "Karthigai Deepam", "state": "Tamil Nadu"},
+    {"anchor": "Ugadi", "state": "Karnataka"},
+    {"anchor": "Mysuru Dasara", "state": "Karnataka"},
+    {"anchor": "Bonalu", "state": "Telangana"},
+    {"anchor": "Bathukamma", "state": "Telangana"},
+    {"anchor": "Kanuma", "state": "Andhra Pradesh"},
+    {"anchor": "Atla Tadde", "state": "Andhra Pradesh"}
   ]
 }

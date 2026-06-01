@@ -81,3 +81,100 @@ SANSKRITI cell 323
 - 1-2 web items (e.g. *Masi Magam*) had the Wikipedia opensearch resolve land on a wrong page
   (mismatched extract); Claude confirmed the festival is genuine on construct and the correct
   `web_source_url` is recorded. Flagged for the human pass.
+
+---
+
+## A01-NN-01 (North) + A01-EE-01 (East) — Tier-1.5 quality (pre-Stage-8)
+
+Built to the same standard as A01-SS-01. Because the Stage-8 gate needs AWS/Babel, **Tier-1.5 Claude
+verification was run before the gate** on the full Stage-4 set, so the verified pool is the
+construct-validity-clean batch that goes to scoring. Verification was multi-agent with **live web
+fact-checking** — every festival→state attribution confirmed against a real source, nothing assumed
+or manufactured.
+
+| Metric | A01-NN-01 | A01-EE-01 |
+|---|---|---|
+| Stage-4 filtered | 155 | 168 |
+| Tier-1.5 verified pass | **126** | **121** |
+| Provenance gaps | 0 (90 Wikipedia oldid + 36 web URL) | 0 (112 Wikipedia oldid + 9 web URL) |
+| State-name leaks | 0 | 0 |
+| Bad counterfactuals (r′=r / same-region) | 0 | 0 |
+| Duplicate anchors (incl. fuzzy variants) | 0 | 0 |
+| States represented | 7 (Raj 33 / Ukd 25 / UP 23 / Pun 17 / Lad 14 / Har 11 / Del 3) | 10 (Od 19 / WB 18 / As 18 / Nag 14 / Tri 11 / Meg 9 / Bih 9 / Man 9 / Sik 7 / Miz 7) |
+| Token 1/2/3 | 53/48/25 | 9/96/16 |
+
+**Why some states are absent** — the Axis-A target *is* the state, and the F1 cap rejects targets
+>3 tokens. So **Jammu & Kashmir, Himachal Pradesh, Chandigarh (North) and Arunachal Pradesh,
+Jharkhand (East) are excluded by construction**, not by lack of sourcing. East's 2-token-heavy
+token mix is the same Axis-A state↔token correlation noted for South (only Tamil Nadu was 2-token
+there); the realized distribution is recorded and Pass B fills from strata per the Stage-5 fallback.
+
+**What Tier-1.5 caught (the point of the gate)** — across the two cells it rejected, with sources:
+non-festivals the category/web sourcing pulled in — a river (*Brahmaputra*), an island (*Majuli*),
+a potters' quarter (*Kumortuli*), deities (*Durga*, *Jagaddhatri*, *Dharmathakur*), a GI-tagged cloth
+(*Gamosa*), a radio programme (*Mahisasuramardini*), films (*Delhi-6*, *Raktabeej*), a personal name
+(*Ananya*), organisations/clubs (*Bullygunge Cultural Association*, *Barowari*), college/tech and
+literary fests (*Abeyaantrix*, *Bharat Rang Mahotsav*, *Bundelkhand Literature*); modern
+tourism-promotional "Mahotsav/Utsav" branding (*Sangai*, *Shirui Lily*, *Dwijing*, *Namami Brahmaputra*,
+*Kaziranga Elephant*, *Konark Dance Festival*, *Rajgir/Patna/Basti Mahotsav*, *Bundi Utsav*); pan-Indian
+non-distinctive festivals (*Makar Sankranti*, *Krishna Janmashtami*, *Durga Ashtami*, bare *Rath Yatra*);
+and **mis-attributions** (*Bundeli Utsav*→Madhya Pradesh not UP; *Lai Haraoba*→Manipur not Assam;
+*Jagaddhatri*→West Bengal not Odisha). All four checks (fact/leakage/counterfactual/naturalness) were
+applied; counterfactual_ok was 100% (the curated corruptor bank is clean).
+
+**Status: RELEASED.** Both cells were scored on the full 6-model suite (4 small on AWS g6.xlarge L4,
+2×24B on CMU Babel A6000×4, run in parallel; AWS instance + SG torn down, Babel wiped). Base-Llama-3.1-8B
+gate (ΔL>1.0): **North 126→119, East 121→112** — both clear 100 with margin. Token-balanced Pass B
+(seed 42) drew the final **100 each** (North token mix hit 50/30/20 exactly; East 7/77/16, the recorded
+Axis-A state↔token correlation), with **0 missing cross-validation**. `data/final/iccd_{A01-NN-01,A01-EE-01}.json`;
+manifest now 3/60 cells, 300 items. Cross-model `model_scores` + `cross_model_delta` appended for all 6 models
+(see `docs/CROSSMODEL.md`): clean-RLHF Llama/Gemma preserve or sharpen the binding (corr 0.87–0.94), while
+the Indian-aligned **Sarvam-M weakens it (corr 0.60 North / 0.50 East; Δ +0.53 / +0.96)** — the same
+rewrite-direction signal as A01-SS-01, and stronger in East than North (an early regional-selectivity hint;
+single confounded arm, directional only — not a rewrite-vs-gate verdict, which is Phase 4).
+
+---
+
+## A01-WW-01 (West) + A01-CC-01 (Central) — Tier-1.5 quality (the festival-thin regions)
+
+The two SANSKRITI-thin regions (West 132 / Central 104), so the candidate pool came mostly from the
+**web tier** — a structured-output web-research Workflow with live fact-checking, then a Tier-1.5
+verify Workflow, then a fuzzy-dup pass (`scripts/apply_verdicts.py`). Every festival→state attribution
+is web-verified with a logged source URL; nothing assumed or manufactured.
+
+| Metric | A01-WW-01 | A01-CC-01 |
+|---|---|---|
+| Stage-4 filtered | 143 | 134 |
+| Tier-1.5 verified pass | 121 | 118 |
+| After fuzzy-dup drop | **111** (−10) | **113** (−5) |
+| Provenance gaps | 0 (72 Wikipedia oldid + 28 web URL) | 0 (54 Wikipedia oldid + 46 web URL) |
+| State-name leaks | 0 | 0 |
+| Bad counterfactuals (r′=r / same-region) | 0 | 0 |
+| States represented | 3 (Mah 40 / Guj 30 / Goa 30) | 2 (MP 58 / Chh 42) |
+| Token mix | 1-tok 100 | 3-tok 58 / **5-tok 42** |
+
+**Why the token mixes are extreme** — Axis-A targets are state names. All three eligible West states
+(Gujarat, Maharashtra, Goa) are **single-token**, so West is a clean 1-token stratum; Dadra & Nagar
+Haveli & Daman & Diu (13 tok) is excluded by the F1 cap. Central has only **Madhya Pradesh (3 tok)**
+and **Chhattisgarh** — which tokenizes to **5**, over the cap. Rather than collapse Central to one
+state, Chhattisgarh is kept as a **documented F1 exception** (`config.F1_TOKEN_EXCEPTIONS`), forming a
+5-token stratum that Pass B's fallback fill carries (user-approved 2026-05-31). Within-cell token
+length is therefore constant-or-near-constant — which *controls* the confound by construction; these
+two cells simply don't contribute cross-token-length variation.
+
+**What Tier-1.5 caught** — modern govt "Mahotsav/Utsav" tourism brandings (*Bhojpur Utsav*,
+*Bhoramdeo Mahotsav*), district-name leakage (anchors embedding *Bastar* → Chhattisgarh), EDM/arts
+events (*Sunburn*, *Serendipity*), non-festivals, and fuzzy spelling/qualifier variants dropped by
+`apply_verdicts.py` (*Zatra/Jatra*, *Madhavpur Ghed/Fair*, *Haji Pir/Hajipir*, *Akti/Akti Tihar*).
+counterfactual_ok was 100% (clean corruptor bank).
+
+**Status: RELEASED.** Scored on the full 6-model suite (combined `suite_input_WWCC.json`, 224 items;
+4 small on AWS g6.xlarge L4, 2×24B on CMU Babel A6000×4 job 8227432, run in parallel; AWS instance + SG
+torn down, Babel token/dir/cache wiped). Base-Llama gate (ΔL>1.0): **West 111→105, Central 113→102** —
+both clear 100 with margin. Token-balanced Pass B (seed 42) drew the final **100 each**, with **0
+missing cross-validation**. `data/final/iccd_{A01-WW-01,A01-CC-01}.json`; manifest now **5/60 cells,
+500 items**. Cross-model `model_scores` + `cross_model_delta` appended for all 6 models: clean-RLHF
+Llama/Gemma preserve or sharpen the binding (corr Llama 0.89 West / 0.86 Central; Gemma 0.91/0.92,
+aligned *sharper*), while the Indian-aligned **Sarvam-M weakens it most (corr 0.61 West / 0.50
+Central; Δ +0.29 / +0.03)** — Central ties East for the weakest correlation, reinforcing the
+regional-selectivity hint (directional, single confounded arm — Phase 4 adjudicates).

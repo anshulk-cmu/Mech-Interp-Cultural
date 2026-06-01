@@ -11,15 +11,32 @@ from __future__ import annotations
 import re
 import sys
 
-from ..config import (INTERIM, MAX_TARGET_TOKENS, PREFIX_MAX_TOKENS, PREFIX_MIN_TOKENS,
-                      RESOURCES, SMOKE_CELL, SUFFIX_MATCH_TOKENS, cell_id)
+from ..config import (F1_TOKEN_EXCEPTIONS, INTERIM, MAX_TARGET_TOKENS, PREFIX_MAX_TOKENS,
+                      PREFIX_MIN_TOKENS, RESOURCES, SMOKE_CELL, SUFFIX_MATCH_TOKENS, cell_id)
 from ..logutil import get_logger
 from ..state import read_json, write_json
 from ..tok import n_tokens, target_token_len, trailing_tokens
 
 log = get_logger("stage4")
 
-_UNIQUE_LANG = {"Tamil": "Tamil Nadu", "Malayalam": "Kerala", "Kannada": "Karnataka"}
+# Languages that uniquely identify ONE state -> hard-reject if they appear in the anchor (F3).
+# Shared/regional languages (Hindi, Bhojpuri, Bengali, Santali, Nepali, Telugu) are NOT here;
+# they only get flagged for Claude. Extended South->North/East for the 60-cell scale-out.
+_UNIQUE_LANG = {
+    # South
+    "Tamil": "Tamil Nadu", "Malayalam": "Kerala", "Kannada": "Karnataka",
+    # North
+    "Punjabi": "Punjab", "Haryanvi": "Haryana", "Kashmiri": "Jammu and Kashmir",
+    "Dogri": "Jammu and Kashmir", "Ladakhi": "Ladakh", "Rajasthani": "Rajasthan",
+    "Marwari": "Rajasthan", "Garhwali": "Uttarakhand", "Kumaoni": "Uttarakhand",
+    # East
+    "Odia": "Odisha", "Assamese": "Assam", "Meitei": "Manipur", "Manipuri": "Manipur",
+    "Khasi": "Meghalaya", "Garo": "Meghalaya", "Mizo": "Mizoram", "Kokborok": "Tripura",
+    "Lepcha": "Sikkim", "Maithili": "Bihar", "Magahi": "Bihar",
+    # West / Central
+    "Gujarati": "Gujarat", "Marathi": "Maharashtra", "Konkani": "Goa",
+    "Chhattisgarhi": "Chhattisgarh",
+}
 
 
 def _word_in(text: str, term: str) -> bool:
@@ -45,7 +62,7 @@ def run(cell=SMOKE_CELL, force: bool = False):
         clean, corrupt = p["clean_prefix"], p["corrupted_prefix"]
         flags, code = [], None
 
-        if target_token_len(target) > MAX_TARGET_TOKENS:
+        if target_token_len(target) > MAX_TARGET_TOKENS and target not in F1_TOKEN_EXCEPTIONS:
             code = "F1_token_overlong"
         elif not (PREFIX_MIN_TOKENS <= n_tokens(clean) <= PREFIX_MAX_TOKENS):
             code = "F6F7_prefix_length"

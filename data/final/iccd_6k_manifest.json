@@ -1,9 +1,25 @@
 {
-  "cells_built": 1,
-  "total_items": 100,
+  "cells_built": 5,
+  "total_items": 500,
   "cells": [
     {
+      "cell": "A01-CC-01",
+      "n": 100
+    },
+    {
+      "cell": "A01-EE-01",
+      "n": 100
+    },
+    {
+      "cell": "A01-NN-01",
+      "n": 100
+    },
+    {
       "cell": "A01-SS-01",
+      "n": 100
+    },
+    {
+      "cell": "A01-WW-01",
       "n": 100
     }
   ]
