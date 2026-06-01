@@ -1,7 +1,9 @@
-"""Stage 2 — source candidate festival anchors for a cell, cross-validated.
+"""Stage 2 — source candidate anchors for a cell (sub-concept aware), cross-validated.
 
-Priority 1: festival anchors parsed from SANSKRITI questions (already SANSKRITI-attested).
-Priority 2: Wikipedia festival-category members. Every kept candidate must clear the
+Priority 1: anchors parsed from SANSKRITI questions (already SANSKRITI-attested).
+Priority 2: Wikipedia category members, from the sub-concept's category set
+(_SUBCONCEPT_SOURCING): per-state categories for festivals, India-level "broad" categories
+with extract-based state resolution for textiles. Every kept candidate must clear the
 mandatory Wikipedia-AND-SANSKRITI cross-validation (plan Section 5.5 / 9.1). Resumable:
 each candidate is appended to a JSONL; a rerun skips anchors already fetched.
 """
@@ -36,26 +38,50 @@ _EXCLUDE = re.compile(r"(film festival|international film|music season|music fes
                       r"boat league|premier league|\btournament\b|\bleague\b|literary|comic|"
                       r"biennale|marathon|\bcup\b|championship|\bawards?\b|\btrophy\b)", re.I)
 _YEAR = re.compile(r"\b(18|19|20)\d\d\b")
-_STATE_CATS = ["Festivals in {s}", "Hindu festivals in {s}", "Religious festivals in {s}"]
-_EXTRA_CATS = {  # language/state-scoped; India-guard + Claude still gate attribution
-    # South
-    "Tamil Nadu": ["Tamil festivals", "Tamil Hindu festivals"],
-    "Karnataka": ["Kannada festivals"],
-    "Kerala": ["Malayali festivals", "Hindu festivals in Kerala"],
-    "Andhra Pradesh": ["Telugu festivals"],
-    "Telangana": ["Telangana festivals"],
-    # North / East language-community categories that exist on Wikipedia (probed 2026-05-31);
-    # non-existent ones (e.g. "Assamese/Odia festivals") return empty and are harmless.
-    "Punjab": ["Punjabi festivals"],
-    "West Bengal": ["Bengali festivals", "Bengali Hindu festivals"],
-    # West / Central language-community categories (probed 2026-05-31); absent ones are harmless.
-    "Maharashtra": ["Marathi festivals", "Marathi Hindu festivals"],
-    "Gujarat": ["Gujarati festivals", "Gujarati Hindu festivals"],
-    "Goa": ["Goan festivals", "Konkani festivals"],
-    "Madhya Pradesh": ["Adivasi festivals"],
+# --- Per-sub-concept Wikipedia sourcing (generalizes the festival-only category lists) ---
+# state_cats : "{s}"-templated categories fetched PER STATE -> member attributed to that state.
+# extra_cats : per-state language/community categories (same per-state attribution).
+# broad_cats : region-agnostic India-level categories fetched ONCE; each member's target state
+#              is RESOLVED FROM ITS WIKIPEDIA EXTRACT, restricted to the cell's region (so a
+#              shared category can't misattribute). Used where per-state categories are empty
+#              on Wikipedia (textiles: per-state "Textile arts of {s}" categories don't exist,
+#              but "Textile arts of India"/"Saris"/"Embroidery in India" are rich — probed 2026-06-01).
+_SUBCONCEPT_SOURCING = {
+    ("A01", "01"): {  # Festivals (released cells; behavior unchanged)
+        "state_cats": ["Festivals in {s}", "Hindu festivals in {s}", "Religious festivals in {s}"],
+        "extra_cats": {
+            # South
+            "Tamil Nadu": ["Tamil festivals", "Tamil Hindu festivals"],
+            "Karnataka": ["Kannada festivals"],
+            "Kerala": ["Malayali festivals", "Hindu festivals in Kerala"],
+            "Andhra Pradesh": ["Telugu festivals"],
+            "Telangana": ["Telangana festivals"],
+            # North / East language-community categories that exist on Wikipedia (probed 2026-05-31);
+            # non-existent ones (e.g. "Assamese/Odia festivals") return empty and are harmless.
+            "Punjab": ["Punjabi festivals"],
+            "West Bengal": ["Bengali festivals", "Bengali Hindu festivals"],
+            # West / Central language-community categories (probed 2026-05-31); absent ones are harmless.
+            "Maharashtra": ["Marathi festivals", "Marathi Hindu festivals"],
+            "Gujarat": ["Gujarati festivals", "Gujarati Hindu festivals"],
+            "Goa": ["Goan festivals", "Konkani festivals"],
+            "Madhya Pradesh": ["Adivasi festivals"],
+        },
+        "broad_cats": [],
+    },
+    ("A01", "02"): {  # Costume & Textile
+        # Per-state "Textile arts of {s}" / "Crafts of {s}" categories are empty on en.wikipedia
+        # (probed 2026-06-01); kept as future-proof no-ops. The real yield is the broad cats below,
+        # resolved to a state via each article's extract. SANSKRITI + the web tier are the workhorses.
+        "state_cats": ["Textile arts of {s}", "Crafts of {s}"],
+        "extra_cats": {},
+        "broad_cats": ["Textile arts of India", "Saris", "Embroidery in India", "Indian clothing"],
+    },
 }
+# Generic tokens skipped when SANSKRITI-attesting an anchor (festival + costume vocabulary, len>=5).
 _GENERIC = {"festival", "fair", "jatra", "mela", "utsav", "puja", "pooja", "temple",
-            "hindu", "day", "night", "feast", "celebration", "harvest", "annual"}
+            "hindu", "day", "night", "feast", "celebration", "harvest", "annual",
+            "saree", "sari", "cotton", "cloth", "shawl", "textile", "weave", "weaving",
+            "embroidery", "print", "attire", "costume", "dress", "handloom", "fabric", "border"}
 
 
 def _is_event(text: str) -> bool:
@@ -102,15 +128,41 @@ def _sanskriti_anchors(items):
     return out
 
 
-def _wiki_anchors(states):
+def _states_in_extract(extract: str, states) -> list:
+    """Region states whose name appears (word-boundary) in a Wikipedia extract."""
+    el = extract.lower()
+    return [s for s in states if re.search(r"\b" + re.escape(s.lower()) + r"\b", el)]
+
+
+def _wiki_anchors(axis, sub, region):
+    """Candidate (anchor, state, title) map for a cell, from sub-concept-matched categories.
+
+    state_cats/extra_cats are per-state (attribution = the loop state); broad_cats are India-level
+    and fetched once, with each member's state RESOLVED from its extract among the region's states
+    (skip if 0 or >1 region-states match -> ambiguous, left to SANSKRITI/web/Claude)."""
+    states = REGIONS[region]
+    cfg = _SUBCONCEPT_SOURCING.get((axis, sub))
+    if cfg is None:
+        raise KeyError(f"no Wikipedia sourcing config for ({axis}, {sub}) — add it to _SUBCONCEPT_SOURCING")
     out = {}
     for st in states:
-        cats = [c.format(s=st) for c in _STATE_CATS] + _EXTRA_CATS.get(st, [])
+        cats = [c.format(s=st) for c in cfg["state_cats"]] + cfg["extra_cats"].get(st, [])
         for cat in cats:
             for title in wiki.category_members_recursive(cat, depth=2):
                 a = _clean(title)
                 if a:
                     out.setdefault(a.lower(), (a, st, title))
+    for cat in cfg.get("broad_cats", []):
+        for title in wiki.category_members_recursive(cat, depth=1):
+            a = _clean(title)
+            if not a or a.lower() in out:
+                continue
+            summ = wiki.page_summary(title)
+            if summ is None:
+                continue
+            hits = _states_in_extract(summ["extract"], states)
+            if len(hits) == 1:                       # single region-state named -> attribute it
+                out.setdefault(a.lower(), (a, hits[0], title))
     return out
 
 
@@ -125,7 +177,7 @@ def run(cell=SMOKE_CELL, target=CANDIDATES_PER_CELL, force: bool = False):
     pool = read_json(SAN_POOL, {})
     state_text = read_json(SAN_TEXT, {})
     san = _sanskriti_anchors(pool.get(cid, []))
-    wk = _wiki_anchors(REGIONS[region])
+    wk = _wiki_anchors(axis, sub, region)
 
     cand = {k: (a, st, "sanskriti", a) for k, (a, st) in san.items()}
     for k, (a, st, title) in wk.items():

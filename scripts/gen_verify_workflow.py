@@ -17,6 +17,41 @@ from pathlib import Path
 
 INTERIM = Path("data/interim")
 
+# Per-sub-concept Tier-1.5 verification profile: what the anchor must BE for fact_ok, and the
+# binding phrase. Keyed by the cell's sub-concept code ("01" festivals, "02" costume & textile).
+# Leakage / counterfactual / naturalness checks are shared; only fact_ok and the framing differ.
+_VERIFY_PROFILE = {
+    "01": {
+        "item": "festival",
+        "binding": "binds a specific Indian festival to its specific Indian STATE",
+        "fact_ok": ("Is the anchor a REAL, traditional festival / fair / mela / jatra / utsav / urs "
+                    "genuinely and distinctively celebrated in the target state? Use the provided "
+                    "wiki_extract first; web-search to confirm when the extract is empty or insufficient. "
+                    "fact_ok = FALSE if: it is NOT a festival (it is a temple, a monument, a person, an "
+                    "organization/association, a place, or a film/music/literary/poetry/sports/food/flower/"
+                    "TOURISM-promotional event or a modern \"<City> Mahotsav/Day\" branding); OR it is "
+                    "actually associated with a DIFFERENT Indian state; OR you cannot verify it from any "
+                    "real source."),
+    },
+    "02": {
+        "item": "textile / costume",
+        "binding": "binds a specific Indian textile, weave, or regional garment to its specific Indian STATE",
+        "fact_ok": ("Is the anchor a REAL, distinctive regional TEXTILE / weave / handloom / saree / "
+                    "embroidery / regional garment genuinely and distinctively associated with the target "
+                    "state (a recognized regional craft, ideally GI-tagged or documented as that state's "
+                    "tradition)? Use the provided wiki_extract first; web-search (Wikipedia, the GI "
+                    "registry, state handloom/handicraft boards) to confirm when the extract is empty or "
+                    "insufficient. fact_ok = FALSE if: it is NOT a textile/weave/garment/embroidery (it is "
+                    "a festival, a food/dish, a dance, a person, an organization, a museum, or a bare "
+                    "place/city/district/region NAME on its own); OR it is a pan-Indian, non-distinctive "
+                    "garment with no regional identity (a plain 'saree', 'dhoti', 'kurta', 'lungi', "
+                    "'turban' etc.); OR it is actually a craft of a DIFFERENT Indian state; OR you cannot "
+                    "verify it from any real source. A textile NAMED AFTER a town in the target state "
+                    "(e.g. Banarasi, Sambalpuri, Chanderi, Pochampally) is the normal naming convention "
+                    "and PASSES fact_ok — judge leakage separately in check 2."),
+    },
+}
+
 
 def build(cid: str, batch: int = 10) -> Path:
     pairs = json.load(open(INTERIM / f"pairs_filtered_{cid}.json", encoding="utf-8"))
@@ -37,7 +72,7 @@ def build(cid: str, batch: int = 10) -> Path:
     js = '''export const meta = {
   name: 'iccd-verify-%CID%',
   description: 'Tier-1.5 construct-validity verification for %CID% (fact/leakage/counterfactual/naturalness)',
-  phases: [{ title: 'Verify', detail: 'fact-check each festival->state minimal pair' }],
+  phases: [{ title: 'Verify', detail: 'fact-check each anchor->state minimal pair' }],
 }
 
 const BATCHES = %BATCHES%
@@ -64,19 +99,19 @@ const SCHEMA = {
 }
 
 function promptFor(batch) {
-  return `You are doing construct-validity verification for a controlled minimal-pair research dataset. Axis A tests whether a model binds a specific Indian festival to its specific Indian STATE. Each item has a clean prefix naming a festival (the anchor) whose correct completion is the target state, and a corrupted prefix naming a DIFFERENT-region festival (the corruptor).
+  return `You are doing construct-validity verification for a controlled minimal-pair research dataset. Axis A tests whether a model %BINDING%. Each item has a clean prefix naming a %ITEM% (the anchor) whose correct completion is the target state, and a corrupted prefix naming a DIFFERENT-region %ITEM% (the corruptor).
 
 For EACH item below, apply these four checks (each a boolean) and decide pass = (all four true):
 
-1. fact_ok — Is the anchor a REAL, traditional festival / fair / mela / jatra / utsav / urs genuinely and distinctively celebrated in the target state? Use the provided wiki_extract first; web-search to confirm when the extract is empty or insufficient. fact_ok = FALSE if: it is NOT a festival (it is a temple, a monument, a person, an organization/association, a place, or a film/music/literary/poetry/sports/food/flower/TOURISM-promotional event or a modern "<City> Mahotsav/Day" branding); OR it is actually associated with a DIFFERENT Indian state; OR you cannot verify it from any real source. NEVER assume — verify. Do not manufacture facts.
+1. fact_ok — %FACT_OK% NEVER assume — verify. Do not manufacture facts.
 
-2. leakage_ok — Does the clean prefix avoid leaking the answer? FALSE if the anchor text contains the target state's own name, OR a major city/district/region name that gives the state away (e.g. Lucknow/Prayagraj/Varanasi->UP, Jaipur/Jodhpur/Udaipur->Rajasthan, Amritsar/Ludhiana->Punjab, Dehradun/Haridwar->Uttarakhand, Leh->Ladakh, Kolkata->West Bengal, Patna/Gaya->Bihar, Guwahati->Assam, Bhubaneswar/Cuttack/Puri->Odisha, Imphal->Manipur, Shillong->Meghalaya, Aizawl->Mizoram, Kohima->Nagaland, Agartala->Tripura, Gangtok->Sikkim).
+2. leakage_ok — Does the clean prefix avoid leaking the answer? FALSE if the anchor text contains the target state's own name, OR a major city/district/region name that gives the state away (e.g. Lucknow/Prayagraj/Varanasi->UP, Jaipur/Jodhpur/Udaipur->Rajasthan, Amritsar/Ludhiana->Punjab, Dehradun/Haridwar->Uttarakhand, Leh->Ladakh, Kolkata->West Bengal, Patna/Gaya->Bihar, Guwahati->Assam, Bhubaneswar/Cuttack/Puri->Odisha, Imphal->Manipur, Shillong->Meghalaya, Aizawl->Mizoram, Kohima->Nagaland, Agartala->Tripura, Gangtok->Sikkim). NOTE: a craft NAMED AFTER its town of origin (Banarasi, Sambalpuri, Chanderi, Pochampally, Kanchipuram, Mangalagiri) does NOT contain the STATE name and PASSES leakage_ok; only flag FALSE when the explicit state name or an unmistakable city giveaway is literally present in the anchor.
 
-3. counterfactual_ok — Is corruptor_anchor a REAL festival from a genuinely DIFFERENT region than the target (its state r_prime must differ from target), and does it read as a plausible same-template festival? FALSE if the corruptor is malformed, not a real festival, or actually from the target's own state.
+3. counterfactual_ok — Is corruptor_anchor a REAL %ITEM% from a genuinely DIFFERENT region than the target (its state r_prime must differ from target), and does it read as a plausible same-template item? FALSE if the corruptor is malformed, not real, or actually from the target's own state.
 
-4. natural_ok — Do BOTH prefixes read as natural English naming a single clean festival? FALSE for parentheticals, commas, embedded prepositions ("X in Y"), mojibake, truncation fragments, bare language words, or non-name strings.
+4. natural_ok — Do BOTH prefixes read as natural English naming a single clean %ITEM%? FALSE for parentheticals, commas, embedded prepositions ("X in Y"), mojibake, truncation fragments, bare language words, or non-name strings.
 
-Be strict but fair: genuine, distinctive regional festivals should PASS; noise (events, temples, orgs, mis-attributions, pan-Indian non-distinctive festivals, malformed names) should FAIL the relevant check. In 'reason' give a one-line justification; in 'source' cite the URL or wiki page that confirms fact_ok (or "n/a" if failed). Return exactly one verdict per item_id. Then CALL StructuredOutput.
+Be strict but fair: genuine, distinctive regional items should PASS; noise (wrong-category entries, places, orgs, mis-attributions, pan-Indian non-distinctive items, malformed names) should FAIL the relevant check. In 'reason' give a one-line justification; in 'source' cite the URL or wiki page that confirms fact_ok (or "n/a" if failed). Return exactly one verdict per item_id. Then CALL StructuredOutput.
 
 ITEMS:
 ${batch.map((it, i) => `${i + 1}. item_id=${it.item_id}
@@ -98,7 +133,11 @@ for (const v of results.filter(Boolean)) all.push(...v)
 log(`%CID% verified: ${all.length} verdicts; ${all.filter(v => v.pass).length} pass`)
 return { verdicts: all }
 '''
-    js = js.replace("%CID%", cid).replace("%BATCHES%", json.dumps(batches, ensure_ascii=False))
+    sub = cid.split("-")[-1]
+    prof = _VERIFY_PROFILE.get(sub, _VERIFY_PROFILE["01"])
+    js = (js.replace("%BATCHES%", json.dumps(batches, ensure_ascii=False))
+            .replace("%BINDING%", prof["binding"]).replace("%ITEM%", prof["item"])
+            .replace("%FACT_OK%", prof["fact_ok"]).replace("%CID%", cid))
     out = INTERIM / f"verify_{cid}.workflow.js"
     out.write_text(js, encoding="utf-8")
     print(f"{cid}: {len(items)} items -> {len(batches)} batches -> {out}")

@@ -55,6 +55,24 @@ REGIONS = {
 REGION_NAMES = {"NN": "North", "SS": "South", "EE": "East", "WW": "West", "CC": "Central"}
 STATE_TO_REGION = {state: rc for rc, states in REGIONS.items() for state in states}
 
+# --- Axis-A STR relation templates, per sub-concept (plan Section 3.7 / App. D) ---
+# Cross-anchor-swap STR: within a pair ONLY the anchor token changes, so the relation
+# frame is one fixed string per cell. A01-01 reproduces the released festival template
+# verbatim; A01-02 is the plan §D.2 textile frame. 03/04 are provisional defaults
+# (finalize when those cells are built). Keyed by (axis, sub_concept).
+RELATION_TEMPLATES = {
+    ("A01", "01"): "{anchor} is a festival celebrated in the Indian state of",
+    ("A01", "02"): "{anchor} is a folk textile tradition associated with the Indian state of",
+    ("A01", "03"): "{anchor} is a traditional dish particularly associated with the Indian state of",
+    ("A01", "04"): "{anchor} is a traditional ritual observed in the Indian state of",
+}
+
+
+def relation_template(axis: str, sub: str) -> str:
+    """The fixed STR relation frame for a cell (KeyError if not yet defined)."""
+    return RELATION_TEMPLATES[(axis, sub)]
+
+
 # --- Cell design (plan Section 3.4) --------------------------------------
 PER_CELL_FINAL = 100
 CANDIDATES_PER_CELL = 240            # over-sampling buffer (plan Section 3.8)
