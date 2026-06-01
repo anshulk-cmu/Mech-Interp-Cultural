@@ -29,15 +29,25 @@ def _get(params: dict) -> dict:
     cache_file = _CACHE / f"{key}.json"
     if cache_file.exists():
         return json.loads(cache_file.read_text(encoding="utf-8"))
-    gap = time.time() - _last[0]
-    if gap < _MIN_INTERVAL:
-        time.sleep(_MIN_INTERVAL - gap)
-    r = _SESSION.get(WIKI_API, params=params, timeout=30)
-    _last[0] = time.time()
-    r.raise_for_status()
-    data = r.json()
-    cache_file.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
-    return data
+    # Retry transient drops (RemoteDisconnected / timeouts) with backoff; the on-disk
+    # cache means a resumed run re-reads already-fetched pages instantly.
+    last_err = None
+    for attempt in range(4):
+        gap = time.time() - _last[0]
+        if gap < _MIN_INTERVAL:
+            time.sleep(_MIN_INTERVAL - gap)
+        try:
+            r = _SESSION.get(WIKI_API, params=params, timeout=30)
+            _last[0] = time.time()
+            r.raise_for_status()
+            data = r.json()
+            cache_file.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+            return data
+        except (requests.RequestException, ValueError) as e:
+            last_err = e
+            _last[0] = time.time()
+            time.sleep(1.0 * (attempt + 1))
+    raise last_err
 
 
 def category_members(category: str, limit: int = 500, with_subcats: bool = False):

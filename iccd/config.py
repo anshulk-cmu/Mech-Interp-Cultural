@@ -61,6 +61,13 @@ CANDIDATES_PER_CELL = 240            # over-sampling buffer (plan Section 3.8)
 PASS_A_TARGET = 143                  # post-Stage-4 survivors expected (240 * 0.60)
 TOKEN_BALANCE = {1: 50, 2: 30, 3: 20}  # one/two/three-token target counts per 100
 MAX_TARGET_TOKENS = 3
+# Documented F1 exceptions: state names >MAX_TARGET_TOKENS kept because the F1 cap would
+# otherwise collapse their whole region to a single eligible state. Central (CC) has only
+# Madhya Pradesh (3 tok) + Chhattisgarh (5 tok) + Dadra... (13 tok, dropped); without this
+# the cell would be Madhya-Pradesh-only. Chhattisgarh items form a 5-token stratum (recorded);
+# the cap's purpose (token-length confound) is served by documenting it, and the delta-L gate
+# + Tier-1.5 verification are unaffected by target length. (User-approved 2026-05-31.)
+F1_TOKEN_EXCEPTIONS = {"Chhattisgarh"}
 FLOOR_PRIMARY = 50
 
 # --- Stage-4 filter bounds (plan Section 6.4) ----------------------------

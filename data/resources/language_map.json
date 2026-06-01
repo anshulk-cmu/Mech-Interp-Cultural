@@ -27,5 +27,124 @@
     "Hindi",
     "Bengali",
     "Tamil"
+  ],
+  "Punjab": [
+    "Punjabi"
+  ],
+  "Haryana": [
+    "Haryanvi",
+    "Hindi"
+  ],
+  "Himachal Pradesh": [
+    "Pahari",
+    "Hindi"
+  ],
+  "Jammu and Kashmir": [
+    "Kashmiri",
+    "Dogri",
+    "Urdu"
+  ],
+  "Ladakh": [
+    "Ladakhi"
+  ],
+  "Rajasthan": [
+    "Rajasthani",
+    "Marwari",
+    "Hindi"
+  ],
+  "Uttar Pradesh": [
+    "Hindi",
+    "Awadhi",
+    "Braj",
+    "Bhojpuri",
+    "Urdu"
+  ],
+  "Uttarakhand": [
+    "Garhwali",
+    "Kumaoni",
+    "Hindi"
+  ],
+  "Delhi": [
+    "Hindi",
+    "Punjabi",
+    "Urdu"
+  ],
+  "Chandigarh": [
+    "Hindi",
+    "Punjabi"
+  ],
+  "Bihar": [
+    "Maithili",
+    "Bhojpuri",
+    "Magahi",
+    "Hindi"
+  ],
+  "Jharkhand": [
+    "Santali",
+    "Nagpuri",
+    "Hindi"
+  ],
+  "Odisha": [
+    "Odia"
+  ],
+  "West Bengal": [
+    "Bengali"
+  ],
+  "Sikkim": [
+    "Nepali",
+    "Bhutia",
+    "Lepcha"
+  ],
+  "Arunachal Pradesh": [
+    "Nyishi",
+    "Adi",
+    "Apatani",
+    "Monpa"
+  ],
+  "Assam": [
+    "Assamese",
+    "Bodo"
+  ],
+  "Manipur": [
+    "Meitei",
+    "Manipuri"
+  ],
+  "Meghalaya": [
+    "Khasi",
+    "Garo"
+  ],
+  "Mizoram": [
+    "Mizo"
+  ],
+  "Nagaland": [
+    "Nagamese",
+    "Ao",
+    "Angami"
+  ],
+  "Tripura": [
+    "Kokborok",
+    "Bengali"
+  ],
+  "Gujarat": [
+    "Gujarati"
+  ],
+  "Maharashtra": [
+    "Marathi"
+  ],
+  "Goa": [
+    "Konkani",
+    "Marathi"
+  ],
+  "Dadra and Nagar Haveli and Daman and Diu": [
+    "Gujarati",
+    "Marathi",
+    "Hindi"
+  ],
+  "Madhya Pradesh": [
+    "Hindi"
+  ],
+  "Chhattisgarh": [
+    "Chhattisgarhi",
+    "Hindi"
   ]
 }
