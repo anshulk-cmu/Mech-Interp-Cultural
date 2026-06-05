@@ -1,10 +1,10 @@
 """Stage 5 — token-balanced stratified sampling around the Stage-8 model gate.
 
 Pass A: carry filtered pairs forward as the Stage-8 scoring batch.
-Pass B: from the Stage-8 + Claude survivors, draw the final 100 under the 50/30/20
-one/two/three-token balance (random within stratum, seed 42; fallback fill). Axis A
-targets are state names, so the realized 1/2/3-token mix is constrained by which states
-appear -- we record the realized distribution (plan Stage-5 fallback), never select on delta-L.
+Pass B: from the Stage-8 + Claude survivors, draw the final 100 under the TOKEN_BALANCE
+token-length strata (1-5 tokens; random within stratum, seed 42; fallback fill). Axis A
+targets are state names, so the realized token mix is constrained by which states appear
+-- we record the realized distribution (plan Stage-5 fallback), never select on delta-L.
 """
 from __future__ import annotations
 
@@ -52,10 +52,11 @@ def pass_b(cell=SMOKE_CELL, n=PER_CELL_FINAL):
     survivors = [i for i in read_json(INTERIM / f"stage8_survivors_{cid}.json", []) if i in filtered]
     rng = random.Random(SEEDS["main"])
 
-    # Primary: target token-length strata 50/30/20 (statistical confound control, Zhang & Nanda).
-    # Secondary: round-robin across target states within each stratum (cultural spread, fix 4).
+    # Primary: target token-length strata per TOKEN_BALANCE (statistical confound control,
+    # Zhang & Nanda). Secondary: round-robin across target states within each stratum (cultural
+    # spread, fix 4). Iterates all configured strata (1-5 tokens).
     chosen = []
-    for k in (1, 2, 3):
+    for k in sorted(TOKEN_BALANCE):
         by_state = {}
         for iid in survivors:
             if filtered[iid]["target_tokens"] == k:

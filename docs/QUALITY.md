@@ -213,7 +213,7 @@ corr 0.44 (North) / 0.35 (South), Δ +3.32 / +3.91, 79–84 % of items base>alig
 the strongest weakening yet, extending the Sarvam-M regional-selectivity signal from Festivals to a
 second sub-concept (directional, single confounded arm — Phase 4 adjudicates).
 
-## A01-EE-02 (East) — Tier-1.5 quality (released); A01-WW-02 (West) — structural-ceiling finding
+## A01-EE-02 (East) — Tier-1.5 quality (released); A01-WW-02 (West) + A01-CC-02 (Central) — released short cells (wave 6)
 
 **A01-EE-02 (East), released.** Same generalized chain; web-tier-dominated across all 10 eligible East
 states. The **verify Workflow was hardened this wave** (judge from the provided evidence + own knowledge,
@@ -237,11 +237,58 @@ What Tier-1.5 caught: a weaver CASTE (*Bhulia*), a fashion BRAND (*Boito*), and 
 Cross-model: Llama corr **0.92** (Δ +0.85), Gemma aligned **sharper** (corr 0.92, Δ −2.31), **Mistral→Sarvam-M
 corr 0.47, Δ +4.28, 88/100 base>aligned — the strongest costume weakening of any cell** (NN +3.32 → SS +3.91 → EE +4.28).
 
-**A01-WW-02 (West) — PAUSED, a STRUCTURAL CEILING, not a quality failure.** Axis-A's F1 ≤3-token cap leaves
-West only **3 eligible states** (Gujarat/Maharashtra/Goa). Distinctive documented textiles per state are
-finite (unlike festivals): exhaustive sourcing (4 hardened web passes, incl. every Kutch embroidery
-sub-style) → only **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1), and the gate would drop
-the obscure Gujarat sub-styles → ~40 final. The user chose **Release East only** and paused West for a
-design discussion (covering Central too — only 2 states). The 57 verified WW-02 items are construct-valid
-and retained; the cell is paused on the **100-items-per-cell design question**, not on quality. See
-`plans/handoff-A01-WW-02-CC-02.md`.
+**A01-WW-02 (West) + A01-CC-02 (Central) — RELEASED as documented short cells.** Both are few-eligible-state
+Costume cells (West 3 states, Central 2) where distinctive documented textiles are finite, so 100 is
+structurally unreachable — NOT a quality failure. Before releasing, an **exhaustive recalibration** ruled
+out a sourcing-effort explanation: an LLM web sweep (15 agents; long-tail + GI/handloom inventories) plus a
+deterministic **deep-Wikipedia category crawl** (`scripts/dev/wiki_deep_ceiling.py`; 872 articles, depth-3,
+full-text state resolution) **converged** — Wikipedia surfaced zero new valid textiles, only
+people/firms/museums/castes/wrong-state noise. Also verified that relaxing the F1 cap to ≤5 tokens adds NO
+eligible states (West's only over-cap state is the 13-token UT; Chhattisgarh, 5-tok, is already admitted).
+
+| Metric | A01-WW-02 (West) | A01-CC-02 (Central) |
+|---|---|---|
+| Stage-4 filtered | 114 | 53 |
+| Tier-1.5 verified pass | 87 | 46 |
+| After fuzzy-dup drop | 77 (−10) | 43 (−3) |
+| Base-Llama gate (ΔL>1.0) | **64** (83 %) | **41** (95 %) |
+| Final (released at real n) | **64** | **41** |
+| States | Gujarat 43 / Maharashtra 18 / Goa 3 | Madhya Pradesh 22 / Chhattisgarh 19 |
+| Token mix | 1-tok 64 (clean single-token stratum) | 3-tok 22 / 5-tok 19 (Chhattisgarh exception) |
+| Provenance gaps | 0 | 0 |
+
+The gate retained far more than the conservative `model_known` projection (West ~47→**64**, Central ~12→**41**)
+— the base model binds most of these textiles to their state. What Tier-1.5 caught: weaver CASTE names
+(Balai, Basor, Chik Baraik, Dhedh), a museum (Calico Museum), a Tajik mis-attribution (Chakan), Bhopal-capital
+**leakage**, and pan-Indian non-distinctive garments (Angavastra, Choli, Ghagra choli, Ghoonghat). **Note
+(Central):** the maximized pool keeps a few town/tribe-variant names of shared crafts (Nandana/Tarapur dabu;
+the Bastar aal-dyed cotton family) — kept per the maximize-and-document decision; a human Tier-2 may collapse them.
+
+**Cross-model (6/6, scored on ONE g6.12xlarge / 4×L4, all models consolidated):** clean-RLHF preserves binding —
+Llama-3.1-8B corr **0.93** (West) / **0.82** (Central); **Gemma-2-9B aligned sharper** (Δ −2.56 / −2.57).
+**Mistral→Sarvam-M (Indian SFT+RLVR) weakens binding most — Δ +4.48 (West) / +4.18 (Central), corr 0.19 / 0.43**,
+completing the costume-axis Sarvam-M selectivity gradient across the whole row: NN +3.32 → SS +3.91 → EE +4.28 → WW +4.48 / CC +4.18.
+
+## A01-NN-03 (North) + A01-SS-03 (South) — Cuisine, Tier-1.5 quality (released, wave 7)
+
+First Cuisine cells, first row under the **permanent ≤5-token cap** (plan §13 v1.4: `MAX_TARGET_TOKENS` 3→5, balance `{1:30,2:25,3:20,4:15,5:10}`, exceptions emptied) — which made **J&K & Himachal Pradesh** eligible in NN-03 and **Puducherry** in SS-03. Both data-rich → both released at the full **100**.
+
+| Metric | A01-NN-03 | A01-SS-03 |
+|---|---|---|
+| Candidates (SANSKRITI / Wiki / web) | 187 (13 / 47 / 127) | 207 (12 / **154** / 41) |
+| Stage-4 filtered | 178 | 197 |
+| Tier-1.5 verified pass | 143 | 134 |
+| After fuzzy-dup drop | 139 (−4) | 129 (−5) |
+| Base-Llama gate (ΔL>1.0) | **124** (89 %) | **128** (99 %) |
+| Final | **100** | **100** |
+| Provenance gaps | 0 | 0 |
+| States | 9 (Raj 15 / Pun 13 / UP 12 / Utk 11 / J&K 11 / Lad 10 / HP 10 / Del 9 / Har 9) | 6 (Ker 21 / Kar 21 / TN 20 / AP 16 / Tel 16 / Pud 6) |
+| Token 1/2/3/4 | 37 / 31 / 11 / 21 | 42 / 20 / 32 / 6 |
+
+**Verify hardening (recovery).** Running BOTH cells' verify Workflows at once triggered the known schema-forced turn-budget emit-failure at scale (~75 % of batches completed with no `StructuredOutput` call → only 42/178 and 63/197 verdicts). Fixed by: (a) a stronger emit rule ("judge from knowledge + the wiki_extract, web-search ≤2 genuinely unfamiliar items, emit FIRST"); (b) a new `gen_verify_workflow.py --missing <verdicts.json>` redo mode (batch 5) that re-verifies only the un-verdicted items into `verify_<cell>_redo.workflow.js`; (c) running cells **sequentially, one Workflow at a time**. The redo runs came back with **0 failures** → 100 % coverage (NN 143 pass / 35 fail, SS 134 / 63).
+
+**Subset-based fuzzy-dedup (new).** Cuisine dishes legitimately share ingredient/type tokens, so the old Jaccard-on-a-shared-≥5-char-token rule produced false merges that also *kept the generic over the specific* (e.g. dropped "Dal Bati Churma" for bare "Churma"; "Manapparai Murukku" for "Murukku"; merged Gongura Pachadi with Gongura Mamsam). `apply_verdicts.py` now merges only when one anchor's non-generic core is a strict **subset** of the other's, and keeps the **longer/more-specific** anchor. Result: every drop is a true variant (bare type-word → specific dish); distinct dishes sharing one ingredient survive.
+
+**What Tier-1.5 caught (cuisine-specific):** spices/ingredients/crops not dishes (Alleppey green cardamom, Byadagi chilli, Attappady/Authoor GI crop varieties, Central Travancore jaggery), cuisine-**category** names ("Andhra cuisine", "Chettinad cuisine"), pan-Indian non-distinctive items (basundi, bhakri, boondi, chirote), city-name **leaks** (Alleppey, Bangalore), and beverages where a dish is required (Aval milk). Town-derived dish names correctly PASS fact_ok (Hyderabadi haleem, Bikaneri bhujia, Dharwad pedha) with leakage judged separately. The F3 language filter hard-rejected language-adjective leaks (Punjabi/Kashmiri X) before Claude — consistent with the soft-filter directive (only unambiguous leaks are deterministic; nuance goes to Claude).
+
+**Cross-model (6/6, scored on one g6.12xlarge / 4×L4 via the fixed `launch_aws.sh`):** clean-RLHF preserves — Llama-3.1-8B corr **0.90 (N) / 0.89 (S)** (Δ +0.39 / +0.57); **Gemma-2-9B aligned sharper** (Δ −3.10 / −2.35, corr 0.92 / 0.90). **Mistral→Sarvam-M weakens binding — corr 0.44 / 0.49, Δ +3.62 / +3.51, 73–79 % base>aligned** — the Sarvam-M selectivity signal **continues into a third sub-concept** (Festivals → Costume +3.3–4.5 → Cuisine ~+3.5; directional, single confounded arm — Phase 4 adjudicates).

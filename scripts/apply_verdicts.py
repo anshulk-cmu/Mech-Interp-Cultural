@@ -1,12 +1,14 @@
 """Apply a Tier-1.5 verify-Workflow result to a cell: save verdicts, drop fuzzy-dup
 variants, and regenerate stage8_input_<cell>.json = the deduped Claude-pass batch.
 
-Fuzzy-dup = two PASS items with the same target whose anchors name the same festival
-under a spelling/qualifier variant (e.g. "Ambaji Fair" vs "Bhadarvi Poonam Ambaji Fair",
-"Gol Gadhedo" vs "Gol Gadhedo Fair"). Detected on the non-generic ("core") anchor tokens:
-either the despaced core strings are equal, or token-Jaccard >= 0.5 sharing a >=5-char
-proper-noun token. The first/shortest anchor in a group is kept; the rest are marked
-pass=false (reason fuzzy_dup_of:<id>) so finalize_cell and the gate agree.
+Fuzzy-dup = two PASS items with the same target whose anchors name the same item under a
+spelling/qualifier variant (e.g. "Ambaji Fair" vs "Bhadarvi Poonam Ambaji Fair", "Churma"
+vs "Dal Bati Churma"). Detected on the non-generic ("core") anchor tokens: either the cores
+are equal, or one core is a strict SUBSET of the other sharing a >=5-char proper-noun token.
+The longest/most-specific anchor in a group is kept (so "Dal Bati Churma" beats bare "Churma",
+not vice-versa); the rest are marked pass=false (reason fuzzy_dup_of:<id>) so finalize_cell
+and the gate agree. Subset (not Jaccard) avoids merging distinct dishes that share one
+ingredient/region token (Gongura Pachadi vs Gongura Mamsam; Amritsari Macchi vs Kulcha).
 
 Usage:  python scripts/apply_verdicts.py A01-WW-01 [data/interim/claude_verdicts_A01-WW-01.json]
 """
@@ -27,7 +29,15 @@ _GENERIC = {"fair", "mela", "melo", "festival", "festivals", "utsav", "mahotsav"
             # "Uppada Jamdani"/"Uppada Jamdani sarees", "Gadwal Sari"/"Gadwal saree" to one item.
             "saree", "sarees", "sari", "saris", "silk", "cotton", "dhoti", "dhoties", "mundu",
             "set", "shawl", "print", "printing", "durrie", "dhurrie", "durries", "dhurries",
-            "handloom", "handlooms", "cloth", "fabric", "weave", "weaving", "embroidery", "work"}
+            "handloom", "handlooms", "cloth", "fabric", "weave", "weaving", "embroidery", "work",
+            # Cuisine generic type-words (A01-03): broad food category words only. Specific
+            # dish-type suffixes (appam, kuzhambu, churma, murukku, pachadi...) are deliberately
+            # NOT here -- making them generic collapses different dishes that share one ingredient
+            # token (Gongura Pachadi vs Gongura Mamsam). The subset rule in _is_dup folds a bare
+            # type-word ("Churma") into the specific dish ("Dal Bati Churma") without that risk.
+            "dish", "dishes", "curry", "masala", "sweet", "sweets", "snack", "snacks", "bread",
+            "rice", "gravy", "fry", "pickle", "chutney", "thali", "dal", "sabzi", "cuisine",
+            "food", "recipe", "halwa", "ladoo", "laddu"}
 
 
 def _core(anchor: str):
@@ -36,14 +46,19 @@ def _core(anchor: str):
 
 
 def _is_dup(a_core, b_core) -> bool:
+    """Same dish iff identical core, OR one core is a strict SUBSET of the other and they share
+    a distinctive (>=5-char) token. Subset (not jaccard) avoids merging different dishes that
+    merely share one ingredient/region token -- e.g. {gongura,pachadi} vs {gongura,mamsam} are
+    NOT a subset of each other, so they survive; {churma} IS a subset of {bati,churma}, so bare
+    'Churma' folds into 'Dal Bati Churma' (the superset/more-specific name is kept, see apply())."""
     if not a_core or not b_core:
         return False
-    if "".join(sorted(a_core)) == "".join(sorted(b_core)):
-        return True
     sa, sb = set(a_core), set(b_core)
-    inter = sa & sb
-    jac = len(inter) / len(sa | sb)
-    return jac >= 0.5 and any(len(t) >= 5 for t in inter)
+    if sa == sb:
+        return True
+    if (sa <= sb or sb <= sa) and any(len(t) >= 5 for t in (sa & sb)):
+        return True
+    return False
 
 
 def apply(cid: str, verdicts_path: str | None = None):
@@ -59,7 +74,7 @@ def apply(cid: str, verdicts_path: str | None = None):
 
     dup_loser = {}  # item_id -> kept item_id
     for tgt, vs in by_tgt.items():
-        vs.sort(key=lambda v: len(pairs[v["item_id"]]["anchor"]))
+        vs.sort(key=lambda v: -len(pairs[v["item_id"]]["anchor"]))  # longest/most-specific first = representative
         kept = []  # (item_id, core)
         for v in vs:
             core = _core(pairs[v["item_id"]]["anchor"])

@@ -76,12 +76,39 @@ _SUBCONCEPT_SOURCING = {
         "extra_cats": {},
         "broad_cats": ["Textile arts of India", "Saris", "Embroidery in India", "Indian clothing"],
     },
+    ("A01", "03"): {  # Cuisine
+        # Unlike textiles, per-state cuisine categories ARE rich on en.wikipedia ("Cuisine of {s}" /
+        # "{s} cuisine"), plus per-language/community cuisine cats. Broad India-level dish cats backfill
+        # via extract-based single-region resolution; SANSKRITI Cuisine attribute is also dense.
+        "state_cats": ["Cuisine of {s}", "{s} cuisine"],
+        "extra_cats": {
+            # North
+            "Punjab": ["Punjabi cuisine"],
+            "Rajasthan": ["Rajasthani cuisine"],
+            "Uttar Pradesh": ["Awadhi cuisine"],
+            "Haryana": ["Haryanvi cuisine"],
+            "Uttarakhand": ["Kumaoni cuisine", "Garhwali cuisine"],
+            "Ladakh": ["Ladakhi cuisine"],
+            "Delhi": ["Delhi cuisine"],
+            # South
+            "Tamil Nadu": ["Tamil cuisine"],
+            "Kerala": ["Malayali cuisine"],
+            "Karnataka": ["Kannada cuisine", "Udupi cuisine"],
+            "Andhra Pradesh": ["Telugu cuisine", "Andhra cuisine"],
+            "Telangana": ["Telangana cuisine", "Hyderabadi cuisine"],
+            "Puducherry": ["Pondicherrian cuisine"],
+        },
+        "broad_cats": ["Indian dishes", "Indian breads", "Indian sweets", "Street food in India"],
+    },
 }
-# Generic tokens skipped when SANSKRITI-attesting an anchor (festival + costume vocabulary, len>=5).
+# Generic tokens skipped when SANSKRITI-attesting an anchor (festival + costume + cuisine vocabulary, len>=5).
 _GENERIC = {"festival", "fair", "jatra", "mela", "utsav", "puja", "pooja", "temple",
             "hindu", "day", "night", "feast", "celebration", "harvest", "annual",
             "saree", "sari", "cotton", "cloth", "shawl", "textile", "weave", "weaving",
-            "embroidery", "print", "attire", "costume", "dress", "handloom", "fabric", "border"}
+            "embroidery", "print", "attire", "costume", "dress", "handloom", "fabric", "border",
+            # Cuisine (A01-03) generic food vocabulary
+            "dish", "curry", "masala", "sweet", "snack", "bread", "rice", "gravy", "fry",
+            "pickle", "chutney", "thali", "sabzi", "cuisine", "food", "dishes", "recipe"}
 
 
 def _is_event(text: str) -> bool:

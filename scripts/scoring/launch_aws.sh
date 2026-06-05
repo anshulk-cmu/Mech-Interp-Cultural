@@ -6,10 +6,22 @@
 #        bash launch_aws.sh g6.12xlarge   iccd-eeww-24b
 set -euo pipefail
 ITYPE="$1"; SGNAME="$2"
-AMI="ami-012ba162b9cd2729c"        # DL PyTorch 2.7 / Ubuntu 22.04 (L4/L40S)
+# Models-preloaded AMI (built 2026-06-01 via bake_models.sh): DLAMI + all 6 Stage-8 models cached at
+# /home/ubuntu/hfcache (500 GB root) -> the runner sets HF_HOME there and skips the ~25-min re-download.
+# Base DLAMI fallback (no models, 200 GB root): ami-012ba162b9cd2729c
+AMI="ami-03deb3bad69887360"        # DL PyTorch 2.7 / Ubuntu 22.04 + 6 ICCD models pre-cached
 KEY="anthropic-fellows-key"
 REGION="us-east-1"
 VPC="vpc-003b5ab4402aba736"
+
+# Optional spot instance for lower cost: SPOT=1 bash launch_aws.sh ...  (one-time, terminate-on-interrupt).
+# Spot G/VT quota is 48 (us-east-1, checked 2026-06-01) = one g6.12xlarge, so spot works without an increase.
+# Caveat: spot can be interrupted mid-scoring; pull results often. AZ-hop already covers no-spot-capacity AZs.
+SPOT_ARGS=()
+if [ "${SPOT:-0}" = "1" ]; then
+  SPOT_ARGS=(--instance-market-options 'MarketType=spot')
+  echo "spot: requesting a SPOT instance (one-time)"
+fi
 
 MYIP="$(curl -s https://checkip.amazonaws.com | tr -d '[:space:]')"
 echo "my ip: $MYIP"
@@ -31,8 +43,9 @@ for AZ in a b c f d e; do
   if IID="$(aws ec2 run-instances --region "$REGION" --image-id "$AMI" \
       --instance-type "$ITYPE" --key-name "$KEY" --security-group-ids "$SG_ID" \
       --subnet-id "$SUBNET" \
-      --block-device-mappings '[{"DeviceName":"/dev/sda1","Ebs":{"VolumeSize":200,"VolumeType":"gp3"}}]' \
+      --block-device-mappings '[{"DeviceName":"/dev/sda1","Ebs":{"VolumeSize":500,"VolumeType":"gp3"}}]' \
       --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${SGNAME}}]" \
+      "${SPOT_ARGS[@]}" \
       --query 'Instances[0].InstanceId' --output text 2>/dev/null)"; then
     echo "launched $IID in us-east-1${AZ}"; break
   else

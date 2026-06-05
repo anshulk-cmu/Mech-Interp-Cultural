@@ -77,15 +77,16 @@ def relation_template(axis: str, sub: str) -> str:
 PER_CELL_FINAL = 100
 CANDIDATES_PER_CELL = 240            # over-sampling buffer (plan Section 3.8)
 PASS_A_TARGET = 143                  # post-Stage-4 survivors expected (240 * 0.60)
-TOKEN_BALANCE = {1: 50, 2: 30, 3: 20}  # one/two/three-token target counts per 100
-MAX_TARGET_TOKENS = 3
-# Documented F1 exceptions: state names >MAX_TARGET_TOKENS kept because the F1 cap would
-# otherwise collapse their whole region to a single eligible state. Central (CC) has only
-# Madhya Pradesh (3 tok) + Chhattisgarh (5 tok) + Dadra... (13 tok, dropped); without this
-# the cell would be Madhya-Pradesh-only. Chhattisgarh items form a 5-token stratum (recorded);
-# the cap's purpose (token-length confound) is served by documenting it, and the delta-L gate
-# + Tier-1.5 verification are unaffected by target length. (User-approved 2026-05-31.)
-F1_TOKEN_EXCEPTIONS = {"Chhattisgarh"}
+# Target token-length balance per 100 final items. Spans 1-5 tokens since MAX_TARGET_TOKENS
+# went 3->5 (user-authorized permanent change 2026-06-05). The split is a TARGET; the realized
+# mix is constrained by which states a cell actually has and is recorded. Stage-5 fallback fill
+# covers strata a cell cannot populate (e.g. NN/SS have no 5-token eligible state).
+TOKEN_BALANCE = {1: 30, 2: 25, 3: 20, 4: 15, 5: 10}  # sums to 100
+MAX_TARGET_TOKENS = 5               # permanent increase 3->5 (user-authorized 2026-06-05)
+# With the 5-token cap every previously hard-excluded state EXCEPT 6+-token names (Andaman and
+# Nicobar Islands=6, Dadra and Nagar Haveli and Daman and Diu=13) is now natively eligible, so no
+# per-state F1 exception is needed (Chhattisgarh=5 now passes on its own). Kept as an (empty) hook.
+F1_TOKEN_EXCEPTIONS: set[str] = set()
 FLOOR_PRIMARY = 50
 
 # --- Stage-4 filter bounds (plan Section 6.4) ----------------------------
@@ -94,7 +95,10 @@ PREFIX_MAX_TOKENS = 64
 SUFFIX_MATCH_TOKENS = 4
 # generic nouns allowed to survive corruption (F4 blocklist, plan Section 6.4)
 GENERIC_NOUN_BLOCKLIST = {"sari", "dance", "festival", "music", "cuisine", "fair",
-                          "print", "mela", "ikat", "dish", "harvest"}
+                          "print", "mela", "ikat", "dish", "harvest",
+                          # Cuisine (A01-03) generic food nouns
+                          "curry", "masala", "sweet", "snack", "bread", "rice", "gravy",
+                          "fry", "pickle", "chutney", "thali", "dal", "sabzi"}
 
 # --- Stage-8 retention threshold (plan Section 8.3) ----------------------
 DELTA_L_FLOOR_NATS = 1.0

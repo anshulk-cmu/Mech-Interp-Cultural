@@ -50,11 +50,33 @@ _VERIFY_PROFILE = {
                     "(e.g. Banarasi, Sambalpuri, Chanderi, Pochampally) is the normal naming convention "
                     "and PASSES fact_ok — judge leakage separately in check 2."),
     },
+    "03": {
+        "item": "dish",
+        "binding": "binds a specific Indian dish to its specific Indian STATE",
+        "fact_ok": ("Is the anchor a REAL, distinctive regional DISH / food / sweet / snack / bread "
+                    "genuinely and distinctively associated with the target state (a recognized regional "
+                    "speciality, ideally documented as that state's signature food, GI-tagged, or a "
+                    "well-known traditional preparation of that region)? Use the provided wiki_extract "
+                    "first; web-search (Wikipedia, state tourism / cuisine pages) to confirm when the "
+                    "extract is empty or insufficient. fact_ok = FALSE if: it is NOT a dish (it is a bare "
+                    "ingredient/spice, a cooking technique/utensil, a restaurant/brand, a person, an "
+                    "organization, a festival, or a bare place/city/district/region NAME on its own); OR "
+                    "it is a PAN-INDIAN, non-distinctive item with no single-state identity (a plain "
+                    "biryani, samosa, roti, dal, paneer tikka, butter chicken, tandoori chicken, gulab "
+                    "jamun etc. claimed for a state it is not specifically from); OR it is actually a dish "
+                    "of a DIFFERENT Indian state; OR you cannot verify it from any real source. A dish "
+                    "NAMED AFTER a town/region in the target state (e.g. Hyderabadi haleem, Bikaneri "
+                    "bhujia, Mysore pak, Tirunelveli halwa) is the normal naming convention and PASSES "
+                    "fact_ok — judge leakage separately in check 2 (an explicit STATE name or unmistakable "
+                    "city giveaway still fails leakage_ok)."),
+    },
 }
 
 
-def build(cid: str, batch: int = 10) -> Path:
+def build(cid: str, batch: int = 10, only_ids: "set[str] | None" = None) -> Path:
     pairs = json.load(open(INTERIM / f"pairs_filtered_{cid}.json", encoding="utf-8"))
+    if only_ids is not None:                 # redo mode: re-verify only the listed item_ids
+        pairs = [p for p in pairs if p["item_id"] in only_ids]
     items = [{
         "item_id": p["item_id"],
         "anchor": p["anchor"],
@@ -101,7 +123,7 @@ const SCHEMA = {
 function promptFor(batch) {
   return `You are doing construct-validity verification for a controlled minimal-pair research dataset. Axis A tests whether a model %BINDING%. Each item has a clean prefix naming a %ITEM% (the anchor) whose correct completion is the target state, and a corrupted prefix naming a DIFFERENT-region %ITEM% (the corruptor).
 
->>> CRITICAL OUTPUT RULE: your FINAL action MUST be a call to the StructuredOutput tool with one verdict per item_id. Do NOT end your turn with a prose summary — an answer with no tool call is a total failure. These items are ALREADY web-sourced (each carries a source + wiki_extract), so JUDGE construct validity from the provided evidence + your own knowledge. Only web-search the FEW items that genuinely look doubtful or unfamiliar; do NOT exhaustively re-search every item. Budget at most ~5 web searches for the whole batch, then immediately CALL StructuredOutput. <<<
+>>> CRITICAL OUTPUT RULE (READ FIRST): your FINAL action MUST be a single call to the StructuredOutput tool with exactly one verdict per item_id. An answer with NO tool call is a TOTAL FAILURE. You can judge almost every item from the provided wiki_extract + your own knowledge of Indian regional food — you usually do NOT need to web-search at all. Web-search AT MOST 2 genuinely unfamiliar items in the WHOLE batch; do NOT research every item. Spend your turns deciding and emitting, not searching — a confident verdict from your own knowledge is far better than running out of turns with no output. CALL StructuredOutput as soon as you have a verdict for each item_id. <<<
 
 For EACH item below, apply these four checks (each a boolean) and decide pass = (all four true):
 
@@ -140,13 +162,24 @@ return { verdicts: all }
     js = (js.replace("%BATCHES%", json.dumps(batches, ensure_ascii=False))
             .replace("%BINDING%", prof["binding"]).replace("%ITEM%", prof["item"])
             .replace("%FACT_OK%", prof["fact_ok"]).replace("%CID%", cid))
-    out = INTERIM / f"verify_{cid}.workflow.js"
+    out = INTERIM / f"verify_{cid}{'_redo' if only_ids is not None else ''}.workflow.js"
     out.write_text(js, encoding="utf-8")
     print(f"{cid}: {len(items)} items -> {len(batches)} batches -> {out}")
     return out
 
 
 if __name__ == "__main__":
-    cid = sys.argv[1]
-    bs = int(sys.argv[2]) if len(sys.argv) > 2 else 10
-    build(cid, bs)
+    # Usage: gen_verify_workflow.py <cid> [batch] [--missing <verdicts.json>]
+    # --missing: re-verify ONLY items absent from the given verdicts file (failed/incomplete batches),
+    #            writing verify_<cid>_redo.workflow.js so the original is not clobbered.
+    pos = [a for a in sys.argv[1:] if not a.startswith("--")]
+    cid = pos[0]
+    bs = int(pos[1]) if len(pos) > 1 else 10
+    only = None
+    if "--missing" in sys.argv:
+        vp = sys.argv[sys.argv.index("--missing") + 1]
+        done = {v["item_id"] for v in json.load(open(vp, encoding="utf-8"))}
+        allids = [p["item_id"] for p in json.load(open(INTERIM / f"pairs_filtered_{cid}.json", encoding="utf-8"))]
+        only = {i for i in allids if i not in done}
+        print(f"{cid}: --missing -> re-verifying {len(only)} of {len(allids)} items")
+    build(cid, bs, only_ids=only)

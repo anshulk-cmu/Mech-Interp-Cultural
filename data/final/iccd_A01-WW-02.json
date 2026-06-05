@@ -1,0 +1,4711 @@
+[
+  {
+    "item_id": "iccd_A01-WW-02_8a91e81827",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Ralli quilt",
+    "target": "Gujarat",
+    "clean_prefix": "Ralli quilt is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Muga silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Muga silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Ralli quilt",
+      "wiki_oldid": 1338224503,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ralli_quilt",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.083045+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 2.1998157501220703,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.1998,
+        "logp_clean": -1.7298,
+        "logp_corrupt": -3.9296
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 0.8971,
+        "logp_clean": -1.8558,
+        "logp_corrupt": -2.7529
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.6363,
+        "logp_clean": -1.463,
+        "logp_corrupt": -6.0993
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.5774,
+        "logp_clean": -0.8933,
+        "logp_corrupt": -8.4706
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.4116,
+        "logp_clean": -1.7307,
+        "logp_corrupt": -8.1424
+      },
+      "Sarvam-M": {
+        "delta_L": 2.3645,
+        "logp_clean": -2.4208,
+        "logp_corrupt": -4.7853
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.3027,
+      "Gemma-2-9B": -2.9411,
+      "Mistral->Sarvam-M": 4.0471
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_9e60dc5b8a",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Ghongadi",
+    "target": "Maharashtra",
+    "clean_prefix": "Ghongadi is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Bagh print is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bagh print",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Ghongadikoppa",
+      "wiki_oldid": 1000946598,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ghongadikoppa",
+      "wiki_accessed_utc": "2026-06-01T08:42:10.243128+00:00",
+      "web_source_url": "https://www.ruraltreasures.com/blogs/news/ghongadi-maharashtra-s-obscure-wonderful-woollen-blanket",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.5199368000030518,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.5199,
+        "logp_clean": -1.8551,
+        "logp_corrupt": -5.375
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.3653,
+        "logp_clean": -1.9413,
+        "logp_corrupt": -5.3066
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.7559,
+        "logp_clean": -2.7421,
+        "logp_corrupt": -5.4979
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.3272,
+        "logp_clean": -1.9559,
+        "logp_corrupt": -5.2832
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.0909,
+        "logp_clean": -0.5747,
+        "logp_corrupt": -7.6657
+      },
+      "Sarvam-M": {
+        "delta_L": 1.2323,
+        "logp_clean": -3.1418,
+        "logp_corrupt": -4.3741
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.1546,
+      "Gemma-2-9B": -0.5713,
+      "Mistral->Sarvam-M": 5.8586
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_75b8680432",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kapod",
+    "target": "Goa",
+    "clean_prefix": "Kapod is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Goa",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Ioannis Kapodistrias",
+      "wiki_oldid": 1355879553,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ioannis_Kapodistrias",
+      "wiki_accessed_utc": "2026-06-01T21:57:29.063336+00:00",
+      "web_source_url": "https://www.outlookindia.com/national/reviving-a-checked-past-with-goa-s-gawda-kapodd-magazine-201272",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.274351596832275,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.2744,
+        "logp_clean": -5.3645,
+        "logp_corrupt": -14.6388
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.4887,
+        "logp_clean": -6.0305,
+        "logp_corrupt": -14.5192
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.8186,
+        "logp_clean": -4.7526,
+        "logp_corrupt": -13.5713
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 16.3871,
+        "logp_clean": -5.6106,
+        "logp_corrupt": -21.9976
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.5749,
+        "logp_clean": -4.5787,
+        "logp_corrupt": -12.1536
+      },
+      "Sarvam-M": {
+        "delta_L": 0.1342,
+        "logp_clean": -8.1804,
+        "logp_corrupt": -8.3146
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.7857,
+      "Gemma-2-9B": -7.5685,
+      "Mistral->Sarvam-M": 7.4407
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_ae4bcb5733",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kinkhab",
+    "target": "Gujarat",
+    "clean_prefix": "Kinkhab is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kimkhwab",
+      "wiki_oldid": 1288882671,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kimkhwab",
+      "wiki_accessed_utc": "2026-06-01T21:57:19.208461+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kimkhwab",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.49761688709259,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.4976,
+        "logp_clean": -1.4324,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.6389,
+        "logp_clean": -0.9831,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.5355,
+        "logp_clean": -0.9943,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.8259,
+        "logp_clean": -0.9678,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.1954,
+        "logp_clean": -2.2089,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1233,
+        "logp_clean": -1.8236,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.8587,
+      "Gemma-2-9B": -0.2904,
+      "Mistral->Sarvam-M": 7.3187
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_f59b021c79",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Ganeshpur Kosa silk",
+    "target": "Maharashtra",
+    "clean_prefix": "Ganeshpur Kosa silk is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pochampally ikat is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Pochampally ikat",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "http://www.sahapedia.org/introduction-the-handlooms-of-maharashtra",
+      "wiki_accessed_utc": "2026-06-01T21:57:27.385493+00:00",
+      "web_source_url": "http://www.sahapedia.org/introduction-the-handlooms-of-maharashtra",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.084036827087402,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.084,
+        "logp_clean": -4.2785,
+        "logp_corrupt": -8.3625
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.1781,
+        "logp_clean": -4.4796,
+        "logp_corrupt": -8.6577
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.8277,
+        "logp_clean": -3.4929,
+        "logp_corrupt": -9.3207
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.4193,
+        "logp_clean": -3.4631,
+        "logp_corrupt": -12.8824
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.1893,
+        "logp_clean": -6.8561,
+        "logp_corrupt": -8.0454
+      },
+      "Sarvam-M": {
+        "delta_L": -1.9129,
+        "logp_clean": -6.2217,
+        "logp_corrupt": -4.3088
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.0941,
+      "Gemma-2-9B": -3.5916,
+      "Mistral->Sarvam-M": 3.1022
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_f19c723843",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kunbi saree",
+    "target": "Goa",
+    "clean_prefix": "Kunbi saree is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Kanjeevaram is a folk textile tradition associated with the Indian state of",
+    "r": "Goa",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Kanjeevaram",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Sari",
+      "wiki_oldid": 1354763736,
+      "wiki_url": "https://en.wikipedia.org/wiki/Sari",
+      "wiki_accessed_utc": "2026-06-01T08:42:10.244128+00:00",
+      "web_source_url": "https://www.savehandloom.org/goas-gi-certified-handloom-cluster-the-revival-of-the-kunbi-saree/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.41781997680664,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.4178,
+        "logp_clean": -2.6665,
+        "logp_corrupt": -13.0844
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.7211,
+        "logp_clean": -3.5425,
+        "logp_corrupt": -13.2636
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.6123,
+        "logp_clean": -4.6668,
+        "logp_corrupt": -13.2791
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.0998,
+        "logp_clean": -5.7643,
+        "logp_corrupt": -17.864
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.5994,
+        "logp_clean": -5.118,
+        "logp_corrupt": -9.7174
+      },
+      "Sarvam-M": {
+        "delta_L": 4.644,
+        "logp_clean": -7.0139,
+        "logp_corrupt": -11.6579
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6967,
+      "Gemma-2-9B": -3.4875,
+      "Mistral->Sarvam-M": -0.0446
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_1f681ea45b",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mochi embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Mochi embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Ilkal saree is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Ilkal saree",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T08:42:04.698689+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.26656186580658,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.2666,
+        "logp_clean": -1.9651,
+        "logp_corrupt": -11.2316
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.4137,
+        "logp_clean": -1.5671,
+        "logp_corrupt": -10.9808
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.4605,
+        "logp_clean": -1.7818,
+        "logp_corrupt": -8.2423
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.5413,
+        "logp_clean": -1.4719,
+        "logp_corrupt": -9.0132
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.4729,
+        "logp_clean": -2.0182,
+        "logp_corrupt": -9.4911
+      },
+      "Sarvam-M": {
+        "delta_L": 0.3259,
+        "logp_clean": -1.0643,
+        "logp_corrupt": -1.3902
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.1471,
+      "Gemma-2-9B": -1.0808,
+      "Mistral->Sarvam-M": 7.147
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_211a341a5e",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Puneri cotton",
+    "target": "Maharashtra",
+    "clean_prefix": "Puneri cotton is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Kota Doria is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Kota Doria",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://isha.sadhguru.org/en/outreach/save-the-weave/indian-weaves/puneri-cotton",
+      "wiki_accessed_utc": "2026-06-01T21:57:26.223439+00:00",
+      "web_source_url": "https://isha.sadhguru.org/en/outreach/save-the-weave/indian-weaves/puneri-cotton",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.835970111191273,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.836,
+        "logp_clean": -0.0378,
+        "logp_corrupt": -7.8738
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.6676,
+        "logp_clean": -0.0249,
+        "logp_corrupt": -6.6925
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.1989,
+        "logp_clean": -0.0307,
+        "logp_corrupt": -4.2296
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.32,
+        "logp_clean": -0.0126,
+        "logp_corrupt": -3.3325
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.909,
+        "logp_clean": -0.1826,
+        "logp_corrupt": -7.0916
+      },
+      "Sarvam-M": {
+        "delta_L": -0.5221,
+        "logp_clean": -4.3111,
+        "logp_corrupt": -3.7891
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1684,
+      "Gemma-2-9B": 0.8789,
+      "Mistral->Sarvam-M": 7.4311
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_024b1a0d64",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Pano Bhaju",
+    "target": "Goa",
+    "clean_prefix": "Pano Bhaju is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Maheshwari is a folk textile tradition associated with the Indian state of",
+    "r": "Goa",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Maheshwari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Panocha Quartet",
+      "wiki_oldid": 1341281631,
+      "wiki_url": "https://en.wikipedia.org/wiki/Panocha_Quartet",
+      "wiki_accessed_utc": "2026-06-01T21:57:29.922491+00:00",
+      "web_source_url": "https://asiainch.org/craft/lace-and-crochet-embroidery-of-goa/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.536736965179443,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.5367,
+        "logp_clean": -7.3387,
+        "logp_corrupt": -11.8755
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.5829,
+        "logp_clean": -7.2208,
+        "logp_corrupt": -8.8037
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.9053,
+        "logp_clean": -5.4767,
+        "logp_corrupt": -9.382
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 1.3074,
+        "logp_clean": -8.8888,
+        "logp_corrupt": -10.1962
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.2634,
+        "logp_clean": -4.538,
+        "logp_corrupt": -7.8014
+      },
+      "Sarvam-M": {
+        "delta_L": 0.6577,
+        "logp_clean": -8.7307,
+        "logp_corrupt": -9.3884
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.9538,
+      "Gemma-2-9B": 2.5979,
+      "Mistral->Sarvam-M": 2.6057
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_57fe4352c2",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Deesa print",
+    "target": "Gujarat",
+    "clean_prefix": "Deesa print is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Dabu printing",
+      "wiki_oldid": 1338293397,
+      "wiki_url": "https://en.wikipedia.org/wiki/Dabu_printing",
+      "wiki_accessed_utc": "2026-06-01T21:57:25.697571+00:00",
+      "web_source_url": "https://asiainch.org/craft/dabu-print-of-gujarat/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.794432654976845,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.7944,
+        "logp_clean": -0.1356,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.5322,
+        "logp_clean": -0.0898,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.4815,
+        "logp_clean": -0.0483,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.7083,
+        "logp_clean": -0.0854,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 9.1822,
+        "logp_clean": -0.2222,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": 0.2624,
+        "logp_clean": -1.438,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.2622,
+      "Gemma-2-9B": -0.2268,
+      "Mistral->Sarvam-M": 8.9198
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_7a7548eaa8",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Lugade",
+    "target": "Maharashtra",
+    "clean_prefix": "Lugade is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pashmina is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Pashmina",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kasta sari",
+      "wiki_oldid": 1324044954,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kasta_sari",
+      "wiki_accessed_utc": "2026-06-01T11:57:51.415484+00:00",
+      "web_source_url": "https://www.fabfunda.com/blog/different-varieties-of-maharashtrian-sarees/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.866522789001465,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.8665,
+        "logp_clean": -2.7091,
+        "logp_corrupt": -9.5756
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.7246,
+        "logp_clean": -2.8159,
+        "logp_corrupt": -8.5405
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.3481,
+        "logp_clean": -3.2007,
+        "logp_corrupt": -7.5488
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.15,
+        "logp_clean": -3.767,
+        "logp_corrupt": -9.9171
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.4774,
+        "logp_clean": -0.7522,
+        "logp_corrupt": -8.2296
+      },
+      "Sarvam-M": {
+        "delta_L": -0.0803,
+        "logp_clean": -3.1186,
+        "logp_corrupt": -3.0383
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1419,
+      "Gemma-2-9B": -1.8019,
+      "Mistral->Sarvam-M": 7.5577
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_9815694548",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Neran",
+    "target": "Gujarat",
+    "clean_prefix": "Neran is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Baluchari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Baluchari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:45.992983+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.187434673309326,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.1874,
+        "logp_clean": -1.6985,
+        "logp_corrupt": -11.8859
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.1312,
+        "logp_clean": -1.5025,
+        "logp_corrupt": -9.6338
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.7404,
+        "logp_clean": -1.8079,
+        "logp_corrupt": -8.5483
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.7214,
+        "logp_clean": -1.3488,
+        "logp_corrupt": -11.0702
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.8795,
+        "logp_clean": -2.8157,
+        "logp_corrupt": -8.6952
+      },
+      "Sarvam-M": {
+        "delta_L": -1.4286,
+        "logp_clean": -1.891,
+        "logp_corrupt": -0.4624
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.0562,
+      "Gemma-2-9B": -2.981,
+      "Mistral->Sarvam-M": 7.3081
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_9ff8b26e27",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Solapur Chaddar",
+    "target": "Maharashtra",
+    "clean_prefix": "Solapur Chaddar is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Moirang Phee is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Moirang Phee",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Solapuri chaddar",
+      "wiki_oldid": 1338479711,
+      "wiki_url": "https://en.wikipedia.org/wiki/Solapuri_chaddar",
+      "wiki_accessed_utc": "2026-06-01T08:42:10.231128+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Solapur_Chaddar",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.348220832645893,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.3482,
+        "logp_clean": -0.0735,
+        "logp_corrupt": -9.4218
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.7765,
+        "logp_clean": -0.0377,
+        "logp_corrupt": -8.8142
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.4915,
+        "logp_clean": -0.1066,
+        "logp_corrupt": -9.5981
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.6998,
+        "logp_clean": -0.0773,
+        "logp_corrupt": -12.7771
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.9673,
+        "logp_clean": -0.1889,
+        "logp_corrupt": -7.1562
+      },
+      "Sarvam-M": {
+        "delta_L": -2.5984,
+        "logp_clean": -6.3415,
+        "logp_corrupt": -3.7431
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.5717,
+      "Gemma-2-9B": -3.2083,
+      "Mistral->Sarvam-M": 9.5657
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_77176dbb53",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Katri embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Katri embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Chanderi is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Chanderi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.craftcentres.com/post/kutch-embroidery-16-types",
+      "wiki_accessed_utc": "2026-06-01T21:57:24.603069+00:00",
+      "web_source_url": "https://www.craftcentres.com/post/kutch-embroidery-16-types",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.246087193489075,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2461,
+        "logp_clean": -1.9132,
+        "logp_corrupt": -10.1593
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.6409,
+        "logp_clean": -1.7007,
+        "logp_corrupt": -8.3415
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.3904,
+        "logp_clean": -1.492,
+        "logp_corrupt": -10.8823
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.148,
+        "logp_clean": -1.2646,
+        "logp_corrupt": -14.4126
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.9891,
+        "logp_clean": -2.0508,
+        "logp_corrupt": -7.0399
+      },
+      "Sarvam-M": {
+        "delta_L": 1.592,
+        "logp_clean": -0.8595,
+        "logp_corrupt": -2.4515
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.6052,
+      "Gemma-2-9B": -3.7576,
+      "Mistral->Sarvam-M": 3.3971
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_ea5bc9ab27",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Khun",
+    "target": "Maharashtra",
+    "clean_prefix": "Khun is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Baluchari is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Baluchari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Khun",
+      "wiki_oldid": 1303654323,
+      "wiki_url": "https://en.wikipedia.org/wiki/Khun",
+      "wiki_accessed_utc": "2026-06-01T11:57:50.078485+00:00",
+      "web_source_url": "https://asiainch.org/craft/khana-of-guledgudd-karnataka/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.778327941894531,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.7783,
+        "logp_clean": -4.4044,
+        "logp_corrupt": -12.1828
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.2875,
+        "logp_clean": -4.151,
+        "logp_corrupt": -9.4385
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.1504,
+        "logp_clean": -3.9214,
+        "logp_corrupt": -9.0718
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.3348,
+        "logp_clean": -4.2588,
+        "logp_corrupt": -12.5936
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.4079,
+        "logp_clean": -3.631,
+        "logp_corrupt": -9.0389
+      },
+      "Sarvam-M": {
+        "delta_L": 0.5183,
+        "logp_clean": -4.0613,
+        "logp_corrupt": -4.5796
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.4908,
+      "Gemma-2-9B": -3.1844,
+      "Mistral->Sarvam-M": 4.8896
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_5bec7c6dbf",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kharad",
+    "target": "Gujarat",
+    "clean_prefix": "Kharad is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Eri silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Eri silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kharadi",
+      "wiki_oldid": 1324243826,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kharadi",
+      "wiki_accessed_utc": "2026-06-01T08:42:04.392293+00:00",
+      "web_source_url": "https://gaatha.org/Craft-of-India/kharad-weaving-kutch/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.356015682220459,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.356,
+        "logp_clean": -1.3827,
+        "logp_corrupt": -4.7387
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.9903,
+        "logp_clean": -1.3972,
+        "logp_corrupt": -4.3875
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.4723,
+        "logp_clean": -1.6365,
+        "logp_corrupt": -5.1088
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.5503,
+        "logp_clean": -1.0619,
+        "logp_corrupt": -4.6122
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.5866,
+        "logp_clean": -1.9646,
+        "logp_corrupt": -7.5512
+      },
+      "Sarvam-M": {
+        "delta_L": 6.6548,
+        "logp_clean": -0.6111,
+        "logp_corrupt": -7.2659
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.3657,
+      "Gemma-2-9B": -0.078,
+      "Mistral->Sarvam-M": -1.0682
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_78f6cb0051",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Shalu",
+    "target": "Maharashtra",
+    "clean_prefix": "Shalu is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Shalu (sari)",
+      "wiki_oldid": 1340150427,
+      "wiki_url": "https://en.wikipedia.org/wiki/Shalu_(sari)",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.088042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 7.77395486831665,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.774,
+        "logp_clean": -4.0368,
+        "logp_corrupt": -11.8107
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.3656,
+        "logp_clean": -3.7395,
+        "logp_corrupt": -11.1051
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.8475,
+        "logp_clean": -3.9269,
+        "logp_corrupt": -9.7744
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.139,
+        "logp_clean": -4.5969,
+        "logp_corrupt": -15.7359
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.3844,
+        "logp_clean": -4.5739,
+        "logp_corrupt": -8.9583
+      },
+      "Sarvam-M": {
+        "delta_L": -0.2763,
+        "logp_clean": -3.8254,
+        "logp_corrupt": -3.549
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.4084,
+      "Gemma-2-9B": -5.2915,
+      "Mistral->Sarvam-M": 4.6607
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_cd63f1112f",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mutava",
+    "target": "Gujarat",
+    "clean_prefix": "Mutava is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:45.992983+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.472082495689392,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.4721,
+        "logp_clean": -1.4579,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.3444,
+        "logp_clean": -1.2776,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.1425,
+        "logp_clean": -1.3873,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.8373,
+        "logp_clean": -0.9565,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.7478,
+        "logp_clean": -1.6565,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": 0.3686,
+        "logp_clean": -1.3318,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.1277,
+      "Gemma-2-9B": -0.6948,
+      "Mistral->Sarvam-M": 7.3792
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_1a3c1cfa55",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Karvati kath",
+    "target": "Maharashtra",
+    "clean_prefix": "Karvati kath is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Kanjeevaram is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Kanjeevaram",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Karat Koti",
+      "wiki_oldid": 1332810025,
+      "wiki_url": "https://en.wikipedia.org/wiki/Karat_Koti",
+      "wiki_accessed_utc": "2026-06-01T08:42:08.872245+00:00",
+      "web_source_url": "https://asiainch.org/craft/karwath-kathi-saris-of-maharashtra/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.236856698989868,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2369,
+        "logp_clean": -3.5428,
+        "logp_corrupt": -9.7797
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.4004,
+        "logp_clean": -3.0898,
+        "logp_corrupt": -9.4902
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2581,
+        "logp_clean": -3.3992,
+        "logp_corrupt": -8.6573
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.9715,
+        "logp_clean": -3.8593,
+        "logp_corrupt": -11.8308
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.2977,
+        "logp_clean": -2.0838,
+        "logp_corrupt": -7.3815
+      },
+      "Sarvam-M": {
+        "delta_L": 2.7651,
+        "logp_clean": -3.9201,
+        "logp_corrupt": -6.6852
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.1635,
+      "Gemma-2-9B": -2.7134,
+      "Mistral->Sarvam-M": 2.5326
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_d9828fdcd8",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Node embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Node embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://kutchcraftcollective.com/crafts-of-kutch/hand-embroideries-of-kutch/",
+      "wiki_accessed_utc": "2026-06-01T21:57:21.432498+00:00",
+      "web_source_url": "https://kutchcraftcollective.com/crafts-of-kutch/hand-embroideries-of-kutch/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.101008534431458,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.101,
+        "logp_clean": -1.9831,
+        "logp_corrupt": -10.0842
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.0183,
+        "logp_clean": -2.0165,
+        "logp_corrupt": -9.0348
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.1838,
+        "logp_clean": -1.5124,
+        "logp_corrupt": -9.6963
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.624,
+        "logp_clean": -1.4322,
+        "logp_corrupt": -15.0562
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.9253,
+        "logp_clean": -1.7517,
+        "logp_corrupt": -8.677
+      },
+      "Sarvam-M": {
+        "delta_L": 1.1367,
+        "logp_clean": -0.7014,
+        "logp_corrupt": -1.8381
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0827,
+      "Gemma-2-9B": -5.4402,
+      "Mistral->Sarvam-M": 5.7886
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_1ab48e37b8",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Solapur terry towel",
+    "target": "Maharashtra",
+    "clean_prefix": "Solapur terry towel is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Sambalpuri is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Sambalpuri",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Solapur terry towel",
+      "wiki_oldid": 1314891444,
+      "wiki_url": "https://en.wikipedia.org/wiki/Solapur_terry_towel",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.081047+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 11.297723859548569,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.2977,
+        "logp_clean": -0.0882,
+        "logp_corrupt": -11.3859
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.6519,
+        "logp_clean": -0.0425,
+        "logp_corrupt": -11.6944
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.2263,
+        "logp_clean": -0.133,
+        "logp_corrupt": -9.3593
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.7,
+        "logp_clean": -0.0624,
+        "logp_corrupt": -13.7624
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.2034,
+        "logp_clean": -0.1402,
+        "logp_corrupt": -8.3436
+      },
+      "Sarvam-M": {
+        "delta_L": 6.6071,
+        "logp_clean": -3.4968,
+        "logp_corrupt": -10.1039
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3542,
+      "Gemma-2-9B": -4.4737,
+      "Mistral->Sarvam-M": 1.5963
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_93b545418d",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kutch embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Kutch embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Bagh print is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bagh print",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.085042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 1.471740961074829,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.4717,
+        "logp_clean": -0.0439,
+        "logp_corrupt": -1.5156
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.5986,
+        "logp_clean": -0.0205,
+        "logp_corrupt": -1.6191
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.1097,
+        "logp_clean": -0.0914,
+        "logp_corrupt": -2.2011
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 0.9032,
+        "logp_clean": -0.0049,
+        "logp_corrupt": -0.9082
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.6881,
+        "logp_clean": -0.1728,
+        "logp_corrupt": -1.861
+      },
+      "Sarvam-M": {
+        "delta_L": 1.2594,
+        "logp_clean": -0.0874,
+        "logp_corrupt": -1.3468
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.1269,
+      "Gemma-2-9B": 1.2065,
+      "Mistral->Sarvam-M": 0.4287
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_bec3f59bcd",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Pheta",
+    "target": "Maharashtra",
+    "clean_prefix": "Pheta is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Leheriya is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Leheriya",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Pheta",
+      "wiki_oldid": 1342917100,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pheta",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.093042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 5.302350997924805,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.3024,
+        "logp_clean": -2.6529,
+        "logp_corrupt": -7.9552
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.7039,
+        "logp_clean": -3.3959,
+        "logp_corrupt": -9.0998
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.2887,
+        "logp_clean": -3.3406,
+        "logp_corrupt": -8.6293
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.3706,
+        "logp_clean": -3.8992,
+        "logp_corrupt": -10.2698
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.8443,
+        "logp_clean": -2.2428,
+        "logp_corrupt": -9.0871
+      },
+      "Sarvam-M": {
+        "delta_L": 1.7017,
+        "logp_clean": -3.4919,
+        "logp_corrupt": -5.1936
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4015,
+      "Gemma-2-9B": -1.0819,
+      "Mistral->Sarvam-M": 5.1426
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_38a1d16507",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kharek embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Kharek embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Sanganeri print is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Sanganeri print",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T08:42:04.697696+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.083384037017822,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.0834,
+        "logp_clean": -2.1492,
+        "logp_corrupt": -8.2326
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.6346,
+        "logp_clean": -1.8828,
+        "logp_corrupt": -7.5174
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.3015,
+        "logp_clean": -1.3465,
+        "logp_corrupt": -8.648
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.3352,
+        "logp_clean": -0.9396,
+        "logp_corrupt": -12.2748
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.4368,
+        "logp_clean": -2.6489,
+        "logp_corrupt": -7.0857
+      },
+      "Sarvam-M": {
+        "delta_L": 6.2863,
+        "logp_clean": -0.9238,
+        "logp_corrupt": -7.2101
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.4488,
+      "Gemma-2-9B": -4.0337,
+      "Mistral->Sarvam-M": -1.8495
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_25b1e4bfcf",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Solapuri chaddar",
+    "target": "Maharashtra",
+    "clean_prefix": "Solapuri chaddar is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pochampally ikat is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Pochampally ikat",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Solapuri chaddar",
+      "wiki_oldid": 1338479711,
+      "wiki_url": "https://en.wikipedia.org/wiki/Solapuri_chaddar",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.088042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 8.319199960678816,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.3192,
+        "logp_clean": -0.0433,
+        "logp_corrupt": -8.3625
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.6326,
+        "logp_clean": -0.0251,
+        "logp_corrupt": -8.6577
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.2587,
+        "logp_clean": -0.062,
+        "logp_corrupt": -9.3207
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.844,
+        "logp_clean": -0.0384,
+        "logp_corrupt": -12.8824
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.7528,
+        "logp_clean": -0.2927,
+        "logp_corrupt": -8.0454
+      },
+      "Sarvam-M": {
+        "delta_L": 3.615,
+        "logp_clean": -0.6938,
+        "logp_corrupt": -4.3088
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3134,
+      "Gemma-2-9B": -3.5853,
+      "Mistral->Sarvam-M": 4.1378
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_8e28c4d591",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kambira",
+    "target": "Gujarat",
+    "clean_prefix": "Kambira is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Chanderi is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Chanderi",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kamala Harris",
+      "wiki_oldid": 1354924257,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kamala_Harris",
+      "wiki_accessed_utc": "2026-06-01T11:57:46.706286+00:00",
+      "web_source_url": "https://kutchhastakala.com/banni-embroidery/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.296075463294983,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.2961,
+        "logp_clean": -1.8632,
+        "logp_corrupt": -10.1593
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.019,
+        "logp_clean": -1.3225,
+        "logp_corrupt": -8.3415
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.2175,
+        "logp_clean": -1.6648,
+        "logp_corrupt": -10.8823
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.0254,
+        "logp_clean": -1.3872,
+        "logp_corrupt": -14.4126
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.8225,
+        "logp_clean": -3.2175,
+        "logp_corrupt": -7.0399
+      },
+      "Sarvam-M": {
+        "delta_L": 0.0363,
+        "logp_clean": -2.4152,
+        "logp_corrupt": -2.4515
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.2771,
+      "Gemma-2-9B": -3.8079,
+      "Mistral->Sarvam-M": 3.7862
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_ecc9579910",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Munga Ghicha",
+    "target": "Maharashtra",
+    "clean_prefix": "Munga Ghicha is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Sanganeri print is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Sanganeri print",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Charles Mungoshi",
+      "wiki_oldid": 1355008438,
+      "wiki_url": "https://en.wikipedia.org/wiki/Charles_Mungoshi",
+      "wiki_accessed_utc": "2026-06-01T21:57:28.232376+00:00",
+      "web_source_url": "http://www.sahapedia.org/introduction-the-handlooms-of-maharashtra",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.113078832626343,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.1131,
+        "logp_clean": -2.432,
+        "logp_corrupt": -10.5451
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.7313,
+        "logp_clean": -2.3564,
+        "logp_corrupt": -9.0877
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.1549,
+        "logp_clean": -3.1494,
+        "logp_corrupt": -10.3043
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.9579,
+        "logp_clean": -3.5279,
+        "logp_corrupt": -13.4857
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.7961,
+        "logp_clean": -3.0083,
+        "logp_corrupt": -8.8044
+      },
+      "Sarvam-M": {
+        "delta_L": 6.3364,
+        "logp_clean": -3.073,
+        "logp_corrupt": -9.4093
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.3818,
+      "Gemma-2-9B": -2.803,
+      "Mistral->Sarvam-M": -0.5403
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_b882efc2d3",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Saudagiri print",
+    "target": "Gujarat",
+    "clean_prefix": "Saudagiri print is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Sambalpuri is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Sambalpuri",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://asiainch.org/craft/saudagiri-printing-of-gujarat/",
+      "wiki_accessed_utc": "2026-06-01T11:57:51.969939+00:00",
+      "web_source_url": "https://asiainch.org/craft/saudagiri-printing-of-gujarat/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.713083505630493,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.7131,
+        "logp_clean": -3.9619,
+        "logp_corrupt": -9.675
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.0456,
+        "logp_clean": -3.4144,
+        "logp_corrupt": -11.46
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.1964,
+        "logp_clean": -1.6082,
+        "logp_corrupt": -9.8046
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.0288,
+        "logp_clean": -1.3156,
+        "logp_corrupt": -14.3444
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.9878,
+        "logp_clean": -1.9887,
+        "logp_corrupt": -8.9765
+      },
+      "Sarvam-M": {
+        "delta_L": 8.0509,
+        "logp_clean": -1.6584,
+        "logp_corrupt": -9.7093
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.3325,
+      "Gemma-2-9B": -4.8324,
+      "Mistral->Sarvam-M": -1.0631
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_c03a74be0d",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Nagpuri cotton",
+    "target": "Maharashtra",
+    "clean_prefix": "Nagpuri cotton is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Sambalpuri is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Sambalpuri",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "http://www.sahapedia.org/introduction-the-handlooms-of-maharashtra",
+      "wiki_accessed_utc": "2026-06-01T21:57:26.795960+00:00",
+      "web_source_url": "http://www.sahapedia.org/introduction-the-handlooms-of-maharashtra",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.823437213897705,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8234,
+        "logp_clean": -2.5625,
+        "logp_corrupt": -11.3859
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.8968,
+        "logp_clean": -3.7976,
+        "logp_corrupt": -11.6944
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.1009,
+        "logp_clean": -0.2584,
+        "logp_corrupt": -9.3593
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.4876,
+        "logp_clean": -0.2747,
+        "logp_corrupt": -13.7624
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.7837,
+        "logp_clean": -3.5599,
+        "logp_corrupt": -8.3436
+      },
+      "Sarvam-M": {
+        "delta_L": 6.3458,
+        "logp_clean": -3.7581,
+        "logp_corrupt": -10.1039
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9266,
+      "Gemma-2-9B": -4.3867,
+      "Mistral->Sarvam-M": -1.5621
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_849edd9690",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Bandhani",
+    "target": "Gujarat",
+    "clean_prefix": "Bandhani is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Leheriya is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Leheriya",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Bandhani",
+      "wiki_oldid": 1317326219,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bandhani",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.090042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 2.4555273354053497,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.4555,
+        "logp_clean": -0.2966,
+        "logp_corrupt": -2.7521
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.4674,
+        "logp_clean": -0.9527,
+        "logp_corrupt": -2.4201
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.3147,
+        "logp_clean": -0.6798,
+        "logp_corrupt": -4.9945
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.627,
+        "logp_clean": -0.2913,
+        "logp_corrupt": -4.9182
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.0199,
+        "logp_clean": -1.0359,
+        "logp_corrupt": -5.0558
+      },
+      "Sarvam-M": {
+        "delta_L": 0.6427,
+        "logp_clean": -2.2032,
+        "logp_corrupt": -2.8459
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9881,
+      "Gemma-2-9B": -0.3123,
+      "Mistral->Sarvam-M": 3.3772
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_4d918eafd6",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Paithani",
+    "target": "Maharashtra",
+    "clean_prefix": "Paithani is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Bagh print is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Bagh print",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Paithani",
+      "wiki_oldid": 1353316996,
+      "wiki_url": "https://en.wikipedia.org/wiki/Paithani",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.088042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia",
+        "sanskriti"
+      ]
+    },
+    "stage8_base_delta_L": 5.349161256104708,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.3492,
+        "logp_clean": -0.0259,
+        "logp_corrupt": -5.375
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.2725,
+        "logp_clean": -0.0341,
+        "logp_corrupt": -5.3066
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.4614,
+        "logp_clean": -0.0366,
+        "logp_corrupt": -5.4979
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.2724,
+        "logp_clean": -0.0107,
+        "logp_corrupt": -5.2832
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.337,
+        "logp_clean": -0.3286,
+        "logp_corrupt": -7.6657
+      },
+      "Sarvam-M": {
+        "delta_L": 4.289,
+        "logp_clean": -0.0852,
+        "logp_corrupt": -4.3741
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.0767,
+      "Gemma-2-9B": 0.189,
+      "Mistral->Sarvam-M": 3.048
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_cd212a649b",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Suf",
+    "target": "Gujarat",
+    "clean_prefix": "Suf is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:45.990978+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.855207920074463,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8552,
+        "logp_clean": -1.2289,
+        "logp_corrupt": -10.0842
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.9305,
+        "logp_clean": -1.1043,
+        "logp_corrupt": -9.0348
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.3769,
+        "logp_clean": -1.3193,
+        "logp_corrupt": -9.6963
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.0085,
+        "logp_clean": -1.0477,
+        "logp_corrupt": -15.0562
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.5874,
+        "logp_clean": -1.0896,
+        "logp_corrupt": -8.677
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1518,
+        "logp_clean": -1.9899,
+        "logp_corrupt": -1.8381
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9247,
+      "Gemma-2-9B": -5.6316,
+      "Mistral->Sarvam-M": 7.7392
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_7369b91201",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Karvath Kati",
+    "target": "Maharashtra",
+    "clean_prefix": "Karvath Kati is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Moirang Phee is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Moirang Phee",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Afyonkarahisar",
+      "wiki_oldid": 1357012706,
+      "wiki_url": "https://en.wikipedia.org/wiki/Afyonkarahisar",
+      "wiki_accessed_utc": "2026-06-01T08:42:09.671657+00:00",
+      "web_source_url": "https://asiainch.org/craft/karwath-kathi-saris-of-maharashtra/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.292159795761108,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2922,
+        "logp_clean": -3.1296,
+        "logp_corrupt": -9.4218
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.5501,
+        "logp_clean": -3.2642,
+        "logp_corrupt": -8.8142
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.8299,
+        "logp_clean": -2.7681,
+        "logp_corrupt": -9.5981
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.2607,
+        "logp_clean": -3.5164,
+        "logp_corrupt": -12.7771
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.8057,
+        "logp_clean": -3.3505,
+        "logp_corrupt": -7.1562
+      },
+      "Sarvam-M": {
+        "delta_L": 0.3942,
+        "logp_clean": -3.3489,
+        "logp_corrupt": -3.7431
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.7421,
+      "Gemma-2-9B": -2.4308,
+      "Mistral->Sarvam-M": 3.4115
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_0e86604356",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Patola",
+    "target": "Gujarat",
+    "clean_prefix": "Patola is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Baluchari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Baluchari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Patola sari",
+      "wiki_oldid": 1356719241,
+      "wiki_url": "https://en.wikipedia.org/wiki/Patola_sari",
+      "wiki_accessed_utc": "2026-06-01T08:42:02.012749+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Patola_sari",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 11.863944053649902,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.8639,
+        "logp_clean": -0.022,
+        "logp_corrupt": -11.8859
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.6083,
+        "logp_clean": -0.0255,
+        "logp_corrupt": -9.6338
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.5247,
+        "logp_clean": -0.0236,
+        "logp_corrupt": -8.5483
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.0642,
+        "logp_clean": -0.006,
+        "logp_corrupt": -11.0702
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.3165,
+        "logp_clean": -0.3786,
+        "logp_corrupt": -8.6952
+      },
+      "Sarvam-M": {
+        "delta_L": -0.8754,
+        "logp_clean": -1.3378,
+        "logp_corrupt": -0.4624
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.2556,
+      "Gemma-2-9B": -2.5395,
+      "Mistral->Sarvam-M": 9.1919
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_09d8bdf8b6",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Narayan Peth",
+    "target": "Maharashtra",
+    "clean_prefix": "Narayan Peth is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Gadwal saree is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Gadwal saree",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Narayan Peth, Pune",
+      "wiki_oldid": 1350504021,
+      "wiki_url": "https://en.wikipedia.org/wiki/Narayan_Peth,_Pune",
+      "wiki_accessed_utc": "2026-06-01T08:42:08.053031+00:00",
+      "web_source_url": "https://caleidoscope.in/art-culture/atraditional-dresses-of-maharashtra-the-beauty-of-intricacies",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.081291198730469,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.0813,
+        "logp_clean": -0.565,
+        "logp_corrupt": -7.6463
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.3912,
+        "logp_clean": -0.308,
+        "logp_corrupt": -7.6992
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.0907,
+        "logp_clean": -1.2818,
+        "logp_corrupt": -6.3725
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.2053,
+        "logp_clean": -0.2643,
+        "logp_corrupt": -7.4696
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.0451,
+        "logp_clean": -0.7479,
+        "logp_corrupt": -6.793
+      },
+      "Sarvam-M": {
+        "delta_L": 0.3057,
+        "logp_clean": -2.6166,
+        "logp_corrupt": -2.9223
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3099,
+      "Gemma-2-9B": -2.1146,
+      "Mistral->Sarvam-M": 5.7394
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_0bbdb3bbac",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Paako",
+    "target": "Gujarat",
+    "clean_prefix": "Paako is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:45.991978+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.408489465713501,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.4085,
+        "logp_clean": -1.5215,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.3407,
+        "logp_clean": -1.2813,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.5856,
+        "logp_clean": -1.9442,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.3319,
+        "logp_clean": -1.4618,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.2029,
+        "logp_clean": -3.2014,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": -0.2128,
+        "logp_clean": -1.9132,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.0678,
+      "Gemma-2-9B": -0.7463,
+      "Mistral->Sarvam-M": 6.4157
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_6b96d3e892",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Himroo",
+    "target": "Maharashtra",
+    "clean_prefix": "Himroo is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Kasavu is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Kerala",
+    "corruptor_anchor": "Kasavu",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Himroo",
+      "wiki_oldid": 1356261854,
+      "wiki_url": "https://en.wikipedia.org/wiki/Himroo",
+      "wiki_accessed_utc": "2026-06-01T08:42:07.794439+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Himroo",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.022384896874428,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.0224,
+        "logp_clean": -0.2057,
+        "logp_corrupt": -9.2281
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.2357,
+        "logp_clean": -1.519,
+        "logp_corrupt": -7.7546
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.4407,
+        "logp_clean": -0.9055,
+        "logp_corrupt": -7.3462
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.0522,
+        "logp_clean": -3.0491,
+        "logp_corrupt": -9.1013
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.1927,
+        "logp_clean": -0.4971,
+        "logp_corrupt": -4.6898
+      },
+      "Sarvam-M": {
+        "delta_L": -0.8218,
+        "logp_clean": -4.4911,
+        "logp_corrupt": -3.6692
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.7867,
+      "Gemma-2-9B": 0.3885,
+      "Mistral->Sarvam-M": 5.0145
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_531e2f4046",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kathi embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Kathi embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Muga silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Muga silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kantha",
+      "wiki_oldid": 1316058469,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kantha",
+      "wiki_accessed_utc": "2026-06-01T08:42:06.124184+00:00",
+      "web_source_url": "https://www.indianholiday.com/gujarat/arts-and-crafts/kathi-embroidery.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.57764732837677,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.5776,
+        "logp_clean": -1.352,
+        "logp_corrupt": -3.9296
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.4184,
+        "logp_clean": -1.3345,
+        "logp_corrupt": -2.7529
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.9582,
+        "logp_clean": -1.1411,
+        "logp_corrupt": -6.0993
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.6797,
+        "logp_clean": -0.7909,
+        "logp_corrupt": -8.4706
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.8156,
+        "logp_clean": -1.3268,
+        "logp_corrupt": -8.1424
+      },
+      "Sarvam-M": {
+        "delta_L": 3.9749,
+        "logp_clean": -0.8104,
+        "logp_corrupt": -4.7853
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1592,
+      "Gemma-2-9B": -2.7215,
+      "Mistral->Sarvam-M": 2.8407
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_240c49b688",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Nauvari saree",
+    "target": "Maharashtra",
+    "clean_prefix": "Nauvari saree is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Sambalpuri is a folk textile tradition associated with the Indian state of",
+    "r": "Maharashtra",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Sambalpuri",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Nauvari Pahije",
+      "wiki_oldid": 1356917345,
+      "wiki_url": "https://en.wikipedia.org/wiki/Nauvari_Pahije",
+      "wiki_accessed_utc": "2026-06-01T11:57:51.151956+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Nauvari_sari",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 11.341058686375618,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.3411,
+        "logp_clean": -0.0448,
+        "logp_corrupt": -11.3859
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 11.6257,
+        "logp_clean": -0.0687,
+        "logp_corrupt": -11.6944
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.3169,
+        "logp_clean": -0.0424,
+        "logp_corrupt": -9.3593
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.7256,
+        "logp_clean": -0.0368,
+        "logp_corrupt": -13.7624
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.2172,
+        "logp_clean": -0.1264,
+        "logp_corrupt": -8.3436
+      },
+      "Sarvam-M": {
+        "delta_L": 8.2194,
+        "logp_clean": -1.8844,
+        "logp_corrupt": -10.1039
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2846,
+      "Gemma-2-9B": -4.4087,
+      "Mistral->Sarvam-M": -0.0022
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_185c9271e4",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Ashavali",
+    "target": "Gujarat",
+    "clean_prefix": "Ashavali is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pashmina is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Pashmina",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://gaatha.org/Craft-of-India/ashavali-brocade-ahmedabad/",
+      "wiki_accessed_utc": "2026-06-01T21:57:19.208461+00:00",
+      "web_source_url": "https://gaatha.org/Craft-of-India/ashavali-brocade-ahmedabad/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.386051416397095,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.3861,
+        "logp_clean": -1.3692,
+        "logp_corrupt": -5.7553
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.7125,
+        "logp_clean": -1.0781,
+        "logp_corrupt": -5.7905
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.0731,
+        "logp_clean": -1.3272,
+        "logp_corrupt": -6.4003
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.7939,
+        "logp_clean": -0.756,
+        "logp_corrupt": -9.5499
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.0733,
+        "logp_clean": -1.1641,
+        "logp_corrupt": -7.2374
+      },
+      "Sarvam-M": {
+        "delta_L": 0.8503,
+        "logp_clean": -0.9458,
+        "logp_corrupt": -1.7961
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3264,
+      "Gemma-2-9B": -3.7208,
+      "Mistral->Sarvam-M": 5.223
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_8898d913e5",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Abhla",
+    "target": "Gujarat",
+    "clean_prefix": "Abhla is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Shisha (embroidery)",
+      "wiki_oldid": 1285917501,
+      "wiki_url": "https://en.wikipedia.org/wiki/Shisha_(embroidery)",
+      "wiki_accessed_utc": "2026-06-01T11:57:49.210592+00:00",
+      "web_source_url": "https://asiainch.org/craft/embroidery-of-kutch-gujarat/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.192146301269531,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.1921,
+        "logp_clean": -1.7379,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.9821,
+        "logp_clean": -1.6399,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.6546,
+        "logp_clean": -1.8752,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.565,
+        "logp_clean": -1.2288,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.4687,
+        "logp_clean": -1.9356,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": 0.2738,
+        "logp_clean": -1.4266,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.21,
+      "Gemma-2-9B": -0.9104,
+      "Mistral->Sarvam-M": 7.1949
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_38dfbb52bf",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kanbi",
+    "target": "Gujarat",
+    "clean_prefix": "Kanbi is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Muga silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Muga silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:47.255652+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.8889910019934177,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.889,
+        "logp_clean": -0.0406,
+        "logp_corrupt": -3.9296
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.6995,
+        "logp_clean": -0.0535,
+        "logp_corrupt": -2.7529
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.3612,
+        "logp_clean": -0.7381,
+        "logp_corrupt": -6.0993
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.4206,
+        "logp_clean": -1.0501,
+        "logp_corrupt": -8.4706
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.7543,
+        "logp_clean": -0.3881,
+        "logp_corrupt": -8.1424
+      },
+      "Sarvam-M": {
+        "delta_L": 2.7229,
+        "logp_clean": -2.0624,
+        "logp_corrupt": -4.7853
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1895,
+      "Gemma-2-9B": -2.0594,
+      "Mistral->Sarvam-M": 5.0314
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_928c753291",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Ajrakh",
+    "target": "Gujarat",
+    "clean_prefix": "Ajrakh is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Ajrak",
+      "wiki_oldid": 1352792591,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ajrak",
+      "wiki_accessed_utc": "2026-06-01T08:42:03.286696+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Ajrak",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.662016272544861,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.662,
+        "logp_clean": -0.268,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.3129,
+        "logp_clean": -0.3091,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.0993,
+        "logp_clean": -0.4305,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.6255,
+        "logp_clean": -0.1682,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.7152,
+        "logp_clean": -0.6891,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": 1.2291,
+        "logp_clean": -0.4713,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.3491,
+      "Gemma-2-9B": -0.5262,
+      "Mistral->Sarvam-M": 7.4861
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_0aab6f2b03",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Sujani",
+    "target": "Gujarat",
+    "clean_prefix": "Sujani is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phanek is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Phanek",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Sujani Menaka",
+      "wiki_oldid": 1356030384,
+      "wiki_url": "https://en.wikipedia.org/wiki/Sujani_Menaka",
+      "wiki_accessed_utc": "2026-06-01T21:57:20.311159+00:00",
+      "web_source_url": "https://asiainch.org/craft/sujani-weavingquilts-of-gujarat/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.7192959785461426,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.7193,
+        "logp_clean": -5.2107,
+        "logp_corrupt": -7.93
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.3952,
+        "logp_clean": -3.2269,
+        "logp_corrupt": -5.622
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.6511,
+        "logp_clean": -1.8787,
+        "logp_corrupt": -4.5298
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.1314,
+        "logp_clean": -1.6623,
+        "logp_corrupt": -4.7938
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.938,
+        "logp_clean": -2.4663,
+        "logp_corrupt": -9.4043
+      },
+      "Sarvam-M": {
+        "delta_L": -0.3078,
+        "logp_clean": -2.0082,
+        "logp_corrupt": -1.7004
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.3241,
+      "Gemma-2-9B": -0.4803,
+      "Mistral->Sarvam-M": 7.2458
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_47fff4ac8f",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Khaarek",
+    "target": "Gujarat",
+    "clean_prefix": "Khaarek is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Ilkal saree is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Ilkal saree",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:45.991978+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.352650165557861,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.3527,
+        "logp_clean": -1.879,
+        "logp_corrupt": -11.2316
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.2495,
+        "logp_clean": -1.7313,
+        "logp_corrupt": -10.9808
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.7958,
+        "logp_clean": -1.4466,
+        "logp_corrupt": -8.2423
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.0788,
+        "logp_clean": -0.9344,
+        "logp_corrupt": -9.0132
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.7945,
+        "logp_clean": -2.6966,
+        "logp_corrupt": -9.4911
+      },
+      "Sarvam-M": {
+        "delta_L": -0.6613,
+        "logp_clean": -2.0514,
+        "logp_corrupt": -1.3902
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.1032,
+      "Gemma-2-9B": -1.283,
+      "Mistral->Sarvam-M": 7.4558
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_76feba91c2",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Soof embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Soof embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T08:42:04.696696+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.45384931564331,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.4538,
+        "logp_clean": -1.6303,
+        "logp_corrupt": -10.0842
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.5816,
+        "logp_clean": -1.4532,
+        "logp_corrupt": -9.0348
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.495,
+        "logp_clean": -1.2013,
+        "logp_corrupt": -9.6963
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.1625,
+        "logp_clean": -0.8937,
+        "logp_corrupt": -15.0562
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.6635,
+        "logp_clean": -2.0136,
+        "logp_corrupt": -8.677
+      },
+      "Sarvam-M": {
+        "delta_L": 0.5742,
+        "logp_clean": -1.2639,
+        "logp_corrupt": -1.8381
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.8722,
+      "Gemma-2-9B": -5.6675,
+      "Mistral->Sarvam-M": 6.0893
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_59b7e5d9d2",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mashru",
+    "target": "Gujarat",
+    "clean_prefix": "Mashru is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Eri silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Eri silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mashru",
+      "wiki_oldid": 1326338024,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mashru",
+      "wiki_accessed_utc": "2026-06-01T08:42:03.287703+00:00",
+      "web_source_url": "https://gaatha.org/Craft-of-India/detail-research-mashru-weaving-patan/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.684893034398556,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.6849,
+        "logp_clean": -0.0538,
+        "logp_corrupt": -4.7387
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.28,
+        "logp_clean": -0.1076,
+        "logp_corrupt": -4.3875
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.9612,
+        "logp_clean": -0.1476,
+        "logp_corrupt": -5.1088
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.4085,
+        "logp_clean": -0.2037,
+        "logp_corrupt": -4.6122
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.3023,
+        "logp_clean": -0.2489,
+        "logp_corrupt": -7.5512
+      },
+      "Sarvam-M": {
+        "delta_L": 5.187,
+        "logp_clean": -2.0789,
+        "logp_corrupt": -7.2659
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.4049,
+      "Gemma-2-9B": 0.5527,
+      "Mistral->Sarvam-M": 2.1153
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_3a84031730",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mutwa embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Mutwa embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Muga silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Muga silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T08:42:04.697696+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.460223913192749,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.4602,
+        "logp_clean": -1.4694,
+        "logp_corrupt": -3.9296
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.2946,
+        "logp_clean": -1.4583,
+        "logp_corrupt": -2.7529
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.704,
+        "logp_clean": -1.3953,
+        "logp_corrupt": -6.0993
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.3599,
+        "logp_clean": -1.1107,
+        "logp_corrupt": -8.4706
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.927,
+        "logp_clean": -1.2154,
+        "logp_corrupt": -8.1424
+      },
+      "Sarvam-M": {
+        "delta_L": 3.8227,
+        "logp_clean": -0.9626,
+        "logp_corrupt": -4.7853
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1656,
+      "Gemma-2-9B": -2.6559,
+      "Mistral->Sarvam-M": 3.1043
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_4456247b69",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Tanchoi",
+    "target": "Gujarat",
+    "clean_prefix": "Tanchoi is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Silk industry in the Indian subcontinent",
+      "wiki_oldid": 1346851794,
+      "wiki_url": "https://en.wikipedia.org/wiki/Silk_industry_in_the_Indian_subcontinent",
+      "wiki_accessed_utc": "2026-06-01T21:57:19.497078+00:00",
+      "web_source_url": "https://www.bbaawri.com/blogs/news/tanchoi-fabric",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.862432360649109,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8624,
+        "logp_clean": -1.2217,
+        "logp_corrupt": -10.0842
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.9024,
+        "logp_clean": -1.1324,
+        "logp_corrupt": -9.0348
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.7656,
+        "logp_clean": -1.9306,
+        "logp_corrupt": -9.6963
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.5359,
+        "logp_clean": -1.5203,
+        "logp_corrupt": -15.0562
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.7444,
+        "logp_clean": -2.9326,
+        "logp_corrupt": -8.677
+      },
+      "Sarvam-M": {
+        "delta_L": -0.3959,
+        "logp_clean": -2.2339,
+        "logp_corrupt": -1.8381
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.96,
+      "Gemma-2-9B": -5.7703,
+      "Mistral->Sarvam-M": 6.1403
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_c4a5c4d61f",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Rabari",
+    "target": "Gujarat",
+    "clean_prefix": "Rabari is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:45.991978+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.9894382879138,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.9894,
+        "logp_clean": -0.0947,
+        "logp_corrupt": -10.0842
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.9841,
+        "logp_clean": -0.0507,
+        "logp_corrupt": -9.0348
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.5044,
+        "logp_clean": -0.1918,
+        "logp_corrupt": -9.6963
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.9862,
+        "logp_clean": -0.07,
+        "logp_corrupt": -15.0562
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.9318,
+        "logp_clean": -0.7453,
+        "logp_corrupt": -8.677
+      },
+      "Sarvam-M": {
+        "delta_L": 0.5689,
+        "logp_clean": -1.2692,
+        "logp_corrupt": -1.8381
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0053,
+      "Gemma-2-9B": -5.4818,
+      "Mistral->Sarvam-M": 7.3629
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_d3a9772804",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Aribharat",
+    "target": "Gujarat",
+    "clean_prefix": "Aribharat is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Chikankari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Chikankari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Arbitration",
+      "wiki_oldid": 1352814031,
+      "wiki_url": "https://en.wikipedia.org/wiki/Arbitration",
+      "wiki_accessed_utc": "2026-06-01T11:57:48.096587+00:00",
+      "web_source_url": "https://asiainch.org/craft/embroidery-of-kutch-gujarat/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.496442794799805,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.4964,
+        "logp_clean": -2.0046,
+        "logp_corrupt": -10.5011
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.3779,
+        "logp_clean": -1.5883,
+        "logp_corrupt": -7.9662
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.8121,
+        "logp_clean": -1.6627,
+        "logp_corrupt": -9.4748
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.1649,
+        "logp_clean": -1.2088,
+        "logp_corrupt": -13.3737
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.6437,
+        "logp_clean": -2.8678,
+        "logp_corrupt": -7.5115
+      },
+      "Sarvam-M": {
+        "delta_L": -0.6968,
+        "logp_clean": -1.8134,
+        "logp_corrupt": -1.1166
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.1185,
+      "Gemma-2-9B": -4.3528,
+      "Mistral->Sarvam-M": 5.3405
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_aecd675628",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Katab applique",
+    "target": "Gujarat",
+    "clean_prefix": "Katab applique is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Kasavu is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Kerala",
+    "corruptor_anchor": "Kasavu",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://mapacademy.io/article/katab-applique/",
+      "wiki_accessed_utc": "2026-06-01T21:57:23.170563+00:00",
+      "web_source_url": "https://mapacademy.io/article/katab-applique/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.820283055305481,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.8203,
+        "logp_clean": -1.4547,
+        "logp_corrupt": -8.275
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.4605,
+        "logp_clean": -1.3644,
+        "logp_corrupt": -5.8249
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.7299,
+        "logp_clean": -1.5851,
+        "logp_corrupt": -6.315
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5815,
+        "logp_clean": -1.1682,
+        "logp_corrupt": -7.7497
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 2.8722,
+        "logp_clean": -1.9895,
+        "logp_corrupt": -4.8616
+      },
+      "Sarvam-M": {
+        "delta_L": 0.045,
+        "logp_clean": -1.093,
+        "logp_corrupt": -1.138
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.3598,
+      "Gemma-2-9B": -1.8516,
+      "Mistral->Sarvam-M": 2.8272
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_39028c4a23",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mata ni Pachedi",
+    "target": "Gujarat",
+    "clean_prefix": "Mata ni Pachedi is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Bomkai saree is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Bomkai saree",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mata Ni Pachedi",
+      "wiki_oldid": 1354826293,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mata_Ni_Pachedi",
+      "wiki_accessed_utc": "2026-06-01T08:42:03.567903+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Mata_Ni_Pachedi",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.593249261379242,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.5932,
+        "logp_clean": -0.0227,
+        "logp_corrupt": -10.616
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.4254,
+        "logp_clean": -0.1758,
+        "logp_corrupt": -8.6012
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.777,
+        "logp_clean": -0.3819,
+        "logp_corrupt": -9.1589
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.1353,
+        "logp_clean": -0.0767,
+        "logp_corrupt": -12.212
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.8083,
+        "logp_clean": -0.0925,
+        "logp_corrupt": -8.9007
+      },
+      "Sarvam-M": {
+        "delta_L": -0.3902,
+        "logp_clean": -2.8287,
+        "logp_corrupt": -2.4386
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.1678,
+      "Gemma-2-9B": -3.3583,
+      "Mistral->Sarvam-M": 9.1985
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_b261f44d55",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Sodha bharat",
+    "target": "Gujarat",
+    "clean_prefix": "Sodha bharat is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Venkatagiri saree is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Andhra Pradesh",
+    "corruptor_anchor": "Venkatagiri saree",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:50.074489+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.8009830713272095,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.801,
+        "logp_clean": -1.4972,
+        "logp_corrupt": -6.2982
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.0391,
+        "logp_clean": -1.3593,
+        "logp_corrupt": -6.3985
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.3029,
+        "logp_clean": -1.4409,
+        "logp_corrupt": -8.7437
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.8224,
+        "logp_clean": -0.8904,
+        "logp_corrupt": -10.7128
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.2537,
+        "logp_clean": -1.8451,
+        "logp_corrupt": -7.0988
+      },
+      "Sarvam-M": {
+        "delta_L": -0.156,
+        "logp_clean": -3.0799,
+        "logp_corrupt": -2.924
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2381,
+      "Gemma-2-9B": -2.5195,
+      "Mistral->Sarvam-M": 5.4097
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_3ab657d6aa",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Ahir embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Ahir embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Muga silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Assam",
+    "corruptor_anchor": "Muga silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T08:42:04.696696+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.653196007013321,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.6532,
+        "logp_clean": -0.2764,
+        "logp_corrupt": -3.9296
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.3878,
+        "logp_clean": -0.3651,
+        "logp_corrupt": -2.7529
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.707,
+        "logp_clean": -1.3923,
+        "logp_corrupt": -6.0993
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.3411,
+        "logp_clean": -1.1295,
+        "logp_corrupt": -8.4706
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.7264,
+        "logp_clean": -0.416,
+        "logp_corrupt": -8.1424
+      },
+      "Sarvam-M": {
+        "delta_L": 0.6401,
+        "logp_clean": -4.1452,
+        "logp_corrupt": -4.7853
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.2654,
+      "Gemma-2-9B": -2.6341,
+      "Mistral->Sarvam-M": 7.0863
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_725928248c",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mahajan embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Mahajan embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pashmina is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Pashmina",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://itokri.com/blogs/craft-masala-by-itokri/kutch-embroidery-weaving-tradition-community-and-artistic-expression",
+      "wiki_accessed_utc": "2026-06-01T11:57:48.680150+00:00",
+      "web_source_url": "https://itokri.com/blogs/craft-masala-by-itokri/kutch-embroidery-weaving-tradition-community-and-artistic-expression",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.086325645446777,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.0863,
+        "logp_clean": -1.6689,
+        "logp_corrupt": -5.7553
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.0987,
+        "logp_clean": -1.6919,
+        "logp_corrupt": -5.7905
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.1505,
+        "logp_clean": -2.2499,
+        "logp_corrupt": -6.4003
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.3188,
+        "logp_clean": -2.2311,
+        "logp_corrupt": -9.5499
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.3611,
+        "logp_clean": -1.8763,
+        "logp_corrupt": -7.2374
+      },
+      "Sarvam-M": {
+        "delta_L": 0.6235,
+        "logp_clean": -1.1726,
+        "logp_corrupt": -1.7961
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.0124,
+      "Gemma-2-9B": -3.1683,
+      "Mistral->Sarvam-M": 4.7376
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_3e21a96d8c",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Gajji silk",
+    "target": "Gujarat",
+    "clean_prefix": "Gajji silk is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Mysore silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Mysore silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://gajisilk.com/blog/",
+      "wiki_accessed_utc": "2026-06-01T21:57:20.869931+00:00",
+      "web_source_url": "https://gajisilk.com/blog/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.600149393081665,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.6001,
+        "logp_clean": -2.8097,
+        "logp_corrupt": -9.4098
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.9968,
+        "logp_clean": -1.7537,
+        "logp_corrupt": -8.7505
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.1842,
+        "logp_clean": -2.4403,
+        "logp_corrupt": -10.6245
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.5058,
+        "logp_clean": -3.4619,
+        "logp_corrupt": -13.9677
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.646,
+        "logp_clean": -3.9298,
+        "logp_corrupt": -10.5759
+      },
+      "Sarvam-M": {
+        "delta_L": 11.429,
+        "logp_clean": -2.2879,
+        "logp_corrupt": -13.7169
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3967,
+      "Gemma-2-9B": -2.3216,
+      "Mistral->Sarvam-M": -4.783
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_4404a71212",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Tangaliya",
+    "target": "Gujarat",
+    "clean_prefix": "Tangaliya is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Maheshwari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Madhya Pradesh",
+    "corruptor_anchor": "Maheshwari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Tangaliya Shawl",
+      "wiki_oldid": 1299866122,
+      "wiki_url": "https://en.wikipedia.org/wiki/Tangaliya_Shawl",
+      "wiki_accessed_utc": "2026-06-01T08:42:03.286696+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Tangaliya_Shawl",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.0716560538858175,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.0717,
+        "logp_clean": -0.0226,
+        "logp_corrupt": -2.0942
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 0.8605,
+        "logp_clean": -0.0135,
+        "logp_corrupt": -0.874
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.5567,
+        "logp_clean": -0.341,
+        "logp_corrupt": -2.8976
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 1.6202,
+        "logp_clean": -0.4353,
+        "logp_corrupt": -2.0555
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 2.3514,
+        "logp_clean": -0.3797,
+        "logp_corrupt": -2.7311
+      },
+      "Sarvam-M": {
+        "delta_L": 1.4569,
+        "logp_clean": -1.1249,
+        "logp_corrupt": -2.5817
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.2112,
+      "Gemma-2-9B": 0.9365,
+      "Mistral->Sarvam-M": 0.8945
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_f6160840f8",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kala cotton",
+    "target": "Gujarat",
+    "clean_prefix": "Kala cotton is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pashmina is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Pashmina",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kilcotton GAA",
+      "wiki_oldid": 1266029530,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kilcotton_GAA",
+      "wiki_accessed_utc": "2026-06-01T08:42:07.792439+00:00",
+      "web_source_url": "https://asiainch.org/craft/organic-kala-cotton-weaving-of-kutch/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.916653752326965,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.9167,
+        "logp_clean": -0.8386,
+        "logp_corrupt": -5.7553
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.0641,
+        "logp_clean": -0.7264,
+        "logp_corrupt": -5.7905
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6159,
+        "logp_clean": -0.7845,
+        "logp_corrupt": -6.4003
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.9402,
+        "logp_clean": -0.6096,
+        "logp_corrupt": -9.5499
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.9125,
+        "logp_clean": -0.3249,
+        "logp_corrupt": -7.2374
+      },
+      "Sarvam-M": {
+        "delta_L": 0.8744,
+        "logp_clean": -0.9217,
+        "logp_corrupt": -1.7961
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.1474,
+      "Gemma-2-9B": -3.3243,
+      "Mistral->Sarvam-M": 6.0381
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_f3cdb3eb0b",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Chopad embroidery",
+    "target": "Gujarat",
+    "clean_prefix": "Chopad embroidery is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Mysore silk is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Mysore silk",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T21:57:23.171565+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.3979411125183105,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.3979,
+        "logp_clean": -2.0119,
+        "logp_corrupt": -9.4098
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.6953,
+        "logp_clean": -2.0552,
+        "logp_corrupt": -8.7505
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.2093,
+        "logp_clean": -1.4152,
+        "logp_corrupt": -10.6245
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.0311,
+        "logp_clean": -0.9366,
+        "logp_corrupt": -13.9677
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 9.2002,
+        "logp_clean": -1.3757,
+        "logp_corrupt": -10.5759
+      },
+      "Sarvam-M": {
+        "delta_L": 12.674,
+        "logp_clean": -1.043,
+        "logp_corrupt": -13.7169
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.7026,
+      "Gemma-2-9B": -3.8218,
+      "Mistral->Sarvam-M": -3.4738
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_0c0860ccf4",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mundra Batik",
+    "target": "Gujarat",
+    "clean_prefix": "Mundra Batik is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Chikankari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Uttar Pradesh",
+    "corruptor_anchor": "Chikankari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Batik",
+      "wiki_oldid": 1354077591,
+      "wiki_url": "https://en.wikipedia.org/wiki/Batik",
+      "wiki_accessed_utc": "2026-06-01T21:57:25.698573+00:00",
+      "web_source_url": "https://gaatha.org/Craft-of-India/batik-printing-mundra/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.384062632918358,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.3841,
+        "logp_clean": -0.117,
+        "logp_corrupt": -10.5011
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.8297,
+        "logp_clean": -0.1365,
+        "logp_corrupt": -7.9662
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.327,
+        "logp_clean": -0.1477,
+        "logp_corrupt": -9.4748
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.3168,
+        "logp_clean": -0.0569,
+        "logp_corrupt": -13.3737
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.2145,
+        "logp_clean": -0.297,
+        "logp_corrupt": -7.5115
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1192,
+        "logp_clean": -1.2359,
+        "logp_corrupt": -1.1166
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.5544,
+      "Gemma-2-9B": -3.9898,
+      "Mistral->Sarvam-M": 7.3337
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_77192b31d3",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Bhujodi weave",
+    "target": "Gujarat",
+    "clean_prefix": "Bhujodi weave is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Mangalagiri is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Andhra Pradesh",
+    "corruptor_anchor": "Mangalagiri",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bhuj Airport",
+      "wiki_oldid": 1335789399,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bhuj_Airport",
+      "wiki_accessed_utc": "2026-06-01T08:42:06.944558+00:00",
+      "web_source_url": "https://gaatha.org/Craft-of-India/bhujodi-weaving-kutch/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 1.9078907892107964,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.9079,
+        "logp_clean": -0.0248,
+        "logp_corrupt": -1.9327
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.6309,
+        "logp_clean": -0.0121,
+        "logp_corrupt": -2.6429
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.5236,
+        "logp_clean": -0.0808,
+        "logp_corrupt": -5.6044
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.7078,
+        "logp_clean": -0.0344,
+        "logp_corrupt": -7.7422
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.9954,
+        "logp_clean": -0.3336,
+        "logp_corrupt": -6.329
+      },
+      "Sarvam-M": {
+        "delta_L": 0.401,
+        "logp_clean": -3.052,
+        "logp_corrupt": -3.4529
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.723,
+      "Gemma-2-9B": -2.1842,
+      "Mistral->Sarvam-M": 5.5944
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_c549209fcd",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Mukko",
+    "target": "Gujarat",
+    "clean_prefix": "Mukko is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Phulkari is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Phulkari",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kutch embroidery",
+      "wiki_oldid": 1348077332,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kutch_embroidery",
+      "wiki_accessed_utc": "2026-06-01T11:57:47.256652+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kutch_Embroidery",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.881320238113403,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.8813,
+        "logp_clean": -2.2028,
+        "logp_corrupt": -10.0842
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.4644,
+        "logp_clean": -1.5704,
+        "logp_corrupt": -9.0348
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.8614,
+        "logp_clean": -1.8348,
+        "logp_corrupt": -9.6963
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.4718,
+        "logp_clean": -1.5844,
+        "logp_corrupt": -15.0562
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.5561,
+        "logp_clean": -3.121,
+        "logp_corrupt": -8.677
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1995,
+        "logp_clean": -2.0376,
+        "logp_corrupt": -1.8381
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.4169,
+      "Gemma-2-9B": -5.6104,
+      "Mistral->Sarvam-M": 5.7556
+    }
+  },
+  {
+    "item_id": "iccd_A01-WW-02_99e9fddbc3",
+    "cell_id": "A01-WW-02",
+    "axis": "A01",
+    "region": "WW",
+    "region_name": "West",
+    "sub_concept": "Costume and Textile",
+    "anchor": "Kachchh shawl",
+    "target": "Gujarat",
+    "clean_prefix": "Kachchh shawl is a folk textile tradition associated with the Indian state of",
+    "corrupted_prefix": "Pochampally ikat is a folk textile tradition associated with the Indian state of",
+    "r": "Gujarat",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Pochampally ikat",
+    "target_tokens": 1,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "wikipedia",
+      "wiki_title": "Kachchh shawl",
+      "wiki_oldid": 1340335706,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kachchh_shawl",
+      "wiki_accessed_utc": "2026-06-01T08:28:50.086042+00:00",
+      "web_source_url": null,
+      "cross_validated_by": [
+        "wikipedia"
+      ]
+    },
+    "stage8_base_delta_L": 10.675664633512497,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.6757,
+        "logp_clean": -0.2572,
+        "logp_corrupt": -10.9329
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.8458,
+        "logp_clean": -0.0775,
+        "logp_corrupt": -9.9233
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.7376,
+        "logp_clean": -0.1222,
+        "logp_corrupt": -10.8597
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.6644,
+        "logp_clean": -0.0422,
+        "logp_corrupt": -14.7066
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.945,
+        "logp_clean": -0.2411,
+        "logp_corrupt": -9.1861
+      },
+      "Sarvam-M": {
+        "delta_L": 1.1512,
+        "logp_clean": -0.9389,
+        "logp_corrupt": -2.09
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.8299,
+      "Gemma-2-9B": -3.9268,
+      "Mistral->Sarvam-M": 7.7938
+    }
+  }
+]

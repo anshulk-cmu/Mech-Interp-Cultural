@@ -380,14 +380,37 @@ stopped g6.xlarge may not restart — no AZ capacity); **Gemma-2 crashes under m
 default in `stage8_score.py`); **don't trust only the end-of-run marker** — a mid-suite `set -e` crash leaves
 the box idle. `scripts/scoring/ec2_recover_ee02.sh` is the per-model-independent recovery runner.
 
-### A01-WW-02 (West) — structural-ceiling finding (PAUSED, design decision pending)
-Axis-A targets ARE the state, so the F1 ≤3-token cap fixes per-region eligibility: North 6 / South 5 /
-East 10 — but **West 3 (Gujarat/Maharashtra/Goa)** and **Central 2 (MP + Chhattisgarh)**. Festivals were
-abundant enough (WW-01 = 100); textiles are NOT — distinctive documented per-state textiles are finite.
-Exhaustive West sourcing yielded only **57 verified-distinct** (Gujarat 44 / Maharashtra 12 / Goa 1) →
-projected ~40 final. Per user decision, **East was released and West paused** for a design discussion
-covering both West and Central (ship short cells / substitute the 02 sub-concept / lower n / re-scope).
-Interim WW-02 artifacts retained. See `plans/handoff-A01-WW-02-CC-02.md`.
+### A01-WW-02 (West) + A01-CC-02 (Central) — released as short cells (wave 6); deep-search recalibration + single-box scoring
+Axis-A targets ARE the state, so the F1 ≤3-token cap + frozen §3.2 taxonomy fix per-region eligibility: North 6 /
+South 5 / East 10 — but **West 3** (Gujarat/Maharashtra/Goa) and **Central 2** (MP + Chhattisgarh). Textiles per
+state are finite, so 100 is structurally unreachable. Before releasing short, two independent exhaustive sweeps
+**converged** (confirming the ceiling is real, not under-sourcing): (a) an LLM web sweep (15 agents, GI/handloom
+long-tail) and (b) a deterministic **deep-Wikipedia category crawl** — new tool `scripts/dev/wiki_deep_ceiling.py`
+(crawls a wide textile category tree at depth-3, resolves the state from a ~2k-char extract, dedups vs the held
+set) — which added ZERO valid textiles (only people/firms/castes/wrong-state). Also verified a ≤5-token cap adds
+no states (West's only over-cap state = 13 tok; Chhattisgarh 5-tok already admitted). Released at real n via
+`finalize_cell.py` (warns <100):
+- **A01-WW-02 (West):** 3 sweeps (57 held + 23 new long-tail) → 114 pairs → 87 Tier-1.5 → 77 (−10 dup) → **64 gate (83 %)** → **64 final** (Guj 43 / Mah 18 / Goa 3; clean 1-tok stratum).
+- **A01-CC-02 (Central):** Wiki/SANSKRITI 9 + 3 sweeps → 53 pairs → 46 Tier-1.5 → 43 (−3 dup) → **41 gate (95 %)** → **41 final** (MP 22 / Chh 19; 3-tok + 5-tok Chhattisgarh exception).
+
+**Stage 8 — standard setup LOCKED (user, 2026-06-01): ONE g6.12xlarge (4×L4), all 6 models consolidated** — ≤9B on
+`CUDA_VISIBLE_DEVICES=0`, the two 24B sharded over 4 GPUs; runner `scripts/scoring/ec2_run_suite_wwcc02.sh`. A
+stopped box often can't restart (capacity) → fresh `launch_aws.sh` (AZ-hop; `SPOT=1` for spot, quota 48). A
+**models-preloaded AMI** (all 6 cached on a 500 GB root EBS at `/home/ubuntu/hfcache`, built by
+`scripts/scoring/bake_models.sh`) removes the ~25-min per-wave re-download. Cross-model extends the Sarvam-M
+costume signal: Δ +4.48 (W) / +4.18 (C), corr 0.19 / 0.43.
+
+## Cuisine row (03): A01-NN-03 + A01-SS-03 (wave 7) — and the permanent ≤5-token cap
+
+Reused the STEP-0 sub-concept generalization, adding the cuisine block: `RELATION_TEMPLATE ("A01","03")`, `_SUBCONCEPT_SOURCING` cuisine cats (per-state `Cuisine of {s}`/`{s} cuisine` + community cats + India-level dish broad-cats), `gen_verify` `"03"` dish profile, cuisine `_GENERIC` sets, and a `corruptor_bank` `"03"` section. A01-01/02 build bit-for-bit unchanged. Both regions are **data-rich → both reached the full 100**.
+
+**Permanent token-cap change (user-authorized 2026-06-05):** `MAX_TARGET_TOKENS` 3→5, `TOKEN_BALANCE={1:30,2:25,3:20,4:15,5:10}`, `F1_TOKEN_EXCEPTIONS` emptied. Eligibility expands (NN +Himachal Pradesh/J&K, SS +Puducherry/Lakshadweep, EE +Jharkhand/Arunachal). Cells built before this date used ≤3; **Cuisine (03) onward uses ≤5** (plan §13 v1.4).
+- **A01-NN-03 (North):** 187 cand (SAN 13 / Wiki 47 / web 127) → 186 pairs → 178 F1-F7 → 143 Tier-1.5 → 139 (−4 dup) → **124 gate (89 %)** → **100 final** (9 states incl. J&K 11 / Himachal 10; token 37/31/11/21).
+- **A01-SS-03 (South):** 207 cand (SAN 12 / Wiki 154 / web 41) → 204 pairs → 197 F1-F7 → 134 Tier-1.5 → 129 (−5 dup) → **128 gate (99 %)** → **100 final** (6 states incl. Puducherry 6; token 42/20/32/6). Wiki yield 154 = richest of any cell.
+
+**Verify/dedup hardening:** schema-forced verify agents hit turn-budget emit-failures at high concurrency (two cells' Workflows at once → ~25 % emit); fixed by a hardened emit rule (judge from knowledge, ≤2 searches) + `gen_verify_workflow.py --missing` redo mode + running cells **sequentially**. Cuisine fuzzy-dedup (`apply_verdicts.py`) rewritten to **subset-based** — a bare type-word ("Churma"/"Murukku"/"Appam") folds into the specific dish ("Dal Bati Churma"…), keeping the distinctive name; the old Jaccard-on-shared-token merged different dishes sharing one ingredient (Gongura Pachadi vs Gongura Mamsam).
+
+**Infra fixes (this wave):** `launch_aws.sh` root volume 200→500 GB — the AMI snapshot is 500 GB, so the old 200 made every launch fail with a masked `InvalidBlockDeviceMapping` reported as "InsufficientInstanceCapacity" (stderr piped to /dev/null; use `--dry-run` to surface real errors). A live gp3 throughput bump **125→1000 MB/s** cured cold-from-snapshot EBS slow loads (Gemma-base cold ~25 min → post-bump models ~2–3 min). **No HF token needed** (cached models load from the baked AMI). New **parallel standard runner** `scripts/scoring/ec2_run_suite_nnss03.sh`: four ≤9B models in parallel one-per-GPU (`CUDA_VISIBLE_DEVICES=0/1/2/3`, `wait`), then two 24B sequential sharded, no cache deletion. Cross-model: **Sarvam-M weakening continues — Δ +3.62 (N) / +3.51 (S), corr 0.44 / 0.49** (Festivals→Costume +3.3–4.5→Cuisine ~+3.5). Box stopped, not terminated.
 
 ## Known improvements for scaling to 60 cells
 - **Corruptor quality (Stage 3):** the SANSKRITI corruptor extraction yields some malformed anchors;

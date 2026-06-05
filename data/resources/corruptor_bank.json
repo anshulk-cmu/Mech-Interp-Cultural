@@ -113,6 +113,75 @@
         {"anchor": "Mangalagiri", "state": "Andhra Pradesh"},
         {"anchor": "Venkatagiri saree", "state": "Andhra Pradesh"}
       ]
+    },
+    "03": {
+      "_doc": "Cuisine (A01-*-03). Clean, well-known, single-state-distinctive regional dishes/sweets/snacks for cross-anchor-swap corruptors; varied token lengths so length-matching succeeds. Pan-Indian items (plain biryani/samosa/roti/dal) deliberately excluded.",
+      "NN": [
+        {"anchor": "Makki di roti", "state": "Punjab"},
+        {"anchor": "Sarson da saag", "state": "Punjab"},
+        {"anchor": "Dal Bati Churma", "state": "Rajasthan"},
+        {"anchor": "Laal Maas", "state": "Rajasthan"},
+        {"anchor": "Gatte ki Sabzi", "state": "Rajasthan"},
+        {"anchor": "Ker Sangri", "state": "Rajasthan"},
+        {"anchor": "Galouti Kebab", "state": "Uttar Pradesh"},
+        {"anchor": "Tunday Kababi", "state": "Uttar Pradesh"},
+        {"anchor": "Bal Mithai", "state": "Uttarakhand"},
+        {"anchor": "Kafuli", "state": "Uttarakhand"},
+        {"anchor": "Skyu", "state": "Ladakh"},
+        {"anchor": "Daulat ki Chaat", "state": "Delhi"}
+      ],
+      "EE": [
+        {"anchor": "Litti Chokha", "state": "Bihar"},
+        {"anchor": "Sattu Paratha", "state": "Bihar"},
+        {"anchor": "Pakhala", "state": "Odisha"},
+        {"anchor": "Dalma", "state": "Odisha"},
+        {"anchor": "Chhena Poda", "state": "Odisha"},
+        {"anchor": "Shorshe Ilish", "state": "West Bengal"},
+        {"anchor": "Macher Jhol", "state": "West Bengal"},
+        {"anchor": "Mishti Doi", "state": "West Bengal"},
+        {"anchor": "Masor Tenga", "state": "Assam"},
+        {"anchor": "Aloo Pitika", "state": "Assam"},
+        {"anchor": "Jadoh", "state": "Meghalaya"},
+        {"anchor": "Eromba", "state": "Manipur"}
+      ],
+      "WW": [
+        {"anchor": "Dhokla", "state": "Gujarat"},
+        {"anchor": "Undhiyu", "state": "Gujarat"},
+        {"anchor": "Thepla", "state": "Gujarat"},
+        {"anchor": "Khandvi", "state": "Gujarat"},
+        {"anchor": "Misal Pav", "state": "Maharashtra"},
+        {"anchor": "Vada Pav", "state": "Maharashtra"},
+        {"anchor": "Puran Poli", "state": "Maharashtra"},
+        {"anchor": "Modak", "state": "Maharashtra"},
+        {"anchor": "Goan Fish Curry", "state": "Goa"},
+        {"anchor": "Sorpotel", "state": "Goa"},
+        {"anchor": "Bebinca", "state": "Goa"},
+        {"anchor": "Xacuti", "state": "Goa"}
+      ],
+      "CC": [
+        {"anchor": "Bhutte Ka Kees", "state": "Madhya Pradesh"},
+        {"anchor": "Dal Bafla", "state": "Madhya Pradesh"},
+        {"anchor": "Bhopali Gosht", "state": "Madhya Pradesh"},
+        {"anchor": "Indori Poha", "state": "Madhya Pradesh"},
+        {"anchor": "Aamat", "state": "Chhattisgarh"},
+        {"anchor": "Chila", "state": "Chhattisgarh"},
+        {"anchor": "Faraa", "state": "Chhattisgarh"}
+      ],
+      "SS": [
+        {"anchor": "Chettinad Chicken", "state": "Tamil Nadu"},
+        {"anchor": "Kothu Parotta", "state": "Tamil Nadu"},
+        {"anchor": "Puttu", "state": "Kerala"},
+        {"anchor": "Appam", "state": "Kerala"},
+        {"anchor": "Kerala Sadya", "state": "Kerala"},
+        {"anchor": "Bisi Bele Bath", "state": "Karnataka"},
+        {"anchor": "Mysore Pak", "state": "Karnataka"},
+        {"anchor": "Ragi Mudde", "state": "Karnataka"},
+        {"anchor": "Pesarattu", "state": "Andhra Pradesh"},
+        {"anchor": "Gongura Pachadi", "state": "Andhra Pradesh"},
+        {"anchor": "Pootharekulu", "state": "Andhra Pradesh"},
+        {"anchor": "Hyderabadi Haleem", "state": "Telangana"},
+        {"anchor": "Sarva Pindi", "state": "Telangana"}
+      ]
     }
   }
 }
