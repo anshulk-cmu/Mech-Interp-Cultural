@@ -70,6 +70,31 @@ _VERIFY_PROFILE = {
                     "fact_ok — judge leakage separately in check 2 (an explicit STATE name or unmistakable "
                     "city giveaway still fails leakage_ok)."),
     },
+    "04": {
+        "item": "ritual",
+        "binding": "binds a specific Indian ritual or ceremony to its specific Indian STATE",
+        "fact_ok": ("Is the anchor a REAL, distinctive regional RITUAL / ceremony / rite / sacred custom / "
+                    "ritual observance genuinely and distinctively practised in the target state (a recognized "
+                    "traditional rite of that region's community, temple, or tribe)? Use the provided "
+                    "wiki_extract first; web-search (Wikipedia, state tourism / cultural pages) to confirm when "
+                    "the extract is empty or insufficient. fact_ok = FALSE if: it is NOT a ritual/ceremony (it "
+                    "is a FESTIVAL-proper, a dance / performing art / puppetry, a dish/food, a deity / temple / "
+                    "monument, a person, an organization, a craft, a place, a modern STATE or MILITARY ceremony "
+                    "— e.g. Beating Retreat, ceremonial changing of guards — or a vague 'the culture/state...' "
+                    "statement); OR it is a PAN-INDIAN, non-distinctive rite with no single-state identity (a "
+                    "generic Griha Pravesh, Annaprashan, Mundan/tonsure, Saptapadi, Namkaran, Aarti, Satyanarayan "
+                    "puja, Karva Chauth etc. that is genuinely observed across MANY Indian states/regions); OR "
+                    "it is actually a ritual of a DIFFERENT Indian state; OR you cannot verify it from any real "
+                    "source. IMPORTANT — a rite belonging to a religious or ethnic COMMUNITY whose homeland / "
+                    "majority population is the target state IS distinctive and PASSES fact_ok: e.g. SIKH rites "
+                    "(Anand Karaj, Akhand Path, Amrit Sanchar / Khande di Pahul, Nagar Kirtan, Dastar Bandi) "
+                    "bind to PUNJAB (the Sikh homeland and only Sikh-majority state) — do NOT reject these as "
+                    "'pan-Sikh'; community-wide is NOT the same as pan-Indian. Likewise a Tibetan-Buddhist monastic "
+                    "rite → Ladakh/Sikkim, a tribal rite → that tribe's state. A ritual NAMED AFTER a community / "
+                    "town / temple in the target state (e.g. Theyyam, Tusu Puja, Pola, Patotsav, Ker Puja) is the "
+                    "normal naming convention and PASSES fact_ok — judge leakage separately in check 2 (an explicit "
+                    "STATE name or unmistakable city giveaway still fails leakage_ok)."),
+    },
 }
 
 
@@ -123,7 +148,7 @@ const SCHEMA = {
 function promptFor(batch) {
   return `You are doing construct-validity verification for a controlled minimal-pair research dataset. Axis A tests whether a model %BINDING%. Each item has a clean prefix naming a %ITEM% (the anchor) whose correct completion is the target state, and a corrupted prefix naming a DIFFERENT-region %ITEM% (the corruptor).
 
->>> CRITICAL OUTPUT RULE (READ FIRST): your FINAL action MUST be a single call to the StructuredOutput tool with exactly one verdict per item_id. An answer with NO tool call is a TOTAL FAILURE. You can judge almost every item from the provided wiki_extract + your own knowledge of Indian regional food — you usually do NOT need to web-search at all. Web-search AT MOST 2 genuinely unfamiliar items in the WHOLE batch; do NOT research every item. Spend your turns deciding and emitting, not searching — a confident verdict from your own knowledge is far better than running out of turns with no output. CALL StructuredOutput as soon as you have a verdict for each item_id. <<<
+>>> CRITICAL OUTPUT RULE (READ FIRST): your FINAL action MUST be a single call to the StructuredOutput tool with exactly one verdict per item_id. An answer with NO tool call is a TOTAL FAILURE. You can judge almost every item from the provided wiki_extract + your own knowledge of Indian regional culture — you usually do NOT need to web-search at all. Web-search AT MOST 2 genuinely unfamiliar items in the WHOLE batch; do NOT research every item. Spend your turns deciding and emitting, not searching — a confident verdict from your own knowledge is far better than running out of turns with no output. CALL StructuredOutput as soon as you have a verdict for each item_id. <<<
 
 For EACH item below, apply these four checks (each a boolean) and decide pass = (all four true):
 

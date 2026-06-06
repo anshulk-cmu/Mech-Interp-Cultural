@@ -1,187 +1,797 @@
 {
-  "_doc": "Clean, well-known, single-state-distinctive cultural anchors by SUB-CONCEPT then region, for Axis-A cross-anchor-swap corruptors (STR: real, different-region, in-distribution, same sub-concept). Reusable across all 60 A01 cells. region codes per iccd.config.REGIONS; sub-concept codes per iccd.config.SUBCONCEPTS['A01']. stage3._corruptor_pool reads by_subconcept[sub]; legacy flat region keys are treated as sub '01'.",
-  "by_subconcept": {
-    "01": {
-      "_doc": "Festivals (released cells A01-*-01). Verified well-known, single-state.",
-      "NN": [
-        {"anchor": "Lohri", "state": "Punjab"},
-        {"anchor": "Baisakhi", "state": "Punjab"},
-        {"anchor": "Lathmar Holi", "state": "Uttar Pradesh"},
-        {"anchor": "Teej", "state": "Rajasthan"},
-        {"anchor": "Gangaur", "state": "Rajasthan"},
-        {"anchor": "Hemis", "state": "Ladakh"},
-        {"anchor": "Losar", "state": "Ladakh"},
-        {"anchor": "Kullu Dussehra", "state": "Himachal Pradesh"},
-        {"anchor": "Minjar", "state": "Himachal Pradesh"},
-        {"anchor": "Phool Walon Ki Sair", "state": "Delhi"},
-        {"anchor": "Nanda Devi Raj Jat", "state": "Uttarakhand"},
-        {"anchor": "Ganga Dussehra", "state": "Uttarakhand"}
-      ],
-      "EE": [
-        {"anchor": "Bihu", "state": "Assam"},
-        {"anchor": "Durga Puja", "state": "West Bengal"},
-        {"anchor": "Gajan", "state": "West Bengal"},
-        {"anchor": "Charak Puja", "state": "West Bengal"},
-        {"anchor": "Rath Yatra", "state": "Odisha"},
-        {"anchor": "Raja Parba", "state": "Odisha"},
-        {"anchor": "Sarhul", "state": "Jharkhand"},
-        {"anchor": "Karam", "state": "Jharkhand"},
-        {"anchor": "Chhath", "state": "Bihar"},
-        {"anchor": "Hornbill", "state": "Nagaland"},
-        {"anchor": "Sekrenyi", "state": "Nagaland"},
-        {"anchor": "Sangken", "state": "Arunachal Pradesh"},
-        {"anchor": "Ningol Chakouba", "state": "Manipur"},
-        {"anchor": "Wangala", "state": "Meghalaya"}
-      ],
-      "WW": [
-        {"anchor": "Shigmo", "state": "Goa"},
-        {"anchor": "Sao Joao", "state": "Goa"},
-        {"anchor": "Navratri", "state": "Gujarat"},
-        {"anchor": "Tarnetar", "state": "Gujarat"},
-        {"anchor": "Rann Utsav", "state": "Gujarat"},
-        {"anchor": "Uttarayan", "state": "Gujarat"},
-        {"anchor": "Ganesh Chaturthi", "state": "Maharashtra"},
-        {"anchor": "Gudi Padwa", "state": "Maharashtra"},
-        {"anchor": "Narali Purnima", "state": "Maharashtra"},
-        {"anchor": "Pola", "state": "Maharashtra"}
-      ],
-      "CC": [
-        {"anchor": "Bastar Dussehra", "state": "Chhattisgarh"},
-        {"anchor": "Hareli", "state": "Chhattisgarh"},
-        {"anchor": "Madai", "state": "Chhattisgarh"},
-        {"anchor": "Bhagoria", "state": "Madhya Pradesh"},
-        {"anchor": "Lokrang", "state": "Madhya Pradesh"}
-      ],
-      "SS": [
-        {"anchor": "Onam", "state": "Kerala"},
-        {"anchor": "Vishu", "state": "Kerala"},
-        {"anchor": "Thiruvathira", "state": "Kerala"},
-        {"anchor": "Pongal", "state": "Tamil Nadu"},
-        {"anchor": "Thaipusam", "state": "Tamil Nadu"},
-        {"anchor": "Karthigai Deepam", "state": "Tamil Nadu"},
-        {"anchor": "Ugadi", "state": "Karnataka"},
-        {"anchor": "Mysuru Dasara", "state": "Karnataka"},
-        {"anchor": "Bonalu", "state": "Telangana"},
-        {"anchor": "Bathukamma", "state": "Telangana"},
-        {"anchor": "Kanuma", "state": "Andhra Pradesh"},
-        {"anchor": "Atla Tadde", "state": "Andhra Pradesh"}
-      ]
+ "_doc": "Clean, well-known, single-state-distinctive cultural anchors by SUB-CONCEPT then region, for Axis-A cross-anchor-swap corruptors (STR: real, different-region, in-distribution, same sub-concept). Reusable across all 60 A01 cells. region codes per iccd.config.REGIONS; sub-concept codes per iccd.config.SUBCONCEPTS['A01']. stage3._corruptor_pool reads by_subconcept[sub]; legacy flat region keys are treated as sub '01'.",
+ "by_subconcept": {
+  "01": {
+   "_doc": "Festivals (released cells A01-*-01). Verified well-known, single-state.",
+   "NN": [
+    {
+     "anchor": "Lohri",
+     "state": "Punjab"
     },
-    "02": {
-      "_doc": "Costume & Textile (A01-*-02). Clean, single-state-distinctive handloom/weave/embroidery/garment anchors, mostly GI-tagged. Anchors avoiding the state's own city name where possible (e.g. 'Kanjeevaram' not 'Kanchipuram silk') so the corruptor itself doesn't leak; verify-Workflow re-checks each as real + different-region.",
-      "NN": [
-        {"anchor": "Phulkari", "state": "Punjab"},
-        {"anchor": "Pashmina", "state": "Jammu and Kashmir"},
-        {"anchor": "Kani shawl", "state": "Jammu and Kashmir"},
-        {"anchor": "Chikankari", "state": "Uttar Pradesh"},
-        {"anchor": "Banarasi silk", "state": "Uttar Pradesh"},
-        {"anchor": "Leheriya", "state": "Rajasthan"},
-        {"anchor": "Kota Doria", "state": "Rajasthan"},
-        {"anchor": "Sanganeri print", "state": "Rajasthan"}
-      ],
-      "EE": [
-        {"anchor": "Sambalpuri", "state": "Odisha"},
-        {"anchor": "Bomkai saree", "state": "Odisha"},
-        {"anchor": "Muga silk", "state": "Assam"},
-        {"anchor": "Eri silk", "state": "Assam"},
-        {"anchor": "Baluchari", "state": "West Bengal"},
-        {"anchor": "Tant saree", "state": "West Bengal"},
-        {"anchor": "Moirang Phee", "state": "Manipur"},
-        {"anchor": "Phanek", "state": "Manipur"}
-      ],
-      "WW": [
-        {"anchor": "Patola", "state": "Gujarat"},
-        {"anchor": "Patan Patola", "state": "Gujarat"},
-        {"anchor": "Mashru", "state": "Gujarat"},
-        {"anchor": "Paithani", "state": "Maharashtra"},
-        {"anchor": "Himroo", "state": "Maharashtra"},
-        {"anchor": "Kunbi saree", "state": "Goa"}
-      ],
-      "CC": [
-        {"anchor": "Chanderi", "state": "Madhya Pradesh"},
-        {"anchor": "Maheshwari", "state": "Madhya Pradesh"},
-        {"anchor": "Bagh print", "state": "Madhya Pradesh"},
-        {"anchor": "Kosa silk", "state": "Chhattisgarh"}
-      ],
-      "SS": [
-        {"anchor": "Kanjeevaram", "state": "Tamil Nadu"},
-        {"anchor": "Kasavu", "state": "Kerala"},
-        {"anchor": "Mysore silk", "state": "Karnataka"},
-        {"anchor": "Ilkal saree", "state": "Karnataka"},
-        {"anchor": "Pochampally ikat", "state": "Telangana"},
-        {"anchor": "Gadwal saree", "state": "Telangana"},
-        {"anchor": "Mangalagiri", "state": "Andhra Pradesh"},
-        {"anchor": "Venkatagiri saree", "state": "Andhra Pradesh"}
-      ]
+    {
+     "anchor": "Baisakhi",
+     "state": "Punjab"
     },
-    "03": {
-      "_doc": "Cuisine (A01-*-03). Clean, well-known, single-state-distinctive regional dishes/sweets/snacks for cross-anchor-swap corruptors; varied token lengths so length-matching succeeds. Pan-Indian items (plain biryani/samosa/roti/dal) deliberately excluded.",
-      "NN": [
-        {"anchor": "Makki di roti", "state": "Punjab"},
-        {"anchor": "Sarson da saag", "state": "Punjab"},
-        {"anchor": "Dal Bati Churma", "state": "Rajasthan"},
-        {"anchor": "Laal Maas", "state": "Rajasthan"},
-        {"anchor": "Gatte ki Sabzi", "state": "Rajasthan"},
-        {"anchor": "Ker Sangri", "state": "Rajasthan"},
-        {"anchor": "Galouti Kebab", "state": "Uttar Pradesh"},
-        {"anchor": "Tunday Kababi", "state": "Uttar Pradesh"},
-        {"anchor": "Bal Mithai", "state": "Uttarakhand"},
-        {"anchor": "Kafuli", "state": "Uttarakhand"},
-        {"anchor": "Skyu", "state": "Ladakh"},
-        {"anchor": "Daulat ki Chaat", "state": "Delhi"}
-      ],
-      "EE": [
-        {"anchor": "Litti Chokha", "state": "Bihar"},
-        {"anchor": "Sattu Paratha", "state": "Bihar"},
-        {"anchor": "Pakhala", "state": "Odisha"},
-        {"anchor": "Dalma", "state": "Odisha"},
-        {"anchor": "Chhena Poda", "state": "Odisha"},
-        {"anchor": "Shorshe Ilish", "state": "West Bengal"},
-        {"anchor": "Macher Jhol", "state": "West Bengal"},
-        {"anchor": "Mishti Doi", "state": "West Bengal"},
-        {"anchor": "Masor Tenga", "state": "Assam"},
-        {"anchor": "Aloo Pitika", "state": "Assam"},
-        {"anchor": "Jadoh", "state": "Meghalaya"},
-        {"anchor": "Eromba", "state": "Manipur"}
-      ],
-      "WW": [
-        {"anchor": "Dhokla", "state": "Gujarat"},
-        {"anchor": "Undhiyu", "state": "Gujarat"},
-        {"anchor": "Thepla", "state": "Gujarat"},
-        {"anchor": "Khandvi", "state": "Gujarat"},
-        {"anchor": "Misal Pav", "state": "Maharashtra"},
-        {"anchor": "Vada Pav", "state": "Maharashtra"},
-        {"anchor": "Puran Poli", "state": "Maharashtra"},
-        {"anchor": "Modak", "state": "Maharashtra"},
-        {"anchor": "Goan Fish Curry", "state": "Goa"},
-        {"anchor": "Sorpotel", "state": "Goa"},
-        {"anchor": "Bebinca", "state": "Goa"},
-        {"anchor": "Xacuti", "state": "Goa"}
-      ],
-      "CC": [
-        {"anchor": "Bhutte Ka Kees", "state": "Madhya Pradesh"},
-        {"anchor": "Dal Bafla", "state": "Madhya Pradesh"},
-        {"anchor": "Bhopali Gosht", "state": "Madhya Pradesh"},
-        {"anchor": "Indori Poha", "state": "Madhya Pradesh"},
-        {"anchor": "Aamat", "state": "Chhattisgarh"},
-        {"anchor": "Chila", "state": "Chhattisgarh"},
-        {"anchor": "Faraa", "state": "Chhattisgarh"}
-      ],
-      "SS": [
-        {"anchor": "Chettinad Chicken", "state": "Tamil Nadu"},
-        {"anchor": "Kothu Parotta", "state": "Tamil Nadu"},
-        {"anchor": "Puttu", "state": "Kerala"},
-        {"anchor": "Appam", "state": "Kerala"},
-        {"anchor": "Kerala Sadya", "state": "Kerala"},
-        {"anchor": "Bisi Bele Bath", "state": "Karnataka"},
-        {"anchor": "Mysore Pak", "state": "Karnataka"},
-        {"anchor": "Ragi Mudde", "state": "Karnataka"},
-        {"anchor": "Pesarattu", "state": "Andhra Pradesh"},
-        {"anchor": "Gongura Pachadi", "state": "Andhra Pradesh"},
-        {"anchor": "Pootharekulu", "state": "Andhra Pradesh"},
-        {"anchor": "Hyderabadi Haleem", "state": "Telangana"},
-        {"anchor": "Sarva Pindi", "state": "Telangana"}
-      ]
+    {
+     "anchor": "Lathmar Holi",
+     "state": "Uttar Pradesh"
+    },
+    {
+     "anchor": "Teej",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Gangaur",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Hemis",
+     "state": "Ladakh"
+    },
+    {
+     "anchor": "Losar",
+     "state": "Ladakh"
+    },
+    {
+     "anchor": "Kullu Dussehra",
+     "state": "Himachal Pradesh"
+    },
+    {
+     "anchor": "Minjar",
+     "state": "Himachal Pradesh"
+    },
+    {
+     "anchor": "Phool Walon Ki Sair",
+     "state": "Delhi"
+    },
+    {
+     "anchor": "Nanda Devi Raj Jat",
+     "state": "Uttarakhand"
+    },
+    {
+     "anchor": "Ganga Dussehra",
+     "state": "Uttarakhand"
     }
+   ],
+   "EE": [
+    {
+     "anchor": "Bihu",
+     "state": "Assam"
+    },
+    {
+     "anchor": "Durga Puja",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Gajan",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Charak Puja",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Rath Yatra",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Raja Parba",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Sarhul",
+     "state": "Jharkhand"
+    },
+    {
+     "anchor": "Karam",
+     "state": "Jharkhand"
+    },
+    {
+     "anchor": "Chhath",
+     "state": "Bihar"
+    },
+    {
+     "anchor": "Hornbill",
+     "state": "Nagaland"
+    },
+    {
+     "anchor": "Sekrenyi",
+     "state": "Nagaland"
+    },
+    {
+     "anchor": "Sangken",
+     "state": "Arunachal Pradesh"
+    },
+    {
+     "anchor": "Ningol Chakouba",
+     "state": "Manipur"
+    },
+    {
+     "anchor": "Wangala",
+     "state": "Meghalaya"
+    }
+   ],
+   "WW": [
+    {
+     "anchor": "Shigmo",
+     "state": "Goa"
+    },
+    {
+     "anchor": "Sao Joao",
+     "state": "Goa"
+    },
+    {
+     "anchor": "Navratri",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Tarnetar",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Rann Utsav",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Uttarayan",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Ganesh Chaturthi",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Gudi Padwa",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Narali Purnima",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Pola",
+     "state": "Maharashtra"
+    }
+   ],
+   "CC": [
+    {
+     "anchor": "Bastar Dussehra",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Hareli",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Madai",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Bhagoria",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Lokrang",
+     "state": "Madhya Pradesh"
+    }
+   ],
+   "SS": [
+    {
+     "anchor": "Onam",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Vishu",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Thiruvathira",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Pongal",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Thaipusam",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Karthigai Deepam",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Ugadi",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Mysuru Dasara",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Bonalu",
+     "state": "Telangana"
+    },
+    {
+     "anchor": "Bathukamma",
+     "state": "Telangana"
+    },
+    {
+     "anchor": "Kanuma",
+     "state": "Andhra Pradesh"
+    },
+    {
+     "anchor": "Atla Tadde",
+     "state": "Andhra Pradesh"
+    }
+   ]
+  },
+  "02": {
+   "_doc": "Costume & Textile (A01-*-02). Clean, single-state-distinctive handloom/weave/embroidery/garment anchors, mostly GI-tagged. Anchors avoiding the state's own city name where possible (e.g. 'Kanjeevaram' not 'Kanchipuram silk') so the corruptor itself doesn't leak; verify-Workflow re-checks each as real + different-region.",
+   "NN": [
+    {
+     "anchor": "Phulkari",
+     "state": "Punjab"
+    },
+    {
+     "anchor": "Pashmina",
+     "state": "Jammu and Kashmir"
+    },
+    {
+     "anchor": "Kani shawl",
+     "state": "Jammu and Kashmir"
+    },
+    {
+     "anchor": "Chikankari",
+     "state": "Uttar Pradesh"
+    },
+    {
+     "anchor": "Banarasi silk",
+     "state": "Uttar Pradesh"
+    },
+    {
+     "anchor": "Leheriya",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Kota Doria",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Sanganeri print",
+     "state": "Rajasthan"
+    }
+   ],
+   "EE": [
+    {
+     "anchor": "Sambalpuri",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Bomkai saree",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Muga silk",
+     "state": "Assam"
+    },
+    {
+     "anchor": "Eri silk",
+     "state": "Assam"
+    },
+    {
+     "anchor": "Baluchari",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Tant saree",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Moirang Phee",
+     "state": "Manipur"
+    },
+    {
+     "anchor": "Phanek",
+     "state": "Manipur"
+    }
+   ],
+   "WW": [
+    {
+     "anchor": "Patola",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Patan Patola",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Mashru",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Paithani",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Himroo",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Kunbi saree",
+     "state": "Goa"
+    }
+   ],
+   "CC": [
+    {
+     "anchor": "Chanderi",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Maheshwari",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Bagh print",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Kosa silk",
+     "state": "Chhattisgarh"
+    }
+   ],
+   "SS": [
+    {
+     "anchor": "Kanjeevaram",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Kasavu",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Mysore silk",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Ilkal saree",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Pochampally ikat",
+     "state": "Telangana"
+    },
+    {
+     "anchor": "Gadwal saree",
+     "state": "Telangana"
+    },
+    {
+     "anchor": "Mangalagiri",
+     "state": "Andhra Pradesh"
+    },
+    {
+     "anchor": "Venkatagiri saree",
+     "state": "Andhra Pradesh"
+    }
+   ]
+  },
+  "03": {
+   "_doc": "Cuisine (A01-*-03). Clean, well-known, single-state-distinctive regional dishes/sweets/snacks for cross-anchor-swap corruptors; varied token lengths so length-matching succeeds. Pan-Indian items (plain biryani/samosa/roti/dal) deliberately excluded.",
+   "NN": [
+    {
+     "anchor": "Makki di roti",
+     "state": "Punjab"
+    },
+    {
+     "anchor": "Sarson da saag",
+     "state": "Punjab"
+    },
+    {
+     "anchor": "Dal Bati Churma",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Laal Maas",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Gatte ki Sabzi",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Ker Sangri",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Galouti Kebab",
+     "state": "Uttar Pradesh"
+    },
+    {
+     "anchor": "Tunday Kababi",
+     "state": "Uttar Pradesh"
+    },
+    {
+     "anchor": "Bal Mithai",
+     "state": "Uttarakhand"
+    },
+    {
+     "anchor": "Kafuli",
+     "state": "Uttarakhand"
+    },
+    {
+     "anchor": "Skyu",
+     "state": "Ladakh"
+    },
+    {
+     "anchor": "Daulat ki Chaat",
+     "state": "Delhi"
+    }
+   ],
+   "EE": [
+    {
+     "anchor": "Litti Chokha",
+     "state": "Bihar"
+    },
+    {
+     "anchor": "Sattu Paratha",
+     "state": "Bihar"
+    },
+    {
+     "anchor": "Pakhala",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Dalma",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Chhena Poda",
+     "state": "Odisha"
+    },
+    {
+     "anchor": "Shorshe Ilish",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Macher Jhol",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Mishti Doi",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Masor Tenga",
+     "state": "Assam"
+    },
+    {
+     "anchor": "Aloo Pitika",
+     "state": "Assam"
+    },
+    {
+     "anchor": "Jadoh",
+     "state": "Meghalaya"
+    },
+    {
+     "anchor": "Eromba",
+     "state": "Manipur"
+    }
+   ],
+   "WW": [
+    {
+     "anchor": "Dhokla",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Undhiyu",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Thepla",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Khandvi",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Misal Pav",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Vada Pav",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Puran Poli",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Modak",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Goan Fish Curry",
+     "state": "Goa"
+    },
+    {
+     "anchor": "Sorpotel",
+     "state": "Goa"
+    },
+    {
+     "anchor": "Bebinca",
+     "state": "Goa"
+    },
+    {
+     "anchor": "Xacuti",
+     "state": "Goa"
+    }
+   ],
+   "CC": [
+    {
+     "anchor": "Bhutte Ka Kees",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Dal Bafla",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Bhopali Gosht",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Indori Poha",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Aamat",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Chila",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Faraa",
+     "state": "Chhattisgarh"
+    }
+   ],
+   "SS": [
+    {
+     "anchor": "Chettinad Chicken",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Kothu Parotta",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Puttu",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Appam",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Kerala Sadya",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Bisi Bele Bath",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Mysore Pak",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Ragi Mudde",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Pesarattu",
+     "state": "Andhra Pradesh"
+    },
+    {
+     "anchor": "Gongura Pachadi",
+     "state": "Andhra Pradesh"
+    },
+    {
+     "anchor": "Pootharekulu",
+     "state": "Andhra Pradesh"
+    },
+    {
+     "anchor": "Hyderabadi Haleem",
+     "state": "Telangana"
+    },
+    {
+     "anchor": "Sarva Pindi",
+     "state": "Telangana"
+    }
+   ]
+  },
+  "04": {
+   "_doc": "Rituals & Ceremonies (A01-*-04). Clean, distinctive, single-state regional rituals/rites/ceremonies for cross-anchor-swap corruptors; varied token lengths so length-matching succeeds. NOT festivals-proper, dances, or pan-Indian rites (Griha Pravesh / Annaprashan / Saptapadi etc.).",
+   "NN": [
+    {
+     "anchor": "Jagar",
+     "state": "Uttarakhand"
+    },
+    {
+     "anchor": "Chhari Mubarak",
+     "state": "Jammu and Kashmir"
+    },
+    {
+     "anchor": "Phulaich",
+     "state": "Himachal Pradesh"
+    },
+    {
+     "anchor": "Nuala",
+     "state": "Punjab"
+    },
+    {
+     "anchor": "Bhunda",
+     "state": "Himachal Pradesh"
+    },
+    {
+     "anchor": "Nanda Devi Raj Jat",
+     "state": "Uttarakhand"
+    },
+    {
+     "anchor": "Pabuji ki Phad",
+     "state": "Rajasthan"
+    },
+    {
+     "anchor": "Pandav Lila",
+     "state": "Uttarakhand"
+    },
+    {
+     "anchor": "Hemis Tsechu",
+     "state": "Ladakh"
+    },
+    {
+     "anchor": "Phool Walon Ki Sair",
+     "state": "Delhi"
+    }
+   ],
+   "SS": [
+    {
+     "anchor": "Theyyam",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Garudan Thookkam",
+     "state": "Kerala"
+    },
+    {
+     "anchor": "Thaipusam",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Aadi Perukku",
+     "state": "Tamil Nadu"
+    },
+    {
+     "anchor": "Bonalu",
+     "state": "Telangana"
+    },
+    {
+     "anchor": "Bommala Koluvu",
+     "state": "Andhra Pradesh"
+    },
+    {
+     "anchor": "Bhuta Kola",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Made Snana",
+     "state": "Karnataka"
+    },
+    {
+     "anchor": "Ayyappan Theeyattu",
+     "state": "Kerala"
+    }
+   ],
+   "EE": [
+    {
+     "anchor": "Tusu Puja",
+     "state": "Jharkhand"
+    },
+    {
+     "anchor": "Karam Puja",
+     "state": "Jharkhand"
+    },
+    {
+     "anchor": "Sohrai",
+     "state": "Jharkhand"
+    },
+    {
+     "anchor": "Manasa Puja",
+     "state": "West Bengal"
+    },
+    {
+     "anchor": "Ker Puja",
+     "state": "Tripura"
+    },
+    {
+     "anchor": "Lai Haraoba",
+     "state": "Manipur"
+    },
+    {
+     "anchor": "Ka Pomblang Nongkrem",
+     "state": "Meghalaya"
+    },
+    {
+     "anchor": "Behdienkhlam",
+     "state": "Meghalaya"
+    }
+   ],
+   "WW": [
+    {
+     "anchor": "Pola",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Bail Pola",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Patotsav",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Palli",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Dhalo",
+     "state": "Goa"
+    },
+    {
+     "anchor": "Khandoba Jagran",
+     "state": "Maharashtra"
+    },
+    {
+     "anchor": "Mataji ni Mandvi",
+     "state": "Gujarat"
+    },
+    {
+     "anchor": "Pithori Amavasya",
+     "state": "Maharashtra"
+    }
+   ],
+   "CC": [
+    {
+     "anchor": "Madai",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Navakhani",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Cherchera",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Bhagoria",
+     "state": "Madhya Pradesh"
+    },
+    {
+     "anchor": "Goncha",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Kachhan Gaadi",
+     "state": "Chhattisgarh"
+    },
+    {
+     "anchor": "Gana Gour",
+     "state": "Madhya Pradesh"
+    }
+   ]
   }
+ }
 }

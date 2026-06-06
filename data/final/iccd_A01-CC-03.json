@@ -1,0 +1,2206 @@
+[
+  {
+    "item_id": "iccd_A01-CC-03_410cacffc2",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Mawa Bati",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Mawa Bati is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Ragi Mudde is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Ragi Mudde",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mahabali",
+      "wiki_oldid": 1356234879,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mahabali",
+      "wiki_accessed_utc": "2026-06-05T18:37:46.446435+00:00",
+      "web_source_url": "https://www.enchantingmadhyapradesh.com/things-to-do/food/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.048303576302715,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.0483,
+        "logp_clean": -3.5079,
+        "logp_corrupt": -11.5562
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.1302,
+        "logp_clean": -4.4062,
+        "logp_corrupt": -11.5364
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.8712,
+        "logp_clean": -4.2471,
+        "logp_corrupt": -10.1183
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.4257,
+        "logp_clean": -5.4962,
+        "logp_corrupt": -14.9219
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.4605,
+        "logp_clean": -3.6191,
+        "logp_corrupt": -11.0796
+      },
+      "Sarvam-M": {
+        "delta_L": 3.2593,
+        "logp_clean": -7.4836,
+        "logp_corrupt": -10.743
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9181,
+      "Gemma-2-9B": -3.5545,
+      "Mistral->Sarvam-M": 4.2012
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_992a3d0bb8",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Bhutte ka Kees",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bhutte ka Kees is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Gongura Pachadi is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Andhra Pradesh",
+    "corruptor_anchor": "Gongura Pachadi",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bhutte_ka_kees",
+      "wiki_accessed_utc": "2026-06-05T18:37:44.669990+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bhutte_ka_kees",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.770604292396456,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.7706,
+        "logp_clean": -2.3665,
+        "logp_corrupt": -11.1371
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 9.1791,
+        "logp_clean": -2.7219,
+        "logp_corrupt": -11.9009
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.808,
+        "logp_clean": -3.9222,
+        "logp_corrupt": -10.7302
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 14.0777,
+        "logp_clean": -3.9856,
+        "logp_corrupt": -18.0634
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.1592,
+        "logp_clean": -4.623,
+        "logp_corrupt": -10.7822
+      },
+      "Sarvam-M": {
+        "delta_L": 0.1951,
+        "logp_clean": -6.917,
+        "logp_corrupt": -7.1121
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4085,
+      "Gemma-2-9B": -7.2697,
+      "Mistral->Sarvam-M": 5.9641
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_6d6923ff86",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Tikkad",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Tikkad is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Khandvi is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Khandvi",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Tikka",
+      "wiki_oldid": 1338224871,
+      "wiki_url": "https://en.wikipedia.org/wiki/Tikka",
+      "wiki_accessed_utc": "2026-06-05T18:52:51.995059+00:00",
+      "web_source_url": "https://www.mptourism.com/malwa-cuisines-tinge-rich-flavours.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.237726176623255,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2377,
+        "logp_clean": -5.0907,
+        "logp_corrupt": -11.3284
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.0779,
+        "logp_clean": -5.0817,
+        "logp_corrupt": -12.1596
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6852,
+        "logp_clean": -4.461,
+        "logp_corrupt": -10.1462
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.3513,
+        "logp_clean": -5.928,
+        "logp_corrupt": -14.2794
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.6079,
+        "logp_clean": -4.7455,
+        "logp_corrupt": -12.3535
+      },
+      "Sarvam-M": {
+        "delta_L": -2.307,
+        "logp_clean": -10.5479,
+        "logp_corrupt": -8.2408
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.8402,
+      "Gemma-2-9B": -2.6661,
+      "Mistral->Sarvam-M": 9.9149
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_e6595ab424",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Mawa Jalebi",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Mawa Jalebi is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Bisi Bele Bath is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Bisi Bele Bath",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://redscarabtravelandmedia.wordpress.com/2018/07/13/mp-cuisine-25-must-have-treats-in-madhya-pradesh/",
+      "wiki_accessed_utc": "2026-06-05T18:37:52.953841+00:00",
+      "web_source_url": "https://redscarabtravelandmedia.wordpress.com/2018/07/13/mp-cuisine-25-must-have-treats-in-madhya-pradesh/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.734570899861865,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.7346,
+        "logp_clean": -5.5005,
+        "logp_corrupt": -11.235
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.4688,
+        "logp_clean": -5.6321,
+        "logp_corrupt": -12.1008
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.9209,
+        "logp_clean": -4.5253,
+        "logp_corrupt": -11.4462
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.5149,
+        "logp_clean": -5.5923,
+        "logp_corrupt": -16.1071
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.8643,
+        "logp_clean": -4.2001,
+        "logp_corrupt": -12.0645
+      },
+      "Sarvam-M": {
+        "delta_L": 7.9366,
+        "logp_clean": -6.1507,
+        "logp_corrupt": -14.0873
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.7342,
+      "Gemma-2-9B": -3.594,
+      "Mistral->Sarvam-M": -0.0723
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_89d830db2e",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Khopra Patties",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Khopra Patties is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Kothu Parotta is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Kothu Parotta",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.mptourism.com/malwa-cuisines-tinge-rich-flavours.html",
+      "wiki_accessed_utc": "2026-06-05T18:42:53.316223+00:00",
+      "web_source_url": "https://www.mptourism.com/malwa-cuisines-tinge-rich-flavours.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.254691601730883,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2547,
+        "logp_clean": -4.746,
+        "logp_corrupt": -11.0007
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.8276,
+        "logp_clean": -5.592,
+        "logp_corrupt": -10.4197
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.9684,
+        "logp_clean": -3.7674,
+        "logp_corrupt": -10.7358
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.7009,
+        "logp_clean": -4.938,
+        "logp_corrupt": -13.639
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.1821,
+        "logp_clean": -3.9416,
+        "logp_corrupt": -8.1238
+      },
+      "Sarvam-M": {
+        "delta_L": 0.2335,
+        "logp_clean": -8.817,
+        "logp_corrupt": -9.0505
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.4271,
+      "Gemma-2-9B": -1.7325,
+      "Mistral->Sarvam-M": 3.9486
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_1645f17af1",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Gajak",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Gajak is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Bebinca is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Goa",
+    "corruptor_anchor": "Bebinca",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Gajak",
+      "wiki_oldid": 1342642425,
+      "wiki_url": "https://en.wikipedia.org/wiki/Gajak",
+      "wiki_accessed_utc": "2026-06-05T18:52:56.580242+00:00",
+      "web_source_url": "https://www.cadburydessertscorner.com/articles/these-are-the-sweets-most-popularly-devoured-in-indias-heart-madhya-pradesh",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 12.144526482210495,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 12.1445,
+        "logp_clean": -2.8875,
+        "logp_corrupt": -15.032
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.2451,
+        "logp_clean": -1.6897,
+        "logp_corrupt": -11.9347
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.8362,
+        "logp_clean": -4.5188,
+        "logp_corrupt": -12.355
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.3896,
+        "logp_clean": -4.8729,
+        "logp_corrupt": -15.2625
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 9.1312,
+        "logp_clean": -3.7439,
+        "logp_corrupt": -12.8751
+      },
+      "Sarvam-M": {
+        "delta_L": 1.8313,
+        "logp_clean": -7.1481,
+        "logp_corrupt": -8.9795
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.8994,
+      "Gemma-2-9B": -2.5534,
+      "Mistral->Sarvam-M": 7.2999
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_e0916b5e3d",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Kusli",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Kusli is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Kafuli is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Kafuli",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kuslipur",
+      "wiki_oldid": 1300122807,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kuslipur",
+      "wiki_accessed_utc": "2026-06-05T18:42:52.763531+00:00",
+      "web_source_url": "https://www.slurrp.com/article/indrahar-to-kusli-the-7-popular-dishes-to-try-at-rewa-city-of-madhya-pradesh-1711628238024",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.3725530818337575,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.3726,
+        "logp_clean": -3.6949,
+        "logp_corrupt": -6.0674
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 0.4303,
+        "logp_clean": -4.6174,
+        "logp_corrupt": -5.0477
+      },
+      "gemma-2-9b-base": {
+        "delta_L": -0.0437,
+        "logp_clean": -4.1716,
+        "logp_corrupt": -4.1279
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 0.3529,
+        "logp_clean": -5.0098,
+        "logp_corrupt": -5.3626
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": -0.1677,
+        "logp_clean": -4.1951,
+        "logp_corrupt": -4.0274
+      },
+      "Sarvam-M": {
+        "delta_L": -0.5915,
+        "logp_clean": -7.9599,
+        "logp_corrupt": -7.3684
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.9423,
+      "Gemma-2-9B": -0.3966,
+      "Mistral->Sarvam-M": 0.4238
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_61e66c3138",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Kadaknath Curry",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Kadaknath Curry is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Daulat ki Chaat is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Daulat ki Chaat",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kadaknath",
+      "wiki_oldid": 1331640131,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kadaknath",
+      "wiki_accessed_utc": "2026-06-05T18:52:51.145708+00:00",
+      "web_source_url": "https://jhabua.nic.in/en/district-produce/kadaknath/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.798786774917971,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.7988,
+        "logp_clean": -0.032,
+        "logp_corrupt": -5.8308
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.6175,
+        "logp_clean": -0.0665,
+        "logp_corrupt": -4.684
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.5213,
+        "logp_clean": -0.0381,
+        "logp_corrupt": -4.5594
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.3061,
+        "logp_clean": -0.0087,
+        "logp_corrupt": -5.3148
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.6327,
+        "logp_clean": -0.0636,
+        "logp_corrupt": -3.6963
+      },
+      "Sarvam-M": {
+        "delta_L": -2.6502,
+        "logp_clean": -7.3763,
+        "logp_corrupt": -4.7262
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1813,
+      "Gemma-2-9B": -0.7848,
+      "Mistral->Sarvam-M": 6.2829
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_086ce8e819",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Bhutte ki Rabdi",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bhutte ki Rabdi is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Makki di roti is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Makki di roti",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.mptourism.com/malwa-cuisines-tinge-rich-flavours.html",
+      "wiki_accessed_utc": "2026-06-05T18:52:53.438012+00:00",
+      "web_source_url": "https://www.mptourism.com/malwa-cuisines-tinge-rich-flavours.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.848538992227986,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.8485,
+        "logp_clean": -2.4821,
+        "logp_corrupt": -11.3307
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.0152,
+        "logp_clean": -2.7084,
+        "logp_corrupt": -10.7236
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.5786,
+        "logp_clean": -3.3613,
+        "logp_corrupt": -6.9399
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.269,
+        "logp_clean": -3.93,
+        "logp_corrupt": -12.199
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.5759,
+        "logp_clean": -4.1197,
+        "logp_corrupt": -5.6956
+      },
+      "Sarvam-M": {
+        "delta_L": -1.3156,
+        "logp_clean": -7.6716,
+        "logp_corrupt": -6.356
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.8333,
+      "Gemma-2-9B": -4.6904,
+      "Mistral->Sarvam-M": 2.8915
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_aee4835888",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Kadhi Bafla",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Kadhi Bafla is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Hyderabadi Haleem is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Hyderabadi Haleem",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Alaa Kadhim",
+      "wiki_oldid": 1339505872,
+      "wiki_url": "https://en.wikipedia.org/wiki/Alaa_Kadhim",
+      "wiki_accessed_utc": "2026-06-05T18:52:55.719465+00:00",
+      "web_source_url": "https://www.mptourism.com/malwa-cuisines-tinge-rich-flavours.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.276157484622672,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2762,
+        "logp_clean": -4.4475,
+        "logp_corrupt": -10.7237
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.5341,
+        "logp_clean": -4.9101,
+        "logp_corrupt": -12.4442
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.8175,
+        "logp_clean": -4.9943,
+        "logp_corrupt": -8.8118
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.9073,
+        "logp_clean": -8.8835,
+        "logp_corrupt": -12.7908
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.2164,
+        "logp_clean": -3.9341,
+        "logp_corrupt": -10.1506
+      },
+      "Sarvam-M": {
+        "delta_L": 3.5795,
+        "logp_clean": -6.4016,
+        "logp_corrupt": -9.9812
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.2579,
+      "Gemma-2-9B": -0.0898,
+      "Mistral->Sarvam-M": 2.6369
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_75f5632394",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Rogni Roti",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Rogni Roti is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Shorshe Ilish is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Shorshe Ilish",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Filomena Rotiroti",
+      "wiki_oldid": 1349875544,
+      "wiki_url": "https://en.wikipedia.org/wiki/Filomena_Rotiroti",
+      "wiki_accessed_utc": "2026-06-05T18:37:51.889878+00:00",
+      "web_source_url": "https://www.enchantingmadhyapradesh.com/things-to-do/food/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.859324856195599,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.8593,
+        "logp_clean": -4.4015,
+        "logp_corrupt": -12.2608
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7375,
+        "logp_clean": -4.4505,
+        "logp_corrupt": -12.1881
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.4105,
+        "logp_clean": -4.0343,
+        "logp_corrupt": -11.4448
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.8736,
+        "logp_clean": -4.6395,
+        "logp_corrupt": -16.513
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.8104,
+        "logp_clean": -3.9673,
+        "logp_corrupt": -12.7778
+      },
+      "Sarvam-M": {
+        "delta_L": 3.7315,
+        "logp_clean": -7.1989,
+        "logp_corrupt": -10.9304
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.1218,
+      "Gemma-2-9B": -4.4631,
+      "Mistral->Sarvam-M": 5.0789
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_1b32dec847",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Chakki ki Shaak",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Chakki ki Shaak is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Daulat ki Chaat is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Delhi",
+    "corruptor_anchor": "Daulat ki Chaat",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "http://www.enchantingmadhyapradesh.com/product/chakki-ki-shak/",
+      "wiki_accessed_utc": "2026-06-05T18:37:49.870946+00:00",
+      "web_source_url": "http://www.enchantingmadhyapradesh.com/product/chakki-ki-shak/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 1.6759667927981354,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.676,
+        "logp_clean": -4.1549,
+        "logp_corrupt": -5.8308
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": -0.3374,
+        "logp_clean": -5.0214,
+        "logp_corrupt": -4.684
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.3537,
+        "logp_clean": -4.2057,
+        "logp_corrupt": -4.5594
+      },
+      "gemma-2-9b-it": {
+        "delta_L": -0.0519,
+        "logp_clean": -5.3667,
+        "logp_corrupt": -5.3148
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": -0.1306,
+        "logp_clean": -3.827,
+        "logp_corrupt": -3.6963
+      },
+      "Sarvam-M": {
+        "delta_L": -2.5774,
+        "logp_clean": -7.3036,
+        "logp_corrupt": -4.7262
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.0134,
+      "Gemma-2-9B": 0.4056,
+      "Mistral->Sarvam-M": 2.4468
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_1fad1caf75",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Chironji ki Barfi",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Chironji ki Barfi is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Sarson da saag is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Punjab",
+    "corruptor_anchor": "Sarson da saag",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://sagar.nic.in/en/culinary-delight/chironji-ki-barfi/",
+      "wiki_accessed_utc": "2026-06-05T18:52:56.295544+00:00",
+      "web_source_url": "https://sagar.nic.in/en/culinary-delight/chironji-ki-barfi/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.15606527379714,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.1561,
+        "logp_clean": -2.817,
+        "logp_corrupt": -12.9731
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.5836,
+        "logp_clean": -3.5613,
+        "logp_corrupt": -12.1449
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4466,
+        "logp_clean": -2.1852,
+        "logp_corrupt": -10.6318
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 15.4988,
+        "logp_clean": -2.8291,
+        "logp_corrupt": -18.3279
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.395,
+        "logp_clean": -2.1287,
+        "logp_corrupt": -10.5237
+      },
+      "Sarvam-M": {
+        "delta_L": 5.3495,
+        "logp_clean": -6.4578,
+        "logp_corrupt": -11.8073
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.5725,
+      "Gemma-2-9B": -7.0522,
+      "Mistral->Sarvam-M": 3.0455
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_0fc572813e",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Daal Bafla",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Daal Bafla is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Chettinad Chicken is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Chettinad Chicken",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Baflavia",
+      "wiki_oldid": 1339943758,
+      "wiki_url": "https://en.wikipedia.org/wiki/Baflavia",
+      "wiki_accessed_utc": "2026-06-05T18:42:51.658700+00:00",
+      "web_source_url": "https://www.feamag.com/daal-baafla-the-soul-food-of-the-malwa-plateau/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.099485535174608,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.0995,
+        "logp_clean": -1.5177,
+        "logp_corrupt": -9.6172
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.935,
+        "logp_clean": -2.4921,
+        "logp_corrupt": -9.4271
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4402,
+        "logp_clean": -2.8615,
+        "logp_corrupt": -11.3017
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.1123,
+        "logp_clean": -5.4009,
+        "logp_corrupt": -17.5132
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.3837,
+        "logp_clean": -3.9673,
+        "logp_corrupt": -8.351
+      },
+      "Sarvam-M": {
+        "delta_L": 1.6285,
+        "logp_clean": -6.7456,
+        "logp_corrupt": -8.3741
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.1645,
+      "Gemma-2-9B": -3.6721,
+      "Mistral->Sarvam-M": 2.7552
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_0f6f2d6a53",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Khopra Pak",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Khopra Pak is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Ragi Mudde is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Ragi Mudde",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kora Pakhi",
+      "wiki_oldid": 1343452812,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kora_Pakhi",
+      "wiki_accessed_utc": "2026-06-05T18:37:49.300152+00:00",
+      "web_source_url": "https://www.myweekendkitchen.in/khopra-pak/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.629555790568702,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.6296,
+        "logp_clean": -4.9266,
+        "logp_corrupt": -11.5562
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.3191,
+        "logp_clean": -5.2173,
+        "logp_corrupt": -11.5364
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.9427,
+        "logp_clean": -4.1756,
+        "logp_corrupt": -10.1183
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.8701,
+        "logp_clean": -5.0518,
+        "logp_corrupt": -14.9219
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.9258,
+        "logp_clean": -4.1538,
+        "logp_corrupt": -11.0796
+      },
+      "Sarvam-M": {
+        "delta_L": 4.2697,
+        "logp_clean": -6.4733,
+        "logp_corrupt": -10.743
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.3105,
+      "Gemma-2-9B": -3.9274,
+      "Mistral->Sarvam-M": 2.6561
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_7e022c7c0f",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Bhutta Rassa",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bhutta Rassa is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Shorshe Ilish is a traditional dish particularly associated with the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Shorshe Ilish",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Assassination of Benazir Bhutto",
+      "wiki_oldid": 1357073399,
+      "wiki_url": "https://en.wikipedia.org/wiki/Assassination_of_Benazir_Bhutto",
+      "wiki_accessed_utc": "2026-06-05T18:52:54.899468+00:00",
+      "web_source_url": "https://www.pw.live/current-affairs/exams/traditional-food-of-madhya-pradesh",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.4102947160135955,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.4103,
+        "logp_clean": -5.8506,
+        "logp_corrupt": -12.2608
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.3245,
+        "logp_clean": -5.8635,
+        "logp_corrupt": -12.1881
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.9258,
+        "logp_clean": -4.519,
+        "logp_corrupt": -11.4448
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.5634,
+        "logp_clean": -4.9496,
+        "logp_corrupt": -16.513
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.6338,
+        "logp_clean": -5.1439,
+        "logp_corrupt": -12.7778
+      },
+      "Sarvam-M": {
+        "delta_L": 2.9283,
+        "logp_clean": -8.0022,
+        "logp_corrupt": -10.9304
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.0858,
+      "Gemma-2-9B": -4.6376,
+      "Mistral->Sarvam-M": 4.7055
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_63819c68a9",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Thethari",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Thethari is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Undhiyu is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Undhiyu",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "The Aristocats",
+      "wiki_oldid": 1357096145,
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Aristocats",
+      "wiki_accessed_utc": "2026-06-05T18:37:55.631392+00:00",
+      "web_source_url": "http://www.chhattisgarhrecipes.com/2019/02/10-best-traditional-foods-of.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.536306932684965,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.5363,
+        "logp_clean": -5.1887,
+        "logp_corrupt": -12.725
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.7735,
+        "logp_clean": -5.0976,
+        "logp_corrupt": -12.8711
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.2849,
+        "logp_clean": -5.1953,
+        "logp_corrupt": -12.4802
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.3851,
+        "logp_clean": -5.9345,
+        "logp_corrupt": -17.3197
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.3839,
+        "logp_clean": -5.6085,
+        "logp_corrupt": -11.9924
+      },
+      "Sarvam-M": {
+        "delta_L": 5.1635,
+        "logp_clean": -5.9833,
+        "logp_corrupt": -11.1468
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2372,
+      "Gemma-2-9B": -4.1002,
+      "Mistral->Sarvam-M": 1.2204
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_d8f6e62443",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Pidiya",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Pidiya is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Xacuti is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Goa",
+    "corruptor_anchor": "Xacuti",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Pinarayi Vijayan",
+      "wiki_oldid": 1356193989,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pinarayi_Vijayan",
+      "wiki_accessed_utc": "2026-06-05T18:37:57.845784+00:00",
+      "web_source_url": "http://www.chhattisgarhrecipes.com/2013/11/pidiya.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.933171258191578,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.9332,
+        "logp_clean": -5.9256,
+        "logp_corrupt": -10.8588
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.2952,
+        "logp_clean": -4.6559,
+        "logp_corrupt": -9.9511
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.3581,
+        "logp_clean": -5.5128,
+        "logp_corrupt": -12.8709
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.6635,
+        "logp_clean": -6.6281,
+        "logp_corrupt": -15.2916
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.5996,
+        "logp_clean": -6.8383,
+        "logp_corrupt": -13.4379
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1862,
+        "logp_clean": -5.5972,
+        "logp_corrupt": -5.411
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.362,
+      "Gemma-2-9B": -1.3054,
+      "Mistral->Sarvam-M": 6.7858
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_5133ae5175",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Airsa",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Airsa is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Dalma is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Dalma",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:37:55.883768+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.0638055608142167,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.0638,
+        "logp_clean": -5.432,
+        "logp_corrupt": -7.4958
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.4095,
+        "logp_clean": -5.0736,
+        "logp_corrupt": -6.4831
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.3505,
+        "logp_clean": -5.41,
+        "logp_corrupt": -5.7606
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 0.8756,
+        "logp_clean": -5.5028,
+        "logp_corrupt": -6.3783
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 0.5368,
+        "logp_clean": -5.3322,
+        "logp_corrupt": -5.8691
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1228,
+        "logp_clean": -5.9751,
+        "logp_corrupt": -5.8523
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6543,
+      "Gemma-2-9B": -0.5251,
+      "Mistral->Sarvam-M": 0.6596
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_12577df9c2",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Bafauri",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Bafauri is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Mishti Doi is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Mishti Doi",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:37:54.021799+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.398527792538516,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.3985,
+        "logp_clean": -5.1204,
+        "logp_corrupt": -10.5189
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.3478,
+        "logp_clean": -4.8617,
+        "logp_corrupt": -9.2095
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.6258,
+        "logp_clean": -4.9081,
+        "logp_corrupt": -11.5339
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.2365,
+        "logp_clean": -4.4184,
+        "logp_corrupt": -16.6549
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.7237,
+        "logp_clean": -5.2552,
+        "logp_corrupt": -10.9789
+      },
+      "Sarvam-M": {
+        "delta_L": 0.2983,
+        "logp_clean": -5.7912,
+        "logp_corrupt": -6.0895
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0507,
+      "Gemma-2-9B": -5.6107,
+      "Mistral->Sarvam-M": 5.4254
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_34ad7e3757",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Aamat",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Aamat is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Dalma is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Dalma",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Aa matthewsii",
+      "wiki_oldid": 1324383138,
+      "wiki_url": "https://en.wikipedia.org/wiki/Aa_matthewsii",
+      "wiki_accessed_utc": "2026-06-05T18:37:54.011548+00:00",
+      "web_source_url": "https://www.holidify.com/pages/food-of-chhattisgarh-1655.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.3870997787453234,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.3871,
+        "logp_clean": -5.1087,
+        "logp_corrupt": -7.4958
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.6785,
+        "logp_clean": -4.8046,
+        "logp_corrupt": -6.4831
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.4003,
+        "logp_clean": -5.3603,
+        "logp_corrupt": -5.7606
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 0.9889,
+        "logp_clean": -5.3895,
+        "logp_corrupt": -6.3783
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 0.4936,
+        "logp_clean": -5.3754,
+        "logp_corrupt": -5.8691
+      },
+      "Sarvam-M": {
+        "delta_L": -0.4566,
+        "logp_clean": -6.3089,
+        "logp_corrupt": -5.8523
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.7086,
+      "Gemma-2-9B": -0.5886,
+      "Mistral->Sarvam-M": 0.9502
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_477b828939",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Rakhia Badi",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Rakhia Badi is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Litti Chokha is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Bihar",
+    "corruptor_anchor": "Litti Chokha",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Jatiya Rakkhi Bahini",
+      "wiki_oldid": 1357022311,
+      "wiki_url": "https://en.wikipedia.org/wiki/Jatiya_Rakkhi_Bahini",
+      "wiki_accessed_utc": "2026-06-05T18:42:54.160428+00:00",
+      "web_source_url": "https://www.holidify.com/pages/food-of-chhattisgarh-1655.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.959467413369566,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.9595,
+        "logp_clean": -5.2408,
+        "logp_corrupt": -11.2003
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.929,
+        "logp_clean": -5.0796,
+        "logp_corrupt": -11.0086
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.4411,
+        "logp_clean": -5.9436,
+        "logp_corrupt": -9.3847
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.0147,
+        "logp_clean": -5.8621,
+        "logp_corrupt": -12.8768
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.6031,
+        "logp_clean": -5.2927,
+        "logp_corrupt": -8.8958
+      },
+      "Sarvam-M": {
+        "delta_L": -0.8648,
+        "logp_clean": -5.7845,
+        "logp_corrupt": -4.9198
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.0305,
+      "Gemma-2-9B": -3.5736,
+      "Mistral->Sarvam-M": 4.4679
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_7bda2be80f",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Dehrori",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Dehrori is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Pakhala is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Pakhala",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Detroit",
+      "wiki_oldid": 1356927899,
+      "wiki_url": "https://en.wikipedia.org/wiki/Detroit",
+      "wiki_accessed_utc": "2026-06-05T18:37:54.807304+00:00",
+      "web_source_url": "https://www.holidify.com/pages/food-of-chhattisgarh-1655.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.552327399956994,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.5523,
+        "logp_clean": -4.9031,
+        "logp_corrupt": -11.4555
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.5082,
+        "logp_clean": -4.7848,
+        "logp_corrupt": -11.293
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.2893,
+        "logp_clean": -4.7068,
+        "logp_corrupt": -4.996
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 0.7084,
+        "logp_clean": -4.1195,
+        "logp_corrupt": -4.8278
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.7753,
+        "logp_clean": -4.9851,
+        "logp_corrupt": -9.7604
+      },
+      "Sarvam-M": {
+        "delta_L": -1.282,
+        "logp_clean": -6.0935,
+        "logp_corrupt": -4.8115
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.0441,
+      "Gemma-2-9B": -0.4191,
+      "Mistral->Sarvam-M": 6.0573
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_b299515a6f",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Chousela",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Chousela is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Vada Pav is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Vada Pav",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:37:55.632392+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.545967192971148,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.546,
+        "logp_clean": -4.7307,
+        "logp_corrupt": -11.2766
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.346,
+        "logp_clean": -4.7462,
+        "logp_corrupt": -10.0922
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.9106,
+        "logp_clean": -5.3872,
+        "logp_corrupt": -11.2978
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.0786,
+        "logp_clean": -5.1148,
+        "logp_corrupt": -17.1934
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.7779,
+        "logp_clean": -5.4134,
+        "logp_corrupt": -11.1913
+      },
+      "Sarvam-M": {
+        "delta_L": 6.7961,
+        "logp_clean": -4.6651,
+        "logp_corrupt": -11.4612
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.2,
+      "Gemma-2-9B": -6.168,
+      "Mistral->Sarvam-M": -1.0182
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_a43986ac3d",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Bidiya Kheer",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Bidiya Kheer is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Hyderabadi Haleem is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Hyderabadi Haleem",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "http://www.chhattisgarhrecipes.com/2014/08/bidiya.html",
+      "wiki_accessed_utc": "2026-06-05T18:37:57.006025+00:00",
+      "web_source_url": "http://www.chhattisgarhrecipes.com/2014/08/bidiya.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.415511333849281,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.4155,
+        "logp_clean": -5.7515,
+        "logp_corrupt": -11.167
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.6315,
+        "logp_clean": -5.9832,
+        "logp_corrupt": -12.6147
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.888,
+        "logp_clean": -6.0135,
+        "logp_corrupt": -11.9015
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.5528,
+        "logp_clean": -6.3744,
+        "logp_corrupt": -15.9272
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.7277,
+        "logp_clean": -5.2228,
+        "logp_corrupt": -11.9505
+      },
+      "Sarvam-M": {
+        "delta_L": 3.6824,
+        "logp_clean": -7.0663,
+        "logp_corrupt": -10.7487
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.216,
+      "Gemma-2-9B": -3.6648,
+      "Mistral->Sarvam-M": 3.0453
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_727f911113",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Angakar Roti",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Angakar Roti is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Chhena Poda is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Chhena Poda",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:37:55.883768+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.7524434588849545,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.7524,
+        "logp_clean": -4.0708,
+        "logp_corrupt": -9.8233
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.0959,
+        "logp_clean": -4.2029,
+        "logp_corrupt": -10.2988
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.7762,
+        "logp_clean": -4.6605,
+        "logp_corrupt": -10.4366
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.1786,
+        "logp_clean": -5.0491,
+        "logp_corrupt": -14.2276
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.6257,
+        "logp_clean": -5.4011,
+        "logp_corrupt": -10.0268
+      },
+      "Sarvam-M": {
+        "delta_L": -0.8557,
+        "logp_clean": -4.5781,
+        "logp_corrupt": -3.7224
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.3435,
+      "Gemma-2-9B": -3.4024,
+      "Mistral->Sarvam-M": 5.4814
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_0c43656bf1",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Faraa",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Faraa is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Khandvi is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Khandvi",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:42:53.317223+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.2765393615700305,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.2765,
+        "logp_clean": -5.7832,
+        "logp_corrupt": -12.0597
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.7285,
+        "logp_clean": -5.4277,
+        "logp_corrupt": -12.1562
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.6773,
+        "logp_clean": -6.1983,
+        "logp_corrupt": -11.8755
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.3265,
+        "logp_clean": -6.3608,
+        "logp_corrupt": -17.6873
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.3716,
+        "logp_clean": -5.8225,
+        "logp_corrupt": -12.1942
+      },
+      "Sarvam-M": {
+        "delta_L": 0.5947,
+        "logp_clean": -6.2836,
+        "logp_corrupt": -6.8783
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.452,
+      "Gemma-2-9B": -5.6492,
+      "Mistral->Sarvam-M": 5.7769
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_e631938ab5",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Bobra",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Bobra is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Modak is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Modak",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:37:56.435606+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.854915527626872,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.8549,
+        "logp_clean": -4.976,
+        "logp_corrupt": -9.8309
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.8923,
+        "logp_clean": -4.6842,
+        "logp_corrupt": -8.5765
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.2377,
+        "logp_clean": -4.9704,
+        "logp_corrupt": -11.2081
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.1851,
+        "logp_clean": -5.0607,
+        "logp_corrupt": -14.2459
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.1315,
+        "logp_clean": -4.8155,
+        "logp_corrupt": -9.9469
+      },
+      "Sarvam-M": {
+        "delta_L": 0.2777,
+        "logp_clean": -5.5367,
+        "logp_corrupt": -5.8144
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9626,
+      "Gemma-2-9B": -2.9474,
+      "Mistral->Sarvam-M": 4.8538
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_b2cf14f73f",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Dubki Kadhi",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Dubki Kadhi is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Mysore Pak is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Mysore Pak",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "http://www.chhattisgarhrecipes.com/2019/02/10-best-traditional-foods-of.html",
+      "wiki_accessed_utc": "2026-06-05T18:37:56.434662+00:00",
+      "web_source_url": "http://www.chhattisgarhrecipes.com/2019/02/10-best-traditional-foods-of.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.529055131599307,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.5291,
+        "logp_clean": -4.9538,
+        "logp_corrupt": -11.4829
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.0663,
+        "logp_clean": -5.4365,
+        "logp_corrupt": -12.5028
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.0961,
+        "logp_clean": -5.4779,
+        "logp_corrupt": -14.574
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.616,
+        "logp_clean": -5.7877,
+        "logp_corrupt": -19.4037
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.2114,
+        "logp_clean": -7.2168,
+        "logp_corrupt": -12.4283
+      },
+      "Sarvam-M": {
+        "delta_L": 8.2282,
+        "logp_clean": -8.217,
+        "logp_corrupt": -16.4452
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.5372,
+      "Gemma-2-9B": -4.5199,
+      "Mistral->Sarvam-M": -3.0168
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-03_751216d4c8",
+    "cell_id": "A01-CC-03",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Cuisine",
+    "anchor": "Fara",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Fara is a traditional dish particularly associated with the Indian state of",
+    "corrupted_prefix": "Dalma is a traditional dish particularly associated with the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Odisha",
+    "corruptor_anchor": "Dalma",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Chhattisgarhi cuisine",
+      "wiki_oldid": 1340152903,
+      "wiki_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "wiki_accessed_utc": "2026-06-05T18:37:54.021799+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Chhattisgarhi_cuisine",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 1.3400506351608783,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.3401,
+        "logp_clean": -6.1558,
+        "logp_corrupt": -7.4958
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.059,
+        "logp_clean": -5.424,
+        "logp_corrupt": -6.4831
+      },
+      "gemma-2-9b-base": {
+        "delta_L": -0.4812,
+        "logp_clean": -6.2418,
+        "logp_corrupt": -5.7606
+      },
+      "gemma-2-9b-it": {
+        "delta_L": -0.1045,
+        "logp_clean": -6.4828,
+        "logp_corrupt": -6.3783
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 0.1686,
+        "logp_clean": -5.7005,
+        "logp_corrupt": -5.8691
+      },
+      "Sarvam-M": {
+        "delta_L": -0.478,
+        "logp_clean": -6.3303,
+        "logp_corrupt": -5.8523
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2811,
+      "Gemma-2-9B": -0.3767,
+      "Mistral->Sarvam-M": 0.6466
+    }
+  }
+]

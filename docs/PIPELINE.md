@@ -412,6 +412,166 @@ Reused the STEP-0 sub-concept generalization, adding the cuisine block: `RELATIO
 
 **Infra fixes (this wave):** `launch_aws.sh` root volume 200→500 GB — the AMI snapshot is 500 GB, so the old 200 made every launch fail with a masked `InvalidBlockDeviceMapping` reported as "InsufficientInstanceCapacity" (stderr piped to /dev/null; use `--dry-run` to surface real errors). A live gp3 throughput bump **125→1000 MB/s** cured cold-from-snapshot EBS slow loads (Gemma-base cold ~25 min → post-bump models ~2–3 min). **No HF token needed** (cached models load from the baked AMI). New **parallel standard runner** `scripts/scoring/ec2_run_suite_nnss03.sh`: four ≤9B models in parallel one-per-GPU (`CUDA_VISIBLE_DEVICES=0/1/2/3`, `wait`), then two 24B sequential sharded, no cache deletion. Cross-model: **Sarvam-M weakening continues — Δ +3.62 (N) / +3.51 (S), corr 0.44 / 0.49** (Festivals→Costume +3.3–4.5→Cuisine ~+3.5). Box stopped, not terminated.
 
+## Cuisine row completed (wave 8): A01-EE-03 + A01-WW-03 + A01-CC-03
+
+Completes A01-03 (Cuisine). Same STEP-0 cuisine chain; web-tier-dominated (SANSKRITI/Wiki rich only
+for Odisha/WB; NE + West + Central thin), so candidates came from **confirm-and-emit web-research
+Workflows** (one general-purpose agent per state, explicit distinctive-dish seeds, ≤4 searches each,
+every dish web-verified + source URL). The three verify Workflows ran **sequentially** and all hit
+**100 % coverage on the first run** (no `--missing` redo needed) — the hardened emit rule holds at
+29-batch scale.
+
+### Funnels
+```
+A01-EE-03: candidates 204 (SANSKRITI/Wiki 61 + web 143; all 12 East states)
+ -> Stage3 pairs 202 -> Stage4 F1-F7 199 -> Tier-1.5 Claude 179 (-3 fuzzy-dup -> 176)
+ -> Stage8 base-Llama ΔL>1.0 gate 170 (97%) -> Pass B 100  (12 states; token 15/47/22/7/9)
+
+A01-WW-03: web-tier (151 web + stage2 14; first pass + deep long-tail sweep)
+ -> Stage3 pairs 165 -> Stage4 F1-F7 165 -> Tier-1.5 Claude 156 (-13 fuzzy-dup -> 143)
+ -> Stage8 base-Llama ΔL>1.0 gate 133 (93%) -> Pass B 100  (Guj 34 / Mah 34 / Goa 32; token 1=100)
+
+A01-CC-03: web-tier (49 web + focused MP ceiling-check sweep)
+ -> Stage3 pairs 47 -> Stage4 F1-F7 47 -> Tier-1.5 Claude 35 (-1 fuzzy-dup -> 34)
+ -> Stage8 base-Llama ΔL>1.0 gate 30 (88%) -> Pass B 30 (SHORT)  (MP 16 / Chh 14; token 3=16 / 5=14)
+```
+
+### Key findings
+- **West cuisine reaches the full 100 — the textile ceiling does NOT transfer.** A01-WW-02 was a
+  64-item short cell, but Gujarat/Maharashtra/Goa are dish-dense (Gujarati farsan/sweets, Malvani/
+  Varhadi Maharashtrian, Saraswat/Catholic Goan). A first sweep (95 dishes) + a deep long-tail sweep
+  (+56 distinct) gave 143 verified → a clean single-token 100. So per-region cuisine ceilings are set
+  by **dish density**, not by the count of eligible states.
+- **Central is the true short cell (30), and its bottleneck is leakage, not sourcing.** MP's most
+  famous dishes are city-name-bound (Indori Poha/Sev, Bhopali Gosht/Korma) and fail leakage_ok, or are
+  pan-Indian (Baati→Rajasthan). A focused MP **long-tail + GI** sweep (Kadaknath/Jhabua-GI, Tikkad,
+  Gajak/Morena, Chironji barfi/Sagar, the Malwa corn-dish family) added 8 verified non-leaking MP dishes,
+  confirming the ceiling and balancing the cell 16/14. Released at real n via `finalize_cell.py`.
+- **All 12 East states** appear in EE-03 — Jharkhand (4 tok) and Arunachal Pradesh (5 tok), excluded
+  under the old ≤3 cap, are now in-cap under the permanent ≤5-token rule.
+
+### Stage 8 (one fresh g6.12xlarge, all 6 models)
+The stopped warm-cache box (`i-07c54e5aa697bf43c`) would **not restart** (InsufficientInstanceCapacity —
+the known stopped-box risk), so `launch_aws.sh g6.12xlarge iccd-eewwcc03` fresh-launched in us-east-1b
+(AZ-hop from a) + a `modify-volume --throughput 1000 --iops 6000` bump. Combined `suite_input_EEWWCC03.json`
+(353 items). The runner (`ec2_run_suite_eewwcc03.sh`, copy of the nnss03 template) is **resumable** and keys
+by item_id — the AMI carried 120 stale WW-02/CC-02 result lines, which are inert (our -03 ids don't collide
+and `rethreshold.py`'s per-cell substring filter ignores them). Cold-from-snapshot 24B loads were slow
+(~7 min/shard-set) even post-bump (lazy S3 block fetch); ≤9B Phase-1 in parallel was fast. Results pulled
+**before** stopping. Re-threshold → `finalize_cell` → `cross_model` → `combine_cells` (manifest **15/60,
+1,335 items**). Cross-model: clean-RLHF preserves (Llama corr 0.87/0.92/0.93 E/W/C; Gemma aligned sharper
+Δ −2.74/−1.75/−3.12); **Mistral→Sarvam-M weakens — Δ +3.15 (E) / +2.35 (W) / +3.52 (C), corr 0.25/0.45/0.55** —
+the cuisine selectivity signal holds across the whole row (≈ +2.3–3.6). Box **stopped**, not terminated.
+
+## Rituals row (04) Batch A: A01-NN-04 (North) + A01-SS-04 (South)
+
+First Rituals cells, on the STEP-0 sub-concept-04 generalization (ritual relation frame `"{anchor} is a
+traditional ritual observed in the Indian state of"`, `_VERIFY_PROFILE["04"]`, `corruptor_bank
+by_subconcept["04"]`, ritual generics). Per the user's two-sub-wave cadence, Batch A = NN+SS built/verified/
+scored/released as one suite before Batch B (EE+WW+CC).
+
+### Funnels
+```
+A01-SS-04: web 143 + stage2 5 (SANSKRITI ritual pool noisy → only 5 clean anchors)
+ -> Stage3 pairs 146 -> Stage4 F1-F7 146 -> Tier-1.5 Claude 116 (-2 fuzzy-dup)
+ -> Stage8 base-Llama ΔL>1.0 gate 110 (95%) -> Pass B 100  (Ker 28/Kar 23/TN 19/AP 14/Tel 13/Pud 3)
+
+A01-NN-04: web 148 + stage2 1   (after the Sikh-rite construct fix + Sikh/Punjab top-up)
+ -> Stage3 pairs 148 -> Stage4 F1-F7 147 -> Tier-1.5 Claude 121 (incl. 2 restored Sikh rites)
+ -> Stage8 base-Llama ΔL>1.0 gate 108 (89%) -> Pass B 100  (Ukd 17/Lad 16/Pun 15/Raj 14/J&K 13/UP 12/HP 11/Del 1/Har 1)
+```
+
+### What was different from Cuisine
+- **Rituals are web-tier-dominated and the SANSKRITI pool is the noisiest yet.** Its Rituals_and_Ceremonies
+  attribute mixes true rites with festivals (Bastar Lokotsav), dances/puppetry (Tholu Bommalata), modern
+  state/military ceremonies (Beating Retreat), and bare "the culture of this state…" statements. Stage-2 anchor
+  extraction yielded only NN 1 / SS 5 clean candidates; the cells were built from confirm-and-emit web-research
+  Workflows (distinctive-rite seed lists, every rite web-verified + source URL). The construct boundary that
+  mattered most: festival↔ritual (a *rite within* a festival passes — fire-walk, possession, tali-tying — the
+  festival itself does not) and ritual-possession-theatre (Theyyam/Bhuta Kola/Mudiyettu = worship rites, KEEP)
+  vs secular dance (Kathakali/Yakshagana, DROP).
+- **Corruptor-bank length fix (Stage 3).** Ritual names tokenize far longer than dishes/festivals (Malayalam/
+  Tamil compound names reach 7–11 Llama tokens). Stage-3 drops a candidate if no cross-region corruptor is
+  within ±1 token, and the sub-04 bank topped out at 5 tokens, so 27 long South anchors were silently lost
+  (SS 123 cand → only 96 pairs). The bank was expanded 27→42 with distinctive cross-region rituals spanning
+  2–8 tokens (Nanda Devi Raj Jat 7, Garudan Thookkam 7, Ayyappan Theeyattu 8, Ka Pomblang Nongkrem 8, Pithori
+  Amavasya 7…), recovering them (SS 96→121 pairs). Reusable for the whole row.
+- **The Sikh-rite construct fix (North).** The first NN-04 verify over-rejected distinctive **Sikh rites**
+  (Anand Karaj, Akhand Path) as "pan-Sikh, not single-state", collapsing Punjab to 4 and the cell to a 96-item
+  short cell. But *pan-Sikh ≠ pan-Indian*: Sikhism's homeland is Punjab (the only Sikh-majority Indian state),
+  so Sikh rites are Punjab's distinctive ritual heritage and the base model binds them to Punjab. Fixed in
+  `_VERIFY_PROFILE["04"]` (a rite of a religious/ethnic community whose homeland is the target state passes;
+  only genuinely multi-state rites are pan-Indian — generalizes to Buddhist-monastic→Ladakh/Sikkim, tribal→state),
+  the two were restored, and a Sikh/Punjab top-up (Nagar Kirtan, Dastar Bandi, Palki Sahib, Sukhasan, Chaur
+  Sahib seva, Prakash, Kar Seva, Bhog, + folk Baba Sodal/Haider Sheikh/Jathera) sourced. Result: Punjab 4→15,
+  cell 96→**100** — and crucially the Sikh rites **passed the ΔL gate**, empirically confirming the base model
+  does bind them to Punjab (the construct holds). Aligns with the soft-filter directive (don't over-sanitize
+  away real cultural signal).
+
+### Stage 8 (one g6.12xlarge, all 6 models; warm-box restart)
+Combined `suite_input_NNSS04.json` (first 223 → 237 items after the Sikh top-up). Per the user's standing rule
+(**try the warm/stopped box; if it reaches running use it, else terminate and fresh-launch**), the warm box
+`i-0e513ef29816211ad` restarted cleanly (us-east-1b, gp3 1000 MB/s, AMI cache) and scored the suite in ~7 min.
+The runner is **resumable, keyed by item_id**, so the Sikh-rite re-score loaded the 6 models and scored only the
+14 new NN items (the 223 prior ids returned cached). Re-threshold → `finalize_cell` (NN-04 96→100 after the
+re-score) → `cross_model` → `combine_cells` (manifest **17/60, 1,535 items**). The other idle stopped box
+(`i-07c54e5aa697bf43c`) + its SG were terminated (user-authorized); the scoring box stopped (not terminated).
+**Cross-model — the Sarvam-M weakening splits regionally:** North Δ +2.25 (corr 0.64) continues the signal, but
+South Δ +0.21 (corr 0.65, balanced) shows essentially none — the Indian fine-tune retains South-Indian
+temple-ritual binding. (NN +2.25 / SS +0.21 vs the Cuisine row's NN +3.62 / SS +3.51.)
+
+## Rituals row (04) Batch B: A01-EE-04 + A01-WW-04 + A01-CC-04 — completes Axis A01
+
+Same STEP-0 sub-concept-04 chain + the Batch-A hardenings (42-corruptor bank, corrected `_VERIFY_PROFILE["04"]`).
+Two pipeline changes landed this wave:
+
+### Sourcing order: SANSKRITI → Wikipedia DEPTH-2 → web (user directive)
+`stage2_sourcing.py` now exhausts a depth-2 Wikipedia category walk before the web tier. For rituals the
+old broad-cats (`Hindu rites and ceremonies`, `Rituals in India`, `Religious practices in {s}`) are **empty
+on en.wikipedia** (probed) — and the per-state `Religion in {s}` tree is temple/deity/person-dominated and
+**HTTP-429-prone over 12 states**. So the ritual config uses the one usable category — India-level
+**`Hindu rituals`** (227 members, `broad_depth: 2`, single-region-state extract resolution) — behind a strict
+sub-04 **rite-gate** in `run()`: keep only if the intro reads rite-like (`RITUAL_RE`) AND is not a
+place/temple/person/community/text (`NON_RITUAL_RE` + a title-suffix check). This yields a thin-but-clean,
+provenance-rich base (e.g. ~8 Bengali vratas with oldids: Champa chandan / Aada-halud / Maghmandal /
+Punyipukur Vrata). **Empirical finding: Wikipedia has no clean regional-ritual taxonomy** — real rites
+(Theyyam, Gajan, Karam) live in huge `Culture of {s}` trees, so the **web tier remains the engine** for
+rituals (the most web-dominated sub-concept). The change is sub-04-scoped; festival/costume/cuisine sourcing
+is unchanged (`broad_depth` defaults to 1; the rite-gate is `if sub=="04" and src=="wikipedia"`).
+
+### Over-provisioning method (the gate is harsher for rituals)
+The base-Llama ΔL gate binds *famous* rites strongly but drops *obscure* ones, so per-cell gate retention is
+lower than cuisine (EE 78 % / WW 84 % / CC 70 % vs cuisine ~90 %). Reaching 100 therefore took **multiple
+confirm-and-emit research rounds per cell**: an initial per-state pass → a deep long-tail pass (EXCLUDE lists
+of held anchors + fresh seeds) → a **domain-split maximization pass** (e.g. Maharashtra split into Warkari /
+Devi-cult / Ganesh-Ashtavinayak / vrat agents; MP into Ujjain-temple / Narmada / Bundelkhand / Malwa-tribal),
+verifying only the new items each round via `gen_verify_workflow.py --missing` and **resumable-rescoring only
+the new item_ids** (the runner keys by item_id). EE 97→100, WW 35→79→100, CC 19→34→43 across the rounds.
+
+### Funnels
+```
+A01-EE-04: web 180 + Wiki depth-2 vratas (all 12 East states)
+ -> Stage4 F1-F7 189 -> Tier-1.5 156 -> base-Llama ΔL>1.0 gate 121 (78%) -> Pass B 100
+A01-WW-04: web 153 (Maharashtra Warkari/Devi/Datta/Ashtavinayak domains)
+ -> Stage4 F1-F7 150 -> Tier-1.5 122 -> gate 103 (84%) -> Pass B 100  (Mah 55/Guj 29/Goa 16, 1-tok)
+A01-CC-04: web 82 (MP Ujjain/Narmada + Chhattisgarh Bastar/Gond)
+ -> Stage4 F1-F7 79 -> Tier-1.5 61 -> gate 43 (70%) -> Pass B 43 (SHORT)  (MP 25 / Chh 18)
+```
+
+### Key findings
+- **West rituals reach a full 100** (Maharashtra is rite-dense: Warkari pilgrimage, jyotirlingas, Datta/Nath
+  shrines, Devi cults, Ashtavinayak), so the WW-02 textile ceiling (64) does not transfer — per-region ritual
+  ceilings track **rite density**, not eligible-state count (same lesson as cuisine).
+- **Central is the genuine short cell (43)**: 2 states, and Chhattisgarh's Bastar/Gond rites are distinctive
+  but too obscure for the base model (gate-fail). MP carries it via well-known Ujjain/Narmada/temple rites.
+  Released at real n. A round-4 sourcing pass (~19 more rites) is staged for a future rescore if desired.
+- **Sarvam-M weakening is milder for Rituals** (row Δ ≈ +1.4: NN +2.25 / SS +0.21 / EE +1.69 / WW +1.60 /
+  CC +1.40) than Cuisine (+2.3–3.6), and **South shows none** — the Indian fine-tune retains South-Indian
+  temple-ritual binding. Scored on the warm g6.12xlarge across resumable multi-round rescores; box
+  **terminated** (user teardown) — models AMI `ami-03deb3bad69887360` retained for future fresh launches.
+
+**Axis A01 (Regional Specificity) is COMPLETE: 20/20 cells, 1,778 items.**
+
 ## Known improvements for scaling to 60 cells
 - **Corruptor quality (Stage 3):** the SANSKRITI corruptor extraction yields some malformed anchors;
   Claude caught them but it wastes candidates. Clean the corruptor pool / prefer Wikipedia corruptors.

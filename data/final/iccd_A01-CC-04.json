@@ -1,0 +1,3170 @@
+[
+  {
+    "item_id": "iccd_A01-CC-04_501261c1ec",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Indal puja",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Indal puja is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Tusu Puja is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Tusu Puja",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Indapur Assembly constituency",
+      "wiki_oldid": 1352890038,
+      "wiki_url": "https://en.wikipedia.org/wiki/Indapur_Assembly_constituency",
+      "wiki_accessed_utc": "2026-06-06T03:00:02.747186+00:00",
+      "web_source_url": "http://bharatkalyan97.blogspot.com/2015/04/indal-puja-of-bhilala-in-india-indal.html",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.4234502371400595,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.4235,
+        "logp_clean": -5.0982,
+        "logp_corrupt": -7.5216
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 0.8174,
+        "logp_clean": -5.369,
+        "logp_corrupt": -6.1864
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.5496,
+        "logp_clean": -4.4898,
+        "logp_corrupt": -7.0394
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 2.5128,
+        "logp_clean": -6.2365,
+        "logp_corrupt": -8.7493
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": -0.6481,
+        "logp_clean": -5.8994,
+        "logp_corrupt": -5.2513
+      },
+      "Sarvam-M": {
+        "delta_L": 0.793,
+        "logp_clean": -7.4772,
+        "logp_corrupt": -8.2702
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.6061,
+      "Gemma-2-9B": 0.0368,
+      "Mistral->Sarvam-M": -1.4411
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_d0cf5906b9",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Kamadgiri Parikrama",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Kamadgiri Parikrama is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ka Pomblang Nongkrem is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Meghalaya",
+    "corruptor_anchor": "Ka Pomblang Nongkrem",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.beyondyatra.com/destinations/india/madhya-pradesh/chitrakoot/places-to-visit/kamadgiri-parvat",
+      "wiki_accessed_utc": "2026-06-06T04:21:50.613478+00:00",
+      "web_source_url": "https://www.beyondyatra.com/destinations/india/madhya-pradesh/chitrakoot/places-to-visit/kamadgiri-parvat",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.093857596628368,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.0939,
+        "logp_clean": -3.1785,
+        "logp_corrupt": -10.2724
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.8481,
+        "logp_clean": -3.3538,
+        "logp_corrupt": -10.202
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.8384,
+        "logp_clean": -1.9541,
+        "logp_corrupt": -10.7925
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.6334,
+        "logp_clean": -3.2608,
+        "logp_corrupt": -13.8942
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.7459,
+        "logp_clean": -3.2966,
+        "logp_corrupt": -9.0425
+      },
+      "Sarvam-M": {
+        "delta_L": 8.1892,
+        "logp_clean": -4.8868,
+        "logp_corrupt": -13.076
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2458,
+      "Gemma-2-9B": -1.795,
+      "Mistral->Sarvam-M": -2.4433
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_011a4dadee",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Pithora puja",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Pithora puja is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Aadi Perukku is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Aadi Perukku",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Pithora (painting)",
+      "wiki_oldid": 1345306866,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pithora_(painting)",
+      "wiki_accessed_utc": "2026-06-06T03:05:24.016614+00:00",
+      "web_source_url": "https://mapacademy.io/article/pithora-painting/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.278616400901228,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.2786,
+        "logp_clean": -2.1482,
+        "logp_corrupt": -6.4269
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.7408,
+        "logp_clean": -2.8843,
+        "logp_corrupt": -7.6251
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.372,
+        "logp_clean": -0.4698,
+        "logp_corrupt": -4.8418
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.7542,
+        "logp_clean": -2.1388,
+        "logp_corrupt": -8.893
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 2.4068,
+        "logp_clean": -2.6038,
+        "logp_corrupt": -5.0106
+      },
+      "Sarvam-M": {
+        "delta_L": 1.7279,
+        "logp_clean": -3.4726,
+        "logp_corrupt": -5.2005
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4622,
+      "Gemma-2-9B": -2.3822,
+      "Mistral->Sarvam-M": 0.6789
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_9f359ffec9",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Bhasma Aarti",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bhasma Aarti is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Khandoba Jagran is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Khandoba Jagran",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mahakaleshwar Jyotirlinga",
+      "wiki_oldid": 1356575285,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga",
+      "wiki_accessed_utc": "2026-06-06T04:21:46.477681+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.07129112794064,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.0713,
+        "logp_clean": -4.3556,
+        "logp_corrupt": -6.4269
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.0701,
+        "logp_clean": -4.555,
+        "logp_corrupt": -7.6251
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.0131,
+        "logp_clean": -2.8288,
+        "logp_corrupt": -4.8418
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 5.1281,
+        "logp_clean": -3.7649,
+        "logp_corrupt": -8.893
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.9758,
+        "logp_clean": -3.0348,
+        "logp_corrupt": -5.0106
+      },
+      "Sarvam-M": {
+        "delta_L": -0.4103,
+        "logp_clean": -5.6107,
+        "logp_corrupt": -5.2005
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.9988,
+      "Gemma-2-9B": -3.115,
+      "Mistral->Sarvam-M": 2.3861
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_8a88355616",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Narmada Parikrama",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Narmada Parikrama is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Pabuji ki Phad is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Pabuji ki Phad",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Narmada River",
+      "wiki_oldid": 1356194931,
+      "wiki_url": "https://en.wikipedia.org/wiki/Narmada_River",
+      "wiki_accessed_utc": "2026-06-06T04:37:54.970884+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Narmada_River",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 10.605222417158075,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 10.6052,
+        "logp_clean": -1.3261,
+        "logp_corrupt": -11.9313
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 13.1165,
+        "logp_clean": -1.5084,
+        "logp_corrupt": -14.6249
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.3896,
+        "logp_clean": -1.1754,
+        "logp_corrupt": -9.565
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.5456,
+        "logp_clean": -0.1947,
+        "logp_corrupt": -13.7404
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.3278,
+        "logp_clean": -2.0867,
+        "logp_corrupt": -8.4145
+      },
+      "Sarvam-M": {
+        "delta_L": 3.0526,
+        "logp_clean": -0.1846,
+        "logp_corrupt": -3.2371
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.5113,
+      "Gemma-2-9B": -5.156,
+      "Mistral->Sarvam-M": 3.2752
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_ec12d5da50",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Mahakal Sawari",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Mahakal Sawari is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Lai Haraoba is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Manipur",
+    "corruptor_anchor": "Lai Haraoba",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.mptourism.com/ujjain-mahakal-temple.html",
+      "wiki_accessed_utc": "2026-06-06T04:21:46.932542+00:00",
+      "web_source_url": "https://www.mptourism.com/ujjain-mahakal-temple.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 11.243686910835095,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 11.2437,
+        "logp_clean": -0.3623,
+        "logp_corrupt": -11.606
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.5706,
+        "logp_clean": -0.5864,
+        "logp_corrupt": -11.1569
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 10.6432,
+        "logp_clean": -0.3655,
+        "logp_corrupt": -11.0087
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 15.2422,
+        "logp_clean": -0.0645,
+        "logp_corrupt": -15.3067
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.4443,
+        "logp_clean": -2.342,
+        "logp_corrupt": -9.7863
+      },
+      "Sarvam-M": {
+        "delta_L": 7.2574,
+        "logp_clean": -3.8324,
+        "logp_corrupt": -11.0897
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6731,
+      "Gemma-2-9B": -4.599,
+      "Mistral->Sarvam-M": 0.1869
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_f15bdcc886",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Bhujariya",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bhujariya is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Thaipusam is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Thaipusam",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mahesh Bhuriya",
+      "wiki_oldid": 1303561839,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mahesh_Bhuriya",
+      "wiki_accessed_utc": "2026-06-06T04:37:57.961690+00:00",
+      "web_source_url": "https://bhind.nic.in/en/festival/the-fair-of-bhujariya/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.802788435481489,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.8028,
+        "logp_clean": -3.727,
+        "logp_corrupt": -8.5297
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.734,
+        "logp_clean": -3.641,
+        "logp_corrupt": -7.375
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.2831,
+        "logp_clean": -3.8101,
+        "logp_corrupt": -11.0932
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.6843,
+        "logp_clean": -4.6705,
+        "logp_corrupt": -13.3548
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.25,
+        "logp_clean": -3.3038,
+        "logp_corrupt": -10.5537
+      },
+      "Sarvam-M": {
+        "delta_L": 6.4035,
+        "logp_clean": -3.2758,
+        "logp_corrupt": -9.6793
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0688,
+      "Gemma-2-9B": -1.4012,
+      "Mistral->Sarvam-M": 0.8465
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_b3163054bb",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Hardaul worship",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Hardaul worship is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Bonalu is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Telangana",
+    "corruptor_anchor": "Bonalu",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Dinman Hardoul Singh",
+      "wiki_oldid": 1322003373,
+      "wiki_url": "https://en.wikipedia.org/wiki/Dinman_Hardoul_Singh",
+      "wiki_accessed_utc": "2026-06-06T03:05:21.665976+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Hardaul",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.8112601367756724,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.8113,
+        "logp_clean": -2.6742,
+        "logp_corrupt": -6.4855
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.624,
+        "logp_clean": -3.0168,
+        "logp_corrupt": -4.6408
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.222,
+        "logp_clean": -3.7417,
+        "logp_corrupt": -5.9637
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.8077,
+        "logp_clean": -4.4801,
+        "logp_corrupt": -8.2877
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 2.5896,
+        "logp_clean": -3.7204,
+        "logp_corrupt": -6.3101
+      },
+      "Sarvam-M": {
+        "delta_L": -0.8616,
+        "logp_clean": -7.3085,
+        "logp_corrupt": -6.4468
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.1873,
+      "Gemma-2-9B": -1.5857,
+      "Mistral->Sarvam-M": 3.4512
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_e58a0ba847",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Hingot war",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Hingot war is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Karam Puja is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Karam Puja",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Hingot war",
+      "wiki_oldid": 1318060129,
+      "wiki_url": "https://en.wikipedia.org/wiki/Hingot_war",
+      "wiki_accessed_utc": "2026-06-06T04:37:56.568741+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Hingot_war",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.602157208835706,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.6022,
+        "logp_clean": -3.1788,
+        "logp_corrupt": -5.781
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.3029,
+        "logp_clean": -3.1743,
+        "logp_corrupt": -6.4772
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.3435,
+        "logp_clean": -4.5386,
+        "logp_corrupt": -4.8821
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 1.2215,
+        "logp_clean": -5.5302,
+        "logp_corrupt": -6.7517
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.6418,
+        "logp_clean": -3.551,
+        "logp_corrupt": -5.1928
+      },
+      "Sarvam-M": {
+        "delta_L": 0.3815,
+        "logp_clean": -6.6285,
+        "logp_corrupt": -7.01
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.7007,
+      "Gemma-2-9B": -0.878,
+      "Mistral->Sarvam-M": 1.2603
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_f5909c13b0",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Omkareshwar Parikrama",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Omkareshwar Parikrama is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Pithori Amavasya is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Pithori Amavasya",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Omkareshwar Temple",
+      "wiki_oldid": 1353167752,
+      "wiki_url": "https://en.wikipedia.org/wiki/Omkareshwar_Temple",
+      "wiki_accessed_utc": "2026-06-06T04:37:53.614236+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Omkareshwar",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.2948731565847993,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.2949,
+        "logp_clean": -0.1137,
+        "logp_corrupt": -3.4086
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.16,
+        "logp_clean": -0.0225,
+        "logp_corrupt": -4.1825
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.9511,
+        "logp_clean": -0.2728,
+        "logp_corrupt": -3.2239
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.2383,
+        "logp_clean": -0.0029,
+        "logp_corrupt": -4.2412
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.1228,
+        "logp_clean": -0.1597,
+        "logp_corrupt": -3.2825
+      },
+      "Sarvam-M": {
+        "delta_L": 2.7605,
+        "logp_clean": -4.0938,
+        "logp_corrupt": -6.8543
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.8651,
+      "Gemma-2-9B": -1.2872,
+      "Mistral->Sarvam-M": 0.3623
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_68f2178e47",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Kal Bhairav liquor offering",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Kal Bhairav liquor offering is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Bommala Koluvu is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Andhra Pradesh",
+    "corruptor_anchor": "Bommala Koluvu",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Kal Bhairav Temple, Ujjain",
+      "wiki_oldid": 1324044604,
+      "wiki_url": "https://en.wikipedia.org/wiki/Kal_Bhairav_Temple,_Ujjain",
+      "wiki_accessed_utc": "2026-06-06T04:37:53.224239+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Kal_Bhairav_Temple,_Ujjain",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.483929582755081,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.4839,
+        "logp_clean": -1.2846,
+        "logp_corrupt": -8.7685
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.276,
+        "logp_clean": -1.0458,
+        "logp_corrupt": -9.3218
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.7887,
+        "logp_clean": -2.6937,
+        "logp_corrupt": -10.4824
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.4287,
+        "logp_clean": -2.1099,
+        "logp_corrupt": -15.5387
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.6267,
+        "logp_clean": -3.1041,
+        "logp_corrupt": -9.7308
+      },
+      "Sarvam-M": {
+        "delta_L": 4.454,
+        "logp_clean": -6.0068,
+        "logp_corrupt": -10.4607
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.7921,
+      "Gemma-2-9B": -5.64,
+      "Mistral->Sarvam-M": 2.1727
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_3474cecfee",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Singaji Samadhi Mela rites",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Singaji Samadhi Mela rites is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ayyappan Theeyattu is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Kerala",
+    "corruptor_anchor": "Ayyappan Theeyattu",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Shree Singaji Thermal Power Project",
+      "wiki_oldid": 1333914456,
+      "wiki_url": "https://en.wikipedia.org/wiki/Shree_Singaji_Thermal_Power_Project",
+      "wiki_accessed_utc": "2026-06-06T04:37:56.561673+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Sant_Singaji",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.569054590538144,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.5691,
+        "logp_clean": -3.7033,
+        "logp_corrupt": -10.2724
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.3144,
+        "logp_clean": -3.8875,
+        "logp_corrupt": -10.202
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.615,
+        "logp_clean": -2.1774,
+        "logp_corrupt": -10.7925
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.6578,
+        "logp_clean": -1.2363,
+        "logp_corrupt": -13.8942
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.0966,
+        "logp_clean": -1.9459,
+        "logp_corrupt": -9.0425
+      },
+      "Sarvam-M": {
+        "delta_L": 9.8164,
+        "logp_clean": -3.2596,
+        "logp_corrupt": -13.076
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2547,
+      "Gemma-2-9B": -4.0428,
+      "Mistral->Sarvam-M": -2.7198
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_7b1035432d",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Salkanpur Yatra",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Salkanpur Yatra is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Behdienkhlam is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Meghalaya",
+    "corruptor_anchor": "Behdienkhlam",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bijasan Mata Temple, Salkanpur",
+      "wiki_oldid": 1336927244,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bijasan_Mata_Temple,_Salkanpur",
+      "wiki_accessed_utc": "2026-06-06T04:21:50.034576+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bijasan_Mata_Temple,_Salkanpur",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.642384853679687,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.6424,
+        "logp_clean": -3.6929,
+        "logp_corrupt": -9.3353
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.4685,
+        "logp_clean": -3.7761,
+        "logp_corrupt": -10.2446
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.4257,
+        "logp_clean": -1.4661,
+        "logp_corrupt": -7.8918
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.5852,
+        "logp_clean": -2.0403,
+        "logp_corrupt": -9.6255
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.6346,
+        "logp_clean": -2.9556,
+        "logp_corrupt": -8.5902
+      },
+      "Sarvam-M": {
+        "delta_L": 4.3593,
+        "logp_clean": -4.7786,
+        "logp_corrupt": -9.1379
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.8261,
+      "Gemma-2-9B": -1.1595,
+      "Mistral->Sarvam-M": 1.2753
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_b80189c830",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Nagchandreshwar Puja",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Nagchandreshwar Puja is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ka Pomblang Nongkrem is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Meghalaya",
+    "corruptor_anchor": "Ka Pomblang Nongkrem",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mahakaleshwar Jyotirlinga",
+      "wiki_oldid": 1356575285,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga",
+      "wiki_accessed_utc": "2026-06-06T04:21:46.477681+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.59943472314626,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.5994,
+        "logp_clean": -4.3442,
+        "logp_corrupt": -10.9436
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.6606,
+        "logp_clean": -3.8419,
+        "logp_corrupt": -12.5024
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.7361,
+        "logp_clean": -3.5369,
+        "logp_corrupt": -11.2731
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.2305,
+        "logp_clean": -4.9591,
+        "logp_corrupt": -14.1896
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.6269,
+        "logp_clean": -3.7598,
+        "logp_corrupt": -9.3868
+      },
+      "Sarvam-M": {
+        "delta_L": 5.9749,
+        "logp_clean": -4.1799,
+        "logp_corrupt": -10.1548
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.0612,
+      "Gemma-2-9B": -1.4944,
+      "Mistral->Sarvam-M": -0.348
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_0d431ad7ba",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Dulha Dev rite",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Dulha Dev rite is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Pabuji ki Phad is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Pabuji ki Phad",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.everyculture.com/wc/Germany-to-Jamaica/Gonds.html",
+      "wiki_accessed_utc": "2026-06-06T03:05:22.209779+00:00",
+      "web_source_url": "https://www.everyculture.com/wc/Germany-to-Jamaica/Gonds.html",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.085176112595946,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.0852,
+        "logp_clean": -3.6833,
+        "logp_corrupt": -8.7685
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.4942,
+        "logp_clean": -3.8276,
+        "logp_corrupt": -9.3218
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.1423,
+        "logp_clean": -3.3401,
+        "logp_corrupt": -10.4824
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.6738,
+        "logp_clean": -4.8649,
+        "logp_corrupt": -15.5387
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.9282,
+        "logp_clean": -3.8026,
+        "logp_corrupt": -9.7308
+      },
+      "Sarvam-M": {
+        "delta_L": 3.2598,
+        "logp_clean": -7.2009,
+        "logp_corrupt": -10.4607
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.409,
+      "Gemma-2-9B": -3.5315,
+      "Mistral->Sarvam-M": 2.6684
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_d96048fba5",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Deep Stambh lighting",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Deep Stambh lighting is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Khandoba Jagran is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Khandoba Jagran",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.ujjaindarshan.com/harsiddhi-temple/",
+      "wiki_accessed_utc": "2026-06-06T04:21:47.478028+00:00",
+      "web_source_url": "https://www.ujjaindarshan.com/harsiddhi-temple/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.9550824026810005,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.9551,
+        "logp_clean": -3.3535,
+        "logp_corrupt": -7.3085
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.341,
+        "logp_clean": -3.9233,
+        "logp_corrupt": -7.2643
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.8476,
+        "logp_clean": -4.3012,
+        "logp_corrupt": -8.1488
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.4562,
+        "logp_clean": -5.0018,
+        "logp_corrupt": -11.4579
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 4.3458,
+        "logp_clean": -4.7173,
+        "logp_corrupt": -9.0632
+      },
+      "Sarvam-M": {
+        "delta_L": 2.1971,
+        "logp_clean": -5.9764,
+        "logp_corrupt": -8.1736
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.6141,
+      "Gemma-2-9B": -2.6086,
+      "Mistral->Sarvam-M": 2.1487
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_48a3e19fca",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Thakur Dev rite",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Thakur Dev rite is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Hemis Tsechu is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Ladakh",
+    "corruptor_anchor": "Hemis Tsechu",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://ehrafworldcultures.yale.edu/cultures/aw32/summary",
+      "wiki_accessed_utc": "2026-06-06T03:05:24.002099+00:00",
+      "web_source_url": "https://ehrafworldcultures.yale.edu/cultures/aw32/summary",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.0294426660984755,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.0294,
+        "logp_clean": -3.7391,
+        "logp_corrupt": -8.7685
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.9481,
+        "logp_clean": -3.3737,
+        "logp_corrupt": -9.3218
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.6408,
+        "logp_clean": -3.8415,
+        "logp_corrupt": -10.4824
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.2476,
+        "logp_clean": -4.2911,
+        "logp_corrupt": -15.5387
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.3293,
+        "logp_clean": -3.4016,
+        "logp_corrupt": -9.7308
+      },
+      "Sarvam-M": {
+        "delta_L": 5.6292,
+        "logp_clean": -4.8316,
+        "logp_corrupt": -10.4607
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.9187,
+      "Gemma-2-9B": -4.6068,
+      "Mistral->Sarvam-M": 0.7001
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_c238b6857d",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Bhilat Dev worship",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bhilat Dev worship is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Chhari Mubarak is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Chhari Mubarak",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://aninews.in/news/national/general-news/madhya-pradesh-cm-ministers-offer-prayers-at-bhilat-dev-temple-in-barwani20260302154744/",
+      "wiki_accessed_utc": "2026-06-06T04:37:57.152364+00:00",
+      "web_source_url": "https://aninews.in/news/national/general-news/madhya-pradesh-cm-ministers-offer-prayers-at-bhilat-dev-temple-in-barwani20260302154744/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.578318597516045,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.5783,
+        "logp_clean": -2.1199,
+        "logp_corrupt": -11.6983
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.8232,
+        "logp_clean": -2.4857,
+        "logp_corrupt": -9.3089
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.1751,
+        "logp_clean": -2.8896,
+        "logp_corrupt": -5.0647
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.1723,
+        "logp_clean": -3.3762,
+        "logp_corrupt": -9.5485
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.0517,
+        "logp_clean": -2.8143,
+        "logp_corrupt": -3.8661
+      },
+      "Sarvam-M": {
+        "delta_L": 2.688,
+        "logp_clean": -4.506,
+        "logp_corrupt": -7.194
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 2.7551,
+      "Gemma-2-9B": -3.9972,
+      "Mistral->Sarvam-M": -1.6363
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_143f8e662b",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Ramraja Sarkar worship",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Ramraja Sarkar worship is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Bommala Koluvu is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Andhra Pradesh",
+    "corruptor_anchor": "Bommala Koluvu",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Ram Raja Temple",
+      "wiki_oldid": 1346052203,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ram_Raja_Temple",
+      "wiki_accessed_utc": "2026-06-06T04:21:49.753456+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Ram_Raja_Temple,_Orchha",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.809379466576502,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.8094,
+        "logp_clean": -5.1219,
+        "logp_corrupt": -11.9313
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.3979,
+        "logp_clean": -6.227,
+        "logp_corrupt": -14.6249
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 4.891,
+        "logp_clean": -4.674,
+        "logp_corrupt": -9.565
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 7.8015,
+        "logp_clean": -5.9389,
+        "logp_corrupt": -13.7404
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 2.949,
+        "logp_clean": -5.4655,
+        "logp_corrupt": -8.4145
+      },
+      "Sarvam-M": {
+        "delta_L": -3.037,
+        "logp_clean": -6.2741,
+        "logp_corrupt": -3.2371
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.5885,
+      "Gemma-2-9B": -2.9105,
+      "Mistral->Sarvam-M": 5.986
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_4c138c291d",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Gotmar Mela",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Gotmar Mela is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Karam Puja is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Karam Puja",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mariano Gomar de las Infantas",
+      "wiki_oldid": 1291723720,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mariano_Gomar_de_las_Infantas",
+      "wiki_accessed_utc": "2026-06-06T04:37:56.580197+00:00",
+      "web_source_url": "https://www.freepressjournal.in/bhopal/mp-gotmar-mela-in-pandurna-starts-along-with-traditional-stone-pelting-battle",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.9447555595543236,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.9448,
+        "logp_clean": -2.8362,
+        "logp_corrupt": -5.781
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.5509,
+        "logp_clean": -2.9262,
+        "logp_corrupt": -6.4772
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 1.1602,
+        "logp_clean": -3.7219,
+        "logp_corrupt": -4.8821
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 2.1454,
+        "logp_clean": -4.6063,
+        "logp_corrupt": -6.7517
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.5857,
+        "logp_clean": -3.6071,
+        "logp_corrupt": -5.1928
+      },
+      "Sarvam-M": {
+        "delta_L": 3.336,
+        "logp_clean": -3.674,
+        "logp_corrupt": -7.01
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.6061,
+      "Gemma-2-9B": -0.9852,
+      "Mistral->Sarvam-M": -1.7503
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_e025331454",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Kachan Jatra",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Kachan Jatra is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Khandoba Jagran is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Khandoba Jagran",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T04:21:51.500830+00:00",
+      "web_source_url": "https://www.sahapedia.org/bastaria-dussehra-coming-together-of-deities",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.347717817523517,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.3477,
+        "logp_clean": -4.7308,
+        "logp_corrupt": -11.0785
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.8058,
+        "logp_clean": -5.8307,
+        "logp_corrupt": -12.6365
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.2154,
+        "logp_clean": -4.1265,
+        "logp_corrupt": -11.342
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.4474,
+        "logp_clean": -4.7961,
+        "logp_corrupt": -15.2434
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.9998,
+        "logp_clean": -4.5399,
+        "logp_corrupt": -10.5397
+      },
+      "Sarvam-M": {
+        "delta_L": 5.0085,
+        "logp_clean": -4.6745,
+        "logp_corrupt": -9.6831
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4581,
+      "Gemma-2-9B": -3.232,
+      "Mistral->Sarvam-M": 0.9913
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_27fea07169",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Lakshmi Jagar",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Lakshmi Jagar is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Pabuji ki Phad is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Rajasthan",
+    "corruptor_anchor": "Pabuji ki Phad",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Jagar (ritual)",
+      "wiki_oldid": 1343317269,
+      "wiki_url": "https://en.wikipedia.org/wiki/Jagar_(ritual)",
+      "wiki_accessed_utc": "2026-06-06T04:21:51.500830+00:00",
+      "web_source_url": "http://www.sahapedia.org/decoding-the-role-of-the-gurmayis-of-chhattisgarh",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.446474653901532,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.4465,
+        "logp_clean": -5.9937,
+        "logp_corrupt": -15.4401
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.7112,
+        "logp_clean": -5.803,
+        "logp_corrupt": -9.5143
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.2332,
+        "logp_clean": -6.1964,
+        "logp_corrupt": -12.4296
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.5633,
+        "logp_clean": -7.5888,
+        "logp_corrupt": -14.1521
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.0439,
+        "logp_clean": -5.4936,
+        "logp_corrupt": -10.5375
+      },
+      "Sarvam-M": {
+        "delta_L": 0.066,
+        "logp_clean": -6.1265,
+        "logp_corrupt": -6.1925
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 5.7353,
+      "Gemma-2-9B": -0.3301,
+      "Mistral->Sarvam-M": 4.9779
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_7eb562175a",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Bhoramdeo tribal worship",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Bhoramdeo tribal worship is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Mataji ni Mandvi is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Gujarat",
+    "corruptor_anchor": "Mataji ni Mandvi",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bhoramdeo Temple",
+      "wiki_oldid": 1342055663,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bhoramdeo_Temple",
+      "wiki_accessed_utc": "2026-06-06T03:00:09.234786+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bhoramdeo_Temple",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.343795996683184,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.3438,
+        "logp_clean": -0.6392,
+        "logp_corrupt": -9.983
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.7737,
+        "logp_clean": -0.4148,
+        "logp_corrupt": -11.1885
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 9.9648,
+        "logp_clean": -0.2577,
+        "logp_corrupt": -10.2225
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 9.7644,
+        "logp_clean": -0.1339,
+        "logp_corrupt": -9.8983
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 9.153,
+        "logp_clean": -0.1739,
+        "logp_corrupt": -9.3269
+      },
+      "Sarvam-M": {
+        "delta_L": 7.8135,
+        "logp_clean": -0.1256,
+        "logp_corrupt": -7.9391
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.4299,
+      "Gemma-2-9B": 0.2004,
+      "Mistral->Sarvam-M": 1.3395
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_09fd40f7da",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Rajim Kumbh Kalpvas",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Rajim Kumbh Kalpvas is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ayyappan Theeyattu is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Kerala",
+    "corruptor_anchor": "Ayyappan Theeyattu",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Rajim Kumbh Mela",
+      "wiki_oldid": 1347018486,
+      "wiki_url": "https://en.wikipedia.org/wiki/Rajim_Kumbh_Mela",
+      "wiki_accessed_utc": "2026-06-06T04:21:51.498832+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Rajim_Kumbh_Mela",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 13.375334718060913,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 13.3753,
+        "logp_clean": -0.0954,
+        "logp_corrupt": -13.4708
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 15.4869,
+        "logp_clean": -0.0656,
+        "logp_corrupt": -15.5525
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 11.0726,
+        "logp_clean": -0.0517,
+        "logp_corrupt": -11.1243
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 13.6605,
+        "logp_clean": -0.0203,
+        "logp_corrupt": -13.6808
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 9.5602,
+        "logp_clean": -0.0911,
+        "logp_corrupt": -9.6513
+      },
+      "Sarvam-M": {
+        "delta_L": -0.2327,
+        "logp_clean": -7.1719,
+        "logp_corrupt": -6.9392
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.1116,
+      "Gemma-2-9B": -2.5879,
+      "Mistral->Sarvam-M": 9.7929
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_dfd7e03a4a",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Bhojli",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Bhojli is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Manasa Puja is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "West Bengal",
+    "corruptor_anchor": "Manasa Puja",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bhopal",
+      "wiki_oldid": 1357072726,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bhopal",
+      "wiki_accessed_utc": "2026-06-06T04:21:52.019039+00:00",
+      "web_source_url": "http://www.sahapedia.org/bhojali-chhattisgarhs-ritualistic-friendship-festival",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 1.1597645754809491,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.1598,
+        "logp_clean": -3.8105,
+        "logp_corrupt": -4.9703
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.5834,
+        "logp_clean": -4.1922,
+        "logp_corrupt": -5.7756
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 1.3454,
+        "logp_clean": -3.524,
+        "logp_corrupt": -4.8694
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 2.2763,
+        "logp_clean": -3.8494,
+        "logp_corrupt": -6.1257
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 0.1637,
+        "logp_clean": -5.0875,
+        "logp_corrupt": -5.2512
+      },
+      "Sarvam-M": {
+        "delta_L": 0.6385,
+        "logp_clean": -4.9586,
+        "logp_corrupt": -5.5971
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4236,
+      "Gemma-2-9B": -0.9309,
+      "Mistral->Sarvam-M": -0.4748
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_1fb97c30cc",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Gaura Gauri",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Gaura Gauri is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Bhuta Kola is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Bhuta Kola",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Gaura Bauram Assembly constituency",
+      "wiki_oldid": 1349981885,
+      "wiki_url": "https://en.wikipedia.org/wiki/Gaura_Bauram_Assembly_constituency",
+      "wiki_accessed_utc": "2026-06-06T03:00:07.583115+00:00",
+      "web_source_url": "https://www.sahapedia.org/devari-other-diwali-chhattisgarh-0",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.291847888380289,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.2918,
+        "logp_clean": -5.0712,
+        "logp_corrupt": -8.3631
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.5602,
+        "logp_clean": -5.8523,
+        "logp_corrupt": -7.4125
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 6.6368,
+        "logp_clean": -4.9324,
+        "logp_corrupt": -11.5692
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.1927,
+        "logp_clean": -5.3329,
+        "logp_corrupt": -13.5256
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.9128,
+        "logp_clean": -5.7142,
+        "logp_corrupt": -9.627
+      },
+      "Sarvam-M": {
+        "delta_L": 6.5496,
+        "logp_clean": -3.9269,
+        "logp_corrupt": -10.4764
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.7316,
+      "Gemma-2-9B": -1.5559,
+      "Mistral->Sarvam-M": -2.6368
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_9a17e4f97d",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Anga Dev rite",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Anga Dev rite is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Chhari Mubarak is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Chhari Mubarak",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Gondi people",
+      "wiki_oldid": 1350423539,
+      "wiki_url": "https://en.wikipedia.org/wiki/Gondi_people",
+      "wiki_accessed_utc": "2026-06-06T03:05:24.306343+00:00",
+      "web_source_url": "https://www.sahapedia.org/dancing-the-deos-the-pen-madais-of-bastar",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.009236284880899,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.0092,
+        "logp_clean": -4.1223,
+        "logp_corrupt": -9.1315
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.9173,
+        "logp_clean": -4.294,
+        "logp_corrupt": -8.2113
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 2.2995,
+        "logp_clean": -3.8207,
+        "logp_corrupt": -6.1202
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 6.2557,
+        "logp_clean": -4.3003,
+        "logp_corrupt": -10.556
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.0003,
+        "logp_clean": -4.4039,
+        "logp_corrupt": -5.4042
+      },
+      "Sarvam-M": {
+        "delta_L": 0.9992,
+        "logp_clean": -4.7265,
+        "logp_corrupt": -5.7257
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.0919,
+      "Gemma-2-9B": -3.9562,
+      "Mistral->Sarvam-M": 0.0011
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_118829e9a4",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Mavli Parghav",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Mavli Parghav is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Garudan Thookkam is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Kerala",
+    "corruptor_anchor": "Garudan Thookkam",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T03:00:06.999614+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.366000337409787,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.366,
+        "logp_clean": -5.9382,
+        "logp_corrupt": -9.3042
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.9629,
+        "logp_clean": -6.8757,
+        "logp_corrupt": -8.8385
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.9974,
+        "logp_clean": -5.5549,
+        "logp_corrupt": -11.5523
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.3169,
+        "logp_clean": -5.9704,
+        "logp_corrupt": -14.2873
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.0012,
+        "logp_clean": -6.0787,
+        "logp_corrupt": -9.0799
+      },
+      "Sarvam-M": {
+        "delta_L": 0.9133,
+        "logp_clean": -8.244,
+        "logp_corrupt": -9.1573
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.4031,
+      "Gemma-2-9B": -2.3195,
+      "Mistral->Sarvam-M": 2.0879
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_7d76aca94d",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Goncha Tupki rite",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Goncha Tupki rite is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Pithori Amavasya is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Pithori Amavasya",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://unexploredbastar.com/goncha-festival/",
+      "wiki_accessed_utc": "2026-06-06T03:00:06.997127+00:00",
+      "web_source_url": "https://unexploredbastar.com/goncha-festival/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.0191894004819915,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.0192,
+        "logp_clean": -5.5935,
+        "logp_corrupt": -8.6127
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.1754,
+        "logp_clean": -6.0077,
+        "logp_corrupt": -7.1831
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 3.2352,
+        "logp_clean": -3.5843,
+        "logp_corrupt": -6.8195
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 3.6851,
+        "logp_clean": -4.0058,
+        "logp_corrupt": -7.6909
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 2.8818,
+        "logp_clean": -4.4512,
+        "logp_corrupt": -7.3331
+      },
+      "Sarvam-M": {
+        "delta_L": 1.6311,
+        "logp_clean": -5.8644,
+        "logp_corrupt": -7.4955
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 1.8438,
+      "Gemma-2-9B": -0.4499,
+      "Mistral->Sarvam-M": 1.2507
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_4c425d084c",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Hareli",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Hareli is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Bhunda is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Himachal Pradesh",
+    "corruptor_anchor": "Bhunda",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mark Harelik",
+      "wiki_oldid": 1357057046,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mark_Harelik",
+      "wiki_accessed_utc": "2026-06-06T03:00:07.581106+00:00",
+      "web_source_url": "https://www.sahapedia.org/celebration-of-labor-agricultural-festivals-of-hareli-and-pola-chhattisgarh",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.2014199796831235,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.2014,
+        "logp_clean": -4.0567,
+        "logp_corrupt": -11.2581
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.6762,
+        "logp_clean": -4.6818,
+        "logp_corrupt": -11.358
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.4146,
+        "logp_clean": -2.2356,
+        "logp_corrupt": -10.6501
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 8.5788,
+        "logp_clean": -3.5077,
+        "logp_corrupt": -12.0865
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 8.5878,
+        "logp_clean": -2.513,
+        "logp_corrupt": -11.1008
+      },
+      "Sarvam-M": {
+        "delta_L": -0.1188,
+        "logp_clean": -4.3237,
+        "logp_corrupt": -4.2048
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.5252,
+      "Gemma-2-9B": -0.1642,
+      "Mistral->Sarvam-M": 8.7066
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_4332923d14",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Muria Durbar",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Muria Durbar is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Tusu Puja is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Jharkhand",
+    "corruptor_anchor": "Tusu Puja",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T03:00:06.999614+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 2.4071708024130203,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 2.4072,
+        "logp_clean": -2.5631,
+        "logp_corrupt": -4.9703
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.737,
+        "logp_clean": -2.0386,
+        "logp_corrupt": -5.7756
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 1.434,
+        "logp_clean": -3.4354,
+        "logp_corrupt": -4.8694
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 2.4985,
+        "logp_clean": -3.6271,
+        "logp_corrupt": -6.1257
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.2267,
+        "logp_clean": -2.0244,
+        "logp_corrupt": -5.2512
+      },
+      "Sarvam-M": {
+        "delta_L": 0.8597,
+        "logp_clean": -4.7375,
+        "logp_corrupt": -5.5971
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -1.3298,
+      "Gemma-2-9B": -1.0645,
+      "Mistral->Sarvam-M": 2.367
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_63d0900b4e",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Nawai",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Nawai is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Jagar is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Jagar",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Nawakhani",
+      "wiki_oldid": 1321140320,
+      "wiki_url": "https://en.wikipedia.org/wiki/Nawakhani",
+      "wiki_accessed_utc": "2026-06-06T03:05:20.944150+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Nawakhani",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 1.4328951202332973,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.4329,
+        "logp_clean": -4.2838,
+        "logp_corrupt": -5.7167
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 1.2364,
+        "logp_clean": -4.4703,
+        "logp_corrupt": -5.7067
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 1.0085,
+        "logp_clean": -5.0039,
+        "logp_corrupt": -6.0124
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 1.6255,
+        "logp_clean": -6.0521,
+        "logp_corrupt": -7.6777
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.7928,
+        "logp_clean": -4.6226,
+        "logp_corrupt": -6.4154
+      },
+      "Sarvam-M": {
+        "delta_L": 0.8028,
+        "logp_clean": -5.7423,
+        "logp_corrupt": -6.5451
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.1965,
+      "Gemma-2-9B": -0.617,
+      "Mistral->Sarvam-M": 0.99
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_82608ed433",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Rath Parikrama",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Rath Parikrama is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Thaipusam is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Thaipusam",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T03:00:06.999614+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 4.677210892608855,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 4.6772,
+        "logp_clean": -5.3458,
+        "logp_corrupt": -10.023
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.9058,
+        "logp_clean": -5.7079,
+        "logp_corrupt": -10.6137
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.8004,
+        "logp_clean": -4.5454,
+        "logp_corrupt": -12.3458
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.945,
+        "logp_clean": -5.3281,
+        "logp_corrupt": -16.2731
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.1381,
+        "logp_clean": -5.2202,
+        "logp_corrupt": -10.3583
+      },
+      "Sarvam-M": {
+        "delta_L": 3.909,
+        "logp_clean": -5.8636,
+        "logp_corrupt": -9.7726
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2286,
+      "Gemma-2-9B": -3.1446,
+      "Mistral->Sarvam-M": 1.2291
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_d7f4ef502e",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Mangalnath Bhaat Puja",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Mangalnath Bhaat Puja is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ka Pomblang Nongkrem is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Meghalaya",
+    "corruptor_anchor": "Ka Pomblang Nongkrem",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Mangalnath Temple",
+      "wiki_oldid": 1323833897,
+      "wiki_url": "https://en.wikipedia.org/wiki/Mangalnath_Temple",
+      "wiki_accessed_utc": "2026-06-06T04:37:53.340983+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Mangalnath_Temple",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 8.514760615304112,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 8.5148,
+        "logp_clean": -2.4288,
+        "logp_corrupt": -10.9436
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 10.7352,
+        "logp_clean": -1.7672,
+        "logp_corrupt": -12.5024
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.0695,
+        "logp_clean": -3.2036,
+        "logp_corrupt": -11.2731
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.0761,
+        "logp_clean": -4.1135,
+        "logp_corrupt": -14.1896
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.7129,
+        "logp_clean": -3.6739,
+        "logp_corrupt": -9.3868
+      },
+      "Sarvam-M": {
+        "delta_L": 2.4937,
+        "logp_clean": -7.6611,
+        "logp_corrupt": -10.1548
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -2.2204,
+      "Gemma-2-9B": -2.0066,
+      "Mistral->Sarvam-M": 3.2192
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_64106c1084",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Ramnami tattoo vow",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Ramnami tattoo vow is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Aadi Perukku is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Aadi Perukku",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Ramnami Samaj",
+      "wiki_oldid": 1337783712,
+      "wiki_url": "https://en.wikipedia.org/wiki/Ramnami_Samaj",
+      "wiki_accessed_utc": "2026-06-06T04:21:52.019039+00:00",
+      "web_source_url": "http://www.sahapedia.org/ramnamis-chhattisgarh-wearing-ram-defiance-casteism",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 9.039204209722811,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 9.0392,
+        "logp_clean": -0.0923,
+        "logp_corrupt": -9.1315
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 8.1213,
+        "logp_clean": -0.09,
+        "logp_corrupt": -8.2113
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 5.9634,
+        "logp_clean": -0.1568,
+        "logp_corrupt": -6.1202
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.4011,
+        "logp_clean": -0.1549,
+        "logp_corrupt": -10.556
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.0703,
+        "logp_clean": -0.3339,
+        "logp_corrupt": -5.4042
+      },
+      "Sarvam-M": {
+        "delta_L": 1.6954,
+        "logp_clean": -4.0303,
+        "logp_corrupt": -5.7257
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.9179,
+      "Gemma-2-9B": -4.4377,
+      "Mistral->Sarvam-M": 3.3749
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_3f8ef4633f",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Bada Dev worship",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Bada Dev worship is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ker Puja is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Tripura",
+    "corruptor_anchor": "Ker Puja",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.forwardpress.in/2017/09/mahishasur-bada-dev-and-mair-baba-in-bundelkhands-traditions/",
+      "wiki_accessed_utc": "2026-06-06T03:05:21.403508+00:00",
+      "web_source_url": "https://www.forwardpress.in/2017/09/mahishasur-bada-dev-and-mair-baba-in-bundelkhands-traditions/",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.6709244358353317,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.6709,
+        "logp_clean": -3.785,
+        "logp_corrupt": -7.456
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 3.4644,
+        "logp_clean": -3.9345,
+        "logp_corrupt": -7.3988
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 1.4963,
+        "logp_clean": -3.8479,
+        "logp_corrupt": -5.3443
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 1.3671,
+        "logp_clean": -5.0503,
+        "logp_corrupt": -6.4174
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.5915,
+        "logp_clean": -3.6534,
+        "logp_corrupt": -5.2449
+      },
+      "Sarvam-M": {
+        "delta_L": 2.0737,
+        "logp_clean": -4.9543,
+        "logp_corrupt": -7.0279
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2065,
+      "Gemma-2-9B": 0.1292,
+      "Mistral->Sarvam-M": -0.4822
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_b713378ef6",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Mati Pujan",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Mati Pujan is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Chhari Mubarak is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Jammu and Kashmir",
+    "corruptor_anchor": "Chhari Mubarak",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Festivals of Chhattisgarh",
+      "wiki_oldid": 1339919062,
+      "wiki_url": "https://en.wikipedia.org/wiki/Festivals_of_Chhattisgarh",
+      "wiki_accessed_utc": "2026-06-06T03:05:24.307333+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Festivals_of_Chhattisgarh",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.96572678280063,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.9657,
+        "logp_clean": -5.1128,
+        "logp_corrupt": -11.0785
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 6.7796,
+        "logp_clean": -5.8569,
+        "logp_corrupt": -12.6365
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.2261,
+        "logp_clean": -4.1158,
+        "logp_corrupt": -11.342
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 10.3845,
+        "logp_clean": -4.8589,
+        "logp_corrupt": -15.2434
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.439,
+        "logp_clean": -5.1007,
+        "logp_corrupt": -10.5397
+      },
+      "Sarvam-M": {
+        "delta_L": 5.4169,
+        "logp_clean": -4.2662,
+        "logp_corrupt": -9.6831
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.8139,
+      "Gemma-2-9B": -3.1584,
+      "Mistral->Sarvam-M": 0.0221
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_1a5e2af8b1",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Nagdwari Yatra",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Nagdwari Yatra is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Behdienkhlam is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Meghalaya",
+    "corruptor_anchor": "Behdienkhlam",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Pachmarhi",
+      "wiki_oldid": 1340575914,
+      "wiki_url": "https://en.wikipedia.org/wiki/Pachmarhi",
+      "wiki_accessed_utc": "2026-06-06T04:21:50.915125+00:00",
+      "web_source_url": "https://narmadapuram.nic.in/en/festival/nagdwari-mela-pachmarhi/",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.659839211963117,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.6598,
+        "logp_clean": -3.1087,
+        "logp_corrupt": -8.7685
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.9124,
+        "logp_clean": -3.4094,
+        "logp_corrupt": -9.3218
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.9763,
+        "logp_clean": -2.506,
+        "logp_corrupt": -10.4824
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.5401,
+        "logp_clean": -2.9985,
+        "logp_corrupt": -15.5387
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 7.2237,
+        "logp_clean": -2.5071,
+        "logp_corrupt": -9.7308
+      },
+      "Sarvam-M": {
+        "delta_L": 7.6035,
+        "logp_clean": -2.8573,
+        "logp_corrupt": -10.4607
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.2526,
+      "Gemma-2-9B": -4.5638,
+      "Mistral->Sarvam-M": -0.3798
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_d036208701",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Phagun Madai",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Phagun Madai is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Bhuta Kola is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Karnataka",
+    "corruptor_anchor": "Bhuta Kola",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://www.sahapedia.org/phagun-madai-phaagauna-madai",
+      "wiki_accessed_utc": "2026-06-06T04:21:51.499831+00:00",
+      "web_source_url": "https://www.sahapedia.org/phagun-madai-phaagauna-madai",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 5.089229241362773,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 5.0892,
+        "logp_clean": -4.9338,
+        "logp_corrupt": -10.023
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.7702,
+        "logp_clean": -5.8435,
+        "logp_corrupt": -10.6137
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 7.7656,
+        "logp_clean": -4.5802,
+        "logp_corrupt": -12.3458
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.2848,
+        "logp_clean": -3.9882,
+        "logp_corrupt": -16.2731
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 6.2237,
+        "logp_clean": -4.1346,
+        "logp_corrupt": -10.3583
+      },
+      "Sarvam-M": {
+        "delta_L": 4.1672,
+        "logp_clean": -5.6054,
+        "logp_corrupt": -9.7726
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.319,
+      "Gemma-2-9B": -4.5192,
+      "Mistral->Sarvam-M": 2.0565
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_f738de5435",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Maihar Sharda Yatra",
+    "target": "Madhya Pradesh",
+    "clean_prefix": "Maihar Sharda Yatra is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Nanda Devi Raj Jat is a traditional ritual observed in the Indian state of",
+    "r": "Madhya Pradesh",
+    "r_prime": "Uttarakhand",
+    "corruptor_anchor": "Nanda Devi Raj Jat",
+    "target_tokens": 3,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": null,
+      "wiki_oldid": null,
+      "wiki_url": "https://en.wikipedia.org/wiki/Sharda_Devi_temple,_Maihar",
+      "wiki_accessed_utc": "2026-06-06T04:21:48.893373+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Sharda_Devi_temple,_Maihar",
+      "cross_validated_by": [
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 3.199341177009046,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 3.1993,
+        "logp_clean": -0.2093,
+        "logp_corrupt": -3.4086
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 4.0913,
+        "logp_clean": -0.0912,
+        "logp_corrupt": -4.1825
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 1.4494,
+        "logp_clean": -1.7744,
+        "logp_corrupt": -3.2239
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 4.1314,
+        "logp_clean": -0.1098,
+        "logp_corrupt": -4.2412
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 3.1231,
+        "logp_clean": -0.1594,
+        "logp_corrupt": -3.2825
+      },
+      "Sarvam-M": {
+        "delta_L": 1.7831,
+        "logp_clean": -5.0712,
+        "logp_corrupt": -6.8543
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.892,
+      "Gemma-2-9B": -2.682,
+      "Mistral->Sarvam-M": 1.34
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_a4f9790dc7",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Deri Gadhai",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Deri Gadhai is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Ker Puja is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Tripura",
+    "corruptor_anchor": "Ker Puja",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T03:05:24.017619+00:00",
+      "web_source_url": "http://www.sahapedia.org/bastaria-dussehra-coming-together-of-deities",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 1.6538739249808714,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 1.6539,
+        "logp_clean": -4.1173,
+        "logp_corrupt": -5.7712
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 2.131,
+        "logp_clean": -4.6438,
+        "logp_corrupt": -6.7748
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 0.3711,
+        "logp_clean": -4.8224,
+        "logp_corrupt": -5.1935
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 1.1327,
+        "logp_clean": -5.4702,
+        "logp_corrupt": -6.6029
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 1.4291,
+        "logp_clean": -4.6504,
+        "logp_corrupt": -6.0795
+      },
+      "Sarvam-M": {
+        "delta_L": 1.3115,
+        "logp_clean": -5.4768,
+        "logp_corrupt": -6.7883
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.4771,
+      "Gemma-2-9B": -0.7616,
+      "Mistral->Sarvam-M": 0.1176
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_a991cc6403",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Kutumb Jatra",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Kutumb Jatra is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Khandoba Jagran is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Maharashtra",
+    "corruptor_anchor": "Khandoba Jagran",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T03:05:24.018617+00:00",
+      "web_source_url": "https://www.indianetzone.com/rituals_bastar_dussehra",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 6.044974389078561,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 6.045,
+        "logp_clean": -3.978,
+        "logp_corrupt": -10.023
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 5.8305,
+        "logp_clean": -4.7832,
+        "logp_corrupt": -10.6137
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.2639,
+        "logp_clean": -4.0819,
+        "logp_corrupt": -12.3458
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 12.0424,
+        "logp_clean": -4.2307,
+        "logp_corrupt": -16.2731
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.4192,
+        "logp_clean": -4.9391,
+        "logp_corrupt": -10.3583
+      },
+      "Sarvam-M": {
+        "delta_L": 4.1391,
+        "logp_clean": -5.6335,
+        "logp_corrupt": -9.7726
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": 0.2145,
+      "Gemma-2-9B": -3.7785,
+      "Mistral->Sarvam-M": 1.2801
+    }
+  },
+  {
+    "item_id": "iccd_A01-CC-04_40757a3614",
+    "cell_id": "A01-CC-04",
+    "axis": "A01",
+    "region": "CC",
+    "region_name": "Central",
+    "sub_concept": "Rituals and Ceremonies",
+    "anchor": "Jogi Bithai",
+    "target": "Chhattisgarh",
+    "clean_prefix": "Jogi Bithai is a traditional ritual observed in the Indian state of",
+    "corrupted_prefix": "Aadi Perukku is a traditional ritual observed in the Indian state of",
+    "r": "Chhattisgarh",
+    "r_prime": "Tamil Nadu",
+    "corruptor_anchor": "Aadi Perukku",
+    "target_tokens": 5,
+    "counterfactual_type": "cross_anchor_swap",
+    "provenance": {
+      "source_primary": "websearch",
+      "wiki_title": "Bastar Dussehra",
+      "wiki_oldid": 1352099852,
+      "wiki_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "wiki_accessed_utc": "2026-06-06T03:00:06.998744+00:00",
+      "web_source_url": "https://en.wikipedia.org/wiki/Bastar_Dussehra",
+      "cross_validated_by": [
+        "wikipedia",
+        "websearch"
+      ]
+    },
+    "stage8_base_delta_L": 7.815500796888955,
+    "claude_verdict": {
+      "fact_ok": true,
+      "leakage_ok": true,
+      "counterfactual_ok": true,
+      "natural_ok": true,
+      "pass": true
+    },
+    "model_scores": {
+      "Llama-3.1-8B-base": {
+        "delta_L": 7.8155,
+        "logp_clean": -2.2075,
+        "logp_corrupt": -10.023
+      },
+      "Llama-3.1-8B-Instruct": {
+        "delta_L": 7.8455,
+        "logp_clean": -2.7682,
+        "logp_corrupt": -10.6137
+      },
+      "gemma-2-9b-base": {
+        "delta_L": 8.1996,
+        "logp_clean": -4.1462,
+        "logp_corrupt": -12.3458
+      },
+      "gemma-2-9b-it": {
+        "delta_L": 11.8454,
+        "logp_clean": -4.4277,
+        "logp_corrupt": -16.2731
+      },
+      "Mistral-Small-24B-Base": {
+        "delta_L": 5.9575,
+        "logp_clean": -4.4009,
+        "logp_corrupt": -10.3583
+      },
+      "Sarvam-M": {
+        "delta_L": 4.1839,
+        "logp_clean": -5.5887,
+        "logp_corrupt": -9.7726
+      }
+    },
+    "cross_model_delta": {
+      "Llama-3.1-8B": -0.03,
+      "Gemma-2-9B": -3.6458,
+      "Mistral->Sarvam-M": 1.7736
+    }
+  }
+]

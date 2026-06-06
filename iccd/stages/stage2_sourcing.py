@@ -100,7 +100,35 @@ _SUBCONCEPT_SOURCING = {
         },
         "broad_cats": ["Indian dishes", "Indian breads", "Indian sweets", "Street food in India"],
     },
+    ("A01", "04"): {  # Rituals & Ceremonies
+        # Wikipedia has NO clean regional-ritual taxonomy (probed 2026-06-05): the old "Hindu rites and
+        # ceremonies"/"Rituals in India"/"Religious practices in {s}" cats are EMPTY, and the per-state
+        # "Religion in {s}" tree is temple/building/deity/person-dominated (noise + triggers HTTP 429 over
+        # 12 states). The one usable cat is India-level "Hindu rituals" walked DEPTH 2 (227 members,
+        # single-region-state extract resolution), strictly rite-gated in run() to keep only true rite
+        # articles (drops Ghats/temples/places). Per the sourcing order SANSKRITI -> Wikipedia depth-2 ->
+        # web: this is a thin-but-clean Wikipedia base (real regional vratas etc. with reproducible
+        # oldids); the web tier (stage2b) backfills the bulk -- rituals are the most web-dominated sub-concept.
+        "state_cats": [],
+        "extra_cats": {},
+        "broad_cats": ["Hindu rituals"],
+        "broad_depth": 2,
+    },
 }
+# Sub-04 Wikipedia rite-gate (run()): keep a candidate only if its intro reads as a RITE (RITUAL_RE) and
+# is NOT a place/temple/person/community/text (NON_RITUAL_RE on the intro head + a title-suffix check),
+# so the "Hindu rituals" cat's Ghats/temples/deities are dropped while real vratas/observances survive.
+RITUAL_RE = re.compile(r"\b(ritual|rite|rites|ceremon|vrat|vrata|jatra|yatra|procession|observ|sacrific|"
+                       r"oracle|pilgrimage|propitiat|penance|fasting|possession|offered to|consecrat|"
+                       r"is performed|is observed|is celebrated|is a (?:hindu )?(?:religious )?(?:festival|custom|rite|practice))\b", re.I)
+NON_RITUAL_RE = re.compile(r"^\W*\w[\w ,'-]{0,60}?\bis (?:a|an|the|one of|located|situated|part of)\b[^.]{0,80}?"
+                           r"\b(temple|mandir|shrine|town|city|village|ghat|river|hill|mountain|lake|island|"
+                           r"district|state|region|deity|god|goddess|saint|guru|poet|writer|king|queen|"
+                           r"community|caste|tribe|people|ethnic|language|dynasty|monastery|gompa|church|"
+                           r"mosque|dargah|gurdwara|samaj|sect|denomination|organisation|organization|"
+                           r"building|structure|monument|fort|museum|university|institute|text|scripture|epic)\b", re.I)
+_PLACE_SUFFIX = ("temple", "mandir", "math", "ghat", "dham", "peeth", "pith", "jyotirlinga", "gurdwara",
+                 "masjid", "mosque", "church", "dargah", "sahib", "fort", "museum")
 # Generic tokens skipped when SANSKRITI-attesting an anchor (festival + costume + cuisine vocabulary, len>=5).
 _GENERIC = {"festival", "fair", "jatra", "mela", "utsav", "puja", "pooja", "temple",
             "hindu", "day", "night", "feast", "celebration", "harvest", "annual",
@@ -108,7 +136,10 @@ _GENERIC = {"festival", "fair", "jatra", "mela", "utsav", "puja", "pooja", "temp
             "embroidery", "print", "attire", "costume", "dress", "handloom", "fabric", "border",
             # Cuisine (A01-03) generic food vocabulary
             "dish", "curry", "masala", "sweet", "snack", "bread", "rice", "gravy", "fry",
-            "pickle", "chutney", "thali", "sabzi", "cuisine", "food", "dishes", "recipe"}
+            "pickle", "chutney", "thali", "sabzi", "cuisine", "food", "dishes", "recipe",
+            # Rituals & Ceremonies (A01-04) generic rite vocabulary
+            "ritual", "rituals", "ceremony", "ceremonies", "ceremonial", "custom", "worship",
+            "tradition", "sanskar", "rite", "rites", "vrat", "observance", "procession"}
 
 
 def _is_event(text: str) -> bool:
@@ -180,7 +211,7 @@ def _wiki_anchors(axis, sub, region):
                 if a:
                     out.setdefault(a.lower(), (a, st, title))
     for cat in cfg.get("broad_cats", []):
-        for title in wiki.category_members_recursive(cat, depth=1):
+        for title in wiki.category_members_recursive(cat, depth=cfg.get("broad_depth", 1)):
             a = _clean(title)
             if not a or a.lower() in out:
                 continue
@@ -231,6 +262,14 @@ def run(cell=SMOKE_CELL, target=CANDIDATES_PER_CELL, force: bool = False):
         # festival<->state fact; nuanced festival-vs-event calls remain Claude's job (Tier 1.5).
         if "india" not in extract_l and state.lower() not in extract_l:
             continue
+        # Sub-04 rite-gate: a Wikipedia candidate is kept only if its intro reads as a RITE and is not a
+        # place/temple/person/community/text (the "Hindu rituals" cat carries Ghats/temples). SANSKRITI
+        # ritual anchors and web-tier items are unaffected.
+        if sub == "04" and src == "wikipedia":
+            head = summ["extract"][:200]
+            if (not RITUAL_RE.search(extract_l) or NON_RITUAL_RE.search(head)
+                    or title.lower().rstrip().endswith(_PLACE_SUFFIX)):
+                continue
         san_ok = (src == "sanskriti") or _attested(anchor, state_text.get(state, ""))
         wiki_state_ok = state.lower() in extract_l
         if not (san_ok or wiki_state_ok):

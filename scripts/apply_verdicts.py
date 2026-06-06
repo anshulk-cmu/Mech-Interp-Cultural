@@ -37,7 +37,11 @@ _GENERIC = {"fair", "mela", "melo", "festival", "festivals", "utsav", "mahotsav"
             # type-word ("Churma") into the specific dish ("Dal Bati Churma") without that risk.
             "dish", "dishes", "curry", "masala", "sweet", "sweets", "snack", "snacks", "bread",
             "rice", "gravy", "fry", "pickle", "chutney", "thali", "dal", "sabzi", "cuisine",
-            "food", "recipe", "halwa", "ladoo", "laddu"}
+            "food", "recipe", "halwa", "ladoo", "laddu",
+            # Rituals & Ceremonies (A01-04) generic rite type-words: collapse "Tusu"/"Tusu Puja",
+            # "Karam"/"Karam Puja" to one item. Specific rite names stay (not listed here).
+            "ritual", "rituals", "ceremony", "ceremonies", "rite", "rites", "puja", "pooja",
+            "vrat", "custom", "worship", "festival", "parab", "parba", "yatra", "jatra"}
 
 
 def _core(anchor: str):

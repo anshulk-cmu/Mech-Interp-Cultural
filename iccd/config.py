@@ -98,7 +98,9 @@ GENERIC_NOUN_BLOCKLIST = {"sari", "dance", "festival", "music", "cuisine", "fair
                           "print", "mela", "ikat", "dish", "harvest",
                           # Cuisine (A01-03) generic food nouns
                           "curry", "masala", "sweet", "snack", "bread", "rice", "gravy",
-                          "fry", "pickle", "chutney", "thali", "dal", "sabzi"}
+                          "fry", "pickle", "chutney", "thali", "dal", "sabzi",
+                          # Rituals & Ceremonies (A01-04) generic rite nouns
+                          "ritual", "ceremony", "rite", "puja", "pooja", "vrat", "custom", "worship"}
 
 # --- Stage-8 retention threshold (plan Section 8.3) ----------------------
 DELTA_L_FLOOR_NATS = 1.0
